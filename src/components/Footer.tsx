@@ -11,7 +11,7 @@ export function Footer() {
           {/* About */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <span className="font-serif text-xl font-bold">VedicIntution</span>
+              <span className="font-serif text-xl font-bold">Vedic Intution</span>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Authentic spiritual products and expert astrology consultations to guide you on your journey to wellness and enlightenment.

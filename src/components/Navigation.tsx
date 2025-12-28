@@ -40,7 +40,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" data-testid="link-home">
             <div className="flex items-center gap-2 cursor-pointer hover-elevate active-elevate-2 rounded-md px-2 -ml-2 py-1">
-              <span className="font-serif text-xl font-bold text-foreground">VedicIntution</span>
+              <span className="font-serif text-xl font-bold text-foreground">Vedic Intution</span>
             </div>
           </Link>
 

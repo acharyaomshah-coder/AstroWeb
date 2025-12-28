@@ -76,7 +76,7 @@ export default function SignUp() {
         <Card className="w-full max-w-md p-8 backdrop-blur-sm bg-card/80">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <h1 className="font-serif text-2xl font-bold">VedicIntution</h1>
+              <h1 className="font-serif text-2xl font-bold">Vedic Intution</h1>
             </div>
             <p className="text-muted-foreground">Create Your Account</p>
           </div>
