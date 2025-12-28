@@ -4,11 +4,11 @@
 
 /* LIGHT MODE */
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
+  --button-outline: rgba(0, 0, 0, .10);
+  --badge-outline: rgba(0, 0, 0, .05);
   --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(0, 0, 0, .03);
+  --elevate-2: rgba(0, 0, 0, .08);
   --background: 270 30% 97%;
   --foreground: 270 25% 15%;
   --border: 280 40% 85%;
@@ -58,7 +58,7 @@
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
-/* Fallback for older browsers */
+  /* Fallback for older browsers */
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 
@@ -88,11 +88,11 @@
 }
 
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(255, 255, 255, .10);
+  --badge-outline: rgba(255, 255, 255, .05);
   --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --elevate-1: rgba(255, 255, 255, .04);
+  --elevate-2: rgba(255, 255, 255, .09);
   --background: 270 40% 8%;
   --foreground: 280 20% 95%;
   --border: 280 35% 18%;
@@ -136,7 +136,7 @@
   --shadow-xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 8px 10px -1px hsl(0 0% 0% / 0.00);
   --shadow-2xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
 
-/* Fallback for older browsers */
+  /* Fallback for older browsers */
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 
@@ -250,12 +250,54 @@
   }
 
   @keyframes dynamic-glow {
-    0% { box-shadow: 0 0 5px rgba(168, 85, 247, 0.2); border-color: rgba(168, 85, 247, 0.3); }
-    50% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.6); border-color: rgba(168, 85, 247, 0.8); }
-    100% { box-shadow: 0 0 5px rgba(168, 85, 247, 0.2); border-color: rgba(168, 85, 247, 0.3); }
+    0% {
+      box-shadow: 0 0 5px rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+      border-color: rgba(168, 85, 247, 0.8);
+    }
+
+    100% {
+      box-shadow: 0 0 5px rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.3);
+    }
   }
 
   .animate-glow {
     animation: dynamic-glow 3s ease-in-out infinite;
+  }
+
+  /* Shared premium background for page headers */
+  .vedic-header {
+    @apply relative overflow-hidden text-white;
+    background: linear-gradient(135deg, #4c1d95 0%, #2e1065 50%, #4c1d95 100%);
+  }
+
+  .vedic-header::before {
+    content: "";
+    @apply absolute inset-0 pointer-events-none opacity-30;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    mix-blend-mode: overlay;
+  }
+
+  .vedic-header::after {
+    content: "";
+    @apply absolute inset-0 pointer-events-none opacity-10;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.4) 50%, transparent 60%);
+    background-size: 200% 200%;
+    animation: shine 6s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
   }
 }

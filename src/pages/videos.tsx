@@ -63,7 +63,7 @@ export default function Videos() {
 
       const response = await fetch("/api/videos", {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`
         },
@@ -92,13 +92,13 @@ export default function Videos() {
         <title>Videos - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto">
+        <section className="vedic-header py-12 md:py-20 px-4">
+          <div className="container mx-auto relative z-10">
             <div className="text-center mb-8">
-              <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-3">
-                Divine Astrology Videos
+              <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-3">
+                Vedic Intution Videos
               </h1>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              <p className="text-white/80 text-lg max-w-2xl mx-auto">
                 Watch our expert astrologers share wisdom, guidance, and spiritual insights
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function Videos() {
             {user && isAdmin && (
               <div className="max-w-2xl mx-auto mb-8">
                 {!showAddForm ? (
-                  <Button 
+                  <Button
                     onClick={() => setShowAddForm(true)}
                     className="w-full"
                   >
@@ -137,13 +137,13 @@ export default function Videos() {
                         </p>
                       </div>
                       <div className="flex gap-2">
-                        <Button 
+                        <Button
                           onClick={handleAddVideo}
                           className="flex-1"
                         >
                           Add Video
                         </Button>
-                        <Button 
+                        <Button
                           variant="outline"
                           onClick={() => setShowAddForm(false)}
                           className="flex-1"
@@ -170,8 +170,8 @@ export default function Videos() {
             ) : videos && videos.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {videos.map((video) => (
-                  <Card 
-                    key={video.id} 
+                  <Card
+                    key={video.id}
                     className="overflow-hidden hover-elevate cursor-pointer group"
                   >
                     <div className="relative overflow-hidden bg-muted h-48">
@@ -189,13 +189,13 @@ export default function Videos() {
                       <h3 className="font-serif text-lg font-bold text-foreground mb-3 line-clamp-2">
                         {video.title}
                       </h3>
-                      <a 
-                        href={video.youtubeUrl} 
-                        target="_blank" 
+                      <a
+                        href={video.youtubeUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Button 
-                          variant="default" 
+                        <Button
+                          variant="default"
                           className="w-full"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />

@@ -201,8 +201,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+        <section className="py-24 vedic-header">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -214,7 +213,7 @@ export default function About() {
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
               Begin Your Spiritual Transformation
             </h2>
-            <p className="text-primary-foreground/90 text-xl max-w-2xl mx-auto mb-10 font-light">
+            <p className="text-white/90 text-xl max-w-2xl mx-auto mb-10 font-light">
               Join thousands of satisfied students and clients who have illuminated their paths with Acharya Om Shah's guidance.
             </p>
           </motion.div>

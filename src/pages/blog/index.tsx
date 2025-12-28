@@ -40,7 +40,7 @@ export default function Blog() {
 
   const filteredPosts = posts?.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = !selectedCategory || selectedCategory === "All" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -51,12 +51,12 @@ export default function Blog() {
         <title>Blog - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <div className="bg-primary text-primary-foreground py-16">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
+        <div className="vedic-header py-16">
+          <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
               Spiritual Insights & Wisdom
             </h1>
-            <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto">
+            <p className="text-white/90 text-lg max-w-2xl mx-auto">
               Explore articles on astrology, gemstones, and spiritual wellness
             </p>
           </div>

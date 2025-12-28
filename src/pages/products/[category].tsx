@@ -34,12 +34,12 @@ export default function ProductsCategory() {
         <title>{title} - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <div className="bg-primary text-primary-foreground py-16">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+        <div className="vedic-header py-16">
+          <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">
               {title}
             </h1>
-            <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto">
+            <p className="text-white/90 text-lg max-w-2xl mx-auto">
               {description}
             </p>
           </div>

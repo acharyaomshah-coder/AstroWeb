@@ -239,8 +239,9 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/book-appointment">
-                <Button size="lg" variant="outline" className="border-accent/50 bg-accent/10 text-primary-foreground hover:bg-accent hover:text-accent-foreground backdrop-blur-md min-w-[200px] animate-glow transition-all duration-500">
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 min-w-[200px]">
                   Book Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </div>

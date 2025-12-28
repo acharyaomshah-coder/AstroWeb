@@ -126,10 +126,10 @@ export default function HoroscopeDetail() {
         <title>{currentSign.name} Horoscope - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <div className="bg-primary text-primary-foreground py-16">
-          <div className="container mx-auto px-4 lg:px-8">
+        <div className="vedic-header py-16">
+          <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <Link href="/horoscope">
-              <Button variant="ghost" size="sm" className="mb-6 text-primary-foreground hover:text-accent">
+              <Button variant="ghost" size="sm" className="mb-6 text-white hover:text-accent">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to All Signs
               </Button>
@@ -138,10 +138,10 @@ export default function HoroscopeDetail() {
             <div className="flex items-center gap-6">
               <div className="text-8xl text-accent">{currentSign.symbol}</div>
               <div>
-                <h1 className="font-serif text-4xl md:text-5xl font-bold mb-2">
+                <h1 className="font-serif text-4xl md:text-5xl font-bold mb-2 text-white">
                   {currentSign.name}
                 </h1>
-                <p className="text-primary-foreground/80 text-lg">{currentSign.dates}</p>
+                <p className="text-white/80 text-lg">{currentSign.dates}</p>
                 <Badge className="mt-3 bg-accent/20 text-accent border-accent/30">
                   {currentSign.element} Sign
                 </Badge>
