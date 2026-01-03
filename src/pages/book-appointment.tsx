@@ -43,30 +43,44 @@ export default function BookAppointment() {
     {
       id: "horoscope-analysis",
       name: "Horoscope Analysis",
-      description: "Comprehensive analysis of your birth chart to provide insights into your personality, career, relationships, and future trends.",
-      price: "INR 3100",
+      description: "A comprehensive analysis of your birth chart to provide insights into your personality, health, relationships, marriage, career, and financial prospects.",
+      price: "₹3,000 + 18% GST",
       category: "horoscope"
     },
     {
-      id: "vaastu-consultation",
-      name: "Vaastu Consultation",
-      description: "Expert guidance on Vaastu Shastra principles for your home or office to harmonize energy and ensure prosperity.",
-      price: "INR 5100",
+      id: "varshaphala",
+      name: "Varshaphala (Annual Forecast)",
+      description: "Detailed astrological guidance for one full year. This analysis utilizes your Janma Kundali combined with your Varsha Kundali to predict yearly trends.",
+      price: "₹6,000 + 18% GST",
+      category: "horoscope"
+    },
+    {
+      id: "muhurta-selection",
+      name: "Muhurta Selection",
+      description: "Identification of the most auspicious moments for significant life events, including marriages, travel, Grah Pravesh, and business inaugurations.",
+      price: "₹6,000 + 18% GST",
+      category: "muhurta"
+    },
+    {
+      id: "residential-vaastu",
+      name: "Residential VAASTU Analysis",
+      description: "A detailed VAASTU report for your home with effective remedies to optimize energy flow, ensuring peace and prosperity.",
+      price: "₹20 / sq. ft.",
       category: "vastu"
     },
     {
-      id: "varsha-kundali",
-      name: "Varsha Kundali Analysis",
-      description: "Annual horoscope prediction based on your solar return chart, covering the year from one birthday to the next.",
-      price: "INR 6100",
-      category: "horoscope"
+      id: "commercial-vaastu",
+      name: "Commercial VAASTU Analysis",
+      description: "Specialized VAASTU assessment for offices, shops, or factories to identify remedies that remove obstacles and stimulate business growth.",
+      price: "₹20 / sq. ft.",
+      category: "vastu"
     },
     {
-      id: "birth-time-rectification",
-      name: "Birth Time Rectification",
-      description: "Precise calculation to correct your recorded birth time by matching life events with astrological timing.",
-      price: "INR 4100",
-      category: "birthtime"
+      id: "karmic-remedial",
+      name: "Astrological (Karmic) Remedial Services",
+      description: "Holistic Vedic remedies designed to balance your karma. Includes corrections, Graha Anushthan, Pancha Tattva treatments, and Yantra therapy.",
+      price: "₹20,000 + 18% GST",
+      category: "remedial"
     }
   ];
 
@@ -151,7 +165,7 @@ export default function BookAppointment() {
     const message = (form.querySelector("#message") as HTMLTextAreaElement)?.value;
 
     // Construct WhatsApp message
-    const whatsappMessage = `Hello Acharya Om Shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Preferred Date:* ${date?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
+    const whatsappMessage = `Hello Aacharya Om Shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Preferred Date:* ${date?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
 
     const adminPhoneNumber = "918527530910";
     const whatsappUrl = `https://wa.me/${adminPhoneNumber}?text=${whatsappMessage}`;
@@ -330,10 +344,10 @@ export default function BookAppointment() {
                       <AvatarFallback>AOS</AvatarFallback>
                     </Avatar>
                     <h3 className="font-serif text-2xl font-bold mb-2">
-                      ACHARYA OM SHAH KASHYAP
+                      AACHARYA OM SHAH KASHYAP
                     </h3>
                     <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
-                      Jyotish Acharya (Gold Medal)<br />
+                      Jyotish Aacharya (Gold Medal)<br />
                       Bhartiya Vidya Bhawan<br />
                       M.A. Astrology, UOU, Uttarakhand<br />
                       Medical Astrology (Diploma), SLBSNSU<br />

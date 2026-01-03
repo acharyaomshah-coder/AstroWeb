@@ -1060,6 +1060,10 @@ body {
   left: -.5rem;
 }
 
+.-right-1 {
+  right: -.25rem;
+}
+
 .-right-12 {
   right: -3rem;
 }
@@ -1082,10 +1086,6 @@ body {
 
 .bottom-4 {
   bottom: 1rem;
-}
-
-.bottom-6 {
-  bottom: 1.5rem;
 }
 
 .bottom-8 {
@@ -1152,10 +1152,6 @@ body {
   right: 1rem;
 }
 
-.right-6 {
-  right: 1.5rem;
-}
-
 .right-8 {
   right: 2rem;
 }
@@ -1214,10 +1210,6 @@ body {
 
 .top-full {
   top: 100%;
-}
-
-.-right-1 {
-  right: -.25rem;
 }
 
 .-z-10 {
@@ -1412,6 +1404,10 @@ body {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
 }
 
 .line-clamp-1 {
@@ -2011,12 +2007,12 @@ body {
   cursor: default;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .cursor-not-allowed {
   cursor: not-allowed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .touch-none {
@@ -2042,6 +2038,10 @@ body {
 
 .auto-rows-\[300px\] {
   grid-auto-rows: 300px;
+}
+
+.auto-rows-\[280px\] {
+  grid-auto-rows: 280px;
 }
 
 .grid-cols-1 {
@@ -2292,16 +2292,16 @@ body {
   border-width: 2px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-8 {
   border-width: 8px;
 }
 
 .border-\[1\.5px\] {
   border-width: 1.5px;
-}
-
-.border-4 {
-  border-width: 4px;
 }
 
 .border-y {
@@ -2323,6 +2323,10 @@ body {
 
 .border-l-2 {
   border-left-width: 2px;
+}
+
+.border-l-4 {
+  border-left-width: 4px;
 }
 
 .border-r {
@@ -2478,6 +2482,14 @@ body {
   border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#D4AF37\]\/30 {
+  border-color: #d4af374d;
+}
+
+.border-muted\/30 {
+  border-color: hsl(var(--muted) / .3);
+}
+
 .border-l-transparent {
   border-left-color: #0000;
 }
@@ -2540,6 +2552,11 @@ body {
 .bg-blue-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
 
 .bg-border {
@@ -2651,6 +2668,14 @@ body {
 .bg-yellow-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#D4AF37\]\/10 {
+  background-color: #d4af371a;
+}
+
+.bg-black\/20 {
+  background-color: #0003;
 }
 
 .bg-gradient-to-b {
@@ -3001,6 +3026,11 @@ body {
   padding-right: .25rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-2 {
   padding-left: .5rem;
   padding-right: .5rem;
@@ -3086,6 +3116,11 @@ body {
   padding-bottom: 1.5rem;
 }
 
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -3159,10 +3194,6 @@ body {
   padding-top: 1rem;
 }
 
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
 .pt-8 {
   padding-top: 2rem;
 }
@@ -3224,6 +3255,18 @@ body {
   font-size: 10px;
 }
 
+.text-\[11px\] {
+  font-size: 11px;
+}
+
+.text-\[8px\] {
+  font-size: 8px;
+}
+
+.text-\[9px\] {
+  font-size: 9px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3249,20 +3292,12 @@ body {
   line-height: 1rem;
 }
 
-.text-\[8px\] {
-  font-size: 8px;
-}
-
-.text-\[11px\] {
-  font-size: 11px;
-}
-
-.text-\[9px\] {
-  font-size: 9px;
-}
-
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-light {
@@ -3336,6 +3371,11 @@ body {
 
 .tracking-widest {
   letter-spacing: .1em;
+}
+
+.text-\[\#D4AF37\] {
+  --tw-text-opacity: 1;
+  color: rgb(212 175 55 / var(--tw-text-opacity, 1));
 }
 
 .text-accent {
@@ -3527,8 +3567,22 @@ body {
   color: rgb(133 77 14 / var(--tw-text-opacity, 1));
 }
 
+.text-emerald-500 {
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
 .no-underline {
   text-decoration-line: none;
+}
+
+.decoration-accent\/20 {
+  -webkit-text-decoration-color: hsl(var(--accent) / .2);
+  text-decoration-color: hsl(var(--accent) / .2);
 }
 
 .opacity-0 {
@@ -3632,6 +3686,12 @@ body {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
 .ring-accent {
   --tw-ring-opacity: 1;
   --tw-ring-color: hsl(var(--accent) / var(--tw-ring-opacity, 1));
@@ -3645,6 +3705,10 @@ body {
 .ring-sidebar-ring {
   --tw-ring-opacity: 1;
   --tw-ring-color: hsl(var(--sidebar-ring) / var(--tw-ring-opacity, 1));
+}
+
+.ring-\[\#D4AF37\]\/10 {
+  --tw-ring-color: #d4af371a;
 }
 
 .ring-offset-background {
@@ -4199,6 +4263,11 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: hsl(var(--accent) / .9);
 }
 
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-green-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity, 1));
@@ -4230,6 +4299,11 @@ input[type="search"]::-webkit-search-cancel-button {
 .hover\:bg-sidebar-accent:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--sidebar-accent) / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-background:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--background) / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-accent:hover {
@@ -4291,6 +4365,17 @@ input[type="search"]::-webkit-search-cancel-button {
   --tw-shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-md:hover {
+  --tw-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-blue-500\/20:hover {
+  --tw-shadow-color: #3b82f633;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .hover\:after\:bg-sidebar-border:hover:after {
@@ -4442,6 +4527,14 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .group:hover .group-hover\:bg-black\/20 {
   background-color: #0003;
+}
+
+.group:hover .group-hover\:bg-accent\/10 {
+  background-color: hsl(var(--accent) / .1);
+}
+
+.group:hover .group-hover\:bg-black\/0 {
+  background-color: #0000;
 }
 
 .group\/item:hover .group-hover\/item\:text-accent, .group:hover .group-hover\:text-accent {
@@ -5316,6 +5409,14 @@ input[type="search"]::-webkit-search-cancel-button {
 
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:row-span-1 {
+    grid-row: span 1 / span 1;
+  }
+
+  .lg\:row-span-2 {
+    grid-row: span 2 / span 2;
   }
 
   .lg\:ml-auto {

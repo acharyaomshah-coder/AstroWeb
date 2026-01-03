@@ -40,7 +40,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Acharya Om Shah - Vedic Intution</title>
+        <title>Aacharya Om Shah - Vedic Intution</title>
       </Head>
       <div className="min-h-screen bg-background">
 
@@ -68,7 +68,7 @@ export default function About() {
 
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-light">
                   <p>
-                    <span className="font-semibold text-foreground">Acharya Om Shah</span> is a <span className="text-accent font-medium">Gold Medalist Astrologer</span> (Jyotish Acharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan & Batch Topper (Diploma in Medical Astrology) from SLBS National Sanskrit University, New Delhi.
+                    <span className="font-semibold text-foreground">Aacharya Om Shah</span> is a <span className="text-accent font-medium">Gold Medalist Astrologer</span> (Jyotish Acharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan & Batch Topper (Diploma in Medical Astrology) from SLBS National Sanskrit University, New Delhi.
                   </p>
 
                   <p>
@@ -87,7 +87,7 @@ export default function About() {
                 </div>
 
                 <div className="pt-4">
-                  <p className="font-serif text-2xl text-foreground">Acharya Om Shah</p>
+                  <p className="font-serif text-2xl text-foreground">Aacharya Om Shah</p>
                   <p className="text-sm text-muted-foreground uppercase tracking-widest mt-1">Astrologer</p>
                 </div>
               </motion.div>

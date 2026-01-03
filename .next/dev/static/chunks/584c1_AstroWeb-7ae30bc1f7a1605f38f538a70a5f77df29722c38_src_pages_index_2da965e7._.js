@@ -1,7 +1,7 @@
 (globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/[root-of-the-server]__79db1bd0._.js",
+  "static/chunks/[root-of-the-server]__24978ab5._.js",
   "static/chunks/70d72_next_dist_compiled_0573f9c1._.js",
   "static/chunks/70d72_next_dist_shared_lib_85a0c1dd._.js",
   "static/chunks/70d72_next_dist_client_02e29845._.js",
@@ -15,7 +15,7 @@
   "static/chunks/70d72_react-icons_lib_a8742000._.js",
   "static/chunks/70d72_date-fns_b2eadce0._.js",
   "static/chunks/70d72_react-day-picker_dist_index_esm_ab6c8c8d.js",
-  "static/chunks/70d72_05ae7f29._.js"
+  "static/chunks/70d72_c9147aaf._.js"
 ],
     source: "entry"
 });

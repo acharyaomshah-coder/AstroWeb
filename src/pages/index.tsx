@@ -11,7 +11,7 @@ import { BlogSection } from "@/components/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
-import { Mail, Phone, MapPin, Play, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, Play, ExternalLink, GraduationCap, Microscope, BookOpen, Star, Calendar as CalendarIcon } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { toast } from "@/hooks/use-toast";
 import { Calendar } from "@/components/ui/calendar";
@@ -19,6 +19,8 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Users, Heart, X } from "lucide-react";
 
 export default function Home() {
   // Zodiac sign metadata (symbols and colors)
@@ -150,6 +152,34 @@ export default function Home() {
     }
   });
 
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const credentials = [
+    { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya", colSpan: "lg:row-span-2" },
+    { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023", colSpan: "lg:row-span-2" },
+    { image: "/result.jpeg", title: "Outstanding Result", subtitle: "Proven Track Record", colSpan: "lg:row-span-1" },
+    { image: "/degree.jpeg", title: "Certified Degree", subtitle: "M.A (Astrology)", colSpan: "lg:row-span-1" },
+  ];
+
+  const values = [
+    {
+      title: "Authenticity",
+      description: "Every product is certified and verified by expert gemologists and astrologers"
+    },
+    {
+      title: "Expertise",
+      description: "Over 25 years of experience in Vedic astrology and spiritual guidance"
+    },
+    {
+      title: "Quality",
+      description: "Premium products sourced from trusted suppliers worldwide"
+    },
+    {
+      title: "Care",
+      description: "Personalized attention and support for every customer's spiritual journey"
+    }
+  ];
+
   // Booking state
   const [bookingDate, setBookingDate] = useState<Date | undefined>(new Date());
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
@@ -159,26 +189,38 @@ export default function Home() {
     {
       id: "horoscope-analysis",
       name: "Horoscope Analysis",
-      description: "Analysis of your birth chart for insights into personality, career, and relationships.",
-      price: "INR 3100"
+      description: "A comprehensive analysis of your birth chart to provide insights into your personality, health, relationships, marriage, career, and financial prospects.",
+      price: "₹3,000 + 18% GST"
     },
     {
-      id: "vaastu-consultation",
-      name: "Vaastu Consultation",
-      description: "Expert guidance on Vaastu Shastra principles for your home or office.",
-      price: "INR 5100"
+      id: "varshaphala",
+      name: "Varshaphala (Annual Forecast)",
+      description: "Detailed astrological guidance for one full year. This analysis utilizes your Janma Kundali combined with your Varsha Kundali to predict yearly trends.",
+      price: "₹6,000 + 18% GST"
     },
     {
-      id: "varsha-kundali",
-      name: "Varsha Kundali Analysis",
-      description: "Annual horoscope prediction covering the year from one birthday to the next.",
-      price: "INR 6100"
+      id: "muhurta-selection",
+      name: "Muhurta Selection",
+      description: "Identification of the most auspicious moments for significant life events, including marriages, travel, Grah Pravesh, and business inaugurations.",
+      price: "₹6,000 + 18% GST"
     },
     {
-      id: "birth-time-rectification",
-      name: "Birth Time Rectification",
-      description: "Precise calculation to correct your recorded birth time matching life events.",
-      price: "INR 4100"
+      id: "residential-vaastu",
+      name: "Residential VAASTU Analysis",
+      description: "A detailed VAASTU report for your home with effective remedies to optimize energy flow, ensuring peace and prosperity.",
+      price: "₹20 / sq. ft."
+    },
+    {
+      id: "commercial-vaastu",
+      name: "Commercial VAASTU Analysis",
+      description: "Specialized VAASTU assessment for offices, shops, or factories to identify remedies that remove obstacles and stimulate business growth.",
+      price: "₹20 / sq. ft."
+    },
+    {
+      id: "karmic-remedial",
+      name: "Astrological (Karmic) Remedial Services",
+      description: "Holistic Vedic remedies designed to balance your karma. Includes corrections, Graha Anushthan, Pancha Tattva treatments, and Yantra therapy.",
+      price: "₹20,000 + 18% GST"
     }
   ];
 
@@ -191,7 +233,7 @@ export default function Home() {
     const phone = (form.querySelector("#phone") as HTMLInputElement)?.value;
     const message = (form.querySelector("#message") as HTMLTextAreaElement)?.value;
 
-    const whatsappMessage = `Hello Acharya Om Shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
+    const whatsappMessage = `Hello Aacharya Om Shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
     const adminPhoneNumber = "918527530910";
     window.open(`https://wa.me/${adminPhoneNumber}?text=${whatsappMessage}`, "_blank");
   };
@@ -319,19 +361,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 2. About Us Section */}
+        {/* 2. About & Excellence Section */}
         <section className="py-24 bg-background overflow-hidden">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative flex justify-center"
+                className="relative flex justify-center order-2 lg:order-1"
               >
-                <div className="max-w-md w-full aspect-[4/5] rounded-2xl overflow-hidden border-8 border-muted shadow-2xl relative">
-                  <img src="/WhatsApp Image 2026-01-03 at 16.49.43.jpeg" alt="Acharya Om Shah" className="w-full h-full object-cover" />
+                <div
+                  className="max-w-md w-full aspect-[4/5] rounded-2xl overflow-hidden border-8 border-muted shadow-2xl relative cursor-pointer group"
+                  onClick={() => setSelectedImage("/WhatsApp Image 2026-01-03 at 17.07.18.jpeg")}
+                >
+                  <img src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" alt="Aacharya Om shah" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"></div>
                 </div>
               </motion.div>
               <motion.div
@@ -339,28 +385,90 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                className="order-1 lg:order-2"
               >
-                <Badge className="bg-accent/10 text-accent mb-4 px-4 py-1">Vedic Astrologer & Mentor</Badge>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-                  Acharya <span className="text-accent italic">Om Shah</span>
+                <Badge className="bg-accent/10 text-accent mb-6 px-4 py-1.5 uppercase tracking-wider font-semibold">Vedic Astrologer & Mentor</Badge>
+                <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                  Aacharya <span className="text-accent italic">Om shah</span>
                 </h2>
-                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    <span className="font-semibold text-foreground">Acharya Om Shah</span> is a <span className="text-accent font-medium">Gold Medalist Astrologer</span> from K.N. Rao Institute of Astrology, bridging the gap between ancient wisdom and modern science.
+
+                <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+                  <p className="border-l-4 border-accent/30 pl-6 py-2">
+                    <span className="font-bold text-foreground">Aacharya Om shah</span> is a <span className="text-[#D4AF37] font-extrabold underline decoration-accent/20">gold medalist</span> astrologer (Jyotish Acharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan.
                   </p>
+
                   <p>
-                    With over 25 years of experience, he specializes in Financial Astrology, Medical Astrology, and Astro-Vaastu, providing scientific remedies for holistic prosperity.
+                    He also holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and Diploma in <span className="text-foreground font-medium">(Vastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
                   </p>
-                </div>
-                <div className="mt-8">
-                  <Link href="/about">
-                    <Button variant="outline" size="lg">
-                      Learn More About Us
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+
+                  <div className="pl-6 border-l-2 border-accent/20 italic text-base">
+                    His expertise includes Financial Astrology, Medical Astrology, Career Counseling, Relationship Astrology, Prashna, Varshaphal, Muhurta, Astro-Vaastu & Remedial Astrology.
+                  </div>
+
+                  <p className="bg-muted/30 p-6 rounded-xl border border-muted shadow-sm text-base">
+                    An ex-microbiologist with an <span className="text-foreground font-bold">M.Sc (Microbiology)</span> and <span className="text-foreground font-bold">Pre-PhD (Molecular Medicine)</span>, Aacharya shah bridges ancient wisdom with modern scientific precision. He actively teaches rare techniques like <span className="text-accent">Sarbatobhadra Chakra</span> to students nationwide.
+                  </p>
                 </div>
               </motion.div>
+            </div>
+
+            {/* Photo Credentials Gallery */}
+            <div className="mb-32">
+              <div className="text-center mb-16">
+                <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Excellence</span>
+                <h3 className="font-serif text-4xl font-bold mb-4">Academic Excellence & Recognition</h3>
+                <div className="w-24 h-1 bg-accent mx-auto"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
+                {credentials.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className={`relative group overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.colSpan || ""}`}
+                    onClick={() => setSelectedImage(item.image)}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                        <h4 className="text-white font-serif text-2xl font-bold mb-1">{item.title}</h4>
+                        <p className="text-white/80 text-sm tracking-wide font-light">{item.subtitle}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Core Values Strip */}
+            <div className="bg-muted/30 p-12 rounded-3xl border border-muted">
+              <div className="text-center mb-12">
+                <h3 className="font-serif text-3xl font-bold mb-4">Values That Guide Us</h3>
+                <p className="text-muted-foreground">The principles behind our spiritual and scientific practice</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {values.map((value, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="space-y-3 p-4 hover:bg-background rounded-2xl transition-colors duration-300"
+                  >
+                    <Star className="h-6 w-6 text-accent" />
+                    <h4 className="font-serif text-xl font-bold text-foreground">{value.title}</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -379,19 +487,19 @@ export default function Home() {
                   <CardContent className="p-6 text-center space-y-4">
                     <div className="relative mb-2">
                       <Avatar className="w-32 h-32 mx-auto border-4 border-accent/20">
-                        <AvatarImage src="/WhatsApp Image 2026-01-03 at 16.49.43.jpeg" className="object-cover" />
+                        <AvatarImage src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" className="object-cover" />
                         <AvatarFallback>AOS</AvatarFallback>
                       </Avatar>
                     </div>
                     <div>
-                      <h3 className="font-serif text-2xl font-bold">Acharya Om Shah</h3>
+                      <h3 className="font-serif text-2xl font-bold">Aacharya Om shah</h3>
                       <p className="text-accent font-medium text-sm">Astro & Vaastu Consultant</p>
                       <p className="text-muted-foreground text-xs italic">(Karmic Consultant)</p>
                     </div>
 
                     <div className="space-y-3 text-[11px] text-muted-foreground border-t pt-4 text-left">
                       <p className="flex items-start gap-2">
-                        <Badge variant="outline" className="h-4 px-1 text-[9px] uppercase">Acharya</Badge>
+                        <Badge variant="outline" className="h-4 px-1 text-[9px] uppercase">Aacharya</Badge>
                         <span>Jyotish, BVB-Delhi (Gold Medal)</span>
                       </p>
                       <p className="flex items-start gap-2">
@@ -552,7 +660,7 @@ export default function Home() {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl font-bold mb-4">Vedic Intuition Videos</h2>
-              <p className="text-muted-foreground text-lg">Watch guidances and insights from Acharya Om Shah</p>
+              <p className="text-muted-foreground text-lg">Watch guidances and insights from Aacharya Om Shah</p>
             </div>
 
             {isLoadingVideos ? (
@@ -753,7 +861,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs opacity-70">Email</p>
-                      <p className="font-bold">acharyaomshah@gmail.com</p>
+                      <p className="font-bold">Aacharyaomshah@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -814,6 +922,27 @@ export default function Home() {
           </div>
         </section>
       </div>
+      {/* Image Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-[90vw] md:max-w-[80vw] lg:max-w-4xl p-0 bg-transparent border-none shadow-none text-white overflow-hidden flex items-center justify-center">
+          <div className="relative w-full h-[80vh]">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-10 right-0 p-2 text-white/80 hover:text-white transition-colors"
+              aria-label="Close image"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            {selectedImage && (
+              <img
+                src={selectedImage}
+                alt="Full view"
+                className="w-full h-full object-contain"
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

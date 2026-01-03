@@ -391,7 +391,7 @@ function About() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Testing$2f$AstroWeb$2d$7ae30bc1f7a1605f38f538a70a5f77df29722c38$2f$node_modules$2f$next$2f$head$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("title", {
-                    children: "Acharya Om Shah - Vedic Intution"
+                    children: "Aacharya Om Shah - Vedic Intution"
                 }, void 0, false, {
                     fileName: "[project]/Testing/AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38/src/pages/about.tsx",
                     lineNumber: 43,
@@ -475,7 +475,7 @@ function About() {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                     className: "font-semibold text-foreground",
-                                                                    children: "Acharya Om Shah"
+                                                                    children: "Aacharya Om Shah"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Testing/AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38/src/pages/about.tsx",
                                                                     lineNumber: 71,
@@ -488,7 +488,7 @@ function About() {
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Testing/AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38/src/pages/about.tsx",
                                                                     lineNumber: 71,
-                                                                    columnNumber: 97
+                                                                    columnNumber: 98
                                                                 }, this),
                                                                 " (Jyotish Acharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan & Batch Topper (Diploma in Medical Astrology) from SLBS National Sanskrit University, New Delhi."
                                                             ]
@@ -567,7 +567,7 @@ function About() {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
                                                             className: "font-serif text-2xl text-foreground",
-                                                            children: "Acharya Om Shah"
+                                                            children: "Aacharya Om Shah"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Testing/AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38/src/pages/about.tsx",
                                                             lineNumber: 90,
