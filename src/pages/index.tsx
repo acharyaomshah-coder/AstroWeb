@@ -208,13 +208,13 @@ export default function Home() {
       id: "residential-vaastu",
       name: "Residential VAASTU Analysis",
       description: "A detailed VAASTU report for your home with effective remedies to optimize energy flow, ensuring peace and prosperity.",
-      price: "₹20 / sq. ft."
+      price: "₹20 / sq. ft.+  18% GST"
     },
     {
       id: "commercial-vaastu",
-      name: "Commercial VAASTU Analysis",
+      name: "Commercial vaastu Analysis",
       description: "Specialized VAASTU assessment for offices, shops, or factories to identify remedies that remove obstacles and stimulate business growth.",
-      price: "₹20 / sq. ft."
+      price: "₹20 / sq. ft + 18% GST."
     },
     {
       id: "karmic-remedial",
@@ -394,7 +394,7 @@ export default function Home() {
 
                 <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
                   <p className="border-l-4 border-accent/30 pl-6 py-2">
-                    <span className="font-bold text-foreground">Aacharya Om shah</span> is a <span className="text-[#D4AF37] font-extrabold underline decoration-accent/20">gold medalist</span> astrologer (Jyotish Acharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan.
+                    <span className="font-bold text-foreground">Aacharya Om shah</span> is a <span className="text-[#D4AF37] font-extrabold underline decoration-accent/20">gold medalist</span> astrologer (Jyotish Aacharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan.
                   </p>
 
                   <p>

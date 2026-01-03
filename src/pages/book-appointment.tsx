@@ -339,12 +339,12 @@ export default function BookAppointment() {
               <Card className="sticky top-24">
                 <CardContent className="p-6 space-y-6">
                   <div className="text-center">
-                    <Avatar className="w-32 h-32 mx-auto mb-4">
-                      <AvatarImage src="/file.png" alt="Acharya Om Shah Kashyap" />
+                    <Avatar className="w-32 h-32 mx-auto mb-4 border-4 border-accent/20">
+                      <AvatarImage src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" alt="Aacharya Om shah" className="object-cover" />
                       <AvatarFallback>AOS</AvatarFallback>
                     </Avatar>
-                    <h3 className="font-serif text-2xl font-bold mb-2">
-                      AACHARYA OM SHAH KASHYAP
+                    <h3 className="font-serif text-2xl font-bold mb-2 uppercase">
+                      Aacharya Om shah
                     </h3>
                     <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
                       Jyotish Aacharya (Gold Medal)<br />
@@ -373,7 +373,7 @@ export default function BookAppointment() {
                       <Award className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-sm">Email</p>
-                        <p className="text-xs text-muted-foreground break-all">acharyaomshah@gmail.com</p>
+                        <p className="text-xs text-muted-foreground break-all">Aacharyaomshah@gmail.com</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
