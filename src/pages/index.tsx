@@ -187,21 +187,21 @@ export default function Home() {
       price: "₹6,000 + 18% GST"
     },
     {
-      id: "residential-vaastu",
-      name: "Residential vaastu Analysis",
-      description: "A detailed vaastu report for your home with effective remedies to optimize energy flow, ensuring peace and prosperity.",
+      id: "residential-Vaastu",
+      name: "Residential Vaastu Analysis",
+      description: "A detailed Vaastu report for your home with effective remedies to optimize energy flow, ensuring peace and prosperity.",
       price: "₹20 / sq. ft.+  18% GST"
     },
     {
-      id: "commercial-vaastu",
-      name: "Commercial vaastu Analysis",
-      description: "Specialized vaastu assessment for offices, shops, or factories to identify remedies that remove obstacles and stimulate business growth.",
+      id: "commercial-Vaastu",
+      name: "Commercial Vaastu Analysis",
+      description: "Specialized Vaastu assessment for offices, shops, or factories to identify remedies that remove obstacles and stimulate business growth.",
       price: "₹20 / sq. ft + 18% GST."
     },
     {
       id: "karmic-remedial",
       name: "Astrological (Karmic) Remedial Services",
-      description: " Vedic remedies includes vaastu remedies , garha anusthaan(mantra , hawan ), panch tatwa treatment and yantra therapy",
+      description: " Vedic remedies includes Vaastu remedies , garha anusthaan(mantra , hawan ), panch tatwa treatment and yantra therapy",
       price: "₹20,000 + 18% GST"
     }
   ];
@@ -217,7 +217,7 @@ export default function Home() {
     const birthPlace = (form.querySelector("#birth-place") as HTMLInputElement)?.value;
     const message = (form.querySelector("#message") as HTMLTextAreaElement)?.value;
 
-    const whatsappMessage = `Hello Acharya Om shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Birth Details:* ${birthDetails}%0A*Birth Place:* ${birthPlace}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
+    const whatsappMessage = `Hello Aacharya Om shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Birth Details:* ${birthDetails}%0A*Birth Place:* ${birthPlace}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
     const adminPhoneNumber = "918527530910";
     window.open(`https://wa.me/${adminPhoneNumber}?text=${whatsappMessage}`, "_blank");
   };
@@ -262,9 +262,9 @@ export default function Home() {
     },
     {
       name: "Vaastu Products",
-      href: "/products/vaastu",
+      href: "/products/Vaastu",
       image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop",
-      description: "Energy balancing vaastu tools"
+      description: "Energy balancing Vaastu tools"
     },
     {
       name: "Others",
@@ -383,9 +383,9 @@ export default function Home() {
                   </p>
 
                   <p>
-                    He also holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and Diploma in <span className="text-foreground font-medium">vaastu Shastra</span> and <span className="text-foreground font-medium">Medical Astrology</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+                    He also holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and Diploma in <span className="text-foreground font-medium">Vaastu Shastra</span> and <span className="text-foreground font-medium">Medical Astrology</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
                     Acharya shah is an ex-microbiologist , M.Sc (Microbiology) and Pre-PhD (Molecular Medicine) <br />
-                    <br></br> With Over 6 years of experience in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, vaastu, and karmic remedies.
+                    <br></br> With Over 6 years of experience in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
                   </p>
 
 
@@ -450,7 +450,7 @@ export default function Home() {
                       </Avatar>
                     </div>
                     <div>
-                      <h3 className="font-serif text-2xl font-bold">Acharya Om shah</h3>
+                      <h3 className="font-serif text-2xl font-bold">Aacharya Om shah</h3>
                       <p className="text-accent font-medium text-sm">Astro & Vaastu Consultant</p>
                       <p className="text-muted-foreground text-xs italic">(Karmic Consultant)</p>
                     </div>
