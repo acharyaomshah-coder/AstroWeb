@@ -32,21 +32,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/584c1_AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages__app_2da965e7._.js",
       "static/chunks/431a2_AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages__app_358ab2fe._.js"
     ],
-    "/about": [
-      "static/chunks/[root-of-the-server]__2fb9d821._.js",
-      "static/chunks/70d72_next_dist_compiled_0573f9c1._.js",
-      "static/chunks/70d72_next_dist_shared_lib_d9a23cd9._.js",
-      "static/chunks/70d72_next_dist_client_f2e01bce._.js",
-      "static/chunks/70d72_next_dist_b2895175._.js",
-      "static/chunks/70d72_next_head_421bef7b.js",
-      "static/chunks/70d72_react_a450380a._.js",
-      "static/chunks/70d72_react-dom_cjs_react-dom_development_290ae4ac.js",
-      "static/chunks/70d72_react-dom_daa8b4c6._.js",
-      "static/chunks/70d72_framer-motion_dist_es_61af5a35._.js",
-      "static/chunks/70d72_de5d68c2._.js",
-      "static/chunks/584c1_AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_about_2da965e7._.js",
-      "static/chunks/431a2_AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_about_e2bb4888._.js"
-    ],
     "/blog": [
       "static/chunks/70d72_next_dist_compiled_0573f9c1._.js",
       "static/chunks/70d72_next_dist_shared_lib_85a0c1dd._.js",
@@ -60,25 +45,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/[root-of-the-server]__b1a54e8f._.js",
       "static/chunks/65f12_roWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_blog_index_tsx_2da965e7._.js",
       "static/chunks/03d10_roWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_blog_index_tsx_96c698e3._.js"
-    ],
-    "/book-appointment": [
-      "static/chunks/[root-of-the-server]__78af536f._.js",
-      "static/chunks/70d72_next_dist_compiled_33a0d851._.js",
-      "static/chunks/70d72_next_dist_shared_lib_d9a23cd9._.js",
-      "static/chunks/70d72_next_dist_client_f2e01bce._.js",
-      "static/chunks/70d72_next_dist_b2895175._.js",
-      "static/chunks/70d72_next_9430b3ec._.js",
-      "static/chunks/70d72_react_a450380a._.js",
-      "static/chunks/70d72_react-dom_cjs_react-dom_development_290ae4ac.js",
-      "static/chunks/70d72_react-dom_daa8b4c6._.js",
-      "static/chunks/70d72_date-fns_b2eadce0._.js",
-      "static/chunks/70d72_react-day-picker_dist_index_esm_ab6c8c8d.js",
-      "static/chunks/70d72_@supabase_realtime-js_dist_module_f2c3c842._.js",
-      "static/chunks/70d72_@supabase_storage-js_dist_module_55637b84._.js",
-      "static/chunks/70d72_@supabase_auth-js_dist_module_f073888e._.js",
-      "static/chunks/70d72_1922379b._.js",
-      "static/chunks/1ccbb_Web-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_book-appointment_2da965e7._.js",
-      "static/chunks/b4858_Web-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_book-appointment_e97f5698._.js"
     ],
     "/contact": [
       "static/chunks/70d72_next_dist_compiled_0573f9c1._.js",
@@ -95,20 +61,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/[root-of-the-server]__5a04cd69._.js",
       "static/chunks/584c1_AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_contact_2da965e7._.js",
       "static/chunks/431a2_AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_contact_6b6dab49._.js"
-    ],
-    "/products": [
-      "static/chunks/70d72_next_dist_compiled_0573f9c1._.js",
-      "static/chunks/70d72_next_dist_shared_lib_5a6a3a36._.js",
-      "static/chunks/70d72_next_dist_client_02e29845._.js",
-      "static/chunks/70d72_next_dist_b2895175._.js",
-      "static/chunks/70d72_next_ebc85fb8._.js",
-      "static/chunks/70d72_react_a450380a._.js",
-      "static/chunks/70d72_react-dom_cjs_react-dom_development_290ae4ac.js",
-      "static/chunks/70d72_react-dom_daa8b4c6._.js",
-      "static/chunks/70d72_3a430be9._.js",
-      "static/chunks/[root-of-the-server]__eca8374c._.js",
-      "static/chunks/afc4f_b-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_products_index_tsx_2da965e7._.js",
-      "static/chunks/3fa3e_b-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_products_index_tsx_cba6f137._.js"
     ],
     "/videos": [
       "static/chunks/70d72_next_dist_compiled_33a0d851._.js",

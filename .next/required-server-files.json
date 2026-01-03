@@ -107,7 +107,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\AstroWeb",
+    "outputFileTracingRoot": "D:\\",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -297,12 +297,12 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "D:\\AstroWeb"
+      "root": "D:\\"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "D:\\AstroWeb",
-  "relativeAppDir": "",
+  "appDir": "D:\\Testing\\AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38",
+  "relativeAppDir": "Testing\\AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38",
   "files": [
     ".next\\routes-manifest.json",
     ".next\\server\\pages-manifest.json",

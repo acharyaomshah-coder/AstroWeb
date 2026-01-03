@@ -9,6 +9,16 @@ import { ProductGrid } from "@/components/ProductGrid";
 import { TestimonialsSlider } from "@/components/TestimonialsSlider";
 import { BlogSection } from "@/components/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
+import { motion, AnimatePresence } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
+import { Mail, Phone, MapPin, Play, ExternalLink } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
+import { toast } from "@/hooks/use-toast";
+import { Calendar } from "@/components/ui/calendar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function Home() {
   // Zodiac sign metadata (symbols and colors)
@@ -127,9 +137,64 @@ export default function Home() {
         setIsLoadingPanchang(false);
       }
     };
-
     fetchPanchang();
   }, []);
+
+  // State for videos
+  const { data: videos, isLoading: isLoadingVideos } = useQuery<any[]>({
+    queryKey: ["/api/videos"],
+    queryFn: async () => {
+      const response = await fetch("/api/videos");
+      if (!response.ok) throw new Error("Failed to fetch videos");
+      return response.json();
+    }
+  });
+
+  // Booking state
+  const [bookingDate, setBookingDate] = useState<Date | undefined>(new Date());
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  const [consultationType, setConsultationType] = useState("Horoscope Analysis");
+
+  const services = [
+    {
+      id: "horoscope-analysis",
+      name: "Horoscope Analysis",
+      description: "Analysis of your birth chart for insights into personality, career, and relationships.",
+      price: "INR 3100"
+    },
+    {
+      id: "vaastu-consultation",
+      name: "Vaastu Consultation",
+      description: "Expert guidance on Vaastu Shastra principles for your home or office.",
+      price: "INR 5100"
+    },
+    {
+      id: "varsha-kundali",
+      name: "Varsha Kundali Analysis",
+      description: "Annual horoscope prediction covering the year from one birthday to the next.",
+      price: "INR 6100"
+    },
+    {
+      id: "birth-time-rectification",
+      name: "Birth Time Rectification",
+      description: "Precise calculation to correct your recorded birth time matching life events.",
+      price: "INR 4100"
+    }
+  ];
+
+  const timeSlots = ["10:00 AM", "11:00 AM", "12:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM"];
+
+  const handleBookingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const name = (form.querySelector("#name") as HTMLInputElement)?.value;
+    const phone = (form.querySelector("#phone") as HTMLInputElement)?.value;
+    const message = (form.querySelector("#message") as HTMLTextAreaElement)?.value;
+
+    const whatsappMessage = `Hello Acharya Om Shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
+    const adminPhoneNumber = "918527530910";
+    window.open(`https://wa.me/${adminPhoneNumber}?text=${whatsappMessage}`, "_blank");
+  };
 
   const features = [
     {
@@ -197,9 +262,8 @@ export default function Home() {
         <title>Vedic Intution - Premium Gemstones, Spiritual Guidance & Authentic Remedies</title>
       </Head>
       <div className="min-h-screen">
-        {/* Hero Section */}
+        {/* 1. Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          {/* Video Background */}
           <div className="absolute inset-0 w-full h-full">
             <video
               className="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
@@ -210,22 +274,35 @@ export default function Home() {
             >
               <source src="/videoplayback.mp4" type="video/mp4" />
             </video>
-            {/* Dark overlay for better text readability */}
             <div className="absolute inset-0 bg-gradient-to-b from-blue-950/95 via-blue-950/90 to-slate-950/95"></div>
           </div>
 
           <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
-
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight"
+            >
               Decode Your <span className="text-accent">Prārabdha</span> to <br />
               Engineer Your <span className="text-accent">Karma</span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Expert vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
+            >
+              Expert Vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!
+            </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
               <Link href="/products">
                 <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 min-w-[200px]">
                   Explore Products
@@ -238,376 +315,413 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* 2. About Us Section */}
+        <section className="py-24 bg-background overflow-hidden">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <Badge className="bg-accent/10 text-accent mb-4 px-4 py-1">Vedic Astrologer & Mentor</Badge>
+                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+                  Acharya <span className="text-accent italic">Om Shah</span>
+                </h2>
+                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    <span className="font-semibold text-foreground">Acharya Om Shah</span> is a <span className="text-accent font-medium">Gold Medalist Astrologer</span> from K.N. Rao Institute of Astrology, bridging the gap between ancient wisdom and modern science.
+                  </p>
+                  <p>
+                    With over 25 years of experience, he specializes in Financial Astrology, Medical Astrology, and Astro-Vaastu, providing scientific remedies for holistic prosperity.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Link href="/about">
+                    <Button variant="outline" size="lg">
+                      Learn More About Us
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden border-8 border-muted shadow-2xl relative">
+                  <img src="/gold medal.jpeg" alt="Acharya Om Shah" className="w-full h-full object-cover" />
+                  <div className="absolute bottom-6 right-6 bg-background/90 backdrop-blur-sm p-4 shadow-lg">
+                    <p className="font-serif text-3xl font-bold text-accent">1st</p>
+                    <p className="text-xs uppercase tracking-widest font-semibold">Gold Medalist</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Smooth Transition Section */}
-        <div className="h-32 bg-gradient-to-b from-blue-950/85 via-blue-900/40 to-background"></div>
-
-        {/* Features Section */}
-        <section className="py-16 lg:py-24 bg-background relative">
+        {/* 3. Book Consultation Section */}
+        <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-              {/* Card 1 - Purple/Lavender */}
-              <div className="group perspective-1000">
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-sky-100 to-blue-200 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 overflow-hidden">
-                  <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/40 flex items-center justify-center">
-                    <Shield className="h-6 w-6 text-blue-700" />
-                  </div>
-                  <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-blue-400/20"></div>
-                  <div className="absolute top-1/2 right-8 w-16 h-16">
-                    <div className="w-full h-full rounded-full border-4 border-blue-400/30"></div>
-                  </div>
-                  <div className="relative z-10 mt-12">
-                    <h3 className="font-serif text-2xl font-bold mb-3 text-blue-900">100%<br /><span className="italic">Authentic</span></h3>
-                    <p className="text-blue-800 text-sm leading-relaxed">All products certified and verified by expert astrologers</p>
-                  </div>
-                </div>
-              </div>
-              {/* Card 2 - Deep Purple/Blue */}
-              <div className="group perspective-1000">
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 overflow-hidden">
-                  <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/30 flex items-center justify-center">
-                    <Award className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="absolute top-8 left-6 w-20 h-20">
-                    <div className="absolute inset-0 rounded-full bg-white/10"></div>
-                    <div className="absolute inset-2 rounded-full bg-white/10"></div>
-                    <div className="absolute inset-4 rounded-full bg-white/10"></div>
-                  </div>
-                  <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-blue-900/30"></div>
-                  <div className="relative z-10 mt-12">
-                    <h3 className="font-serif text-2xl font-bold mb-3 text-white">Premium<br /><span className="italic">Quality</span></h3>
-                    <p className="text-white/90 text-sm leading-relaxed">Sourced from trusted suppliers with quality assurance</p>
-                  </div>
-                </div>
-              </div>
-              {/* Card 3 - Yellow/Orange */}
-              <div className="group perspective-1000">
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-amber-200 to-yellow-300 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 overflow-hidden">
-                  <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/40 flex items-center justify-center">
-                    <TrendingUp className="h-6 w-6 text-amber-700" />
-                  </div>
-                  <div className="absolute top-12 left-8">
-                    <div className="grid grid-cols-3 gap-1">
-                      {[...Array(9)].map((_, i) => <div key={i} className="w-2 h-2 rounded-full bg-amber-400/40"></div>)}
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-bold mb-4">Book Your Consultation</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Get personalized astrology guidance from our expert astrologers</p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="lg:col-span-1">
+                <Card className="h-full">
+                  <CardContent className="p-6 text-center space-y-6">
+                    <Avatar className="w-32 h-32 mx-auto">
+                      <AvatarImage src="/file.png" />
+                      <AvatarFallback>AOS</AvatarFallback>
+                    </Avatar>
+                    <h3 className="font-serif text-2xl font-bold">Acharya Om Shah</h3>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <p>Jyotish Acharya (Gold Medal)</p>
+                      <p>M.A. Astrology & Vaastu Expert</p>
                     </div>
-                  </div>
-                  <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-3xl bg-yellow-400/30 transform rotate-45"></div>
-                  <div className="relative z-10 mt-12">
-                    <h3 className="font-serif text-2xl font-bold mb-3 text-amber-900">Proven<br /><span className="italic">Results</span></h3>
-                    <p className="text-amber-800 text-sm leading-relaxed">Thousands of satisfied customers with life transformations</p>
-                  </div>
-                </div>
+                    <div className="pt-6 border-t font-bold text-accent text-2xl">
+                      {services.find(s => s.name === consultationType)?.price || "Select Service"}
+                    </div>
+                    <img src="/payment.jpeg" alt="Payment" className="w-full rounded-lg shadow-sm" />
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="lg:col-span-2">
+                <Card>
+                  <CardContent className="p-8">
+                    <form onSubmit={handleBookingSubmit} className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label>Full Name</Label>
+                          <Input id="name" placeholder="Your Name" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label>Phone Number</Label>
+                          <Input id="phone" placeholder="Your Phone" required />
+                        </div>
+                      </div>
+
+                      <div className="space-y-4">
+                        <Label>Select Service</Label>
+                        <div className="grid grid-cols-1 gap-3">
+                          {services.map((service) => (
+                            <div
+                              key={service.id}
+                              onClick={() => setConsultationType(service.name)}
+                              className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${consultationType === service.name ? "border-accent bg-accent/5" : "border-border"
+                                }`}
+                            >
+                              <div className="flex justify-between items-center mb-1">
+                                <h4 className="font-bold">{service.name}</h4>
+                                <span className="text-accent font-bold">{service.price}</span>
+                              </div>
+                              <p className="text-xs text-muted-foreground">{service.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label>Select Date</Label>
+                          <div className="border rounded-md p-2 flex justify-center bg-background">
+                            <Calendar
+                              mode="single"
+                              selected={bookingDate}
+                              onSelect={setBookingDate}
+                              disabled={(d) => d < new Date() || d.getDay() === 0}
+                            />
+                          </div>
+                        </div>
+                        <div className="space-y-4">
+                          <Label>Select Time</Label>
+                          <div className="grid grid-cols-2 gap-2">
+                            {timeSlots.map((time) => (
+                              <Button
+                                key={time}
+                                type="button"
+                                variant={selectedTime === time ? "default" : "outline"}
+                                onClick={() => setSelectedTime(time)}
+                                className="text-xs"
+                              >
+                                {time}
+                              </Button>
+                            ))}
+                          </div>
+                          <div className="space-y-2">
+                            <Label>Additional Message</Label>
+                            <Textarea id="message" placeholder="Optional questions..." rows={3} />
+                          </div>
+                        </div>
+                      </div>
+
+                      <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
+                        Book via WhatsApp
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Categories Section */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        {/* 4. Products Section */}
+        <section className="py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
-                Explore Our Collections
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Discover authentic spiritual products carefully curated for your well-being
-              </p>
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-bold mb-4">Authentic Spiritual Products</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Sourced and certified by experts for your spiritual growth</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {categories.map((category, index) => (
                 <Link key={index} href={category.href}>
-                  <Card className="overflow-hidden hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer group">
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={category.image}
-                        alt={category.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="font-serif text-2xl font-bold text-white mb-1">{category.name}</h3>
-                        <p className="text-white/90 text-sm">{category.description}</p>
+                  <motion.div
+                    whileHover={{ y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    className="group cursor-pointer"
+                  >
+                    <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 shadow-lg">
+                      <img src={category.image} alt={category.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                      <div className="absolute bottom-4 left-4">
+                        <h3 className="text-white font-bold text-lg">{category.name}</h3>
                       </div>
                     </div>
-                  </Card>
+                  </motion.div>
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <Sparkles className="h-12 w-12 text-accent mx-auto mb-6" />
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
-              Begin Your Spiritual Journey Today
-            </h2>
-            <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto mb-8">
-              Connect with our expert astrologers and discover the perfect remedies for your life path
-            </p>
-            <Link href="/book-appointment">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                Book Your Consultation Now
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* Daily Horoscope Section */}
-        <section className="py-16 lg:py-24 bg-background">
+        {/* 5. Blogs Section */}
+        <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Zap className="h-8 w-8 text-accent" />
-                <h2 className="font-serif text-3xl md:text-4xl font-bold">Daily Horoscope</h2>
-                <Zap className="h-8 w-8 text-accent" />
+            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+              <div>
+                <h2 className="font-serif text-4xl font-bold mb-4">Spiritual Insights</h2>
+                <p className="text-muted-foreground text-lg">Knowledge and wisdom for your modern lifestyle</p>
               </div>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Discover what the stars have in store for you today
-              </p>
-            </div>
-
-            <div className="space-y-4 max-w-3xl mx-auto">
-              {isLoadingHoroscope ? (
-                <div className="text-center py-12">
-                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
-                  <p className="mt-4 text-muted-foreground">Loading today's horoscopes...</p>
-                </div>
-              ) : horoscope.length === 0 ? (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground">No horoscopes available for today. Check back later!</p>
-                </div>
-              ) : (
-                horoscope.map((item, index) => (
-                  <Card
-                    key={index}
-                    className="bg-gradient-to-br from-accent/10 to-primary/5 border-accent/20 hover-elevate active-elevate-2 transition-all duration-300"
-                  >
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className={`flex-shrink-0 w-20 h-20 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center text-white shadow-lg`}>
-                          <span className="text-4xl">{item.symbol}</span>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="font-serif text-2xl font-bold text-accent mb-2">{item.sign}</h3>
-                          <div className="h-1 w-12 bg-gradient-to-r from-accent to-primary/50 rounded-full mb-4"></div>
-                          <p className="text-foreground/80 text-sm leading-relaxed">
-                            {item.prediction}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* Daily Panchang Section */}
-        <section className="py-16 lg:py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Clock className="h-8 w-8 text-accent" />
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
-                  Today's Panchang
-                </h2>
-                <Clock className="h-8 w-8 text-accent" />
-              </div>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Daily astrological insights for {new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-              </p>
-            </div>
-
-            {isLoadingPanchang ? (
-              <div className="text-center py-12">
-                <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
-                <p className="mt-4 text-muted-foreground">Loading panchang data...</p>
-              </div>
-            ) : panchang ? (
-              <div className="max-w-4xl mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {[
-                    { label: "Tithi", value: panchang.tithi, sub: "तिथि" },
-                    { label: "Vaar", value: panchang.vaar, sub: "वार" },
-                    { label: "Nakshatra", value: panchang.nakshatr, sub: "नक्षत्र" },
-                    { label: "Yoga", value: panchang.yoga, sub: "योग" },
-                    { label: "Karan", value: panchang.karan, sub: "करण" }
-                  ].map((item, idx) => (
-                    <Card key={idx} className="bg-card border-border/50 shadow-sm hover:shadow-md transition-shadow">
-                      <CardContent className="p-4 text-center">
-                        <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">{item.label}</p>
-                        <p className="font-serif text-lg font-bold text-accent">{item.value || "—"}</p>
-                        <p className="text-[10px] text-muted-foreground mt-1">{item.sub}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground text-lg">Daily panchang not updated for today yet. Check back later!</p>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* Monthly Muhurat (Auspicious Days) Section */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Sunrise className="h-8 w-8 text-accent" />
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
-                  Auspicious Muhurat for {muhurat?.monthName || "This Month"}
-                </h2>
-                <Sunrise className="h-8 w-8 text-accent" />
-              </div>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Plan your important events with our auspicious timing guide
-              </p>
-            </div>
-
-            {isLoadingMuhurat ? (
-              <div className="text-center py-12">
-                <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
-                <p className="mt-4 text-muted-foreground">Loading muhurat data...</p>
-              </div>
-            ) : muhurat ? (
-              <div className="max-w-4xl mx-auto">
-                <Card className="bg-card border-border/50 shadow-xl overflow-hidden">
-                  <CardContent className="p-8 space-y-8">
-                    {/* Vehicle Purchase */}
-                    {muhurat.vehiclePurchase && (
-                      <div className="border-b border-border/50 pb-6 last:border-0 last:pb-0">
-                        <h3 className="font-serif text-xl font-bold text-foreground mb-3 flex items-center gap-2">
-                          <span className="bg-accent/10 p-2 rounded-lg text-accent"><Settings className="h-5 w-5" /></span>
-                          Vehicle Purchase (वाहन खरीद)
-                        </h3>
-                        <p className="text-foreground/80 leading-relaxed whitespace-pre-line font-medium pl-12">
-                          {muhurat.vehiclePurchase}
-                        </p>
-                      </div>
-                    )}
-
-                    {/* New Home */}
-                    {muhurat.newHome && (
-                      <div className="border-b border-border/50 pb-6 last:border-0 last:pb-0">
-                        <h3 className="font-serif text-xl font-bold text-foreground mb-3 flex items-center gap-2">
-                          <span className="bg-accent/10 p-2 rounded-lg text-accent"><HomeIcon className="h-5 w-5" /></span>
-                          Move to a New Home (गृह प्रवेश)
-                        </h3>
-                        <p className="text-foreground/80 leading-relaxed whitespace-pre-line font-medium pl-12">
-                          {muhurat.newHome}
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Auspicious Days */}
-                    {muhurat.auspiciousDays && (
-                      <div className="border-b border-border/50 pb-6 last:border-0 last:pb-0">
-                        <h3 className="font-serif text-xl font-bold text-foreground mb-3 flex items-center gap-2">
-                          <span className="bg-accent/10 p-2 rounded-lg text-accent"><CheckCircle2 className="h-5 w-5" /></span>
-                          Auspicious days (सामान्य शुभ दिन)
-                        </h3>
-                        <p className="text-foreground/80 leading-relaxed whitespace-pre-line font-medium pl-12">
-                          {muhurat.auspiciousDays}
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Note */}
-                    {muhurat.note && (
-                      <div className="bg-muted/50 rounded-lg p-4 text-sm text-muted-foreground italic border-l-4 border-accent">
-                        <strong>Note:</strong> {muhurat.note}
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground text-lg">No muhurat data available for this month. Check back later!</p>
-              </div>
-            )}
-          </div>
-        </section>
-        {/* Trust Section */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
-                Why Choose Divine Astrology?
-              </h2>
-              <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto">
-                We are committed to providing authentic products and genuine guidance
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                  <p className="text-primary-foreground/90">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-16 lg:py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
-                What Our Customers Say
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Real experiences from people who transformed their lives
-              </p>
-            </div>
-
-            <TestimonialsSlider />
-          </div>
-        </section>
-
-        {/* Blog Section */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
-                From Our Blog
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Insights on astrology, gemstones, and spiritual wellness
-              </p>
-            </div>
-
-            <BlogSection limit={3} />
-
-            <div className="text-center mt-12">
               <Link href="/blog">
-                <Button size="lg" variant="outline">
-                  Read More Articles
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Button variant="outline" size="lg">View All Blogs</Button>
+              </Link>
+            </div>
+            <BlogSection limit={3} />
+          </div>
+        </section>
+
+        {/* 6. Videos Section */}
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-bold mb-4">Wisdom in Motion</h2>
+              <p className="text-muted-foreground text-lg">Watch guideances and insights from Acharya Om Shah</p>
+            </div>
+
+            {isLoadingVideos ? (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-pulse">
+                {[1, 2, 3].map(i => <div key={i} className="aspect-video bg-muted rounded-xl" />)}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {videos?.slice(0, 3).map((video: any) => (
+                  <motion.div key={video.id} whileHover={{ scale: 1.02 }} className="group">
+                    <a href={video.youtubeUrl} target="_blank" rel="noopener noreferrer">
+                      <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl mb-4">
+                        <img src={video.thumbnailUrl} alt={video.title} className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
+                          <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-white shadow-2xl">
+                            <Play className="fill-current w-6 h-6 ml-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <h3 className="font-serif text-xl font-bold line-clamp-2">{video.title}</h3>
+                    </a>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+            <div className="text-center mt-12">
+              <Link href="/videos">
+                <Button variant="outline" size="lg">See More Videos</Button>
               </Link>
             </div>
           </div>
         </section>
 
+        {/* 7. Horoscope, Panchang, Muhurat */}
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Daily Horoscope */}
+              <div>
+                <div className="flex items-center gap-3 mb-8">
+                  <Zap className="text-accent h-6 w-6" />
+                  <h2 className="font-serif text-3xl font-bold">Daily Horoscope</h2>
+                </div>
+                <div className="space-y-4 max-h-[600px] overflow-y-auto pr-4 custom-scrollbar">
+                  {horoscope.map((item, index) => (
+                    <Card key={index} className="transition-all hover:border-accent">
+                      <CardContent className="p-4 flex gap-4 items-center">
+                        <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-2xl shadow-md`}>
+                          {item.symbol}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-bold text-accent">{item.sign}</h4>
+                          <p className="text-xs text-muted-foreground line-clamp-2">{item.prediction}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              {/* Panchang & Muhurat */}
+              <div className="space-y-12">
+                <div>
+                  <div className="flex items-center gap-3 mb-8">
+                    <Clock className="text-accent h-6 w-6" />
+                    <h2 className="font-serif text-3xl font-bold">Today's Panchang</h2>
+                  </div>
+                  {panchang ? (
+                    <div className="grid grid-cols-2 gap-4">
+                      {[{ l: "Tithi", v: panchang.tithi }, { l: "Vaar", v: panchang.vaar }, { l: "Nakshatra", v: panchang.nakshatr }, { l: "Yoga", v: panchang.yoga }].map((x, i) => (
+                        <Card key={i} className="bg-background">
+                          <CardContent className="p-4 text-center">
+                            <p className="text-[10px] uppercase tracking-tighter text-muted-foreground mb-1">{x.l}</p>
+                            <p className="font-serif text-lg font-bold text-accent">{x.v || "—"}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  ) : <p className="text-muted-foreground">Panchang not available</p>}
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-3 mb-8">
+                    <Sunrise className="text-accent h-6 w-6" />
+                    <h2 className="font-serif text-3xl font-bold">Auspicious Muhurat</h2>
+                  </div>
+                  {muhurat ? (
+                    <Card className="bg-background">
+                      <CardContent className="p-6 space-y-4">
+                        <div className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-accent mt-1" />
+                          <div>
+                            <p className="text-xs text-muted-foreground uppercase font-bold">General Auspicious Days</p>
+                            <p className="text-sm font-medium">{muhurat.auspiciousDays}</p>
+                          </div>
+                        </div>
+                        {muhurat.newHome && (
+                          <div className="flex items-start gap-3">
+                            <HomeIcon className="h-5 w-5 text-accent mt-1" />
+                            <div>
+                              <p className="text-xs text-muted-foreground uppercase font-bold">Griha Pravesh</p>
+                              <p className="text-sm font-medium">{muhurat.newHome}</p>
+                            </div>
+                          </div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  ) : <p className="text-muted-foreground">Muhurat not available</p>}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. Contact Us Section */}
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-6xl mx-auto shadow-2xl rounded-3xl overflow-hidden bg-muted/10 border border-muted flex flex-col lg:flex-row">
+              <div className="lg:w-1/2 p-12 bg-primary text-primary-foreground space-y-8">
+                <div>
+                  <h2 className="font-serif text-4xl font-bold mb-4">Get in Touch</h2>
+                  <p className="text-primary-foreground/80 leading-relaxed">
+                    We're here to answer your questions and guide you on your spiritual journey. Reach out to us through any channel.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs opacity-70">Phone</p>
+                      <p className="font-bold">+91 85275 30910</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs opacity-70">Email</p>
+                      <p className="font-bold">acharyaomshah@gmail.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs opacity-70">Address</p>
+                      <p className="font-bold">Greater Noida, India</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-8">
+                  <a href="https://wa.me/918527530910" target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white">
+                      <SiWhatsapp className="w-5 h-5 mr-3" />
+                      Chat on WhatsApp
+                    </Button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="lg:w-1/2 p-12 bg-background">
+                <form className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="c-name">Full Name</Label>
+                    <Input id="c-name" placeholder="Your Name" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="c-email">Email Address</Label>
+                    <Input id="c-email" type="email" placeholder="Your Email" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="c-message">How can we help you?</Label>
+                    <Textarea id="c-message" placeholder="Your message here..." rows={6} />
+                  </div>
+                  <Button className="w-full" size="lg">Send Message</Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="font-serif text-3xl md:text-3xl font-bold mb-4">
                 Frequently Asked Questions
               </h2>
               <p className="text-muted-foreground text-lg">

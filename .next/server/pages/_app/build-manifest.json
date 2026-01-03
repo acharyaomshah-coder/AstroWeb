@@ -6,17 +6,18 @@
   "rootMainFiles": [],
   "pages": {
     "/_app": [
-      "static/chunks/10824e96199ca64c.js",
-      "static/chunks/ff9623c616a8a307.js",
-      "static/chunks/309573dc8c2b36ff.js",
-      "static/chunks/59f04188ce5c0e61.js",
-      "static/chunks/c5f0d683055ef699.js",
-      "static/chunks/b83e9443234e5d4a.js",
-      "static/chunks/cf7c75daec783f25.js",
-      "static/chunks/d14fe4b17e0a9b9d.js",
-      "static/chunks/72e43c04ea428d58.js",
-      "static/chunks/6fd285e0d360e211.css",
-      "static/chunks/turbopack-324bb8d297272513.js"
+      "static/chunks/177643a6d67a4839.js",
+      "static/chunks/e18d956853ed3fe5.js",
+      "static/chunks/89c51e8cf4498580.js",
+      "static/chunks/2b99c9a715881332.js",
+      "static/chunks/ee6b1c16e5f20c26.js",
+      "static/chunks/a849030ec8f2cc24.js",
+      "static/chunks/70132301d30bf16e.js",
+      "static/chunks/27d5cdc70d9ad62b.js",
+      "static/chunks/01fe84100697b096.js",
+      "static/chunks/2eed04ea2eaad118.js",
+      "static/chunks/f3b449133ebe5836.css",
+      "static/chunks/turbopack-ee03730a0198df22.js"
     ]
   },
   "ampFirstPages": []
