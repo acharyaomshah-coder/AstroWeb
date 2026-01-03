@@ -158,8 +158,16 @@ export default function BookAppointment() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const form = e.currentTarget;
+
+    if (!consultationType) {
+      toast({
+        title: "Selection Required",
+        description: "Please select a consultation service first.",
+        variant: "destructive"
+      });
+      return;
+    }
     const name = (form.querySelector("#name") as HTMLInputElement)?.value;
     const phone = (form.querySelector("#phone") as HTMLInputElement)?.value; // Fixed: using phone instead of email for whatsapp if needed, but message goes to admin phone.
     const birthDetails = (form.querySelector("#birth-details") as HTMLInputElement)?.value;
@@ -389,7 +397,6 @@ export default function BookAppointment() {
 
                   <div className="pt-4 border-t">
                     <div className="text-center mb-4">
-                      <p className="text-sm text-muted-foreground mb-2">Consultation Fee</p>
                       <p className="text-xl font-bold text-accent">
                         {services.find(s => s.name === consultationType)?.price || "Select Service"}
                       </p>

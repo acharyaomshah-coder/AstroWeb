@@ -211,6 +211,16 @@ export default function Home() {
   const handleBookingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
+
+    if (!consultationType) {
+      toast({
+        title: "Selection Required",
+        description: "Please select a consultation service first.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     const name = (form.querySelector("#name") as HTMLInputElement)?.value;
     const phone = (form.querySelector("#phone") as HTMLInputElement)?.value;
     const birthDetails = (form.querySelector("#birth-details") as HTMLInputElement)?.value;
