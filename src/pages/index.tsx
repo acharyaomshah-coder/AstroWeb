@@ -213,12 +213,15 @@ export default function Home() {
     const form = e.currentTarget;
     const name = (form.querySelector("#name") as HTMLInputElement)?.value;
     const phone = (form.querySelector("#phone") as HTMLInputElement)?.value;
+    const birthDetails = (form.querySelector("#birth-details") as HTMLInputElement)?.value;
+    const birthPlace = (form.querySelector("#birth-place") as HTMLInputElement)?.value;
     const message = (form.querySelector("#message") as HTMLTextAreaElement)?.value;
 
-    const whatsappMessage = `Hello Acharya Om shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
+    const whatsappMessage = `Hello Acharya Om shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Birth Details:* ${birthDetails}%0A*Birth Place:* ${birthPlace}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
     const adminPhoneNumber = "918527530910";
     window.open(`https://wa.me/${adminPhoneNumber}?text=${whatsappMessage}`, "_blank");
   };
+
 
   const features = [
     {
@@ -381,11 +384,11 @@ export default function Home() {
 
                   <p>
                     He also holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and Diploma in <span className="text-foreground font-medium">vaastu Shastra</span> and <span className="text-foreground font-medium">Medical Astrology</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+                    Acharya shah is an ex-microbiologist , M.Sc (Microbiology) and Pre-PhD (Molecular Medicine) <br />
+                    <br></br> With Over 6 years of experience in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, vaastu, and karmic remedies.
                   </p>
 
-                  <p className="bg-muted/30 p-6 rounded-xl border border-muted shadow-sm text-base">
-                    Acharya shah is an ex-microbiologist, <span className="text-foreground font-bold">M.Sc (Microbiology)</span>, and <span className="text-foreground font-bold">Pre-PhD (Molecular Medicine)</span>. With over 6 years of experience in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, vaastu, and karmic remedies.
-                  </p>
+
                 </div>
               </motion.div>
             </div>
@@ -463,13 +466,13 @@ export default function Home() {
                       </p>
                       <p className="flex items-start gap-2">
                         <Badge variant="outline" className="h-4 px-1 text-[9px] uppercase">Academic</Badge>
-                        <span>M.A.(Astrology), M.Sc. (Microbiology), Pre-PhD (Molecular Medicine)</span>
+                        <span>M.A.(Astrology) <br></br> M.Sc. (Microbiology), Pre-PhD (Molecular Medicine)</span>
                       </p>
                     </div>
 
                     <div className="pt-4 border-t">
                       <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wider">Consultation Fee</p>
-                      <div className="font-bold text-accent text-3xl">
+                      <div className="font-bold text-accent text-2xl">
                         {services.find(s => s.name === consultationType)?.price || "Select Service"}
                       </div>
                     </div>
@@ -489,6 +492,14 @@ export default function Home() {
                         <div className="space-y-2">
                           <Label>Phone Number</Label>
                           <Input id="phone" placeholder="Your Phone" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label>Date & Time of Birth</Label>
+                          <Input id="birth-details" placeholder="15 Aug 1990, 10:30 AM" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label>Place of Birth</Label>
+                          <Input id="birth-place" placeholder="City, State, Country" required />
                         </div>
                       </div>
 

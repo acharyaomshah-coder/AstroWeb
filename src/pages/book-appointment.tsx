@@ -162,10 +162,12 @@ export default function BookAppointment() {
     const form = e.currentTarget;
     const name = (form.querySelector("#name") as HTMLInputElement)?.value;
     const phone = (form.querySelector("#phone") as HTMLInputElement)?.value; // Fixed: using phone instead of email for whatsapp if needed, but message goes to admin phone.
+    const birthDetails = (form.querySelector("#birth-details") as HTMLInputElement)?.value;
+    const birthPlace = (form.querySelector("#birth-place") as HTMLInputElement)?.value;
     const message = (form.querySelector("#message") as HTMLTextAreaElement)?.value;
 
     // Construct WhatsApp message
-    const whatsappMessage = `Hello Aacharya Om Shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Preferred Date:* ${date?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
+    const whatsappMessage = `Hello Acharya Om shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Birth Details:* ${birthDetails}%0A*Birth Place:* ${birthPlace}%0A*Preferred Date:* ${date?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
 
     const adminPhoneNumber = "918527530910";
     const whatsappUrl = `https://wa.me/${adminPhoneNumber}?text=${whatsappMessage}`;
@@ -418,8 +420,12 @@ export default function BookAppointment() {
                         <Input id="phone" type="tel" required />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="dob">Date of Birth *</Label>
-                        <Input id="dob" type="date" required />
+                        <Label htmlFor="birth-details">Date and Time of Birth *</Label>
+                        <Input id="birth-details" placeholder="15 Aug 1990, 10:30 AM" required />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="birth-place">Place of Birth *</Label>
+                        <Input id="birth-place" placeholder="City, State, Country" required />
                       </div>
                     </div>
 
