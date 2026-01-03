@@ -182,7 +182,7 @@ export default function Home() {
     }
   ];
 
-  const timeSlots = ["10:00 AM", "11:00 AM", "12:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM"];
+  const timeSlots = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"];
 
   const handleBookingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -328,6 +328,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                className="relative flex justify-center"
+              >
+                <div className="max-w-md w-full aspect-[4/5] rounded-2xl overflow-hidden border-8 border-muted shadow-2xl relative">
+                  <img src="/WhatsApp Image 2026-01-03 at 16.49.43.jpeg" alt="Acharya Om Shah" className="w-full h-full object-cover" />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
               >
                 <Badge className="bg-accent/10 text-accent mb-4 px-4 py-1">Vedic Astrologer & Mentor</Badge>
                 <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
@@ -350,21 +361,6 @@ export default function Home() {
                   </Link>
                 </div>
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative flex justify-center"
-              >
-                <div className="max-w-md w-full aspect-[4/5] rounded-2xl overflow-hidden border-8 border-muted shadow-2xl relative">
-                  <img src="/gold medal.jpeg" alt="Acharya Om Shah" className="w-full h-full object-cover" />
-                  <div className="absolute bottom-6 right-6 bg-background/90 backdrop-blur-sm p-4 shadow-lg">
-                    <p className="font-serif text-3xl font-bold text-accent">1st</p>
-                    <p className="text-xs uppercase tracking-widest font-semibold">Gold Medalist</p>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>
@@ -380,20 +376,40 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="lg:col-span-1">
                 <Card className="h-full">
-                  <CardContent className="p-6 text-center space-y-6">
-                    <Avatar className="w-32 h-32 mx-auto">
-                      <AvatarImage src="/file.png" />
-                      <AvatarFallback>AOS</AvatarFallback>
-                    </Avatar>
-                    <h3 className="font-serif text-2xl font-bold">Acharya Om Shah</h3>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <p>Jyotish Acharya (Gold Medal)</p>
-                      <p>M.A. Astrology & Vaastu Expert</p>
+                  <CardContent className="p-6 text-center space-y-4">
+                    <div className="relative mb-2">
+                      <Avatar className="w-32 h-32 mx-auto border-4 border-accent/20">
+                        <AvatarImage src="/WhatsApp Image 2026-01-03 at 16.49.43.jpeg" className="object-cover" />
+                        <AvatarFallback>AOS</AvatarFallback>
+                      </Avatar>
                     </div>
-                    <div className="pt-6 border-t font-bold text-accent text-2xl">
-                      {services.find(s => s.name === consultationType)?.price || "Select Service"}
+                    <div>
+                      <h3 className="font-serif text-2xl font-bold">Acharya Om Shah</h3>
+                      <p className="text-accent font-medium text-sm">Astro & Vaastu Consultant</p>
+                      <p className="text-muted-foreground text-xs italic">(Karmic Consultant)</p>
                     </div>
-                    <img src="/payment.jpeg" alt="Payment" className="w-full rounded-lg shadow-sm" />
+
+                    <div className="space-y-3 text-[11px] text-muted-foreground border-t pt-4 text-left">
+                      <p className="flex items-start gap-2">
+                        <Badge variant="outline" className="h-4 px-1 text-[9px] uppercase">Acharya</Badge>
+                        <span>Jyotish, BVB-Delhi (Gold Medal)</span>
+                      </p>
+                      <p className="flex items-start gap-2">
+                        <Badge variant="outline" className="h-4 px-1 text-[9px] uppercase">Diploma</Badge>
+                        <span>Medical Astrology, Vaastu Shastra & Palmistry</span>
+                      </p>
+                      <p className="flex items-start gap-2">
+                        <Badge variant="outline" className="h-4 px-1 text-[9px] uppercase">Academic</Badge>
+                        <span>M.A. (Astrology), M.Sc. (Microbiology), Pre-PhD (Molecular Medicine)</span>
+                      </p>
+                    </div>
+
+                    <div className="pt-4 border-t">
+                      <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wider">Consultation Fee</p>
+                      <div className="font-bold text-accent text-3xl">
+                        {services.find(s => s.name === consultationType)?.price || "Select Service"}
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -448,17 +464,24 @@ export default function Home() {
                         <div className="space-y-4">
                           <Label>Select Time</Label>
                           <div className="grid grid-cols-2 gap-2">
-                            {timeSlots.map((time) => (
-                              <Button
-                                key={time}
-                                type="button"
-                                variant={selectedTime === time ? "default" : "outline"}
-                                onClick={() => setSelectedTime(time)}
-                                className="text-xs"
-                              >
-                                {time}
-                              </Button>
-                            ))}
+                            {timeSlots.map((time) => {
+                              const isUnavailable = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM"].includes(time);
+                              return (
+                                <Button
+                                  key={time}
+                                  type="button"
+                                  variant={selectedTime === time ? "default" : "outline"}
+                                  onClick={() => !isUnavailable && setSelectedTime(time)}
+                                  disabled={isUnavailable}
+                                  className={`text-xs relative ${isUnavailable ? "opacity-60 bg-muted cursor-not-allowed border-dashed" : ""}`}
+                                >
+                                  {time}
+                                  {isUnavailable && (
+                                    <span className="absolute -top-2 -right-1 bg-destructive text-[8px] text-white px-2 rounded-full uppercase">Unavailable</span>
+                                  )}
+                                </Button>
+                              );
+                            })}
                           </div>
                           <div className="space-y-2">
                             <Label>Additional Message</Label>

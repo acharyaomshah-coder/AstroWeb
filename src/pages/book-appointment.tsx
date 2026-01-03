@@ -84,9 +84,8 @@ export default function BookAppointment() {
   }, [router.query.service]);
 
   const timeSlots = [
-    "10:00 AM", "11:00 AM", "12:00 PM",
-    "02:00 PM", "03:00 PM", "04:00 PM",
-    "05:00 PM", "06:00 PM", "07:00 PM"
+    "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM",
+    "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"
   ];
 
   const { data: appointments = [], isLoading: appointmentsLoading, refetch } = useQuery<Appointment[]>({
@@ -379,13 +378,6 @@ export default function BookAppointment() {
                         {services.find(s => s.name === consultationType)?.price || "Select Service"}
                       </p>
                     </div>
-                    <div className="mt-4 flex justify-center">
-                      <img
-                        src="/payment.jpeg"
-                        alt="Payment Methods"
-                        className="w-full h-auto rounded-md shadow-sm"
-                      />
-                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -469,17 +461,24 @@ export default function BookAppointment() {
                     <div className="space-y-2">
                       <Label>Select Time Slot *</Label>
                       <div className="grid grid-cols-3 gap-2">
-                        {timeSlots.map((time) => (
-                          <Button
-                            key={time}
-                            type="button"
-                            variant={selectedTime === time ? "default" : "outline"}
-                            onClick={() => setSelectedTime(time)}
-                            className="w-full"
-                          >
-                            {time}
-                          </Button>
-                        ))}
+                        {timeSlots.map((time) => {
+                          const isUnavailable = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM"].includes(time);
+                          return (
+                            <Button
+                              key={time}
+                              type="button"
+                              variant={selectedTime === time ? "default" : "outline"}
+                              onClick={() => !isUnavailable && setSelectedTime(time)}
+                              disabled={isUnavailable}
+                              className={`w-full relative ${isUnavailable ? "opacity-60 bg-muted cursor-not-allowed border-dashed" : ""}`}
+                            >
+                              {time}
+                              {isUnavailable && (
+                                <span className="absolute -top-2 -right-1 bg-destructive text-[8px] text-white px-2 rounded-full uppercase">Unavailable</span>
+                              )}
+                            </Button>
+                          );
+                        })}
                       </div>
                     </div>
 
