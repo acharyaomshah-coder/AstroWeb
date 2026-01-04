@@ -152,6 +152,32 @@ async function handler(req, res) {
             });
         }
     }
+    if (req.method === "DELETE") {
+        try {
+            const authHeader = req.headers.authorization;
+            if (!authHeader) {
+                return res.status(401).json({
+                    error: "Unauthorized"
+                });
+            }
+            const { date, sign } = req.query;
+            if (!date || !sign) {
+                return res.status(400).json({
+                    error: "Date and sign are required"
+                });
+            }
+            const { error } = await __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$lib$2f$supabase$2e$ts__$5b$api$5d$__$28$ecmascript$29$__["supabase"].from("daily_horoscopes").delete().eq("date", date).eq("sign", sign.toString().toLowerCase());
+            if (error) throw error;
+            return res.status(200).json({
+                message: "Horoscope deleted successfully"
+            });
+        } catch (error) {
+            console.error("Error deleting horoscope:", error);
+            return res.status(500).json({
+                error: "Failed to delete horoscope"
+            });
+        }
+    }
     return res.status(405).json({
         error: "Method not allowed"
     });

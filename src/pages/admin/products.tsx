@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Package, Loader2, Plus, Trash2, Edit, X } from "lucide-react";
+import { ArrowLeft, Package, Loader2, Plus, Trash2, Edit, X, Upload, Image as ImageIcon } from "lucide-react";
 
 interface Product {
     id: string;
@@ -37,6 +37,7 @@ export default function AdminProducts() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [deletingId, setDeletingId] = useState<string | null>(null);
+    const [isUploading, setIsUploading] = useState(false);
 
     // Form state
     const [name, setName] = useState("");
@@ -87,6 +88,42 @@ export default function AdminProducts() {
         setCertified(true);
         setInStock(true);
         setEditingId(null);
+    };
+
+    const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        // Check file size (limit to 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+            alert("File size too large. Please upload an image smaller than 5MB.");
+            return;
+        }
+
+        try {
+            setIsUploading(true);
+            const fileExt = file.name.split('.').pop();
+            const fileName = `${Math.random().toString(36).substring(2)}_${Date.now()}.${fileExt}`;
+            const filePath = `products/${fileName}`;
+
+            const { error: uploadError } = await supabase.storage
+                .from('images')
+                .upload(filePath, file);
+
+            if (uploadError) throw uploadError;
+
+            const { data: { publicUrl } } = supabase.storage
+                .from('images')
+                .getPublicUrl(filePath);
+
+            setImagesInput(prev => prev ? `${prev}\n${publicUrl}` : publicUrl);
+            alert("Image uploaded successfully and added to the list!");
+        } catch (error: any) {
+            console.error('Error uploading image:', error);
+            alert(`Error uploading image: ${error.message}. Make sure you have an 'images' bucket in Supabase Storage with public access.`);
+        } finally {
+            setIsUploading(false);
+        }
     };
 
     const handleEdit = (product: Product) => {
@@ -341,7 +378,32 @@ export default function AdminProducts() {
                                     </div>
 
                                     <div>
-                                        <Label htmlFor="images">Image URLs (one per line) *</Label>
+                                        <div className="flex items-center justify-between mb-2">
+                                            <Label htmlFor="images">Image URLs (one per line) *</Label>
+                                            <div className="relative">
+                                                <Button
+                                                    type="button"
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className="h-8"
+                                                    disabled={isUploading}
+                                                >
+                                                    {isUploading ? (
+                                                        <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                                                    ) : (
+                                                        <Upload className="h-4 w-4 mr-2" />
+                                                    )}
+                                                    Upload Photo
+                                                </Button>
+                                                <Input
+                                                    type="file"
+                                                    accept="image/*"
+                                                    onChange={handleImageUpload}
+                                                    className="absolute inset-0 opacity-0 cursor-pointer disabled:cursor-not-allowed"
+                                                    disabled={isUploading}
+                                                />
+                                            </div>
+                                        </div>
                                         <Textarea
                                             id="images"
                                             value={imagesInput}
@@ -350,6 +412,9 @@ export default function AdminProducts() {
                                             rows={3}
                                             required
                                         />
+                                        <p className="text-[10px] text-muted-foreground mt-1">
+                                            You can add multiple URLs (one per line) or use the upload button to add local photos.
+                                        </p>
                                     </div>
 
                                     <div>

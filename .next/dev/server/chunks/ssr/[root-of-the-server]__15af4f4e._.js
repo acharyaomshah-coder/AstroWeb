@@ -282,7 +282,7 @@ const BLOG_CATEGORIES = [
     "Astrology",
     "Gemstones",
     "Spirituality",
-    "Wellness"
+    "Vaastu"
 ];
 function AdminBlogs() {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();

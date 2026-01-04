@@ -53,19 +53,33 @@ export default function Home() {
         if (response.ok) {
           const data = await response.json();
 
-          // Transform API data to match component format
-          const formattedHoroscopes = data.map((item: any) => ({
-            sign: item.sign.charAt(0).toUpperCase() + item.sign.slice(1), // Capitalize
-            prediction: item.love || "Check back later for your daily prediction.",
-            symbol: zodiacMeta[item.sign.toLowerCase()]?.symbol || "⭐",
-            color: zodiacMeta[item.sign.toLowerCase()]?.color || "from-purple-500 to-pink-500",
-            image: zodiacMeta[item.sign.toLowerCase()]?.image || ""
-          }));
+          // Define the serial order
+          const signOrder = [
+            "aries", "taurus", "gemini", "cancer", "leo", "virgo",
+            "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"
+          ];
+
+          // Create a map of existing data
+          const dataMap = new Map();
+          data.forEach((item: any) => dataMap.set(item.sign.toLowerCase(), item));
+
+          // Generate all 12 signs in order
+          const formattedHoroscopes = signOrder.map(signKey => {
+            const item = dataMap.get(signKey);
+            return {
+              sign: signKey.charAt(0).toUpperCase() + signKey.slice(1),
+              prediction: item?.love || "Discover what the stars have in store for " + signKey + " today. Check back later for your update.",
+              symbol: zodiacMeta[signKey]?.symbol || "⭐",
+              color: zodiacMeta[signKey]?.color || "from-blue-900 to-blue-800",
+              image: zodiacMeta[signKey]?.image || ""
+            };
+          });
 
           setHoroscope(formattedHoroscopes);
         } else {
-          // Fallback to default message if no data
-          setHoroscope(Object.keys(zodiacMeta).map(sign => ({
+          // Fallback to default message if no data (already ordered by Object.keys if defined in order)
+          const signOrder = ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"];
+          setHoroscope(signOrder.map(sign => ({
             sign: sign.charAt(0).toUpperCase() + sign.slice(1),
             prediction: "Check back later for your daily prediction.",
             symbol: zodiacMeta[sign].symbol,
@@ -685,30 +699,43 @@ export default function Home() {
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Discover what the stars have in store for you today</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-5 max-w-6xl mx-auto">
               {horoscope.map((item, index) => (
-                <Card key={index} className="transition-all hover:border-accent hover:shadow-lg group">
-                  <CardContent className="p-6">
-                    <div className="flex flex-col items-center text-center space-y-4">
-                      <div className="relative w-24 h-24 mb-4">
-                        <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${item.color} blur-md opacity-40 animate-pulse`}></div>
-                        {item.image ? (
-                          <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-accent/20 shadow-xl group-hover:scale-110 transition-transform duration-500 bg-white">
-                            <img src={item.image} alt={item.sign} className="w-full h-full object-cover" />
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                >
+                  <Card className="bg-background/50 backdrop-blur-sm border-blue-900/10 hover:border-accent/40 transition-all hover:shadow-xl group overflow-hidden">
+                    <CardContent className="p-0">
+                      <div className="flex items-center gap-6 p-4">
+                        {/* Left Side: Circular Image and Name */}
+                        <div className="flex flex-col items-center flex-shrink-0 w-24">
+                          <div className="relative w-20 h-20 mb-2">
+                            <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${item.color} blur-sm opacity-20`}></div>
+                            <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-accent/20 shadow-lg bg-white">
+                              <img
+                                src={item.image}
+                                alt={item.sign}
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                              />
+                            </div>
                           </div>
-                        ) : (
-                          <div className={`relative w-24 h-24 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-4xl shadow-xl transform transition-transform group-hover:scale-110`}>
-                            {item.symbol}
-                          </div>
-                        )}
+                          <span className="text-sm font-bold text-accent uppercase tracking-tighter">{item.sign}</span>
+                        </div>
+
+                        {/* Right Side: Content */}
+                        <div className="flex-1 min-h-[80px] flex items-center">
+                          <p className="text-sm text-foreground/80 leading-relaxed line-clamp-3">
+                            {item.prediction}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-bold text-accent text-xl mb-2">{item.sign}</h4>
-                        <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">{item.prediction}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>

@@ -13,6 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Badge } from "@/components/ui/badge";
 
 export function Navigation() {
   const router = useRouter();
@@ -30,6 +31,45 @@ export function Navigation() {
     { name: "Rudrakshas", href: "/products/rudrakshas", description: "Authentic Rudraksha beads" },
     { name: "Vaastu Products", href: "/products/vaastu", description: "Energy balancing vaastu tools" },
     { name: "Others", href: "/products/others", description: "Other spiritual items" },
+  ];
+
+  const consultationServices = [
+    {
+      title: "Horoscope Analysis",
+      price: "₹3,000",
+      description: "Comprehensive birth chart analysis for insights into personality, health, marriage, and career.",
+      href: "/book-appointment?service=horoscope-analysis",
+    },
+    {
+      title: "Varshaphala (Annual Forecast)",
+      price: "₹6,000",
+      description: "Detailed one-year astrological guidance using Janma and Varsha Kundali for yearly trends.",
+      href: "/book-appointment?service=varshaphala",
+    },
+    {
+      title: "Muhurta Selection",
+      price: "₹6,000",
+      description: "Auspicious moments for significant life events including marriage, travel, and business.",
+      href: "/book-appointment?service=muhurta-selection",
+    },
+    {
+      title: "Residential Vaastu Analysis",
+      price: "₹20/sq.ft",
+      description: "Detailed home Vaastu report with remedies to optimize energy flow for peace.",
+      href: "/book-appointment?service=residential-Vaastu",
+    },
+    {
+      title: "Commercial Vaastu Analysis",
+      price: "₹20/sq.ft",
+      description: "Specialized assessment for offices and factories to identify growth-oriented remedies.",
+      href: "/book-appointment?service=commercial-Vaastu",
+    },
+    {
+      title: "Astrological (Karmic) Remedial",
+      price: "₹20,000",
+      description: "Vedic remedies including mantra, hawan, panch tatwa treatment and yantra therapy.",
+      href: "/book-appointment?service=karmic-remedial",
+    },
   ];
 
   return (
@@ -51,82 +91,32 @@ export function Navigation() {
               </Button>
             </Link>
 
-            <div className="group relative">
-              <Button variant="ghost" size="sm" className="text-sm font-medium" data-testid="button-consultation-menu">
-                Book a Consultation Now
-              </Button>
-
-              <div className="absolute left-0 mt-0 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="p-2 space-y-1">
-                  <div className="group/item relative">
-                    <Link href="/book-appointment?service=horoscope-analysis">
-                      <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-horoscope">
-                        <span>Horoscope Analysis</span>
-                        <span className="text-xs">›</span>
-                      </div>
-                    </Link>
-                    <div className="absolute left-full top-0 ml-1 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
-                      <div className="p-2 space-y-1">
-                        <Link href="/book-appointment?service=horoscope-analysis">
-                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">In-depth Analysis</div>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-accent/10 data-[state=open]:bg-accent/10" data-testid="button-consultation-menu">
+                    Book a Consultation Now
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[700px] gap-3 p-6 md:grid-cols-2">
+                      {consultationServices.map((service) => (
+                        <Link key={service.href} href={service.href}>
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 active-elevate-2">
+                            <div className="flex justify-between items-center mb-1">
+                              <span className="text-sm font-bold leading-none">{service.title}</span>
+                              <Badge variant="outline" className="text-[10px] py-0 h-4 px-1.5 font-bold border-accent/30 text-accent">{service.price}</Badge>
+                            </div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                              {service.description}
+                            </p>
+                          </NavigationMenuLink>
                         </Link>
-                      </div>
+                      ))}
                     </div>
-                  </div>
-
-                  <div className="group/item relative">
-                    <Link href="/book-appointment?service=residential-Vaastu">
-                      <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-vaastu">
-                        <span>Vaastu Consultation</span>
-                        <span className="text-xs">›</span>
-                      </div>
-                    </Link>
-                    <div className="absolute left-full top-0 ml-1 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
-                      <div className="p-2 space-y-1">
-                        <Link href="/book-appointment?service=residential-Vaastu">
-                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Residential Vaastu</div>
-                        </Link>
-                        <Link href="/book-appointment?service=commercial-Vaastu">
-                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Commercial Vaastu</div>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="group/item relative">
-                    <Link href="/book-appointment?service=varshaphala">
-                      <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-varshaphal">
-                        <span>Varshaphala Analysis</span>
-                        <span className="text-xs">›</span>
-                      </div>
-                    </Link>
-                    <div className="absolute left-full top-0 ml-1 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
-                      <div className="p-2 space-y-1">
-                        <Link href="/book-appointment?service=varshaphala">
-                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Yearly Predictions</div>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="group/item relative">
-                    <Link href="/book-appointment?service=muhurta-selection">
-                      <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-muhurta">
-                        <span>Muhurta Selection</span>
-                        <span className="text-xs">›</span>
-                      </div>
-                    </Link>
-                    <div className="absolute left-full top-0 ml-1 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
-                      <div className="p-2 space-y-1">
-                        <Link href="/book-appointment?service=muhurta-selection">
-                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Auspicious Timing</div>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
 
             <NavigationMenu>
               <NavigationMenuList>
@@ -228,26 +218,24 @@ export function Navigation() {
 
                   <div className="border-t pt-4 space-y-1">
                     <p className="text-sm font-semibold text-muted-foreground px-2">Book a Consultation</p>
-                    <Link href="/book-appointment?service=horoscope-analysis">
-                      <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-horoscope">
-                        Horoscope Analysis
-                      </Button>
-                    </Link>
-                    <Link href="/book-appointment?service=residential-Vaastu">
-                      <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-vaastu">
-                        Vaastu Consultation
-                      </Button>
-                    </Link>
-                    <Link href="/book-appointment?service=varshaphala">
-                      <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-varshaphal">
-                        Varshaphala Analysis
-                      </Button>
-                    </Link>
-                    <Link href="/book-appointment?service=muhurta-selection">
-                      <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-muhurta">
-                        Muhurta Selection
-                      </Button>
-                    </Link>
+                    {consultationServices.map((service) => (
+                      <Link key={service.href} href={service.href}>
+                        <Button
+                          variant="ghost"
+                          className="w-full justify-start py-6 h-auto"
+                          onClick={() => setMobileMenuOpen(false)}
+                          data-testid={`link-mobile-consultation-${service.title.toLowerCase().replace(/\s+/g, "-")}`}
+                        >
+                          <div className="flex flex-col items-start gap-1">
+                            <div className="flex items-center gap-2">
+                              <span className="font-medium">{service.title}</span>
+                              <Badge variant="secondary" className="text-[10px] py-0 px-1">{service.price}</Badge>
+                            </div>
+                            <span className="text-[10px] text-muted-foreground leading-tight line-clamp-1">{service.description}</span>
+                          </div>
+                        </Button>
+                      </Link>
+                    ))}
                   </div>
 
                   <div className="space-y-2">

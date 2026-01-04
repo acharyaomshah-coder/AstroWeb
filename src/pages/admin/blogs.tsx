@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, FileText, Loader2, Plus, Trash2, Edit, X, ExternalLink } from "lucide-react";
+import { ArrowLeft, FileText, Loader2, Plus, Trash2, Edit, X, ExternalLink, Image as ImageIcon, Upload } from "lucide-react";
 
 interface BlogPost {
     id: string;
@@ -37,6 +37,8 @@ export default function AdminBlogs() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [deletingId, setDeletingId] = useState<string | null>(null);
+    const [isUploading, setIsUploading] = useState(false);
+    const [imageType, setImageType] = useState<"url" | "upload">("url");
 
     // Form state
     const [title, setTitle] = useState("");
@@ -96,6 +98,56 @@ export default function AdminBlogs() {
         setReadTime("5");
         setMetaDescription("");
         setEditingId(null);
+        setImageType("url");
+    };
+
+    const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        // Check file size (limit to 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+            alert("File size too large. Please upload an image smaller than 5MB.");
+            return;
+        }
+
+        try {
+            setIsUploading(true);
+            const fileExt = file.name.split('.').pop();
+            const fileName = `${Math.random().toString(36).substring(2)}_${Date.now()}.${fileExt}`;
+            const filePath = `blog-posts/${fileName}`;
+
+            const { data: buckets, error: bucketsError } = await supabase.storage.listBuckets();
+            if (bucketsError) throw bucketsError;
+
+            // Try to find the bucket case-insensitively
+            const bucketName = buckets.find(b => b.name.toLowerCase() === 'images')?.name || 'images';
+
+            const { error: uploadError } = await supabase.storage
+                .from(bucketName)
+                .upload(filePath, file);
+
+            if (uploadError) {
+                if (uploadError.message.includes("not found")) {
+                    throw new Error(`Bucket '${bucketName}' not found. Please create a bucket named 'images' in Supabase.`);
+                }
+                throw uploadError;
+            }
+
+            const { data: { publicUrl } } = supabase.storage
+                .from(bucketName)
+                .getPublicUrl(filePath);
+
+            setFeaturedImage(publicUrl);
+            alert("Image uploaded successfully!");
+        } catch (error: any) {
+            console.error('Error uploading image:', error);
+            alert(`Error: ${error.message}`);
+        } finally {
+            setIsUploading(false);
+            // Reset the input so the user can upload the same file again if they want
+            e.target.value = "";
+        }
     };
 
     const handleEdit = (blog: BlogPost) => {
@@ -338,15 +390,70 @@ export default function AdminBlogs() {
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div>
-                                            <Label htmlFor="featuredImage">Featured Image URL *</Label>
-                                            <Input
-                                                id="featuredImage"
-                                                value={featuredImage}
-                                                onChange={(e) => setFeaturedImage(e.target.value)}
-                                                placeholder="https://example.com/image.jpg"
-                                                required
-                                            />
+                                        <div className="md:col-span-1">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <Label htmlFor="featuredImage">Featured Image *</Label>
+                                                <div className="flex bg-muted rounded-md p-0.5">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setImageType("url")}
+                                                        className={`px-2 py-1 text-xs rounded-sm transition-all ${imageType === "url" ? "bg-background shadow-sm" : "hover:text-primary"}`}
+                                                    >
+                                                        URL
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setImageType("upload")}
+                                                        className={`px-2 py-1 text-xs rounded-sm transition-all ${imageType === "upload" ? "bg-background shadow-sm" : "hover:text-primary"}`}
+                                                    >
+                                                        Upload
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            {imageType === "url" ? (
+                                                <div className="flex gap-2">
+                                                    <Input
+                                                        id="featuredImage"
+                                                        value={featuredImage}
+                                                        onChange={(e) => setFeaturedImage(e.target.value)}
+                                                        placeholder="https://example.com/image.jpg"
+                                                        required
+                                                    />
+                                                </div>
+                                            ) : (
+                                                <div className="flex flex-col gap-2">
+                                                    <div className="relative group cursor-pointer border-2 border-dashed border-muted-foreground/20 rounded-lg p-4 hover:border-primary/50 transition-all bg-muted/5">
+                                                        <Input
+                                                            id="imageUpload"
+                                                            type="file"
+                                                            accept="image/*"
+                                                            onChange={handleImageUpload}
+                                                            className="absolute inset-0 opacity-0 cursor-pointer z-10"
+                                                            disabled={isUploading}
+                                                        />
+                                                        <div className="flex flex-col items-center justify-center gap-2 text-muted-foreground">
+                                                            {isUploading ? (
+                                                                <>
+                                                                    <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                                                                    <span className="text-sm">Uploading...</span>
+                                                                </>
+                                                            ) : (
+                                                                <>
+                                                                    <Upload className="h-8 w-8 group-hover:text-primary transition-colors" />
+                                                                    <span className="text-sm">Click to upload image</span>
+                                                                    <span className="text-[10px]">Max size: 5MB</span>
+                                                                </>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                    {featuredImage && (
+                                                        <div className="text-[10px] text-muted-foreground truncate max-w-full italic">
+                                                            Currently: {featuredImage}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
                                         </div>
 
                                         <div>

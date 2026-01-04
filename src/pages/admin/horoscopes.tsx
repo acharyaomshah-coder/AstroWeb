@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowLeft, Save, Calendar, Sparkles } from "lucide-react";
+import { ArrowLeft, Save, Calendar, Sparkles, Trash2 } from "lucide-react";
 
 export default function AdminHoroscopes() {
     const router = useRouter();
@@ -22,6 +22,7 @@ export default function AdminHoroscopes() {
     const [selectedSign, setSelectedSign] = useState<string>("aries");
     const [loadingData, setLoadingData] = useState(false);
     const [saving, setSaving] = useState(false);
+    const [deleting, setDeleting] = useState(false);
 
     // Horoscope Data State
     const [formData, setFormData] = useState({
@@ -124,7 +125,7 @@ export default function AdminHoroscopes() {
                 },
                 body: JSON.stringify({
                     date,
-                    sign: selectedSign,
+                    sign: selectedSign.toLowerCase(),
                     ...formData
                 })
             });
@@ -137,6 +138,44 @@ export default function AdminHoroscopes() {
             toast({ title: "Error", description: "Failed to save horoscope", variant: "destructive" });
         } finally {
             setSaving(false);
+        }
+    };
+
+    const handleDelete = async () => {
+        if (!confirm(`Are you sure you want to delete the horoscope for ${selectedSign} on ${date}?`)) {
+            return;
+        }
+
+        setDeleting(true);
+        try {
+            const token = await getAuthToken();
+            const response = await fetch(`/api/horoscope?date=${date}&sign=${selectedSign}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            });
+
+            if (!response.ok) throw new Error("Failed to delete");
+
+            toast({ title: "Success", description: "Horoscope deleted successfully" });
+
+            // Reset form
+            setFormData({
+                love: "",
+                career: "",
+                finance: "",
+                health: "",
+                luckyNumber: "",
+                luckyColor: "",
+                luckyTime: "",
+                luckyGem: ""
+            });
+        } catch (error) {
+            console.error("Error deleting:", error);
+            toast({ title: "Error", description: "Failed to delete horoscope", variant: "destructive" });
+        } finally {
+            setDeleting(false);
         }
     };
 
@@ -217,9 +256,14 @@ export default function AdminHoroscopes() {
                                             <p className="text-xs font-normal text-muted-foreground mt-0.5">({date})</p>
                                         </div>
                                     </CardTitle>
-                                    <Button onClick={handleSave} disabled={saving || loadingData}>
-                                        {saving ? "Saving..." : <><Save className="mr-2 h-4 w-4" /> Save Changes</>}
-                                    </Button>
+                                    <div className="flex gap-2">
+                                        <Button variant="destructive" onClick={handleDelete} disabled={deleting || loadingData}>
+                                            {deleting ? "Deleting..." : <><Trash2 className="mr-2 h-4 w-4" /> Delete</>}
+                                        </Button>
+                                        <Button onClick={handleSave} disabled={saving || loadingData}>
+                                            {saving ? "Saving..." : <><Save className="mr-2 h-4 w-4" /> Save Changes</>}
+                                        </Button>
+                                    </div>
                                 </CardHeader>
                                 <CardContent className="space-y-6">
                                     {loadingData ? (

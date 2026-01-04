@@ -2,14 +2,17 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.js",
+  "/admin": "pages/admin.js",
+  "/admin/blogs": "pages/admin/blogs.js",
+  "/admin/products": "pages/admin/products.js",
+  "/api/appointments": "pages/api/appointments.js",
   "/api/blog": "pages/api/blog.js",
   "/api/horoscope": "pages/api/horoscope.js",
   "/api/muhurat": "pages/api/muhurat.js",
   "/api/panchang": "pages/api/panchang.js",
+  "/api/users": "pages/api/users.js",
   "/api/videos": "pages/api/videos.js",
-  "/blog": "pages/blog.js",
   "/book-appointment": "pages/book-appointment.js",
   "/login": "pages/login.js",
-  "/videos": "pages/videos.js"
+  "/profile": "pages/profile.js"
 }

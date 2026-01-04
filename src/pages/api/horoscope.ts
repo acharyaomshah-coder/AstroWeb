@@ -95,5 +95,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
     }
 
+    if (req.method === "DELETE") {
+        try {
+            const authHeader = req.headers.authorization;
+            if (!authHeader) {
+                return res.status(401).json({ error: "Unauthorized" });
+            }
+
+            const { date, sign } = req.query;
+
+            if (!date || !sign) {
+                return res.status(400).json({ error: "Date and sign are required" });
+            }
+
+            const { error } = await supabase
+                .from("daily_horoscopes")
+                .delete()
+                .eq("date", date)
+                .eq("sign", sign.toString().toLowerCase());
+
+            if (error) throw error;
+
+            return res.status(200).json({ message: "Horoscope deleted successfully" });
+        } catch (error) {
+            console.error("Error deleting horoscope:", error);
+            return res.status(500).json({ error: "Failed to delete horoscope" });
+        }
+    }
+
     return res.status(405).json({ error: "Method not allowed" });
 }

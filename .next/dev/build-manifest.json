@@ -20,7 +20,7 @@
       "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_index_399dd592._.js"
     ],
     "/_app": [
-      "static/chunks/[root-of-the-server]__f8c03e96._.js",
+      "static/chunks/[root-of-the-server]__75d9c3eb._.js",
       "static/chunks/22aaf_next_dist_compiled_1ba461ab._.js",
       "static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js",
       "static/chunks/22aaf_next_dist_client_a9bc3bc9._.js",
@@ -35,36 +35,58 @@
       "static/chunks/22aaf_5bb0969b._.js",
       "static/chunks/DEMO-PROJECTS_AstroWeb_src_styles_globals_90b99ddf.css",
       "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages__app_dcbd95c4._.js"
+      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages__app_453eae70._.js"
     ],
-    "/about": [
-      "static/chunks/22aaf_next_dist_compiled_06d30792._.js",
-      "static/chunks/22aaf_next_dist_shared_lib_4656948b._.js",
-      "static/chunks/22aaf_next_dist_client_6faefe44._.js",
-      "static/chunks/22aaf_next_dist_547b0852._.js",
-      "static/chunks/22aaf_next_head_628c3148.js",
-      "static/chunks/22aaf_react_aadced80._.js",
-      "static/chunks/22aaf_react-dom_cjs_react-dom_development_bf73e345.js",
-      "static/chunks/22aaf_react-dom_c4eafa69._.js",
-      "static/chunks/22aaf_framer-motion_dist_es_45d9f4de._.js",
-      "static/chunks/22aaf_f48eb1c8._.js",
-      "static/chunks/[root-of-the-server]__3747da06._.js",
-      "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_about_2da965e7._.js",
-      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_about_faf1d09e._.js"
-    ],
-    "/blog": [
-      "static/chunks/22aaf_next_dist_compiled_06d30792._.js",
-      "static/chunks/22aaf_next_dist_shared_lib_9df8cd89._.js",
+    "/admin": [
+      "static/chunks/[root-of-the-server]__6ae8df1a._.js",
+      "static/chunks/22aaf_next_dist_compiled_1ba461ab._.js",
+      "static/chunks/22aaf_next_dist_shared_lib_98c4ddf8._.js",
       "static/chunks/22aaf_next_dist_client_a9bc3bc9._.js",
       "static/chunks/22aaf_next_dist_547b0852._.js",
-      "static/chunks/22aaf_next_6d79f447._.js",
+      "static/chunks/22aaf_next_ccbda66e._.js",
       "static/chunks/22aaf_react_aadced80._.js",
       "static/chunks/22aaf_react-dom_cjs_react-dom_development_bf73e345.js",
       "static/chunks/22aaf_react-dom_c4eafa69._.js",
-      "static/chunks/22aaf_1250717d._.js",
-      "static/chunks/[root-of-the-server]__1d46201f._.js",
-      "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_blog_index_tsx_2da965e7._.js",
-      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_blog_index_tsx_e519869e._.js"
+      "static/chunks/22aaf_@supabase_realtime-js_dist_module_eb066e46._.js",
+      "static/chunks/22aaf_@supabase_storage-js_dist_module_2cf06bf3._.js",
+      "static/chunks/22aaf_@supabase_auth-js_dist_module_969f862b._.js",
+      "static/chunks/22aaf_d32fddda._.js",
+      "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_admin_index_tsx_2da965e7._.js",
+      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_admin_index_tsx_233df707._.js"
+    ],
+    "/admin/blogs": [
+      "static/chunks/[root-of-the-server]__40a56c84._.js",
+      "static/chunks/22aaf_next_dist_compiled_1ba461ab._.js",
+      "static/chunks/22aaf_next_dist_shared_lib_98c4ddf8._.js",
+      "static/chunks/22aaf_next_dist_client_a9bc3bc9._.js",
+      "static/chunks/22aaf_next_dist_547b0852._.js",
+      "static/chunks/22aaf_next_ccbda66e._.js",
+      "static/chunks/22aaf_react_aadced80._.js",
+      "static/chunks/22aaf_react-dom_cjs_react-dom_development_bf73e345.js",
+      "static/chunks/22aaf_react-dom_c4eafa69._.js",
+      "static/chunks/22aaf_@supabase_realtime-js_dist_module_eb066e46._.js",
+      "static/chunks/22aaf_@supabase_storage-js_dist_module_2cf06bf3._.js",
+      "static/chunks/22aaf_@supabase_auth-js_dist_module_969f862b._.js",
+      "static/chunks/22aaf_0acb6686._.js",
+      "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_admin_blogs_tsx_2da965e7._.js",
+      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_admin_blogs_tsx_f9147de1._.js"
+    ],
+    "/admin/products": [
+      "static/chunks/[root-of-the-server]__0eadeccb._.js",
+      "static/chunks/22aaf_next_dist_compiled_1ba461ab._.js",
+      "static/chunks/22aaf_next_dist_shared_lib_98c4ddf8._.js",
+      "static/chunks/22aaf_next_dist_client_a9bc3bc9._.js",
+      "static/chunks/22aaf_next_dist_547b0852._.js",
+      "static/chunks/22aaf_next_ccbda66e._.js",
+      "static/chunks/22aaf_react_aadced80._.js",
+      "static/chunks/22aaf_react-dom_cjs_react-dom_development_bf73e345.js",
+      "static/chunks/22aaf_react-dom_c4eafa69._.js",
+      "static/chunks/22aaf_@supabase_realtime-js_dist_module_eb066e46._.js",
+      "static/chunks/22aaf_@supabase_storage-js_dist_module_2cf06bf3._.js",
+      "static/chunks/22aaf_@supabase_auth-js_dist_module_969f862b._.js",
+      "static/chunks/22aaf_3aa74f78._.js",
+      "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_admin_products_tsx_2da965e7._.js",
+      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_admin_products_tsx_69d93e3f._.js"
     ],
     "/book-appointment": [
       "static/chunks/[root-of-the-server]__81da6f2e._.js",
@@ -102,22 +124,22 @@
       "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_login_2da965e7._.js",
       "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_login_f834aafb._.js"
     ],
-    "/videos": [
+    "/profile": [
       "static/chunks/22aaf_next_dist_compiled_1ba461ab._.js",
       "static/chunks/22aaf_next_dist_shared_lib_4656948b._.js",
       "static/chunks/22aaf_next_dist_client_6faefe44._.js",
       "static/chunks/22aaf_next_dist_547b0852._.js",
-      "static/chunks/22aaf_next_head_628c3148.js",
+      "static/chunks/22aaf_next_3c6f23a1._.js",
       "static/chunks/22aaf_react_aadced80._.js",
       "static/chunks/22aaf_react-dom_cjs_react-dom_development_bf73e345.js",
       "static/chunks/22aaf_react-dom_c4eafa69._.js",
       "static/chunks/22aaf_@supabase_realtime-js_dist_module_eb066e46._.js",
       "static/chunks/22aaf_@supabase_storage-js_dist_module_2cf06bf3._.js",
       "static/chunks/22aaf_@supabase_auth-js_dist_module_969f862b._.js",
-      "static/chunks/22aaf_5b1a3fb6._.js",
-      "static/chunks/[root-of-the-server]__d2b87543._.js",
-      "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_videos_2da965e7._.js",
-      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_videos_c3c455e2._.js"
+      "static/chunks/22aaf_2bcc6d49._.js",
+      "static/chunks/[root-of-the-server]__385e33f0._.js",
+      "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_profile_2da965e7._.js",
+      "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_profile_285c1fa2._.js"
     ]
   },
   "devFiles": [],
