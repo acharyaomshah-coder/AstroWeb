@@ -125,12 +125,6 @@ export default function Login() {
                 </button>
               </p>
             </div>
-
-            <div className="pt-3 border-t">
-              <p className="text-xs text-muted-foreground mb-2">Admin Credentials:</p>
-              <p className="text-xs">Email: aacharyaomshah@gmail.com</p>
-              <p className="text-xs">Password: omshahastrologer</p>
-            </div>
           </div>
         </Card>
       </div>
