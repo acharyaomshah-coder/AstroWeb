@@ -1,219 +1,196 @@
-[00:00:02.055] Server  LOG      ✓ Ready in 1353ms
-[00:00:09.372] Server  LOG      ○ Compiling /login ...
-[00:00:29.321] Server  WARN     ⚠ Cross origin request detected from 192.168.63.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:30.809] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
+[00:00:02.277] Server  LOG      ✓ Ready in 1390ms
+[00:00:05.638] Server  LOG      ○ Compiling / ...
+[00:00:35.718] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
     at div
-    at Badge (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:691:18)
+    at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
     at p
     at div
     at div
-    at _c8 (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:622:213)
+    at _c8 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:622:213)
     at div
-    at _c (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:578:205)
+    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:578:205)
     at div
     at div
     at div
     at section
     at div
-    at Home (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:1870:210)
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:1870:210)
     at main
     at div
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__f8c03e96._.js:1059:25)
-    at QueryClientProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__f8c03e96._.js:3252:16)
-    at PathnameContextProviderAdapter (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
-[00:00:30.810] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
+    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
+    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3088:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
+    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
+[00:00:35.718] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
     at div
-    at Badge (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:691:18)
+    at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
     at p
     at div
     at div
-    at _c8 (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:622:213)
+    at _c8 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:622:213)
     at div
-    at _c (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:578:205)
+    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:578:205)
     at div
     at div
     at div
     at section
     at div
-    at Home (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:1870:210)
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:1870:210)
     at main
     at div
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__f8c03e96._.js:1059:25)
-    at QueryClientProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__f8c03e96._.js:3252:16)
-    at PathnameContextProviderAdapter (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:30.810] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
-[00:03:36.351] Server  LOG      ✓ Compiled in 1766ms
-[00:04:03.905] Server  LOG      ✓ Compiled in 1480ms
-[00:05:38.145] Server  LOG      ✓ Compiled in 538ms
-[00:05:49.355] Server  LOG      ✓ Compiled in 810ms
-[00:06:46.322] Browser ERROR   Error uploading image: {"message":"Bucket not found","name":"StorageApiError","status":400,"statusCode":"404"}
-[00:13:01.908] Server  LOG      ✓ Compiled in 424ms
-[00:13:02.973] Browser LOG     Refreshing page data due to server-side change
-[00:13:02.973] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/admin/blogs.tsx:140:7
+    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
+    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
+    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3088:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
+    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:35.718] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
+[00:01:53.046] Server  LOG      ✓ Compiled in 442ms
+[00:02:06.268] Server  LOG      ✓ Compiled in 493ms
+[00:02:10.451] Server  LOG      ✓ Compiled in 385ms
+[00:02:53.103] Server  LOG      ✓ Compiled in 483ms
+[00:02:58.725] Server  LOG      ✓ Compiled in 383ms
+[00:03:16.285] Server  LOG      ✓ Compiled in 429ms
+[00:03:18.093] Server  LOG      ✓ Compiled in 333ms
+[00:03:18.460] Browser LOG     Refreshing page data due to server-side change
+[00:03:18.460] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:415:42
 Parsing ecmascript source code failed
-  138 |         console.error('Error uploading image:', error);
-  139 |         alert(`Error: ${error.message}`);
-> 140 |     } finally {
-      |       ^^^^^^^
-  141 |         setIsUploading(false);
-  142 |         // Reset the input so the user can upload the same file again if they want
-  143 |         e.target.value = "";
+  413 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and <b>Diploma</b> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+  414 |                     Aacharya Shah is an ex-microbiologist , <b>M.Sc. (Microbiology)</b> and <b>Pre-PhD (Molecular Medicine).</b> <br />
+> 415 |                     <br></br> With Over <6 years of experience in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+      |                                          ^
+  416 |                   </p>
+  417 |
+  418 |
 
-Expected a semicolon
-[00:13:02.973] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/admin/blogs.tsx
+Expected '</', got 'numeric literal (6, 6)'
+[00:03:18.460] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
 Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/blogs.tsx [ssr] (ecmascript)
+An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
 
 Caused by:
 - CJS module can't be async.
 
 Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/blogs.tsx [ssr] (ecmascript)
+- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
 - Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
 - Execution of EcmascriptChunkItemContent::new failed
 - CJS module can't be async.
-[00:13:41.962] Browser LOG     Refreshing page data due to server-side change
-[00:13:42.116] Server  LOG      ✓ Compiled in 354ms
-[00:16:14.884] Browser ERROR   Error uploading image: {"message":"new row violates row-level security policy","name":"StorageApiError","status":400,"statusCode":"403"}
-[00:28:54.319] Server  LOG      ✓ Compiled in 434ms
-[00:29:28.573] Server  LOG      ✓ Compiled in 495ms
-[00:29:41.186] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
-    at div
-    at Badge (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
-    at p
-    at div
-    at div
-    at _c8 (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__40a56c84._.js:906:213)
-    at div
-    at _c (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__40a56c84._.js:862:205)
-    at div
-    at div
-    at div
-    at section
-    at div
-    at Home (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__9f9bd97e._.js:1870:210)
-    at main
-    at div
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
-    at QueryClientProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3088:16)
-    at PathnameContextProviderAdapter (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:30:19.270] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <a> a 
-    at a
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3041:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:18415:13
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:18054:13
-    at a
-    at LinkComponent (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:4335:19)
-    at div
-    at div
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3267:13
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:18393:13
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:18217:13
-    at Presence (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3609:13)
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:18153:13
-    at _c6 (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1598:223)
-    at li
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:17921:13
-    at ul
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:18393:13
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at div
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:17896:13
-    at _c2 (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1562:220)
-    at nav
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at NavigationMenuProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:17840:13)
-    at http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:17702:13
-    at _c (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1543:215)
-    at nav
-    at div
-    at div
-    at header
-    at Navigation (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1745:192)
-    at div
-    at Provider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
-    at QueryClientProvider (http://192.168.63.1:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://192.168.63.1:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3088:16)
-    at PathnameContextProviderAdapter (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://192.168.63.1:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
+[00:03:20.402] Server  LOG      ✓ Compiled in 382ms
+[00:03:20.455] Browser LOG     Refreshing page data due to server-side change
+[00:03:24.899] Server  LOG      ✓ Compiled in 389ms
+[00:03:27.031] Server  LOG      ✓ Compiled in 387ms
+[00:04:09.926] Server  LOG      ✓ Compiled in 362ms
+[00:04:10.470] Browser LOG     Refreshing page data due to server-side change
+[00:04:10.470] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:413:53
+Parsing ecmascript source code failed
+  411 |
+  412 |                   <p>
+> 413 |                     He holds M.A. (Astrology)</span> and <b>Diploma</b> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+      |                                                     ^^^^^
+  414 |                     Aacharya Shah is an ex-microbiologist , <b>M.Sc. (Microbiology)</b> and <b>Pre-PhD (Molecular Medicine).</b> <br />
+  415 |                     <br></br> With Over <b>6 years of experience</b> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+  416 |                   </p>
+
+Expected '</', got 'jsx text ( and )'
+[00:04:10.470] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:04:11.791] Server  LOG      ✓ Compiled in 387ms
+[00:04:12.470] Browser LOG     Refreshing page data due to server-side change
+[00:04:18.087] Server  LOG      ✓ Compiled in 439ms
+[00:04:18.471] Browser LOG     Refreshing page data due to server-side change
+[00:04:18.471] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:415:112
+Parsing ecmascript source code failed
+  413 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and <b>Diploma</b> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+  414 |                     Aacharya Shah is an ex-microbiologist , <b>M.Sc. (Microbiology)</b> and <b>Pre-PhD (Molecular Medicine).</b> <br />
+> 415 |                     <br></br> With Over <span className="text-foreground font-medium">6 years of experience</b> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+      |                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 416 |                   </p>
+      | ^^^^^^^^^^^^^^^^^^^
+  417 |
+  418 |
+  419 |                 </div>
+
+Expected '</', got 'jsx text ( in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+                  )'
+[00:04:18.471] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:04:22.724] Server  LOG      ✓ Compiled in 376ms
+[00:04:23.459] Browser LOG     Refreshing page data due to server-side change
+[00:04:36.912] Server  LOG      ✓ Compiled in 390ms
+[00:04:37.473] Browser LOG     Refreshing page data due to server-side change
+[00:04:37.473] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:414:131
+Parsing ecmascript source code failed
+  412 |                   <p>
+  413 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and <b>Diploma</b> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+> 414 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</b> and <b>Pre-PhD (Molecular Medicine).</b> <br />
+      |                                                                                                                                   ^^^^^
+  415 |                     <br></br> With Over <span className="text-foreground font-medium">6 years of experience</span> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+  416 |                   </p>
+  417 |
+
+Expected '</', got 'jsx text ( and )'
+[00:04:37.473] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+[00:04:42.683] Server  LOG      ✓ Compiled in 408ms
+[00:04:43.465] Browser LOG     Refreshing page data due to server-side change
+[00:07:43.798] Server  LOG      ✓ Compiled in 4.3s

@@ -172,7 +172,7 @@ export default function Home() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const credentials = [
-    { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya", colSpan: "lg:row-span-2" },
+    { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya , BVB-Delhi", colSpan: "lg:row-span-2" },
     { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023", colSpan: "lg:row-span-2" },
     { image: "/result.jpeg", title: "Outstanding Result", subtitle: "Proven Track Record", colSpan: "lg:row-span-1" },
     { image: "/degree.jpeg", title: "Certified Degree", subtitle: "M.A (Astrology)", colSpan: "lg:row-span-1" },
@@ -313,7 +313,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vedic Intution - Premium Gemstones, Spiritual Guidance & Authentic Remedies</title>
+        <title>Vedic Intuition - Premium Gemstones, Spiritual Guidance & Authentic Remedies</title>
       </Head>
       <div className="min-h-screen">
         {/* 1. Hero Section */}
@@ -388,7 +388,7 @@ export default function Home() {
                   className="max-w-md w-full aspect-[4/5] rounded-2xl overflow-hidden border-8 border-muted shadow-2xl relative cursor-pointer group"
                   onClick={() => setSelectedImage("/WhatsApp Image 2026-01-03 at 17.07.18.jpeg")}
                 >
-                  <img src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" alt="Aacharya Om shah" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" alt="Aacharya Om Shah" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"></div>
                 </div>
               </motion.div>
@@ -410,9 +410,9 @@ export default function Home() {
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and <b>Diploma</b> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
-                    Aacharya shah is an ex-microbiologist , <b>M.Sc. (Microbiology)</b> and <b>Pre-PhD (Molecular Medicine).</b> <br />
-                    <br></br> With Over 6 years of experience in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+                    Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
+                    <br></br> With Over <span className="text-foreground font-medium">6 years of experience</span> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
                   </p>
 
 
@@ -428,7 +428,7 @@ export default function Home() {
                 <div className="w-24 h-1 bg-accent mx-auto"></div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] md:auto-rows-[280px]">
                 {credentials.map((item, index) => (
                   <motion.div
                     key={index}
@@ -442,7 +442,7 @@ export default function Home() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
@@ -477,7 +477,7 @@ export default function Home() {
                       </Avatar>
                     </div>
                     <div>
-                      <h3 className="font-serif text-2xl font-bold">Aacharya Om shah</h3>
+                      <h3 className="font-serif text-2xl font-bold">Aacharya Om Shah</h3>
                       <p className="text-accent font-medium text-sm">Astro & Vaastu Consultant</p>
                       <p className="text-muted-foreground text-xs italic">(Karmic Consultant)</p>
                     </div>
