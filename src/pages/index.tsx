@@ -493,7 +493,7 @@ export default function Home() {
                       </p>
                       <p className="flex items-start gap-3">
                         <Badge variant="outline" className="w-[60px] h-4 px-0 justify-center text-[9px] uppercase flex-shrink-0">Academic</Badge>
-                        <span className="flex-1">M.A.(Astrology) <br /> M.Sc.(Microbiology), Pre-PhD (Molecular Medicine)</span>
+                        <span className="flex-1">M.A.(Astrology) <br /> M.Sc.(Microbiology) <br /> Pre-PhD (Molecular Medicine)</span>
                       </p>
                     </div>
 
