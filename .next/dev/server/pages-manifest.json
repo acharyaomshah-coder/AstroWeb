@@ -6,5 +6,7 @@
   "/api/horoscope": "pages/api/horoscope.js",
   "/api/muhurat": "pages/api/muhurat.js",
   "/api/panchang": "pages/api/panchang.js",
-  "/api/videos": "pages/api/videos.js"
+  "/api/users": "pages/api/users.js",
+  "/api/videos": "pages/api/videos.js",
+  "/profile": "pages/profile.js"
 }

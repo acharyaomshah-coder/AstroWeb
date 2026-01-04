@@ -1834,7 +1834,7 @@ function Navigation() {
                             className: "flex items-center gap-2 cursor-pointer hover-elevate active-elevate-2 rounded-md px-2 -ml-2 py-1",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "font-serif text-xl font-bold text-foreground",
-                                children: "Vedic Intution"
+                                children: "Vedic Intuition"
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
                                 lineNumber: 82,
@@ -2684,7 +2684,7 @@ function Footer() {
                                     className: "flex items-center gap-2",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "font-serif text-xl font-bold",
-                                        children: "Vedic Intution"
+                                        children: "Vedic Intuition"
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Footer.tsx",
                                         lineNumber: 14,
@@ -3030,7 +3030,7 @@ function Footer() {
                         children: [
                             "© ",
                             new Date().getFullYear(),
-                            " VedicIntution. All rights reserved."
+                            " VedicIntuition. All rights reserved."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Footer.tsx",

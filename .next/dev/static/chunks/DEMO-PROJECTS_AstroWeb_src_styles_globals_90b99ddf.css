@@ -2036,10 +2036,6 @@ body {
   list-style-type: none;
 }
 
-.auto-rows-\[280px\] {
-  grid-auto-rows: 280px;
-}
-
 .auto-rows-\[300px\] {
   grid-auto-rows: 300px;
 }

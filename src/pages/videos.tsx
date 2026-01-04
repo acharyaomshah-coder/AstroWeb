@@ -96,7 +96,7 @@ export default function Videos() {
           <div className="container mx-auto relative z-10">
             <div className="text-center mb-8">
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-3">
-                Vedic Intution Videos
+                Vedic Intuition Videos
               </h1>
               <p className="text-white/80 text-lg max-w-2xl mx-auto">
                 Watch our expert astrologers share wisdom, guidance, and spiritual insights

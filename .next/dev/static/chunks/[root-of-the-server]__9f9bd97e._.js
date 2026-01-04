@@ -2924,7 +2924,13 @@ function Home() {
                                                                                     lineNumber: 496,
                                                                                     columnNumber: 66
                                                                                 }, this),
-                                                                                " M.Sc.(Microbiology), Pre-PhD (Molecular Medicine)"
+                                                                                " M.Sc.(Microbiology) ",
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
+                                                                                    lineNumber: 496,
+                                                                                    columnNumber: 93
+                                                                                }, this),
+                                                                                " Pre-PhD (Molecular Medicine)"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",

@@ -40,7 +40,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Aacharya Om Shah - Vedic Intution</title>
+        <title>Aacharya Om Shah - Vedic Intuition</title>
       </Head>
       <div className="min-h-screen bg-background">
 
