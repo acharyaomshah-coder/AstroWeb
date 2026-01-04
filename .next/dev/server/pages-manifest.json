@@ -1,10 +1,24 @@
 {
   "/": "pages/index.js",
+  "/404": "pages/404.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/about": "pages/about.js",
+  "/admin": "pages/admin.js",
+  "/admin/blogs": "pages/admin/blogs.js",
+  "/admin/horoscopes": "pages/admin/horoscopes.js",
+  "/admin/panchang": "pages/admin/panchang.js",
+  "/admin/videos": "pages/admin/videos.js",
   "/api/blog": "pages/api/blog.js",
   "/api/horoscope": "pages/api/horoscope.js",
   "/api/muhurat": "pages/api/muhurat.js",
   "/api/panchang": "pages/api/panchang.js",
-  "/api/videos": "pages/api/videos.js"
+  "/api/users": "pages/api/users.js",
+  "/api/videos": "pages/api/videos.js",
+  "/blog": "pages/blog.js",
+  "/contact": "pages/contact.js",
+  "/login": "pages/login.js",
+  "/profile": "pages/profile.js",
+  "/signup": "pages/signup.js",
+  "/videos": "pages/videos.js"
 }
