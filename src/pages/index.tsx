@@ -24,23 +24,23 @@ import { X } from "lucide-react";
 
 export default function Home() {
   // Zodiac sign metadata (symbols and colors)
-  const zodiacMeta: Record<string, { symbol: string; color: string }> = {
-    aries: { symbol: "♈", color: "from-red-500 to-orange-500" },
-    taurus: { symbol: "♉", color: "from-green-600 to-emerald-500" },
-    gemini: { symbol: "♊", color: "from-yellow-500 to-amber-500" },
-    cancer: { symbol: "♋", color: "from-blue-600 to-cyan-500" },
-    leo: { symbol: "♌", color: "from-orange-500 to-red-500" },
-    virgo: { symbol: "♍", color: "from-emerald-600 to-teal-500" },
-    libra: { symbol: "♎", color: "from-pink-500 to-rose-500" },
-    scorpio: { symbol: "♏", color: "from-purple-600 to-indigo-500" },
-    sagittarius: { symbol: "♐", color: "from-violet-600 to-purple-500" },
-    capricorn: { symbol: "♑", color: "from-slate-600 to-gray-600" },
-    aquarius: { symbol: "♒", color: "from-cyan-500 to-blue-500" },
-    pisces: { symbol: "♓", color: "from-teal-500 to-green-500" },
+  const zodiacMeta: Record<string, { symbol: string; color: string; image: string }> = {
+    aries: { symbol: "♈", color: "from-red-500 to-orange-500", image: "/aries.jpeg" },
+    taurus: { symbol: "♉", color: "from-green-600 to-emerald-500", image: "/tauraus.jpeg" },
+    gemini: { symbol: "♊", color: "from-yellow-500 to-amber-500", image: "/gemini.jpeg" },
+    cancer: { symbol: "♋", color: "from-blue-600 to-cyan-500", image: "/cancer.jpeg" },
+    leo: { symbol: "♌", color: "from-orange-500 to-red-500", image: "/leo.jpeg" },
+    virgo: { symbol: "♍", color: "from-emerald-600 to-teal-500", image: "/virgo.jpeg" },
+    libra: { symbol: "♎", color: "from-pink-500 to-rose-500", image: "/libra.jpeg" },
+    scorpio: { symbol: "♏", color: "from-purple-600 to-indigo-500", image: "/scorpio.jpeg" },
+    sagittarius: { symbol: "♐", color: "from-violet-600 to-purple-500", image: "/sagittarius.jpeg" },
+    capricorn: { symbol: "♑", color: "from-slate-600 to-gray-600", image: "/capricon.jpeg" },
+    aquarius: { symbol: "♒", color: "from-cyan-500 to-blue-500", image: "/aqarius.jpeg" },
+    pisces: { symbol: "♓", color: "from-teal-500 to-green-500", image: "/pisces.jpeg" },
   };
 
   // State for horoscope data
-  const [horoscope, setHoroscope] = useState<Array<{ sign: string; prediction: string; symbol: string; color: string }>>([]);
+  const [horoscope, setHoroscope] = useState<Array<{ sign: string; prediction: string; symbol: string; color: string; image: string }>>([]);
   const [isLoadingHoroscope, setIsLoadingHoroscope] = useState(true);
 
   // Fetch horoscope data from API
@@ -58,7 +58,8 @@ export default function Home() {
             sign: item.sign.charAt(0).toUpperCase() + item.sign.slice(1), // Capitalize
             prediction: item.love || "Check back later for your daily prediction.",
             symbol: zodiacMeta[item.sign.toLowerCase()]?.symbol || "⭐",
-            color: zodiacMeta[item.sign.toLowerCase()]?.color || "from-purple-500 to-pink-500"
+            color: zodiacMeta[item.sign.toLowerCase()]?.color || "from-purple-500 to-pink-500",
+            image: zodiacMeta[item.sign.toLowerCase()]?.image || ""
           }));
 
           setHoroscope(formattedHoroscopes);
@@ -68,7 +69,8 @@ export default function Home() {
             sign: sign.charAt(0).toUpperCase() + sign.slice(1),
             prediction: "Check back later for your daily prediction.",
             symbol: zodiacMeta[sign].symbol,
-            color: zodiacMeta[sign].color
+            color: zodiacMeta[sign].color,
+            image: zodiacMeta[sign].image
           })));
         }
       } catch (error) {
@@ -78,7 +80,8 @@ export default function Home() {
           sign: sign.charAt(0).toUpperCase() + sign.slice(1),
           prediction: "Check back later for your daily prediction.",
           symbol: zodiacMeta[sign].symbol,
-          color: zodiacMeta[sign].color
+          color: zodiacMeta[sign].color,
+          image: zodiacMeta[sign].image
         })));
       } finally {
         setIsLoadingHoroscope(false);
@@ -687,12 +690,21 @@ export default function Home() {
                 <Card key={index} className="transition-all hover:border-accent hover:shadow-lg group">
                   <CardContent className="p-6">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-4xl shadow-xl transform transition-transform group-hover:scale-110`}>
-                        {item.symbol}
+                      <div className="relative w-24 h-24 mb-4">
+                        <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${item.color} blur-md opacity-40 animate-pulse`}></div>
+                        {item.image ? (
+                          <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-accent/20 shadow-xl group-hover:scale-110 transition-transform duration-500 bg-white">
+                            <img src={item.image} alt={item.sign} className="w-full h-full object-cover" />
+                          </div>
+                        ) : (
+                          <div className={`relative w-24 h-24 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-4xl shadow-xl transform transition-transform group-hover:scale-110`}>
+                            {item.symbol}
+                          </div>
+                        )}
                       </div>
                       <div>
                         <h4 className="font-bold text-accent text-xl mb-2">{item.sign}</h4>
-                        <p className="text-sm text-muted-foreground line-clamp-3">{item.prediction}</p>
+                        <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">{item.prediction}</p>
                       </div>
                     </div>
                   </CardContent>

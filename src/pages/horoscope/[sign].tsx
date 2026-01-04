@@ -14,18 +14,18 @@ export default function HoroscopeDetail() {
   const [data, setData] = useState<any>(null);
 
   const zodiacData: Record<string, any> = {
-    aries: { name: "Aries", symbol: "♈", dates: "Mar 21 - Apr 19", element: "Fire" },
-    taurus: { name: "Taurus", symbol: "♉", dates: "Apr 20 - May 20", element: "Earth" },
-    gemini: { name: "Gemini", symbol: "♊", dates: "May 21 - Jun 20", element: "Air" },
-    cancer: { name: "Cancer", symbol: "♋", dates: "Jun 21 - Jul 22", element: "Water" },
-    leo: { name: "Leo", symbol: "♌", dates: "Jul 23 - Aug 22", element: "Fire" },
-    virgo: { name: "Virgo", symbol: "♍", dates: "Aug 23 - Sep 22", element: "Earth" },
-    libra: { name: "Libra", symbol: "♎", dates: "Sep 23 - Oct 22", element: "Air" },
-    scorpio: { name: "Scorpio", symbol: "♏", dates: "Oct 23 - Nov 21", element: "Water" },
-    sagittarius: { name: "Sagittarius", symbol: "♐", dates: "Nov 22 - Dec 21", element: "Fire" },
-    capricorn: { name: "Capricorn", symbol: "♑", dates: "Dec 22 - Jan 19", element: "Earth" },
-    aquarius: { name: "Aquarius", symbol: "♒", dates: "Jan 20 - Feb 18", element: "Air" },
-    pisces: { name: "Pisces", symbol: "♓", dates: "Feb 19 - Mar 20", element: "Water" }
+    aries: { name: "Aries", symbol: "♈", dates: "Mar 21 - Apr 19", element: "Fire", image: "/aries.jpeg" },
+    taurus: { name: "Taurus", symbol: "♉", dates: "Apr 20 - May 20", element: "Earth", image: "/tauraus.jpeg" },
+    gemini: { name: "Gemini", symbol: "♊", dates: "May 21 - Jun 20", element: "Air", image: "/gemini.jpeg" },
+    cancer: { name: "Cancer", symbol: "♋", dates: "Jun 21 - Jul 22", element: "Water", image: "/cancer.jpeg" },
+    leo: { name: "Leo", symbol: "♌", dates: "Jul 23 - Aug 22", element: "Fire", image: "/leo.jpeg" },
+    virgo: { name: "Virgo", symbol: "♍", dates: "Aug 23 - Sep 22", element: "Earth", image: "/virgo.jpeg" },
+    libra: { name: "Libra", symbol: "♎", dates: "Sep 23 - Oct 22", element: "Air", image: "/libra.jpeg" },
+    scorpio: { name: "Scorpio", symbol: "♏", dates: "Oct 23 - Nov 21", element: "Water", image: "/scorpio.jpeg" },
+    sagittarius: { name: "Sagittarius", symbol: "♐", dates: "Nov 22 - Dec 21", element: "Fire", image: "/sagittarius.jpeg" },
+    capricorn: { name: "Capricorn", symbol: "♑", dates: "Dec 22 - Jan 19", element: "Earth", image: "/capricon.jpeg" },
+    aquarius: { name: "Aquarius", symbol: "♒", dates: "Jan 20 - Feb 18", element: "Air", image: "/aqarius.jpeg" },
+    pisces: { name: "Pisces", symbol: "♓", dates: "Feb 19 - Mar 20", element: "Water", image: "/pisces.jpeg" }
   };
 
   const signStr = typeof sign === "string" ? sign : "";
@@ -136,7 +136,15 @@ export default function HoroscopeDetail() {
             </Link>
 
             <div className="flex items-center gap-6">
-              <div className="text-8xl text-accent">{currentSign.symbol}</div>
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl bg-white">
+                {currentSign.image ? (
+                  <img src={currentSign.image} alt={currentSign.name} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-6xl text-accent">
+                    {currentSign.symbol}
+                  </div>
+                )}
+              </div>
               <div>
                 <h1 className="font-serif text-4xl md:text-5xl font-bold mb-2 text-white">
                   {currentSign.name}

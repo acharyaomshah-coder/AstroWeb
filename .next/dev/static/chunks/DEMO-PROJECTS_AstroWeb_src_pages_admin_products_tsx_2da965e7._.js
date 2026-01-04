@@ -1,4 +1,6 @@
-__turbopack_load_page_chunks__("/admin/products", [
+(globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
+    script: typeof document === "object" ? document.currentScript : undefined,
+    chunks: [
   "static/chunks/[root-of-the-server]__0eadeccb._.js",
   "static/chunks/22aaf_next_dist_compiled_1ba461ab._.js",
   "static/chunks/22aaf_next_dist_shared_lib_98c4ddf8._.js",
@@ -11,7 +13,7 @@ __turbopack_load_page_chunks__("/admin/products", [
   "static/chunks/22aaf_@supabase_realtime-js_dist_module_eb066e46._.js",
   "static/chunks/22aaf_@supabase_storage-js_dist_module_2cf06bf3._.js",
   "static/chunks/22aaf_@supabase_auth-js_dist_module_969f862b._.js",
-  "static/chunks/22aaf_3aa74f78._.js",
-  "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_admin_products_tsx_2da965e7._.js",
-  "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_admin_products_tsx_69d93e3f._.js"
-])
+  "static/chunks/22aaf_3aa74f78._.js"
+],
+    source: "entry"
+});

@@ -4,18 +4,18 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function Horoscope() {
   const zodiacSigns = [
-    { name: "Aries", symbol: "♈", dates: "Mar 21 - Apr 19", element: "Fire", slug: "aries" },
-    { name: "Taurus", symbol: "♉", dates: "Apr 20 - May 20", element: "Earth", slug: "taurus" },
-    { name: "Gemini", symbol: "♊", dates: "May 21 - Jun 20", element: "Air", slug: "gemini" },
-    { name: "Cancer", symbol: "♋", dates: "Jun 21 - Jul 22", element: "Water", slug: "cancer" },
-    { name: "Leo", symbol: "♌", dates: "Jul 23 - Aug 22", element: "Fire", slug: "leo" },
-    { name: "Virgo", symbol: "♍", dates: "Aug 23 - Sep 22", element: "Earth", slug: "virgo" },
-    { name: "Libra", symbol: "♎", dates: "Sep 23 - Oct 22", element: "Air", slug: "libra" },
-    { name: "Scorpio", symbol: "♏", dates: "Oct 23 - Nov 21", element: "Water", slug: "scorpio" },
-    { name: "Sagittarius", symbol: "♐", dates: "Nov 22 - Dec 21", element: "Fire", slug: "sagittarius" },
-    { name: "Capricorn", symbol: "♑", dates: "Dec 22 - Jan 19", element: "Earth", slug: "capricorn" },
-    { name: "Aquarius", symbol: "♒", dates: "Jan 20 - Feb 18", element: "Air", slug: "aquarius" },
-    { name: "Pisces", symbol: "♓", dates: "Feb 19 - Mar 20", element: "Water", slug: "pisces" }
+    { name: "Aries", symbol: "♈", dates: "Mar 21 - Apr 19", element: "Fire", slug: "aries", image: "/aries.jpeg" },
+    { name: "Taurus", symbol: "♉", dates: "Apr 20 - May 20", element: "Earth", slug: "taurus", image: "/tauraus.jpeg" },
+    { name: "Gemini", symbol: "♊", dates: "May 21 - Jun 20", element: "Air", slug: "gemini", image: "/gemini.jpeg" },
+    { name: "Cancer", symbol: "♋", dates: "Jun 21 - Jul 22", element: "Water", slug: "cancer", image: "/cancer.jpeg" },
+    { name: "Leo", symbol: "♌", dates: "Jul 23 - Aug 22", element: "Fire", slug: "leo", image: "/leo.jpeg" },
+    { name: "Virgo", symbol: "♍", dates: "Aug 23 - Sep 22", element: "Earth", slug: "virgo", image: "/virgo.jpeg" },
+    { name: "Libra", symbol: "♎", dates: "Sep 23 - Oct 22", element: "Air", slug: "libra", image: "/libra.jpeg" },
+    { name: "Scorpio", symbol: "♏", dates: "Oct 23 - Nov 21", element: "Water", slug: "scorpio", image: "/scorpio.jpeg" },
+    { name: "Sagittarius", symbol: "♐", dates: "Nov 22 - Dec 21", element: "Fire", slug: "sagittarius", image: "/sagittarius.jpeg" },
+    { name: "Capricorn", symbol: "♑", dates: "Dec 22 - Jan 19", element: "Earth", slug: "capricorn", image: "/capricon.jpeg" },
+    { name: "Aquarius", symbol: "♒", dates: "Jan 20 - Feb 18", element: "Air", slug: "aquarius", image: "/aqarius.jpeg" },
+    { name: "Pisces", symbol: "♓", dates: "Feb 19 - Mar 20", element: "Water", slug: "pisces", image: "/pisces.jpeg" }
   ];
 
   return (
@@ -41,8 +41,16 @@ export default function Horoscope() {
               <Link key={sign.slug} href={`/horoscope/${sign.slug}`}>
                 <Card className="hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer group">
                   <CardContent className="p-6 text-center space-y-3">
-                    <div className="text-5xl text-accent group-hover:scale-110 transition-transform">
-                      {sign.symbol}
+                    <div className="relative w-24 h-24 mx-auto mb-4 group-hover:scale-110 transition-transform flex items-center justify-center">
+                      {sign.image ? (
+                        <div className="w-full h-full rounded-full overflow-hidden border-2 border-accent/20 bg-white">
+                          <img src={sign.image} alt={sign.name} className="w-full h-full object-cover" />
+                        </div>
+                      ) : (
+                        <div className="text-5xl text-accent">
+                          {sign.symbol}
+                        </div>
+                      )}
                     </div>
                     <div>
                       <h3 className="font-serif text-xl font-bold mb-1">

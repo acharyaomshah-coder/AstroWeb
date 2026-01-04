@@ -35,6 +35,21 @@ export default function AdminHoroscopes() {
         luckyGem: ""
     });
 
+    const zodiacMeta: Record<string, { image: string }> = {
+        aries: { image: "/aries.jpeg" },
+        taurus: { image: "/tauraus.jpeg" },
+        gemini: { image: "/gemini.jpeg" },
+        cancer: { image: "/cancer.jpeg" },
+        leo: { image: "/leo.jpeg" },
+        virgo: { image: "/virgo.jpeg" },
+        libra: { image: "/libra.jpeg" },
+        scorpio: { image: "/scorpio.jpeg" },
+        sagittarius: { image: "/sagittarius.jpeg" },
+        capricorn: { image: "/capricon.jpeg" },
+        aquarius: { image: "/aqarius.jpeg" },
+        pisces: { image: "/pisces.jpeg" },
+    };
+
     const zodiacSigns = [
         "Aries", "Taurus", "Gemini", "Cancer",
         "Leo", "Virgo", "Libra", "Scorpio",
@@ -189,8 +204,18 @@ export default function AdminHoroscopes() {
                         <div className="md:col-span-2">
                             <Card>
                                 <CardHeader className="flex flex-row items-center justify-between">
-                                    <CardTitle className="text-xl capitalize flex items-center gap-2">
-                                        {selectedSign} Horoscope <span className="text-sm font-normal text-muted-foreground">({date})</span>
+                                    <CardTitle className="text-xl capitalize flex items-center gap-3">
+                                        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent/20 bg-white">
+                                            <img
+                                                src={zodiacMeta[selectedSign]?.image || "/favicon.png"}
+                                                alt={selectedSign}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                        <div>
+                                            {selectedSign} Horoscope
+                                            <p className="text-xs font-normal text-muted-foreground mt-0.5">({date})</p>
+                                        </div>
                                     </CardTitle>
                                     <Button onClick={handleSave} disabled={saving || loadingData}>
                                         {saving ? "Saving..." : <><Save className="mr-2 h-4 w-4" /> Save Changes</>}
