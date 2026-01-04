@@ -1,4 +1,6 @@
-__turbopack_load_page_chunks__("/book-appointment", [
+(globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
+    script: typeof document === "object" ? document.currentScript : undefined,
+    chunks: [
   "static/chunks/[root-of-the-server]__81da6f2e._.js",
   "static/chunks/22aaf_next_dist_compiled_1ba461ab._.js",
   "static/chunks/22aaf_next_dist_shared_lib_4656948b._.js",
@@ -13,7 +15,7 @@ __turbopack_load_page_chunks__("/book-appointment", [
   "static/chunks/22aaf_@supabase_realtime-js_dist_module_eb066e46._.js",
   "static/chunks/22aaf_@supabase_storage-js_dist_module_2cf06bf3._.js",
   "static/chunks/22aaf_@supabase_auth-js_dist_module_969f862b._.js",
-  "static/chunks/22aaf_3d5de7c2._.js",
-  "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_book-appointment_2da965e7._.js",
-  "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_book-appointment_8cd11315._.js"
-])
+  "static/chunks/22aaf_3d5de7c2._.js"
+],
+    source: "entry"
+});

@@ -36,7 +36,7 @@ export default function Blog() {
     }
   });
 
-  const categories = ["All", "Astrology", "Gemstones", "Spirituality", "Wellness"];
+  const categories = ["All", "Astrology", "Gemstones", "Spirituality", "Vaastu"];
 
   const filteredPosts = posts?.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -57,7 +57,7 @@ export default function Blog() {
               Spiritual Insights & Wisdom
             </h1>
             <p className="text-white/90 text-lg max-w-2xl mx-auto">
-              Explore articles on astrology, gemstones, and spiritual wellness
+              Explore articles on astrology, gemstones, and vaastu
             </p>
           </div>
         </div>

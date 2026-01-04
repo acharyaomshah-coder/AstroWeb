@@ -826,7 +826,7 @@ function Blog() {
         "Astrology",
         "Gemstones",
         "Spirituality",
-        "Wellness"
+        "Vaastu"
     ];
     const filteredPosts = posts?.filter((post)=>{
         const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
@@ -866,7 +866,7 @@ function Blog() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-white/90 text-lg max-w-2xl mx-auto",
-                                    children: "Explore articles on astrology, gemstones, and spiritual wellness"
+                                    children: "Explore articles on astrology, gemstones, and vaastu"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/blog/index.tsx",
                                     lineNumber: 59,

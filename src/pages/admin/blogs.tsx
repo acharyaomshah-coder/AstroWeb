@@ -26,7 +26,7 @@ interface BlogPost {
     published_at: string;
 }
 
-const BLOG_CATEGORIES = ["Astrology", "Gemstones", "Spirituality", "Wellness"];
+const BLOG_CATEGORIES = ["Astrology", "Gemstones", "Spirituality", "Vaastu"];
 
 export default function AdminBlogs() {
     const router = useRouter();

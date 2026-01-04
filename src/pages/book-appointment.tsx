@@ -14,6 +14,7 @@ import { Star, Clock, Award, Calendar as CalendarIcon, MapPin, Video, Check, X }
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/lib/authContext";
 import { getAuthToken } from "@/lib/supabase";
+import { Sunrise, BookOpen, GraduationCap, Microscope, CheckCircle2 } from "lucide-react";
 
 interface Appointment {
   id: string;
@@ -32,7 +33,7 @@ export default function BookAppointment() {
   const router = useRouter();
   const { toast } = useToast();
   const { user, isAdmin, loading: authLoading } = useAuth();
-  const [date, setDate] = useState<Date | undefined>(new Date());
+  const [bookingDate, setBookingDate] = useState<Date | undefined>(new Date());
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [consultationType, setConsultationType] = useState("");
   const [isBooking, setIsBooking] = useState(false);
@@ -175,7 +176,7 @@ export default function BookAppointment() {
     const message = (form.querySelector("#message") as HTMLTextAreaElement)?.value;
 
     // Construct WhatsApp message
-    const whatsappMessage = `Hello Aacharya Om shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Birth Details:* ${birthDetails}%0A*Birth Place:* ${birthPlace}%0A*Preferred Date:* ${date?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
+    const whatsappMessage = `Hello Aacharya Om shah,%0A%0AI would like to book a *${consultationType}* consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Birth Details:* ${birthDetails}%0A*Birth Place:* ${birthPlace}%0A*Preferred Date:* ${bookingDate?.toLocaleDateString()}%0A*Preferred Time:* ${selectedTime}%0A%0A*Additional Message:* ${message || "N/A"}`;
 
     const adminPhoneNumber = "918527530910";
     const whatsappUrl = `https://wa.me/${adminPhoneNumber}?text=${whatsappMessage}`;
@@ -329,209 +330,183 @@ export default function BookAppointment() {
   return (
     <>
       <Head>
-        <title>Book Your Consultation - Divine Astrology</title>
+        <title>Book Your Consultation - Vedic Intuition</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16">
-          <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">
-              Book Your Consultation
-            </h1>
-            <p className="text-white/90 text-lg max-w-2xl mx-auto">
-              Get personalized astrology guidance from our expert astrologers
-            </p>
-          </div>
-        </div>
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-bold mb-4">Book Your Consultation</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Get personalized astrology guidance from our expert Astrologers</p>
+            </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-1">
-              <Card className="sticky top-24">
-                <CardContent className="p-6 space-y-6">
-                  <div className="text-center">
-                    <Avatar className="w-32 h-32 mx-auto mb-4 border-4 border-accent/20">
-                      < AvatarImage src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" alt="Aacharya Om Saha" className="object-cover" />
-                      <AvatarFallback>AOS</AvatarFallback>
-                    </Avatar>
-                    <h3 className="font-serif text-2xl font-bold mb-2 uppercase">
-                      Aacharya Om Saha
-                    </h3>
-                    <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
-                      Jyotish Aacharya (Gold Medal)<br />
-                      Bhartiya Vidya Bhawan<br />
-                      M.A. Astrology, UOU, Uttarakhand<br />
-                      Medical Astrology (Diploma), SLBSNSU<br />
-                      Vaastu Shastra (Diploma), BVB–Delhi
-                    </p>
-                    <div className="flex items-center justify-center gap-1 mb-4">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-accent fill-accent" />
-                      ))}
-                      <span className="text-sm text-muted-foreground ml-2">(500+ consultations)</span>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="lg:col-span-1">
+                <Card className="h-full">
+                  <CardContent className="p-6 text-center space-y-4">
+                    <div className="relative mb-2">
+                      <Avatar className="w-32 h-32 mx-auto border-4 border-accent/20">
+                        <AvatarImage src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" className="object-cover" />
+                        <AvatarFallback>AOS</AvatarFallback>
+                      </Avatar>
                     </div>
-                  </div>
+                    <div>
+                      <h3 className="font-serif text-2xl font-bold uppercase">Aacharya Om shah</h3>
+                      <p className="text-accent font-medium text-sm">Astro & Vaastu Consultant</p>
+                      <p className="text-muted-foreground text-xs italic">(Karmic Consultant)</p>
+                    </div>
 
-                  <div className="space-y-3 border-t pt-3">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-sm">Address</p>
-                        <p className="text-xs text-muted-foreground">133 D, India Expo Plaza<br />Knowledge Park II Metro<br />Greater Noida, 201310</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Award className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-sm">Email</p>
-                        <p className="text-xs text-muted-foreground break-all">acharyaomshah@gmail.com</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Clock className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-sm">Phone</p>
-                        <p className="text-xs text-muted-foreground">+91 85275 30910</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t">
-                    <div className="text-center mb-4">
-                      <p className="text-xl font-bold text-accent">
-                        {services.find(s => s.name === consultationType)?.price || "Select Service"}
+                    <div className="space-y-3 text-[11px] text-muted-foreground border-t pt-4 text-left">
+                      <p className="flex items-start gap-3">
+                        <Badge variant="outline" className="w-[60px] h-4 px-0 justify-center text-[9px] uppercase flex-shrink-0">Acharya</Badge>
+                        <span className="flex-1">Jyotish, BVB-Delhi (Gold Medal)</span>
+                      </p>
+                      <p className="flex items-start gap-3">
+                        <Badge variant="outline" className="w-[60px] h-4 px-0 justify-center text-[9px] uppercase flex-shrink-0">Diploma</Badge>
+                        <span className="flex-1">Medical Astrology, Vaastu Shastra & Palmistry</span>
+                      </p>
+                      <p className="flex items-start gap-3">
+                        <Badge variant="outline" className="w-[60px] h-4 px-0 justify-center text-[9px] uppercase flex-shrink-0">Academic</Badge>
+                        <span className="flex-1">M.A.(Astrology) <br /> M.Sc.(Microbiology), Pre-PhD (Molecular Medicine)</span>
                       </p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
 
-            <div className="lg:col-span-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="font-serif text-2xl">Appointment Details</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
-                        <Input id="name" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input id="email" type="email" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number *</Label>
-                        <Input id="phone" type="tel" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="birth-details">Date and Time of Birth *</Label>
-                        <Input id="birth-details" placeholder="15 Aug 1990, 10:30 AM" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="birth-place">Place of Birth *</Label>
-                        <Input id="birth-place" placeholder="City, State, Country" required />
+                    <div className="pt-4 border-t">
+                      <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wider">Consultation Fee</p>
+                      <div className="font-bold text-accent text-2xl">
+                        {services.find(s => s.name === consultationType)?.price || "Select Service"}
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-                    {selectedService ? (
-                      <div className="space-y-3 p-4 rounded-lg border-2 border-accent bg-accent/10">
-                        {services.filter(s => s.id === selectedService).map((service) => (
-                          <div key={service.id}>
-                            <div className="flex justify-between items-start gap-2 mb-2">
-                              <h3 className="font-semibold">{service.name}</h3>
-                              <span className="text-accent font-bold text-lg">{service.price}</span>
-                            </div>
-                            <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="space-y-3">
-                        <Label>Select Service *</Label>
-                        <div className="space-y-3">
-                          {services.map((service) => (
-                            <div
-                              key={service.id}
-                              onClick={() => setConsultationType(service.name)}
-                              className={`p-4 rounded-lg border-2 cursor-pointer transition-all hover-elevate ${consultationType === service.name
-                                ? "border-accent bg-accent/10"
-                                : "border-border bg-background"
-                                }`}
-                            >
-                              <div className="flex justify-between items-start gap-2 mb-2">
-                                <h3 className="font-semibold text-sm leading-tight flex-1">{service.name}</h3>
-                                <span className="text-accent font-bold text-sm whitespace-nowrap">{service.price}</span>
-                              </div>
-                              <p className="text-xs text-muted-foreground leading-relaxed">{service.description}</p>
-                            </div>
-                          ))}
+              <div className="lg:col-span-2">
+                <Card>
+                  <CardContent className="p-8">
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="name">Full Name</Label>
+                          <Input id="name" placeholder="Your Name" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">Phone Number</Label>
+                          <Input id="phone" placeholder="Your Phone" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="birth-details">Date & Time of Birth</Label>
+                          <Input id="birth-details" placeholder="15 Aug 1990, 10:30 AM" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="birth-place">Place of Birth</Label>
+                          <Input id="birth-place" placeholder="City, State, Country" required />
                         </div>
                       </div>
-                    )}
 
-                    <div className="space-y-2">
-                      <Label>Select Date</Label>
-                      <div className="border rounded-md p-4 flex justify-center">
-                        <Calendar
-                          mode="single"
-                          selected={date}
-                          onSelect={setDate}
-                          disabled={(d) => d < new Date() || d.getDay() === 0}
-                          className="rounded-md"
-                        />
+                      {selectedService ? (
+                        <div className="space-y-4">
+                          <Label>Selected Service</Label>
+                          <div className="grid grid-cols-1 gap-3">
+                            {services.filter(s => s.id === selectedService).map((service) => (
+                              <div
+                                key={service.id}
+                                className="p-4 rounded-lg border-2 border-accent bg-accent/5 cursor-default"
+                              >
+                                <div className="flex justify-between items-center mb-1">
+                                  <h4 className="font-bold">{service.name}</h4>
+                                  <span className="text-accent font-bold">{service.price}</span>
+                                </div>
+                                <p className="text-xs text-muted-foreground">{service.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                          <Button
+                            variant="ghost"
+                            className="p-0 h-auto text-xs underline hover:bg-transparent text-accent"
+                            onClick={() => setSelectedService(null)}
+                          >
+                            Change Service
+                          </Button>
+                        </div>
+                      ) : (
+                        <div className="space-y-4">
+                          <Label>Select Service</Label>
+                          <div className="grid grid-cols-1 gap-3">
+                            {services.map((service) => (
+                              <div
+                                key={service.id}
+                                onClick={() => setConsultationType(service.name)}
+                                className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${consultationType === service.name ? "border-accent bg-accent/5" : "border-border"
+                                  }`}
+                              >
+                                <div className="flex justify-between items-center mb-1">
+                                  <h4 className="font-bold">{service.name}</h4>
+                                  <span className="text-accent font-bold">{service.price}</span>
+                                </div>
+                                <p className="text-xs text-muted-foreground">{service.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label>Select Date</Label>
+                          <div className="border rounded-md p-2 flex justify-center bg-background">
+                            <Calendar
+                              mode="single"
+                              selected={bookingDate}
+                              onSelect={setBookingDate}
+                              disabled={(d) => d < new Date() || d.getDay() === 0}
+                            />
+                          </div>
+                        </div>
+                        <div className="space-y-4">
+                          <Label>Select Time</Label>
+                          <div className="grid grid-cols-2 gap-2">
+                            {timeSlots.map((time) => {
+                              const isUnavailable = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM"].includes(time);
+                              return (
+                                <Button
+                                  key={time}
+                                  type="button"
+                                  variant={selectedTime === time ? "default" : "outline"}
+                                  onClick={() => !isUnavailable && setSelectedTime(time)}
+                                  disabled={isUnavailable}
+                                  className={`text-xs relative ${isUnavailable ? "opacity-60 bg-muted cursor-not-allowed border-dashed" : ""}`}
+                                >
+                                  {time}
+                                  {isUnavailable && (
+                                    <span className="absolute -top-2 -right-1 bg-destructive text-[8px] text-white px-2 rounded-full uppercase">Unavailable</span>
+                                  )}
+                                </Button>
+                              );
+                            })}
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="message">Additional Message</Label>
+                            <Textarea id="message" placeholder="Optional questions..." rows={3} />
+                          </div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="space-y-2">
-                      <Label>Select Time Slot *</Label>
-                      <div className="grid grid-cols-3 gap-2">
-                        {timeSlots.map((time) => {
-                          const isUnavailable = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM"].includes(time);
-                          return (
-                            <Button
-                              key={time}
-                              type="button"
-                              variant={selectedTime === time ? "default" : "outline"}
-                              onClick={() => !isUnavailable && setSelectedTime(time)}
-                              disabled={isUnavailable}
-                              className={`w-full relative ${isUnavailable ? "opacity-60 bg-muted cursor-not-allowed border-dashed" : ""}`}
-                            >
-                              {time}
-                              {isUnavailable && (
-                                <span className="absolute -top-2 -right-1 bg-destructive text-[8px] text-white px-2 rounded-full uppercase">Unavailable</span>
-                              )}
-                            </Button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Additional Message (Optional)</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Any specific questions or concerns..."
-                        rows={4}
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full"
-                      disabled={isBooking}
-                    >
-                      Book via WhatsApp
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+                      <Button
+                        type="submit"
+                        size="lg"
+                        className="w-full bg-accent hover:bg-accent/90"
+                        disabled={isBooking}
+                      >
+                        Book via WhatsApp
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

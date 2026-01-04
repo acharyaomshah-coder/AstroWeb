@@ -75,7 +75,7 @@ export function Navigation() {
                   </div>
 
                   <div className="group/item relative">
-                    <Link href="/book-appointment?service=vaastu-consultation">
+                    <Link href="/book-appointment?service=residential-Vaastu">
                       <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-vaastu">
                         <span>Vaastu Consultation</span>
                         <span className="text-xs">›</span>
@@ -83,23 +83,26 @@ export function Navigation() {
                     </Link>
                     <div className="absolute left-full top-0 ml-1 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
                       <div className="p-2 space-y-1">
-                        <Link href="/book-appointment?service=vaastu-consultation">
-                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Home & Office Vaastu</div>
+                        <Link href="/book-appointment?service=residential-Vaastu">
+                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Residential Vaastu</div>
+                        </Link>
+                        <Link href="/book-appointment?service=commercial-Vaastu">
+                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Commercial Vaastu</div>
                         </Link>
                       </div>
                     </div>
                   </div>
 
                   <div className="group/item relative">
-                    <Link href="/book-appointment?service=varsha-kundali">
+                    <Link href="/book-appointment?service=varshaphala">
                       <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-varshaphal">
-                        <span>Varsha Kundali Analysis</span>
+                        <span>Varshaphala Analysis</span>
                         <span className="text-xs">›</span>
                       </div>
                     </Link>
                     <div className="absolute left-full top-0 ml-1 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
                       <div className="p-2 space-y-1">
-                        <Link href="/book-appointment?service=varsha-kundali">
+                        <Link href="/book-appointment?service=varshaphala">
                           <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Yearly Predictions</div>
                         </Link>
                       </div>
@@ -107,16 +110,16 @@ export function Navigation() {
                   </div>
 
                   <div className="group/item relative">
-                    <Link href="/book-appointment?service=birth-time-rectification">
-                      <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-birthtime">
-                        <span>Birth Time Rectification</span>
+                    <Link href="/book-appointment?service=muhurta-selection">
+                      <div className="px-4 py-2 text-sm hover:bg-accent/10 rounded cursor-pointer flex items-center justify-between group-hover/item:text-accent" data-testid="link-consultation-muhurta">
+                        <span>Muhurta Selection</span>
                         <span className="text-xs">›</span>
                       </div>
                     </Link>
                     <div className="absolute left-full top-0 ml-1 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
                       <div className="p-2 space-y-1">
-                        <Link href="/book-appointment?service=birth-time-rectification">
-                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Time Correction</div>
+                        <Link href="/book-appointment?service=muhurta-selection">
+                          <div className="px-4 py-2 text-sm text-foreground/80 hover:bg-accent/10 hover:text-accent rounded cursor-pointer">Auspicious Timing</div>
                         </Link>
                       </div>
                     </div>
@@ -230,19 +233,19 @@ export function Navigation() {
                         Horoscope Analysis
                       </Button>
                     </Link>
-                    <Link href="/book-appointment?service=vaastu-consultation">
+                    <Link href="/book-appointment?service=residential-Vaastu">
                       <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-vaastu">
                         Vaastu Consultation
                       </Button>
                     </Link>
-                    <Link href="/book-appointment?service=varsha-kundali">
+                    <Link href="/book-appointment?service=varshaphala">
                       <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-varshaphal">
-                        Varsha Kundali Analysis
+                        Varshaphala Analysis
                       </Button>
                     </Link>
-                    <Link href="/book-appointment?service=birth-time-rectification">
-                      <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-birthtime">
-                        Birth Time Rectification
+                    <Link href="/book-appointment?service=muhurta-selection">
+                      <Button variant="ghost" className="w-full justify-start" onClick={() => setMobileMenuOpen(false)} data-testid="link-mobile-consultation-muhurta">
+                        Muhurta Selection
                       </Button>
                     </Link>
                   </div>
