@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -122,9 +122,11 @@ export default function HoroscopeDetail() {
 
   return (
     <>
-      <Head>
-        <title>{currentSign.name} Horoscope - Divine Astrology</title>
-      </Head>
+      <SEOHead
+        title={`${currentSign.name} Daily Horoscope - Vedic Intuition`}
+        description={`Get your daily ${currentSign.name} horoscope, love, career, and money predictions from Vedic Intuition.`}
+        keywords={[`${currentSign.name} Horoscope`, "Daily Horoscope", "Vedic Astrology"]}
+      />
       <div className="min-h-screen bg-background">
         <div className="vedic-header py-16">
           <div className="container mx-auto px-4 lg:px-8 relative z-10">

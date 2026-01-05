@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -192,9 +192,10 @@ export default function BookAppointment() {
   if (isAdmin && !authLoading) {
     return (
       <>
-        <Head>
-          <title>Consultation Bookings - Divine Astrology</title>
-        </Head>
+        <SEOHead
+          title="Consultation Bookings - Vedic Intuition Admin"
+          description="Admin dashboard for managing consultation bookings."
+        />
         <div className="min-h-screen bg-background">
           <div className="bg-primary text-primary-foreground py-16">
             <div className="container mx-auto px-4 lg:px-8 text-center">
@@ -329,9 +330,11 @@ export default function BookAppointment() {
 
   return (
     <>
-      <Head>
-        <title>Book Your Consultation - Vedic Intuition</title>
-      </Head>
+      <SEOHead
+        title="Book Your Consultation - Vedic Intuition"
+        description="Book a personalized Vedic Astrology or Vaastu consultation with Aacharya Om Shah."
+        keywords={["Book Astrology Consultation", "Online Astrologer Appointment", "Vastu Consultation"]}
+      />
       <div className="min-h-screen bg-background">
         <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">

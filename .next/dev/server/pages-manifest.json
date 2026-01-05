@@ -1,12 +1,1 @@
-{
-  "/": "pages/index.js",
-  "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/api/blog": "pages/api/blog.js",
-  "/api/horoscope": "pages/api/horoscope.js",
-  "/api/muhurat": "pages/api/muhurat.js",
-  "/api/panchang": "pages/api/panchang.js",
-  "/api/users": "pages/api/users.js",
-  "/api/videos": "pages/api/videos.js",
-  "/profile": "pages/profile.js"
-}
+{}

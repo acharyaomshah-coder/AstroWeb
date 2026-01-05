@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Users, Star, Heart, Sparkles, X } from "lucide-react";
@@ -39,9 +39,11 @@ export default function About() {
 
   return (
     <>
-      <Head>
-        <title>Aacharya Om Shah - Vedic Intuition</title>
-      </Head>
+      <SEOHead
+        title="About Vedic Intuition - Aacharya Om Shah"
+        description="Learn about Aacharya Om Shah and Vedic Intuition, a leading source for Vedic Astrology, Vaastu Shastra, and authentic spiritual products."
+        keywords={["About Aacharya Om Shah", "Vedic Intuition Profile", "Astrologer Biography"]}
+      />
       <div className="min-h-screen bg-background">
 
         {/* Hero Bio Section */}

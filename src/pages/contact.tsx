@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,9 +48,11 @@ export default function Contact() {
 
   return (
     <>
-      <Head>
-        <title>Contact Us - Divine Astrology</title>
-      </Head>
+      <SEOHead
+        title="Contact Us - Vedic Intuition"
+        description="Get in touch with Vedic Intuition for expert astrology consultation, product inquiries, or customer support."
+        keywords={["Contact Vedic Intuition", "Astrology Support", "Customer Service"]}
+      />
       <div className="min-h-screen bg-background">
         <div className="vedic-header py-16">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">

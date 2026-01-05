@@ -1,12 +1,14 @@
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { ProductGrid } from "@/components/ProductGrid";
 
 export default function Products() {
   return (
     <>
-      <Head>
-        <title>All Products - Divine Astrology</title>
-      </Head>
+      <SEOHead
+        title="Spiritual Products & Gemstones - Vedic Intuition"
+        description="Browse our collection of authentic, certified gemstones, rudrakshas, and healing crystals."
+        keywords={["Buy Gemstones", "Healing Crystals", "Rudraksha", "Vastu Products", "Online Astrological Shop"]}
+      />
       <div className="min-h-screen bg-background">
         <div className="vedic-header py-16">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">

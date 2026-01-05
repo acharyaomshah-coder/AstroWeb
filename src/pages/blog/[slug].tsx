@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -63,10 +63,33 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <Head>
-        <title>{post.title} - Divine Astrology</title>
-        <meta name="description" content={post.metaDescription} />
-      </Head>
+      <SEOHead
+        title={`${post.title} - Vedic Intuition`}
+        description={post.metaDescription}
+        image={post.featuredImage}
+        type="article"
+        keywords={[post.category, "Vedic Intuition Blog"]}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "image": post.featuredImage,
+          "author": {
+            "@type": "Person",
+            "name": post.author
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Vedic Intuition",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://vedicintuition.com/favicon.png"
+            }
+          },
+          "datePublished": post.publishedAt,
+          "description": post.metaDescription
+        }}
+      />
       <div className="min-h-screen bg-background">
         <article className="container mx-auto px-4 lg:px-8 py-12 max-w-4xl">
           <Link href="/blog">

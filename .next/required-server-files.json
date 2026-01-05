@@ -2,8 +2,8 @@
   "version": 1,
   "config": {
     "env": {
-      "NEXT_PUBLIC_SUPABASE_URL": "https://cxanroyrcrsacyvlehxb.supabase.co",
-      "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4YW5yb3lyY3JzYWN5dmxlaHhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQwODI1NDcsImV4cCI6MjA3OTY1ODU0N30.VYCdmvFjopRd06VqhzLN8wI_i93vaz-8kEGPnlvj0Hc"
+      "NEXT_PUBLIC_SUPABASE_URL": "https://muvycgcnmqdhgivrjpry.supabase.co",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im11dnljZ2NubXFkaGdpdnJqcHJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc0NDcyNDcsImV4cCI6MjA4MzAyMzI0N30.gtPh-MkpeH-_YmA1o9M1tPXVkDy0yMO-4vsFd9SfjTQ"
     },
     "webpack": null,
     "typescript": {
@@ -301,8 +301,8 @@
     },
     "distDirRoot": ".next"
   },
-  "appDir": "D:\\Testing\\AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38",
-  "relativeAppDir": "Testing\\AstroWeb-7ae30bc1f7a1605f38f538a70a5f77df29722c38",
+  "appDir": "D:\\DEMO-PROJECTS\\AstroWeb",
+  "relativeAppDir": "DEMO-PROJECTS\\AstroWeb",
   "files": [
     ".next\\routes-manifest.json",
     ".next\\server\\pages-manifest.json",

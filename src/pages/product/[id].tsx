@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -72,9 +72,30 @@ export default function ProductDetail() {
 
   return (
     <>
-      <Head>
-        <title>{product.name} - Divine Astrology</title>
-      </Head>
+      <SEOHead
+        title={`${product.name} - Vedic Intuition Shop`}
+        description={product.description}
+        image={product.images[0]}
+        keywords={[product.name, product.category, "Buy " + product.name, "Authentic " + product.name]}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": product.name,
+          "image": product.images,
+          "description": product.description,
+          "brand": {
+            "@type": "Brand",
+            "name": "Vedic Intuition"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": `https://vedicintuition.com/product/${product.id}`,
+            "priceCurrency": "INR",
+            "price": product.price,
+            "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+          }
+        }}
+      />
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 lg:px-8 py-8">
           <Link href="/products">

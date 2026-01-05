@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -312,9 +312,12 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Vedic Intuition - Premium Gemstones, Spiritual Guidance & Authentic Remedies</title>
-      </Head>
+      <SEOHead
+        title="Vedic Intuition - Premium Gemstones, Spiritual Guidance & Authentic Remedies"
+        description="Vedic Intuition offers expert Vedic Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products."
+        keywords={["Gemstones", "Spiritual Guidance", "Remedies", "Vedic Astrology", "Vastu Shastra"]}
+        image="/favicon.png"
+      />
       <div className="min-h-screen">
         {/* 1. Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -332,7 +335,9 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
-            <motion.h1
+            {/* SEO Optimized H1 - Visually Hidden */}
+            <h1 className="sr-only">Vedic Intuition</h1>
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -340,7 +345,7 @@ export default function Home() {
             >
               Decode Your <span className="text-accent">Prārabdha</span> to <br />
               Engineer Your <span className="text-accent">Karma</span>
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -348,7 +353,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
             >
-              Expert Vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!
+              <span className="font-semibold text-accent">Vedic Intuition</span> offers Expert Vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!
             </motion.p>
 
             <motion.div

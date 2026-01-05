@@ -6,18 +6,18 @@
   "rootMainFiles": [],
   "pages": {
     "/_app": [
-      "static/chunks/177643a6d67a4839.js",
-      "static/chunks/e18d956853ed3fe5.js",
-      "static/chunks/89c51e8cf4498580.js",
-      "static/chunks/2b99c9a715881332.js",
-      "static/chunks/ee6b1c16e5f20c26.js",
-      "static/chunks/a849030ec8f2cc24.js",
-      "static/chunks/70132301d30bf16e.js",
-      "static/chunks/27d5cdc70d9ad62b.js",
-      "static/chunks/01fe84100697b096.js",
-      "static/chunks/2eed04ea2eaad118.js",
-      "static/chunks/f3b449133ebe5836.css",
-      "static/chunks/turbopack-ee03730a0198df22.js"
+      "static/chunks/6453eb60024064c0.js",
+      "static/chunks/ecb712da8c3a58bc.js",
+      "static/chunks/55ece2389063f214.js",
+      "static/chunks/fb99db3f495e9263.js",
+      "static/chunks/2e1d400e04e0e65d.js",
+      "static/chunks/e22b55c8f7522d24.js",
+      "static/chunks/73b6386d4e033ade.js",
+      "static/chunks/f0d89716cc337088.js",
+      "static/chunks/dcd46c7513e058a5.js",
+      "static/chunks/0a13c4f78dbc30d7.js",
+      "static/chunks/be52a41b26042c9c.css",
+      "static/chunks/turbopack-f3b8870cecb3686a.js"
     ]
   },
   "ampFirstPages": []

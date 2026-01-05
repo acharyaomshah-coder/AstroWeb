@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import Head from "next/head";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -47,9 +47,11 @@ export default function Blog() {
 
   return (
     <>
-      <Head>
-        <title>Blog - Divine Astrology</title>
-      </Head>
+      <SEOHead
+        title="Spiritual Insights & Wisdom - Vedic Intuition Blog"
+        description="Explore articles on Vedic Astrology, Gemstones, Vaastu Shastra, and spiritual wisdom from Aacharya Om Shah."
+        keywords={["Astrology Blog", "Spiritual Articles", "Vedic Wisdom", "Gemstone Guide"]}
+      />
       <div className="min-h-screen bg-background">
         <div className="vedic-header py-16">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">

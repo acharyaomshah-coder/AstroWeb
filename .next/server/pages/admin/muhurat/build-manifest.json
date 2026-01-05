@@ -6,15 +6,15 @@
   "rootMainFiles": [],
   "pages": {
     "/admin/muhurat": [
-      "static/chunks/0b246665cb7bf467.js",
-      "static/chunks/177643a6d67a4839.js",
-      "static/chunks/7b13365dfc3625ad.js",
-      "static/chunks/e18d956853ed3fe5.js",
-      "static/chunks/2eed04ea2eaad118.js",
-      "static/chunks/27d5cdc70d9ad62b.js",
-      "static/chunks/89c51e8cf4498580.js",
-      "static/chunks/a849030ec8f2cc24.js",
-      "static/chunks/turbopack-36f7533cdd1f82a8.js"
+      "static/chunks/e60c1cf928963ebd.js",
+      "static/chunks/788e1555ba6cd019.js",
+      "static/chunks/ecb712da8c3a58bc.js",
+      "static/chunks/fb99db3f495e9263.js",
+      "static/chunks/e22b55c8f7522d24.js",
+      "static/chunks/f0d89716cc337088.js",
+      "static/chunks/2e1d400e04e0e65d.js",
+      "static/chunks/73b6386d4e033ade.js",
+      "static/chunks/turbopack-b8e4a42e4bfb3fc7.js"
     ]
   },
   "ampFirstPages": []
