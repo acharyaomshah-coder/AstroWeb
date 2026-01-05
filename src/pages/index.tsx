@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -393,7 +394,7 @@ export default function Home() {
                   className="max-w-md w-full aspect-[4/5] rounded-2xl overflow-hidden border-8 border-muted shadow-2xl relative cursor-pointer group"
                   onClick={() => setSelectedImage("/WhatsApp Image 2026-01-03 at 17.07.18.jpeg")}
                 >
-                  <img src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" alt="Aacharya Om Shah" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  <Image src="/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" alt="Aacharya Om Shah" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"></div>
                 </div>
               </motion.div>
@@ -444,10 +445,11 @@ export default function Home() {
                     className={`relative group overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.colSpan || ""}`}
                     onClick={() => setSelectedImage(item.image)}
                   >
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
@@ -624,7 +626,7 @@ export default function Home() {
                     className="group cursor-pointer"
                   >
                     <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 shadow-lg">
-                      <img src={category.image} alt={category.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                      <Image src={category.image} alt={category.name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                       <div className="absolute bottom-4 left-4">
                         <h3 className="text-white font-bold text-lg">{category.name}</h3>
@@ -671,7 +673,7 @@ export default function Home() {
                   <motion.div key={video.id} whileHover={{ scale: 1.02 }} className="group">
                     <a href={video.youtubeUrl} target="_blank" rel="noopener noreferrer">
                       <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl mb-4">
-                        <img src={video.thumbnailUrl} alt={video.title} className="w-full h-full object-cover" />
+                        <Image src={video.thumbnailUrl} alt={video.title} fill className="object-cover" />
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
                           <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-white shadow-2xl">
                             <Play className="fill-current w-6 h-6 ml-1" />
@@ -721,10 +723,11 @@ export default function Home() {
                           <div className="relative w-20 h-20 mb-2">
                             <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${item.color} blur-sm opacity-20`}></div>
                             <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-accent/20 shadow-lg bg-white">
-                              <img
+                              <Image
                                 src={item.image}
                                 alt={item.sign}
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                fill
+                                className="object-cover group-hover:scale-110 transition-transform duration-700"
                               />
                             </div>
                           </div>

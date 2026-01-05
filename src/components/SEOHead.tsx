@@ -9,6 +9,11 @@ interface SEOHeadProps {
     type?: 'website' | 'article' | 'profile';
     publishedTime?: string;
     schema?: Record<string, any>;
+    googleBot?: string; // Optional: "index, follow" override
+    verification?: {
+        google?: string;
+        bing?: string;
+    };
 }
 
 export const SEOHead = ({
@@ -18,7 +23,8 @@ export const SEOHead = ({
     image = "/favicon.png", // Default image
     type = 'website',
     publishedTime,
-    schema
+    schema,
+    verification
 }: SEOHeadProps) => {
     const router = useRouter();
     const siteUrl = "https://vedicintuition.com"; // Replace with actual domain
@@ -34,14 +40,42 @@ export const SEOHead = ({
 
     const structuredData = schema || {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "name": "Vedic Intuition",
+        "image": [`${siteUrl}/favicon.png`, `${siteUrl}/WhatsApp Image 2026-01-03 at 17.07.18.jpeg`],
         "url": siteUrl,
-        "logo": `${siteUrl}/favicon.png`,
+        "telephone": "+91-8527530910",
+        "priceRange": "₹₹",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "133 D, India Expo Plaza, Knowledge Park II Metro",
+            "addressLocality": "Greater Noida",
+            "addressRegion": "UP",
+            "postalCode": "201310",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 28.4744,
+            "longitude": 77.5040
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "11:00",
+            "closes": "20:00"
+        },
         "sameAs": [
-            // Add social media links here if known, e.g.
-            // "https://www.facebook.com/vedicintuition",
-            // "https://www.instagram.com/vedicintuition"
+            "https://www.youtube.com/@VedicIntuition", // Assuming based on content
+            // Add other social links here
         ],
         "contactPoint": {
             "@type": "ContactPoint",
@@ -57,6 +91,10 @@ export const SEOHead = ({
             <meta name="keywords" content={allKeywords} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="canonical" href={canonicalUrl} />
+
+            {/* Verification Tags */}
+            {verification?.google && <meta name="google-site-verification" content={verification.google} />}
+            {verification?.bing && <meta name="msvalidate.01" content={verification.bing} />}
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content={type} />

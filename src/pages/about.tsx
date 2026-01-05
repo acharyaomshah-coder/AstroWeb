@@ -1,4 +1,5 @@
 import { SEOHead } from "@/components/SEOHead";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Users, Star, Heart, Sparkles, X } from "lucide-react";
@@ -104,10 +105,11 @@ export default function About() {
               >
                 <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:ml-auto rounded-none overflow-hidden border-8 border-muted bg-muted shadow-2xl hover:shadow-3xl transition-shadow duration-300">
                   <div className="absolute inset-0 border border-white/20 z-10 m-4 pointer-events-none"></div>
-                  <img
+                  <Image
                     src="/gold medal.jpeg"
                     alt="Gold Medal Achievement"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute bottom-8 right-8 z-20 bg-background/90 backdrop-blur-sm p-4 shadow-lg max-w-[200px] text-right pointer-events-none">
                     <p className="font-serif text-3xl font-bold text-accent">1st</p>
@@ -157,10 +159,11 @@ export default function About() {
                   className={`relative group overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.colSpan || ""}`}
                   onClick={() => setSelectedImage(item.image)}
                 >
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
