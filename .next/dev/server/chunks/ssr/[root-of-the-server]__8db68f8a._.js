@@ -61,7 +61,7 @@ function Document() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("meta", {
                         name: "description",
-                        content: "Discover authentic gemstones, rudraksha, yantras and spiritual remedies with certified astrology consultations. Transform your life with ancient wisdom and premium spiritual products."
+                        content: "Vedic Astrology & Vaastu Consultation, remedies with certified astrology consultations. Transform your life with ancient wisdom and premium spiritual products."
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/_document.tsx",
                         lineNumber: 8,
@@ -69,7 +69,7 @@ function Document() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("meta", {
                         property: "og:title",
-                        content: "VedicIntuition - Premium Gemstones & Spiritual Guidance"
+                        content: "Vedic Astrology & Vaastu Consultation , remedies"
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/_document.tsx",
                         lineNumber: 9,

@@ -1,12 +1,12 @@
 (globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/[root-of-the-server]__9f9bd97e._.js",
-  "static/chunks/22aaf_next_dist_compiled_06d30792._.js",
-  "static/chunks/22aaf_next_dist_shared_lib_9df8cd89._.js",
-  "static/chunks/22aaf_next_dist_client_a9bc3bc9._.js",
+  "static/chunks/[root-of-the-server]__e62ae74e._.js",
+  "static/chunks/22aaf_next_dist_compiled_e5988f1e._.js",
+  "static/chunks/22aaf_next_dist_shared_lib_cc8f56db._.js",
+  "static/chunks/22aaf_next_dist_client_1b2ee1d8._.js",
   "static/chunks/22aaf_next_dist_547b0852._.js",
-  "static/chunks/22aaf_next_6d79f447._.js",
+  "static/chunks/22aaf_next_ba254f6a._.js",
   "static/chunks/22aaf_react_aadced80._.js",
   "static/chunks/22aaf_react-dom_cjs_react-dom_development_bf73e345.js",
   "static/chunks/22aaf_react-dom_c4eafa69._.js",
@@ -15,7 +15,7 @@
   "static/chunks/22aaf_react-icons_lib_1d60da94._.js",
   "static/chunks/22aaf_date-fns_b07223bb._.js",
   "static/chunks/22aaf_react-day-picker_dist_index_esm_f55cc2e2.js",
-  "static/chunks/22aaf_c2fb2f70._.js"
+  "static/chunks/22aaf_12563cd3._.js"
 ],
     source: "entry"
 });

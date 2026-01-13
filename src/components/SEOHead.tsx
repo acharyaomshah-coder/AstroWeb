@@ -29,7 +29,7 @@ export const SEOHead = ({
     const router = useRouter();
     const siteUrl = "https://vedicintuition.com"; // Replace with actual domain
     const canonicalUrl = `${siteUrl}${router.asPath === '/' ? '' : router.asPath}`.split('?')[0];
-    const fullTitle = title.startsWith("Vedic Intuition") ? title : `${title} | Vedic Intuition`;
+    const fullTitle = (title.includes("Vedic Intuition") || title.includes("Vedic Astrology")) ? title : `${title} | Vedic Intuition`;
 
     // Default keywords combined with page-specific ones
     const allKeywords = [

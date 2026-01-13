@@ -1,9 +1,9 @@
 var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/pages/about.js")
-R.c("server/chunks/ssr/22aaf_10892d65._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__ae59ee24._.js")
+R.c("server/chunks/ssr/22aaf_f2e2d12b._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__d2eabe28._.js")
 R.c("server/chunks/ssr/22aaf_2877b9da._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__8db68f8a._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__80f1ca72._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__85d9fd69._.js")
 R.c("server/chunks/ssr/22aaf_b4a67881._.js")
 R.m("[project]/DEMO-PROJECTS/AstroWeb/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/DEMO-PROJECTS/AstroWeb/src/pages/_document.tsx [ssr] (ecmascript)\", INNER_APP => \"[project]/DEMO-PROJECTS/AstroWeb/src/pages/_app.tsx [ssr] (ecmascript)\" } [ssr] (ecmascript)")
 module.exports=R.m("[project]/DEMO-PROJECTS/AstroWeb/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/DEMO-PROJECTS/AstroWeb/src/pages/_document.tsx [ssr] (ecmascript)\", INNER_APP => \"[project]/DEMO-PROJECTS/AstroWeb/src/pages/_app.tsx [ssr] (ecmascript)\" } [ssr] (ecmascript)").exports

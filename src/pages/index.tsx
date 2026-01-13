@@ -314,7 +314,7 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Vedic Intuition - Premium Gemstones, Spiritual Guidance & Authentic Remedies"
+        title="Vedic Astrology & Vaastu Consultation , remedies"
         description="Vedic Intuition offers expert Vedic Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products."
         keywords={["Gemstones", "Spiritual Guidance", "Remedies", "Vedic Astrology", "Vastu Shastra"]}
         image="/favicon.png"
@@ -379,10 +379,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 2. About & Excellence Section */}
+        {/* 2. About Section */}
         <section className="py-24 bg-background overflow-hidden">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -416,7 +416,7 @@ export default function Home() {
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> and <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> and <span className="text-foreground font-medium">(Medical Astrology)</span> from BVB Delhi and SLBS National Sanskrit University, respectively.
+                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU , <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
                     <br></br> With Over <span className="text-foreground font-medium">6 years of experience</span> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
                   </p>
@@ -426,52 +426,19 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Photo Credentials Gallery */}
-            <div className="mb-32">
-              <div className="text-center mb-16">
-                <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Excellence</span>
-                <h3 className="font-serif text-4xl font-bold mb-4">Academic Excellence & Recognition</h3>
-                <div className="w-24 h-1 bg-accent mx-auto"></div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] md:auto-rows-[280px]">
-                {credentials.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className={`relative group overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.colSpan || ""}`}
-                    onClick={() => setSelectedImage(item.image)}
-                  >
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300">
-                      <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                        <h4 className="text-white font-serif text-2xl font-bold mb-1">{item.title}</h4>
-                        <p className="text-white/80 text-sm tracking-wide font-light">{item.subtitle}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
 
           </div>
         </section>
 
         {/* 3. Book Consultation Section */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl font-bold mb-4">Book Your Consultation</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Get personalized astrology guidance from our expert Astrologers</p>
+        <section className="bg-muted/30">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Book Your Consultation</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">Get personalized astrology guidance from our expert Astrologers</p>
             </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="lg:col-span-1">
@@ -610,12 +577,14 @@ export default function Home() {
         </section>
 
         {/* 4. Products Section */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl font-bold mb-4">Purchase Authentic Products</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Sourced and certified by experts for your spiritual growth</p>
+        <section className="bg-background">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Purchase Authentic Products</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">Sourced and certified by experts for your spiritual growth</p>
             </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {categories.map((category, index) => (
@@ -639,13 +608,55 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5. Blogs Section */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-4xl font-bold mb-4">Vedic Intuition Blogs</h2>
-              <p className="text-muted-foreground text-lg">Knowledge and wisdom for your modern lifestyle</p>
+        {/* 5. Academic Excellence Section */}
+        <section className="bg-muted/30">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Excellence</span>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Academic Excellence & Recognition</h2>
+              <div className="w-24 h-1 bg-accent mx-auto"></div>
             </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] md:auto-rows-[280px]">
+              {credentials.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`relative group overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer ${item.colSpan || ""}`}
+                  onClick={() => setSelectedImage(item.image)}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      <h4 className="text-white font-serif text-2xl font-bold mb-1">{item.title}</h4>
+                      <p className="text-white/80 text-sm tracking-wide font-light">{item.subtitle}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 6. Blogs Section */}
+        <section className="bg-background">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Vedic Intuition Blogs</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">Knowledge and wisdom for your modern lifestyle</p>
+            </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
             <BlogSection limit={3} />
             <div className="text-center mt-12">
               <Link href="/blog">
@@ -655,13 +666,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 6. Videos Section */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl font-bold mb-4">Vedic Intuition Videos</h2>
-              <p className="text-muted-foreground text-lg">Watch guidances and insights from Aacharya Om Shah</p>
+        {/* 7. Videos Section */}
+        <section className="bg-muted/30">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Vedic Intuition Videos</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">Watch guidances and insights from Aacharya Om Shah</p>
             </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
 
             {isLoadingVideos ? (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-pulse">
@@ -694,17 +707,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 7. Daily Horoscope Section */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Zap className="text-accent h-8 w-8" />
-                <h2 className="font-serif text-4xl font-bold">Daily Horoscope</h2>
-                <Zap className="text-accent h-8 w-8" />
-              </div>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Discover what the stars have in store for you today</p>
+        {/* 8. Daily Horoscope Section */}
+        <section className="bg-background">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Daily Horoscope</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">Discover what the stars have in store for you today</p>
             </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-5 max-w-6xl mx-auto">
               {horoscope.map((item, index) => (
@@ -721,7 +732,7 @@ export default function Home() {
                         {/* Left Side: Circular Image and Name */}
                         <div className="flex flex-col items-center flex-shrink-0 w-24">
                           <div className="relative w-20 h-20 mb-2">
-                            <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${item.color} blur-sm opacity-20`}></div>
+                            <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${item.color} blur-md opacity-40`}></div>
                             <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-accent/20 shadow-lg bg-white">
                               <Image
                                 src={item.image}
@@ -749,19 +760,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 8. Today's Panchang Section */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Clock className="text-accent h-8 w-8" />
-                <h2 className="font-serif text-4xl font-bold">Today's Panchang</h2>
-                <Clock className="text-accent h-8 w-8" />
-              </div>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        {/* 9. Today's Panchang Section */}
+        <section className="bg-muted/30">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Today's Panchang</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">
                 {new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
               </p>
             </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
 
             {panchang ? (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -788,17 +797,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 9. Auspicious Muhurat Section */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Sunrise className="text-accent h-8 w-8" />
-                <h2 className="font-serif text-4xl font-bold">Auspicious Muhurat</h2>
-                <Sunrise className="text-accent h-8 w-8" />
-              </div>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Plan your auspicious beginnings with divine timing</p>
+        {/* 10. Auspicious Muhurat Section */}
+        <section className="bg-background">
+          <div className="vedic-header py-20 mb-16">
+            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Auspicious Muhurat</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">Plan your auspicious beginnings with divine timing</p>
             </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-8">
 
             {muhurat ? (
               <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -856,8 +863,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 10. Contact Us Section */}
-        <section className="py-24 bg-background">
+        {/* 11. Contact Us Section */}
+        <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-6xl mx-auto shadow-2xl rounded-3xl overflow-hidden bg-muted/10 border border-muted flex flex-col lg:flex-row">
               <div className="lg:w-1/2 p-12 bg-primary text-primary-foreground space-y-8">
@@ -929,8 +936,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-24 bg-muted/30">
+        {/* 12. FAQ Section */}
+        <section className="py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-3xl font-bold mb-4">
