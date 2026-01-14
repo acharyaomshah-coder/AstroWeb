@@ -103,7 +103,7 @@ export default function About() {
                 className="relative order-1 lg:order-2 cursor-pointer pt-2 lg:pt-4"
                 onClick={() => setSelectedImage("/gold medal.jpeg")}
               >
-                <div className="relative aspect-[4/5] w-full max-w-[340px] md:max-w-[380px] lg:ml-auto rounded-xl overflow-hidden border-[10px] border-white bg-white shadow-[0_15px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.12)] transition-all duration-500 group">
+                <div className="relative aspect-[4/5] w-full max-w-[400px] md:max-w-[450px] lg:mr-auto rounded-xl overflow-hidden border-[12px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 group">
                   <div className="absolute inset-0 border border-slate-100 z-10 pointer-events-none rounded-sm"></div>
                   <Image
                     src="/gold medal.jpeg"

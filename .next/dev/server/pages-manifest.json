@@ -3,12 +3,10 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/about": "pages/about.js",
-  "/api/appointments": "pages/api/appointments.js",
   "/api/blog": "pages/api/blog.js",
   "/api/horoscope": "pages/api/horoscope.js",
   "/api/muhurat": "pages/api/muhurat.js",
   "/api/panchang": "pages/api/panchang.js",
   "/api/users": "pages/api/users.js",
-  "/api/videos": "pages/api/videos.js",
-  "/book-appointment": "pages/book-appointment.js"
+  "/api/videos": "pages/api/videos.js"
 }
