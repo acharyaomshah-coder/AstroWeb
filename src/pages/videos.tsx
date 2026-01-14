@@ -92,7 +92,7 @@ export default function Videos() {
         <title>Videos - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16 md:py-24">
+        <div className="vedic-header py-10 md:py-10">
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="text-center mb-0">
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-3">

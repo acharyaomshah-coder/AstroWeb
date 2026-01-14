@@ -2442,7 +2442,7 @@ function Home() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$SEOHead$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["SEOHead"], {
-                title: "Vedic Astrology & Vaastu Consultation , remedies",
+                title: "Vedic Intuition - Expert Vedic astrology & Vaastu consultation",
                 description: "Vedic Intuition offers expert Vedic Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products.",
                 keywords: [
                     "Gemstones",

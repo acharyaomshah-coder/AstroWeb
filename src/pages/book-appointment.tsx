@@ -336,7 +336,7 @@ export default function BookAppointment() {
         keywords={["Book Astrology Consultation", "Online Astrologer Appointment", "Vastu Consultation"]}
       />
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16 md:py-24">
+        <div className="vedic-header py-10 md:py-10">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Book Your Consultation</h2>
             <p className="text-white/90 text-lg max-w-2xl mx-auto">Get personalized astrology guidance from our expert Astrologers</p>

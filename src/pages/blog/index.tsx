@@ -53,7 +53,7 @@ export default function Blog() {
         keywords={["Astrology Blog", "Spiritual Articles", "Vedic Wisdom", "Gemstone Guide"]}
       />
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16 md:py-24">
+        <div className="vedic-header py-10 md:py-10">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
               Spiritual Insights & Wisdom
