@@ -314,7 +314,7 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Vedic Astrology & Vaastu Consultation , remedies"
+        title="Vedic Intuition - Expert Vedic astrology & Vaastu consultation"
         description="Vedic Intuition offers expert Vedic Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products."
         keywords={["Gemstones", "Spiritual Guidance", "Remedies", "Vedic Astrology", "Vastu Shastra"]}
         image="/favicon.png"

@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vedic Astrology & Vaastu Consultation, remedies with certified astrology consultations. Transform your life with ancient wisdom and premium spiritual products." />
-        <meta property="og:title" content="Vedic Astrology & Vaastu Consultation , remedies" />
+        <meta property="og:title" content="Vedic Intuition - Expert Vedic astrology & Vaastu consultation" />
         <meta property="og:description" content="Authentic spiritual products and expert astrology consultations for your well-being" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://astro-web-nine-pink.vercel.app/file.png" />
