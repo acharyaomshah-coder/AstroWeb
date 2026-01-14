@@ -8,20 +8,20 @@ export default function ProductsCategory() {
 
   const categoryTitles: Record<string, string> = {
     gemstones: "Premium Gemstones",
-    bracelets: "Healing Crystal Bracelets",
+    "healing-crystals": "Healing Crystal Bracelets",
     rudraksha: "Authentic Rudraksha Beads",
-    yantras: "Sacred Yantras",
-    rings: "Astrological Rings",
-    remedies: "Spiritual Remedies"
+    vaastu: "Sacred Vaastu Products",
+    "spiritual-remedies": "Spiritual Remedies",
+    others: "More Spiritual Items"
   };
 
   const categoryDescriptions: Record<string, string> = {
     gemstones: "Certified natural gemstones carefully selected for their astrological properties and healing powers",
-    bracelets: "Handcrafted crystal bracelets designed to balance your energy and promote well-being",
+    "healing-crystals": "Handcrafted crystal bracelets designed to balance your energy and promote well-being",
     rudraksha: "Sacred Rudraksha beads blessed and authenticated by expert astrologers",
-    yantras: "Powerful geometric yantras energized for prosperity, protection, and spiritual growth",
-    rings: "Exquisite gemstone rings crafted according to Vedic astrology principles",
-    remedies: "Traditional spiritual remedies and products for specific planetary afflictions"
+    vaastu: "Powerful geometric yantras and vaastu tools energized for prosperity and protection",
+    "spiritual-remedies": "Traditional spiritual remedies and products for specific planetary afflictions",
+    others: "Browse our collection of authentic spiritual products"
   };
 
   const categoryStr = typeof category === "string" ? category : "";
@@ -34,7 +34,7 @@ export default function ProductsCategory() {
         <title>{title} - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16">
+        <div className="vedic-header py-16 md:py-24">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">
               {title}
@@ -45,7 +45,7 @@ export default function ProductsCategory() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 py-10">
           <ProductGrid category={categoryStr} />
         </div>
       </div>

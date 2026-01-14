@@ -28,7 +28,8 @@ export function Navigation() {
   const productCategories = [
     { name: "Gemstones", href: "/products/gemstones", description: "Certified natural gemstones" },
     { name: "Healing Crystals", href: "/products/healing-crystals", description: "Powerful healing crystals" },
-    { name: "Rudrakshas", href: "/products/rudrakshas", description: "Authentic Rudraksha beads" },
+    { name: "Rudrakshas", href: "/products/rudraksha", description: "Authentic Rudraksha beads" },
+    { name: "Spiritual Remedies", href: "/products/spiritual-remedies", description: "Remedies for planetary afflictions" },
     { name: "Vaastu Products", href: "/products/vaastu", description: "Energy balancing vaastu tools" },
     { name: "Others", href: "/products/others", description: "Other spiritual items" },
   ];
@@ -74,7 +75,7 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" data-testid="link-home">

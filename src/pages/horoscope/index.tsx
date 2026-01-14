@@ -24,7 +24,7 @@ export default function Horoscope() {
         <title>Daily Horoscope - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16">
+        <div className="vedic-header py-16 md:py-24">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
               Daily Horoscope
@@ -35,7 +35,7 @@ export default function Horoscope() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {zodiacSigns.map((sign) => (
               <Link key={sign.slug} href={`/horoscope/${sign.slug}`}>

@@ -433,19 +433,19 @@ function ProductsCategory() {
     const { category } = router.query;
     const categoryTitles = {
         gemstones: "Premium Gemstones",
-        bracelets: "Healing Crystal Bracelets",
+        "healing-crystals": "Healing Crystal Bracelets",
         rudraksha: "Authentic Rudraksha Beads",
-        yantras: "Sacred Yantras",
-        rings: "Astrological Rings",
-        remedies: "Spiritual Remedies"
+        vaastu: "Sacred Vaastu Products",
+        "spiritual-remedies": "Spiritual Remedies",
+        others: "More Spiritual Items"
     };
     const categoryDescriptions = {
         gemstones: "Certified natural gemstones carefully selected for their astrological properties and healing powers",
-        bracelets: "Handcrafted crystal bracelets designed to balance your energy and promote well-being",
+        "healing-crystals": "Handcrafted crystal bracelets designed to balance your energy and promote well-being",
         rudraksha: "Sacred Rudraksha beads blessed and authenticated by expert astrologers",
-        yantras: "Powerful geometric yantras energized for prosperity, protection, and spiritual growth",
-        rings: "Exquisite gemstone rings crafted according to Vedic astrology principles",
-        remedies: "Traditional spiritual remedies and products for specific planetary afflictions"
+        vaastu: "Powerful geometric yantras and vaastu tools energized for prosperity and protection",
+        "spiritual-remedies": "Traditional spiritual remedies and products for specific planetary afflictions",
+        others: "Browse our collection of authentic spiritual products"
     };
     const categoryStr = typeof category === "string" ? category : "";
     const title = categoryTitles[categoryStr] || "All Products";
@@ -472,7 +472,7 @@ function ProductsCategory() {
                 className: "min-h-screen bg-background",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "vedic-header py-16",
+                        className: "vedic-header py-16 md:py-24",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                             className: "container mx-auto px-4 lg:px-8 text-center relative z-10",
                             children: [
@@ -504,7 +504,7 @@ function ProductsCategory() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "container mx-auto px-4 lg:px-8 py-12",
+                        className: "max-w-6xl mx-auto px-4 lg:px-8 py-10",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ProductGrid$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["ProductGrid"], {
                             category: categoryStr
                         }, void 0, false, {

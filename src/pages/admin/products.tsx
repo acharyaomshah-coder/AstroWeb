@@ -26,7 +26,7 @@ interface Product {
     review_count: number;
 }
 
-const CATEGORIES = ["gemstones", "bracelets", "rudraksha", "yantras", "rings", "remedies"];
+const CATEGORIES = ["gemstones", "healing-crystals", "rudraksha", "vaastu", "spiritual-remedies", "others"];
 
 export default function AdminProducts() {
     const router = useRouter();
@@ -322,7 +322,9 @@ export default function AdminProducts() {
                                             >
                                                 {CATEGORIES.map(cat => (
                                                     <option key={cat} value={cat}>
-                                                        {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                                                        {cat === "healing-crystals" ? "Healing Crystals" :
+                                                            cat === "spiritual-remedies" ? "Spiritual Remedies" :
+                                                                cat.charAt(0).toUpperCase() + cat.slice(1).replace("-", " ")}
                                                     </option>
                                                 ))}
                                             </select>

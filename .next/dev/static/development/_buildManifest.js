@@ -5,11 +5,32 @@ self.__BUILD_MANIFEST = {
   "/about": [
     "static/chunks/pages/about.js"
   ],
+  "/admin": [
+    "static/chunks/pages/admin.js"
+  ],
+  "/admin/products": [
+    "static/chunks/pages/admin/products.js"
+  ],
   "/blog": [
     "static/chunks/pages/blog.js"
   ],
+  "/book-appointment": [
+    "static/chunks/pages/book-appointment.js"
+  ],
+  "/login": [
+    "static/chunks/pages/login.js"
+  ],
+  "/product/[id]": [
+    "static/chunks/pages/product/[id].js"
+  ],
   "/products/[category]": [
     "static/chunks/pages/products/[category].js"
+  ],
+  "/profile": [
+    "static/chunks/pages/profile.js"
+  ],
+  "/videos": [
+    "static/chunks/pages/videos.js"
   ],
   "__rewrites": {
     "afterFiles": [],

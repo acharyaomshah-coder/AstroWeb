@@ -42,7 +42,7 @@ export default function ProductDetail() {
 
   if (isLoading) {
     return (
-      <div className="container mx-auto px-4 lg:px-8 py-12">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-4">
             <Skeleton className="h-96 w-full" />
@@ -64,7 +64,7 @@ export default function ProductDetail() {
 
   if (!product) {
     return (
-      <div className="container mx-auto px-4 lg:px-8 py-12 text-center">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 py-12 text-center">
         <p className="text-muted-foreground">Product not found</p>
       </div>
     );
@@ -97,7 +97,7 @@ export default function ProductDetail() {
         }}
       />
       <div className="min-h-screen bg-background">
-        <div className="container mx-auto px-4 lg:px-8 py-8">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 py-8">
           <Link href="/products">
             <Button variant="ghost" size="sm" className="mb-6">
               <ArrowLeft className="h-4 w-4 mr-2" />
@@ -204,11 +204,17 @@ export default function ProductDetail() {
                   <p className="text-muted-foreground text-sm mb-4">
                     This item is exclusively available at our offline store. Please visit us or contact our team for purchase inquiries and availability.
                   </p>
-                  <Link href="/contact">
+                  <a
+                    href={`https://wa.me/918527530910?text=${encodeURIComponent(
+                      `Hello Aacharya Om Shah, I am interested in purchasing ${product.name} (Ref ID: ${product.id}). Could you please share more details and availability?`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
                       Contact Us for Inquiry
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
 

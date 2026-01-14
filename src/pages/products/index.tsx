@@ -10,7 +10,7 @@ export default function Products() {
         keywords={["Buy Gemstones", "Healing Crystals", "Rudraksha", "Vastu Products", "Online Astrological Shop"]}
       />
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16">
+        <div className="vedic-header py-16 md:py-24">
           <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
               All Products
@@ -21,7 +21,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 py-10">
           <ProductGrid />
         </div>
       </div>

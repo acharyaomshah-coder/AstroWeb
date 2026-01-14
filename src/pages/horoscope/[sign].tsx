@@ -128,7 +128,7 @@ export default function HoroscopeDetail() {
         keywords={[`${currentSign.name} Horoscope`, "Daily Horoscope", "Vedic Astrology"]}
       />
       <div className="min-h-screen bg-background">
-        <div className="vedic-header py-16">
+        <div className="vedic-header py-16 md:py-24">
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <Link href="/horoscope">
               <Button variant="ghost" size="sm" className="mb-6 text-white hover:text-accent">
@@ -160,7 +160,7 @@ export default function HoroscopeDetail() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 py-10">
           <div className="mb-8">
             <h2 className="font-serif text-2xl font-bold mb-2">
               Today's Prediction - {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}

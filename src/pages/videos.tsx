@@ -92,9 +92,9 @@ export default function Videos() {
         <title>Videos - Divine Astrology</title>
       </Head>
       <div className="min-h-screen bg-background">
-        <section className="vedic-header py-12 md:py-20 px-4">
-          <div className="container mx-auto relative z-10">
-            <div className="text-center mb-8">
+        <div className="vedic-header py-16 md:py-24">
+          <div className="container mx-auto px-4 lg:px-8 relative z-10">
+            <div className="text-center mb-0">
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-3">
                 Vedic Intuition Videos
               </h1>
@@ -104,17 +104,17 @@ export default function Videos() {
             </div>
 
             {user && isAdmin && (
-              <div className="max-w-2xl mx-auto mb-8">
+              <div className="max-w-2xl mx-auto mt-8">
                 {!showAddForm ? (
                   <Button
                     onClick={() => setShowAddForm(true)}
-                    className="w-full"
+                    className="w-full bg-accent hover:bg-accent/90 text-white"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Add New Video
                   </Button>
                 ) : (
-                  <Card className="p-6 bg-card">
+                  <Card className="p-6 bg-card/50 backdrop-blur border-white/10">
                     <h3 className="font-serif text-xl font-bold mb-4">Add YouTube Video</h3>
                     <div className="space-y-4">
                       <div>
@@ -123,6 +123,7 @@ export default function Videos() {
                           placeholder="Enter video title..."
                           value={videoTitle}
                           onChange={(e) => setVideoTitle(e.target.value)}
+                          className="bg-background/20"
                         />
                       </div>
                       <div>
@@ -131,6 +132,7 @@ export default function Videos() {
                           placeholder="https://www.youtube.com/watch?v=..."
                           value={youtubeUrl}
                           onChange={(e) => setYoutubeUrl(e.target.value)}
+                          className="bg-background/20"
                         />
                         <p className="text-xs text-muted-foreground mt-1">
                           Paste full YouTube URL or shortened youtu.be link
@@ -146,7 +148,7 @@ export default function Videos() {
                         <Button
                           variant="outline"
                           onClick={() => setShowAddForm(false)}
-                          className="flex-1"
+                          className="flex-1 text-white border-white/20 hover:bg-white/10"
                         >
                           Cancel
                         </Button>
@@ -157,10 +159,10 @@ export default function Videos() {
               </div>
             )}
           </div>
-        </section>
+        </div>
 
-        <section className="py-12 md:py-20 px-4">
-          <div className="container mx-auto">
+        <section className="py-10">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
             {isLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (

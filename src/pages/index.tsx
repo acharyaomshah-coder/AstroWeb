@@ -273,25 +273,25 @@ export default function Home() {
     {
       name: "Gemstones",
       href: "/products/gemstones",
-      image: "https://images.unsplash.com/photo-1611955167811-4711904bb9f8?w=400&h=300&fit=crop",
+      image: "/gemstones.jpeg",
       description: "Natural certified gemstones"
     },
     {
       name: "Healing Crystals",
       href: "/products/healing-crystals",
-      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop",
+      image: "/healing crystal.jpeg",
       description: "Powerful healing crystals"
     },
     {
       name: "Rudrakshas",
-      href: "/products/rudrakshas",
-      image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=400&h=300&fit=crop",
+      href: "/products/rudraksha",
+      image: "/rudraksha.jpeg",
       description: "Sacred Rudraksha beads"
     },
     {
       name: "Vaastu Products",
-      href: "/products/Vaastu",
-      image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop",
+      href: "/products/vaastu",
+      image: "/vaastu.jpeg",
       description: "Energy balancing Vaastu tools"
     },
     {
@@ -335,7 +335,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-blue-950/95 via-blue-950/90 to-slate-950/95"></div>
           </div>
 
-          <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
+          <div className="relative z-10 px-8 text-center">
             {/* SEO Optimized H1 - Visually Hidden */}
             <h1 className="sr-only">Vedic Intuition</h1>
             <motion.h2
@@ -380,8 +380,8 @@ export default function Home() {
         </section>
 
         {/* 2. About Section */}
-        <section className="py-24 bg-background overflow-hidden">
-          <div className="container mx-auto px-4 lg:px-8">
+        <section className="py-20 bg-background overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -431,14 +431,14 @@ export default function Home() {
         </section>
 
         {/* 3. Book Consultation Section */}
-        <section className="bg-muted/30">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <section className="py-20 bg-muted/30">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Book Your Consultation</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">Get personalized astrology guidance from our expert Astrologers</p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="lg:col-span-1">
@@ -577,14 +577,14 @@ export default function Home() {
         </section>
 
         {/* 4. Products Section */}
-        <section className="bg-background">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <section className="py-20 bg-background">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Purchase Authentic Products</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">Sourced and certified by experts for your spiritual growth</p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {categories.map((category, index) => (
@@ -609,15 +609,14 @@ export default function Home() {
         </section>
 
         {/* 5. Academic Excellence Section */}
-        <section className="bg-muted/30">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-              <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Excellence</span>
+        <section className="py-20 bg-muted/30">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Academic Excellence & Recognition</h2>
               <div className="w-24 h-1 bg-accent mx-auto"></div>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] md:auto-rows-[280px]">
               {credentials.map((item, index) => (
@@ -649,14 +648,14 @@ export default function Home() {
         </section>
 
         {/* 6. Blogs Section */}
-        <section className="bg-background">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <section className="py-20 bg-background">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Vedic Intuition Blogs</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">Knowledge and wisdom for your modern lifestyle</p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <BlogSection limit={3} />
             <div className="text-center mt-12">
               <Link href="/blog">
@@ -667,14 +666,14 @@ export default function Home() {
         </section>
 
         {/* 7. Videos Section */}
-        <section className="bg-muted/30">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <section className="py-20 bg-muted/30">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Vedic Intuition Videos</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">Watch guidances and insights from Aacharya Om Shah</p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             {isLoadingVideos ? (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-pulse">
@@ -708,14 +707,14 @@ export default function Home() {
         </section>
 
         {/* 8. Daily Horoscope Section */}
-        <section className="bg-background">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <section className="py-20 bg-background">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Daily Horoscope</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">Discover what the stars have in store for you today</p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-5 max-w-6xl mx-auto">
               {horoscope.map((item, index) => (
@@ -761,16 +760,16 @@ export default function Home() {
         </section>
 
         {/* 9. Today's Panchang Section */}
-        <section className="bg-muted/30">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <section className="py-20 bg-muted/30">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Today's Panchang</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">
                 {new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
               </p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             {panchang ? (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -798,14 +797,14 @@ export default function Home() {
         </section>
 
         {/* 10. Auspicious Muhurat Section */}
-        <section className="bg-background">
-          <div className="vedic-header py-20 mb-16">
-            <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
+        <section className="py-20 bg-background">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Auspicious Muhurat</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">Plan your auspicious beginnings with divine timing</p>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             {muhurat ? (
               <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -864,8 +863,8 @@ export default function Home() {
         </section>
 
         {/* 11. Contact Us Section */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
+        <section className="py-20 bg-muted/30">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="max-w-6xl mx-auto shadow-2xl rounded-3xl overflow-hidden bg-muted/10 border border-muted flex flex-col lg:flex-row">
               <div className="lg:w-1/2 p-12 bg-primary text-primary-foreground space-y-8">
                 <div>
@@ -937,8 +936,8 @@ export default function Home() {
         </section>
 
         {/* 12. FAQ Section */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+        <section className="py-20 bg-background">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-3xl font-bold mb-4">
                 Frequently Asked Questions
