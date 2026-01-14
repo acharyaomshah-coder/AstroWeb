@@ -1,6 +1,6 @@
-[00:00:02.866] Server  LOG      ✓ Ready in 1976ms
-[00:00:07.852] Server  LOG      ○ Compiling / ...
-[00:00:37.079] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
+[00:00:02.407] Server  LOG      ✓ Ready in 1678ms
+[00:00:06.614] Server  LOG      ○ Compiling / ...
+[00:00:24.522] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
     at div
     at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
     at p
@@ -21,16 +21,16 @@
     at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
     at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
     at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3088:16)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3093:16)
     at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
     at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
     at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
     at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
     at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
     at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
-[00:00:37.079] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+[00:00:24.523] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.523] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
+[00:00:24.523] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
     at div
     at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
     at p
@@ -51,54 +51,41 @@
     at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
     at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
     at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3088:16)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3093:16)
     at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
     at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
     at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
     at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
     at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
     at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.079] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:37.080] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
-[00:00:37.456] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.348] Browser WARN    Image with src "https://images.unsplash.com/photo-1611955167811-4711904bb9f8?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.348] Browser WARN    Image with src "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.348] Browser WARN    Image with src "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.348] Browser WARN    Image with src "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.348] Browser WARN    Image with src "/astro-remedies-for-all-sun-signs-2025-1733308932583.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.688] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.688] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.688] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.936] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:50.898] Server  LOG      ✓ Compiled in 1151ms
-[00:00:51.520] Browser WARN    Image with src "/aries.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:51.520] Browser WARN    Image with src "/tauraus.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:51.750] Browser WARN    Image with src "/cancer.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:51.751] Browser WARN    Image with src "/gemini.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:51.876] Browser WARN    Image with src "/leo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:51.876] Browser WARN    Image with src "/virgo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:52.292] Browser WARN    Image with src "/scorpio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:52.292] Browser WARN    Image with src "/libra.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:52.292] Browser WARN    Image with src "/sagittarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:52.292] Browser WARN    Image with src "/capricon.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:52.884] Browser WARN    Image with src "/aqarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:52.884] Browser WARN    Image with src "/pisces.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:15.131] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <a> a 
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:24.524] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
+[00:00:24.524] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:29.278] Server  LOG      ✓ Compiled in 921ms
+[00:00:38.938] Server  LOG      ✓ Compiled in 875ms
+[00:00:40.421] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:40.421] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:40.421] Browser WARN    Image with src "/bio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:40.421] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:40.421] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:22.720] Server  LOG      ✓ Compiled in 395ms
+[00:01:37.472] Browser WARN    Image with src "/bio2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:01.582] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <a> a 
     at a
     at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
     at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
@@ -163,121 +150,7 @@
     at div
     at div
     at header
-    at Navigation (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1745:192)
-    at div
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
-    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3088:16)
-    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:01:19.280] Browser WARN    Image with src "/bio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:19.280] Browser WARN    Image with src "/bio2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:31.854] Server  LOG      ✓ Compiled in 617ms
-[00:01:32.561] Server  LOG      ✓ Compiled in 657ms
-[00:01:33.367] Server  LOG      ✓ Compiled in 669ms
-[00:03:08.590] Server  LOG      ✓ Compiled in 566ms
-[00:03:23.250] Server  LOG      ✓ Compiled in 376ms
-[00:03:24.112] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/about.tsx:252:9
-Parsing ecmascript source code failed
-  250 |           </Dialog>
-  251 |         </div>
-> 252 |       </>
-      |         ^
-  253 |       );
-  254 | }
-  255 |
-
-Expression expected
-[00:03:24.112] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/about.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:03:41.144] Server  LOG      ✓ Compiled in 391ms
-[00:03:42.113] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/about.tsx:129:24
-Parsing ecmascript source code failed
-  127 |             </div>
-  128 |
-> 129 |           </motion.div>
-      |                        ^
-> 130 |         </section>
-      | ^^^^^^^^^
-  131 |       </div>
-  132 |
-  133 |       {/* Credentials & Achievements Section (One by One Animation) */}
-
-Expected '</', got 'jsx text (
-        )'
-[00:03:42.113] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/about.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:04:13.530] Server  LOG      ✓ Compiled in 579ms
-[00:04:57.733] Server  LOG      ✓ Compiled in 384ms
-[00:05:12.769] Server  LOG      ✓ Compiled in 547ms
-[00:06:15.402] Server  LOG      ✓ Compiled in 430ms
-[00:06:28.763] Server  LOG      ✓ Compiled in 455ms
-[00:06:54.806] Server  LOG      ✓ Compiled in 1154ms
-[00:07:08.004] Server  LOG      ✓ Compiled in 1073ms
-[00:10:25.093] Server  LOG      ✓ Compiled in 4.6s
-[00:10:31.200] Server  LOG      ✓ Compiled in 366ms
-[00:11:03.000] Server  LOG      ✓ Compiled in 330ms
-[00:11:14.670] Server  LOG      ✓ Compiled in 413ms
-[00:12:20.883] Server  LOG      ✓ Compiled in 404ms
-[01:58:03.686] Server  LOG      ✓ Compiled in 310ms
-[01:58:11.831] Server  LOG      ✓ Compiled in 276ms
-[01:58:19.950] Server  LOG      ✓ Compiled in 284ms
-[01:58:43.422] Server  LOG      ✓ Compiled in 302ms
-[01:59:03.154] Server  LOG      ✓ Compiled in 286ms
-[02:00:37.534] Server  LOG      ✓ Compiled in 7.3s
-[02:00:51.368] Server  LOG      ✓ Compiled in 8.1s
-[02:01:24.947] Server  LOG      ✓ Compiled in 7.3s
-[02:01:39.868] Server  LOG      ✓ Compiled in 9s
-[02:02:08.650] Server  LOG      ✓ Compiled in 432ms
-[02:02:09.441] Server  LOG      ✓ Compiled in 686ms
-[02:02:15.183] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:15.183] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:15.183] Browser WARN    Image with src "/bio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:15.183] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:15.183] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:15.183] Browser WARN    Image with src "/bio2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:41.954] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
-    at div
-    at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
-    at p
-    at div
-    at div
-    at _c8 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__838aa014._.js:805:213)
-    at div
-    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__838aa014._.js:761:205)
-    at div
-    at div
-    at div
-    at section
-    at div
-    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__e62ae74e._.js:2124:210)
-    at main
+    at Navigation (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fcomponents%252FNavigation.tsx+%255Bclient%255D+%2528ecmascript%2529:34:192)
     at div
     at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
     at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
@@ -290,197 +163,4 @@ Debug info:
     at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
     at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
     at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[02:02:43.297] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:50.148] Browser WARN    Image with src "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:50.149] Browser WARN    Image with src "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:50.149] Browser WARN    Image with src "https://images.unsplash.com/photo-1611955167811-4711904bb9f8?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:50.149] Browser WARN    Image with src "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:02:50.149] Browser WARN    Image with src "/astro-remedies-for-all-sun-signs-2025-1733308932583.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:03.433] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <a> a 
-    at a
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3041:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18415:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18054:13
-    at a
-    at LinkComponent (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:4335:19)
-    at div
-    at div
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3267:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18393:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18217:13
-    at Presence (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3609:13)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18153:13
-    at _c6 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1598:223)
-    at li
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17921:13
-    at ul
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18393:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at div
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17896:13
-    at _c2 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1562:220)
-    at nav
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at NavigationMenuProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17840:13)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17702:13
-    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1543:215)
-    at nav
-    at div
-    at div
-    at header
-    at Navigation (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1745:192)
-    at div
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
-    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3093:16)
-    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[02:03:45.538] Browser WARN    Image with src "/aries.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:45.538] Browser WARN    Image with src "/tauraus.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/gemini.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/cancer.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/leo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/virgo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/libra.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/scorpio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/sagittarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/capricon.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/aqarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:03:46.098] Browser WARN    Image with src "/pisces.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:04:49.925] Server  LOG      ✓ Compiled in 6s
-[02:06:07.882] Server  LOG      ✓ Compiled in 4.5s
-[02:11:44.968] Server  LOG      ✓ Compiled in 209ms
-[02:11:46.118] Browser WARN    Image with src "/gemstones.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:11:46.118] Browser WARN    Image with src "/vaastu.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:11:46.118] Browser WARN    Image with src "/healing crystal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:11:46.118] Browser WARN    Image with src "/rudraksha.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:15:15.909] Server  ERROR   Warning: A title element received an array with more than 1 element as children. In browsers title Elements can only have Text Nodes as children. If the children being rendered output more than a single text node in aggregate the browser will display markup and comments as text in the title and hydration will likely fail and fall back to client rendering
-    at title
-    at head
-    at Head (D:\DEMO-PROJECTS\AstroWeb\node_modules\next\src\pages\_document.tsx:372:8)
-    at html
-    at Html (D:\DEMO-PROJECTS\AstroWeb\node_modules\next\src\pages\_document.tsx:932:19)
-    at Document
-[02:15:20.722] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <a> a 
-    at a
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3041:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18415:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18054:13
-    at a
-    at LinkComponent (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:4335:19)
-    at div
-    at div
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3267:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18393:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18217:13
-    at Presence (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3609:13)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18153:13
-    at _c6 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1598:223)
-    at li
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17921:13
-    at ul
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:18393:13
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3028:17
-    at div
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17896:13
-    at _c2 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1562:220)
-    at nav
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3138:17
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:3014:17)
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at NavigationMenuProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17840:13)
-    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:17702:13
-    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1543:215)
-    at nav
-    at div
-    at div
-    at header
-    at Navigation (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1745:192)
-    at div
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
-    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3093:16)
-    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[02:15:48.525] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:15:48.525] Browser WARN    Image with src "/bio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:15:48.525] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:15:48.525] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:15:48.525] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[02:15:49.600] Browser WARN    Image with src "/bio2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:21.648] Server  LOG      ✓ Compiled in 796ms

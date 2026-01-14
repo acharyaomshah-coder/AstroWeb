@@ -48,50 +48,50 @@ export default function About() {
       <div className="min-h-screen bg-background pb-12">
 
         {/* Hero Bio Section */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 lg:py-24 bg-[#f8fafc]">
+        <section className="relative flex items-start justify-center overflow-hidden pt-4 pb-12 lg:pt-8 lg:pb-16 bg-[#f8fafc]">
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
               {/* Bio Text */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="space-y-8 order-2 lg:order-1"
+                className="space-y-6 order-2 lg:order-1 mt-4 lg:mt-6"
               >
-                <div className="space-y-4">
-                  <Badge className="bg-blue-50 text-blue-600 hover:bg-blue-100 border-blue-100 px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm">
+                <div className="space-y-3">
+                  <Badge className="bg-blue-50 text-blue-600 hover:bg-blue-100 border-blue-100 px-4 py-1 text-[10px] font-bold uppercase tracking-widest shadow-sm">
                     Vedic Astrologer & Mentor
                   </Badge>
-                  <h1 className="font-serif text-6xl md:text-7xl font-bold leading-tight">
+                  <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
                     <span className="text-slate-900">Aacharya</span> <br />
                     <span className="text-accent italic drop-shadow-sm font-serif">Om Shah</span>
                   </h1>
                 </div>
 
-                <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-light">
+                <div className="space-y-4 text-md md:text-lg text-slate-600 leading-relaxed font-light">
                   <p>
                     <span className="font-semibold text-slate-900">Aacharya Om Shah</span> is a <span className="text-accent font-semibold underline decoration-accent/20 underline-offset-4">Gold Medalist Astrologer</span> (Jyotish Aacharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan & Batch Topper (Diploma in Medical Astrology) from SLBS National Sanskrit University, New Delhi.
                   </p>
 
                   <p>
-                    He also holds a <span className="font-medium text-slate-900 border-b border-slate-200">Master's Degree in Medical Microbiology</span> & Pre PhD in Molecular Medicine, bridging the gap between ancient wisdom and modern science.
+                    He also holds a <span className="font-medium text-slate-900 border-b border-slate-200">Master's Degree in Medical Microbiology</span> & Pre PhD in Molecular Medicine.
                   </p>
 
-                  <div className="pl-6 border-l-4 border-accent/20 italic bg-white/50 py-4 rounded-r-xl">
+                  <div className="pl-4 border-l-4 border-accent/20 italic bg-white/50 py-3 rounded-r-xl text-sm md:text-base">
                     <p className="text-slate-500">
-                      "His expertise includes Financial Astrology, Medical Astrology, Career Counseling, Marriage/Relationship Astrology, Prashna, Varshaphal, Muhurta, Astro-Vaastu & Remedial Astrology."
+                      "His expertise includes Financial Astrology, Medical Astrology, Career Counseling, Marriage/Relationship Astrology, Prashna, Varshaphal, Muhurta & Astro-Vaastu."
                     </p>
                   </div>
 
-                  <p>
-                    He actively teaches Astrology and Vaastu to Diploma and M.A. students, sharing rare techniques like <span className="text-accent font-medium hover:underline cursor-pointer transition-all">Sarbatobhadra Chakra</span> & <span className="text-accent font-medium hover:underline cursor-pointer transition-all">Bhava Paddhati Astakvarga</span>.
+                  <p className="text-sm md:text-base">
+                    He actively teaches Astrology and Vaastu to Diploma and M.A. students, sharing rare techniques like <span className="text-accent font-medium">Sarbatobhadra Chakra</span>.
                   </p>
                 </div>
 
-                <div className="pt-6 border-t border-slate-200">
-                  <p className="font-serif text-3xl text-slate-900">Aacharya Om Shah</p>
-                  <p className="text-xs text-slate-400 uppercase tracking-[0.3em] mt-2 font-bold">Spiritual Guide & Mentor</p>
+                <div className="pt-4 border-t border-slate-200">
+                  <p className="font-serif text-2xl text-slate-900">Aacharya Om Shah</p>
+                  <p className="text-[10px] text-slate-400 uppercase tracking-[0.3em] mt-1 font-bold">Spiritual Guide & Mentor</p>
                 </div>
               </motion.div>
 
@@ -100,10 +100,10 @@ export default function About() {
                 initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                className="relative order-1 lg:order-2 cursor-pointer"
+                className="relative order-1 lg:order-2 cursor-pointer pt-2 lg:pt-4"
                 onClick={() => setSelectedImage("/gold medal.jpeg")}
               >
-                <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:ml-auto rounded-xl overflow-hidden border-[12px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 group">
+                <div className="relative aspect-[4/5] w-full max-w-[340px] md:max-w-[380px] lg:ml-auto rounded-xl overflow-hidden border-[10px] border-white bg-white shadow-[0_15px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.12)] transition-all duration-500 group">
                   <div className="absolute inset-0 border border-slate-100 z-10 pointer-events-none rounded-sm"></div>
                   <Image
                     src="/gold medal.jpeg"
@@ -111,10 +111,10 @@ export default function About() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute bottom-6 right-6 z-20 bg-white/95 backdrop-blur-md p-5 shadow-2xl max-w-[210px] text-right pointer-events-none border border-slate-100 rounded-lg">
-                    <p className="font-serif text-4xl font-bold text-accent mb-1">1st</p>
-                    <p className="text-[10px] uppercase tracking-widest font-bold text-slate-800">Gold Medalist</p>
-                    <p className="text-[9px] text-slate-400 mt-1.5 leading-tight">K.N. Rao Institute of Astrology, Bhartiya Vidya Bhavan</p>
+                  <div className="absolute bottom-4 right-4 z-20 bg-white/95 backdrop-blur-md p-4 shadow-xl max-w-[180px] text-right pointer-events-none border border-slate-100 rounded-lg">
+                    <p className="font-serif text-3xl font-bold text-accent mb-0.5">1st</p>
+                    <p className="text-[9px] uppercase tracking-widest font-bold text-slate-800">Gold Medalist</p>
+                    <p className="text-[8px] text-slate-400 mt-1 leading-tight">K.N. Rao Institute of Astrology</p>
                   </div>
                 </div>
                 {/* Decorative elements */}

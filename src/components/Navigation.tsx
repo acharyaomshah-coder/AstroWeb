@@ -75,8 +75,8 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-      <div className="max-w-6xl mx-auto px-4 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+      <div className="w-full px-4 lg:px-12">
+        <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/" data-testid="link-home">
             <div className="flex items-center gap-2 cursor-pointer hover-elevate active-elevate-2 rounded-md px-2 -ml-2 py-1">
@@ -85,7 +85,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-10">
             <Link href="/about">
               <Button variant="ghost" size="sm" data-testid="link-about" className={location === "/about" ? "bg-accent/10" : ""}>
                 About Us
@@ -96,7 +96,7 @@ export function Navigation() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-accent/10 data-[state=open]:bg-accent/10" data-testid="button-consultation-menu">
-                    Book a Consultation Now
+                    Book Consultation
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[700px] gap-3 p-6 md:grid-cols-2">
@@ -163,7 +163,7 @@ export function Navigation() {
           </nav>
 
           {/* Right Icons */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 md:gap-4">
             <Button variant="ghost" size="icon" className="hidden lg:flex" data-testid="button-phone">
               <Phone className="h-5 w-5" />
             </Button>
