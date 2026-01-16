@@ -632,7 +632,7 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Educational Courses</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Astro & Vaastu Courses Courses</h2>
               <p className="text-white/90 text-lg max-w-2xl mx-auto">Master the sacred sciences of Vedic Astrology and Vaastu Shastra with our comprehensive courses.</p>
             </div>
           </div>
