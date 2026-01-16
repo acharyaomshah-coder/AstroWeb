@@ -39,7 +39,21 @@ export function Navigation() {
         .limit(6);
 
       if (data) {
-        setCourses(data);
+        const sortedCourses = [...data].sort((a, b) => {
+          const getIndex = (title: string) => {
+            const t = title.toLowerCase();
+            if (t.includes("basic vaastu")) return 0;
+            if (t.includes("advanced vaastu")) return 1;
+            if (t.includes("basic predictive astrology")) return 2;
+            if (t.includes("advanced predictive astrology")) return 3;
+            if (t.includes("remedial")) return 4;
+            if (t.includes("mundane")) return 5;
+            return 6;
+          };
+          return getIndex(a.title) - getIndex(b.title);
+        });
+
+        setCourses(sortedCourses);
       }
     };
     fetchCourses();
