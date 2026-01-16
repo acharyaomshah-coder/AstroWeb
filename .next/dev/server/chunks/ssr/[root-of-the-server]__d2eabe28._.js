@@ -529,36 +529,28 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 function About() {
     const credentials = [
         {
-            image: "/bio.jpeg",
-            title: "Leading Spiritual Guide",
-            subtitle: "25+ Years of Service",
-            colSpan: "md:col-span-2 lg:col-span-1 row-span-2"
+            image: "/gold medal.jpeg",
+            title: "Gold Medalist",
+            subtitle: "Jyotish Aacharya , BVB-Delhi",
+            colSpan: "lg:row-span-2"
         },
         {
             image: "/award.jpeg",
             title: "Excellence Award",
-            subtitle: "Best Astrologer 2023"
+            subtitle: "Best Astrologer 2023",
+            colSpan: "lg:row-span-2"
         },
         {
-            image: "/gold medal.jpeg",
-            title: "Gold Medalist",
-            subtitle: "Academic Excellence"
+            image: "/result.jpeg",
+            title: "Outstanding Result",
+            subtitle: "Proven Track Record",
+            colSpan: "lg:row-span-1"
         },
         {
             image: "/degree.jpeg",
             title: "Certified Degree",
-            subtitle: "Master in Astrology"
-        },
-        {
-            image: "/result.jpeg",
-            title: "Outstanding Results",
-            subtitle: "Proven Track Record"
-        },
-        {
-            image: "/bio2.jpeg",
-            title: "Dedicated Mentor",
-            subtitle: "Teaching Future Astrologers",
-            colSpan: "lg:col-span-2"
+            subtitle: "M.A (Astrology)",
+            colSpan: "lg:row-span-1"
         }
     ];
     const values = [
@@ -592,352 +584,275 @@ function About() {
                 ]
             }, void 0, false, {
                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                lineNumber: 43,
+                lineNumber: 41,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "min-h-screen bg-background pb-12",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
-                        className: "relative flex items-start justify-center overflow-hidden pt-4 pb-12 lg:pt-8 lg:pb-16 bg-[#f8fafc]",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "container mx-auto px-4 lg:px-8 relative z-10",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__["motion"].div, {
-                                            initial: {
-                                                opacity: 0,
-                                                x: -50
-                                            },
-                                            animate: {
-                                                opacity: 1,
-                                                x: 0
-                                            },
-                                            transition: {
-                                                duration: 0.8,
-                                                ease: "easeOut"
-                                            },
-                                            className: "space-y-6 order-2 lg:order-1 mt-4 lg:mt-6",
+                        className: "py-20 bg-background overflow-hidden relative",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                            className: "max-w-6xl mx-auto px-4 lg:px-8 relative z-10",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                className: "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__["motion"].div, {
+                                        initial: {
+                                            opacity: 0,
+                                            x: -50
+                                        },
+                                        whileInView: {
+                                            opacity: 1,
+                                            x: 0
+                                        },
+                                        viewport: {
+                                            once: true
+                                        },
+                                        transition: {
+                                            duration: 0.8
+                                        },
+                                        className: "relative flex justify-center order-2 lg:order-1",
+                                        onClick: ()=>setSelectedImage("/gold medal.jpeg"),
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                            className: "relative aspect-[4/5] w-full max-w-[400px] md:max-w-[450px] rounded-xl overflow-hidden border-[12px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 group",
                                             children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$image$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                    src: "/gold medal.jpeg",
+                                                    alt: "Gold Medal Achievement",
+                                                    fill: true,
+                                                    className: "object-cover group-hover:scale-105 transition-transform duration-700"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                    lineNumber: 63,
+                                                    columnNumber: 19
+                                                }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "space-y-3",
+                                                    className: "absolute bottom-4 right-4 z-20 bg-white/95 backdrop-blur-md p-4 shadow-xl max-w-[180px] text-right pointer-events-none border border-slate-100 rounded-lg",
                                                     children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Badge"], {
-                                                            className: "bg-blue-50 text-blue-600 hover:bg-blue-100 border-blue-100 px-4 py-1 text-[10px] font-bold uppercase tracking-widest shadow-sm",
-                                                            children: "Vedic Astrologer & Mentor"
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                            className: "font-serif text-3xl font-bold text-accent mb-0.5",
+                                                            children: "1st"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 63,
-                                                            columnNumber: 19
+                                                            lineNumber: 70,
+                                                            columnNumber: 21
                                                         }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
-                                                            className: "font-serif text-5xl md:text-6xl font-bold leading-tight",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                    className: "text-slate-900",
-                                                                    children: "Aacharya"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 67,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                " ",
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 67,
-                                                                    columnNumber: 70
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                    className: "text-accent italic drop-shadow-sm font-serif",
-                                                                    children: "Om Shah"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 68,
-                                                                    columnNumber: 21
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                            className: "text-[9px] uppercase tracking-widest font-bold text-slate-800",
+                                                            children: "Gold Medalist"
+                                                        }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 66,
-                                                            columnNumber: 19
+                                                            lineNumber: 71,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                            className: "text-[8px] text-slate-400 mt-1 leading-tight",
+                                                            children: "K.N. Rao Institute of Astrology"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                            lineNumber: 72,
+                                                            columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 62,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "space-y-4 text-md md:text-lg text-slate-600 leading-relaxed font-light",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                    className: "font-semibold text-slate-900",
-                                                                    children: "Aacharya Om Shah"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 74,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                " is a ",
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                    className: "text-accent font-semibold underline decoration-accent/20 underline-offset-4",
-                                                                    children: "Gold Medalist Astrologer"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 74,
-                                                                    columnNumber: 97
-                                                                }, this),
-                                                                " (Jyotish Aacharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan & Batch Topper (Diploma in Medical Astrology) from SLBS National Sanskrit University, New Delhi."
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 73,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            children: [
-                                                                "He also holds a ",
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                    className: "font-medium text-slate-900 border-b border-slate-200",
-                                                                    children: "Master's Degree in Medical Microbiology"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 78,
-                                                                    columnNumber: 37
-                                                                }, this),
-                                                                " & Pre PhD in Molecular Medicine."
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 77,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                            className: "pl-4 border-l-4 border-accent/20 italic bg-white/50 py-3 rounded-r-xl text-sm md:text-base",
-                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                                className: "text-slate-500",
-                                                                children: '"His expertise includes Financial Astrology, Medical Astrology, Career Counseling, Marriage/Relationship Astrology, Prashna, Varshaphal, Muhurta & Astro-Vaastu."'
+                                                    lineNumber: 69,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                            lineNumber: 62,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                        lineNumber: 54,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__["motion"].div, {
+                                        initial: {
+                                            opacity: 0,
+                                            x: 50
+                                        },
+                                        whileInView: {
+                                            opacity: 1,
+                                            x: 0
+                                        },
+                                        viewport: {
+                                            once: true
+                                        },
+                                        transition: {
+                                            duration: 0.8
+                                        },
+                                        className: "order-1 lg:order-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Badge"], {
+                                                className: "bg-accent/10 text-accent mb-6 px-4 py-1.5 uppercase tracking-wider font-semibold",
+                                                children: "Vedic Astrologer & Vaastu consultant"
+                                            }, void 0, false, {
+                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                lineNumber: 85,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
+                                                className: "font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight",
+                                                children: [
+                                                    "Aacharya ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                        className: "text-accent italic",
+                                                        children: "Om Shah"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                        lineNumber: 87,
+                                                        columnNumber: 28
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                lineNumber: 86,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                className: "space-y-8 text-lg text-muted-foreground leading-relaxed",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                        className: "border-l-4 border-accent/30 pl-6 py-2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "font-bold text-foreground",
+                                                                children: "Aacharya Om Shah"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                lineNumber: 82,
+                                                                lineNumber: 92,
                                                                 columnNumber: 21
-                                                            }, this)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 81,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            className: "text-sm md:text-base",
-                                                            children: [
-                                                                "He actively teaches Astrology and Vaastu to Diploma and M.A. students, sharing rare techniques like ",
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                    className: "text-accent font-medium",
-                                                                    children: "Sarbatobhadra Chakra"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 88,
-                                                                    columnNumber: 121
-                                                                }, this),
-                                                                "."
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 87,
-                                                            columnNumber: 19
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 72,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "pt-4 border-t border-slate-200",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            className: "font-serif text-2xl text-slate-900",
-                                                            children: "Aacharya Om Shah"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 93,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                            className: "text-[10px] text-slate-400 uppercase tracking-[0.3em] mt-1 font-bold",
-                                                            children: "Spiritual Guide & Mentor"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 94,
-                                                            columnNumber: 19
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 92,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 56,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__["motion"].div, {
-                                            initial: {
-                                                opacity: 0,
-                                                scale: 0.9,
-                                                rotate: 2
-                                            },
-                                            animate: {
-                                                opacity: 1,
-                                                scale: 1,
-                                                rotate: 0
-                                            },
-                                            transition: {
-                                                duration: 0.8,
-                                                delay: 0.2,
-                                                ease: "easeOut"
-                                            },
-                                            className: "relative order-1 lg:order-2 cursor-pointer pt-2 lg:pt-4",
-                                            onClick: ()=>setSelectedImage("/gold medal.jpeg"),
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "relative aspect-[4/5] w-full max-w-[400px] md:max-w-[450px] lg:mr-auto rounded-xl overflow-hidden border-[12px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 group",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                            className: "absolute inset-0 border border-slate-100 z-10 pointer-events-none rounded-sm"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 107,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$image$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                            src: "/gold medal.jpeg",
-                                                            alt: "Gold Medal Achievement",
-                                                            fill: true,
-                                                            className: "object-cover group-hover:scale-105 transition-transform duration-700"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 108,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                            className: "absolute bottom-4 right-4 z-20 bg-white/95 backdrop-blur-md p-4 shadow-xl max-w-[180px] text-right pointer-events-none border border-slate-100 rounded-lg",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                                    className: "font-serif text-3xl font-bold text-accent mb-0.5",
-                                                                    children: "1st"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 115,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                                    className: "text-[9px] uppercase tracking-widest font-bold text-slate-800",
-                                                                    children: "Gold Medalist"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 116,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                                                    className: "text-[8px] text-slate-400 mt-1 leading-tight",
-                                                                    children: "K.N. Rao Institute of Astrology"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                    lineNumber: 117,
-                                                                    columnNumber: 21
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 114,
-                                                            columnNumber: 19
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 106,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "absolute -z-10 top-[-30px] right-[-30px] w-64 h-64 bg-blue-100/50 rounded-full blur-3xl"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 121,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                    className: "absolute -z-10 bottom-[-30px] left-[-30px] w-64 h-64 bg-accent/10 rounded-full blur-3xl"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 122,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 99,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                    lineNumber: 53,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                lineNumber: 52,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__["motion"].div, {
-                                initial: {
-                                    opacity: 0,
-                                    y: -10
-                                },
-                                animate: {
-                                    opacity: 1,
-                                    y: 0
-                                },
-                                transition: {
-                                    delay: 1,
-                                    duration: 1,
-                                    repeat: Infinity,
-                                    repeatType: "reverse"
-                                },
-                                className: "absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-300",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                        className: "w-px h-12 bg-gradient-to-b from-transparent via-current to-transparent mx-auto mb-2"
-                                    }, void 0, false, {
+                                                            }, this),
+                                                            " is a ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-[#D4AF37] font-extrabold underline decoration-[#D4AF37]/50",
+                                                                children: "Gold Medalist"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 92,
+                                                                columnNumber: 94
+                                                            }, this),
+                                                            " Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi."
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                        lineNumber: 91,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                        children: [
+                                                            "He holds ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "M.A. (Astrology)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 96,
+                                                                columnNumber: 30
+                                                            }, this),
+                                                            " from UOU , ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "Diploma"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 96,
+                                                                columnNumber: 111
+                                                            }, this),
+                                                            " in ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "(Vaastu Shastra)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 96,
+                                                                columnNumber: 175
+                                                            }, this),
+                                                            " from BVB-Delhi & Diploma in ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "(Medical Astrology)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 96,
+                                                                columnNumber: 273
+                                                            }, this),
+                                                            " from SLBS National Sanskrit University. Aacharya Shah is an ex-microbiologist , ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "M.Sc. (Microbiology)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 97,
+                                                                columnNumber: 61
+                                                            }, this),
+                                                            " and ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "Pre-PhD (Molecular Medicine)."
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 97,
+                                                                columnNumber: 139
+                                                            }, this),
+                                                            " ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 97,
+                                                                columnNumber: 222
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 98,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            " With Over ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "6 years of experience"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                                lineNumber: 98,
+                                                                columnNumber: 38
+                                                            }, this),
+                                                            " in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies."
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                        lineNumber: 95,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                                                lineNumber: 90,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                        lineNumber: 135,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                        className: "text-[9px] uppercase tracking-[0.3em] font-bold",
-                                        children: "Discover More"
-                                    }, void 0, false, {
-                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                        lineNumber: 136,
-                                        columnNumber: 13
+                                        lineNumber: 78,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                lineNumber: 129,
-                                columnNumber: 11
+                                lineNumber: 51,
+                                columnNumber: 13
                             }, this)
-                        ]
-                    }, void 0, true, {
+                        }, void 0, false, {
+                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
+                            lineNumber: 50,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                        lineNumber: 51,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -953,7 +868,7 @@ function About() {
                                             children: "Excellence"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 144,
+                                            lineNumber: 110,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
@@ -961,24 +876,24 @@ function About() {
                                             children: "Credentials & Recognition"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 111,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                             className: "w-24 h-1 bg-accent mx-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 148,
+                                            lineNumber: 114,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                    lineNumber: 143,
+                                    lineNumber: 109,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-[300px]",
+                                    className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] md:auto-rows-[280px]",
                                     children: credentials.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__["motion"].div, {
                                             initial: {
                                                 opacity: 0,
@@ -1006,7 +921,7 @@ function About() {
                                                     className: "object-cover transform group-hover:scale-105 transition-transform duration-700"
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 162,
+                                                    lineNumber: 128,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1019,7 +934,7 @@ function About() {
                                                                 children: item.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                lineNumber: 170,
+                                                                lineNumber: 136,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1027,40 +942,40 @@ function About() {
                                                                 children: item.subtitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                lineNumber: 171,
+                                                                lineNumber: 137,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                        lineNumber: 169,
+                                                        lineNumber: 135,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 134,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 119,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 117,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                            lineNumber: 142,
+                            lineNumber: 108,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                        lineNumber: 141,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -1076,7 +991,7 @@ function About() {
                                             children: "Values That Guide Us"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 150,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1084,13 +999,13 @@ function About() {
                                             children: "The principles behind our spiritual practice"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 185,
+                                            lineNumber: 151,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                    lineNumber: 183,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1121,7 +1036,7 @@ function About() {
                                                             children: value.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 198,
+                                                            lineNumber: 164,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1129,39 +1044,39 @@ function About() {
                                                             children: value.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                            lineNumber: 199,
+                                                            lineNumber: 165,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                    lineNumber: 197,
+                                                    lineNumber: 163,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                lineNumber: 196,
+                                                lineNumber: 162,
                                                 columnNumber: 19
                                             }, this)
                                         }, index, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 155,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 153,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                            lineNumber: 182,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                        lineNumber: 181,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1189,7 +1104,7 @@ function About() {
                                         className: "h-12 w-12 text-accent mx-auto mb-6"
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                        lineNumber: 218,
+                                        lineNumber: 184,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
@@ -1197,7 +1112,7 @@ function About() {
                                         children: "Begin Your Spiritual Transformation"
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                        lineNumber: 219,
+                                        lineNumber: 185,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1205,23 +1120,23 @@ function About() {
                                         children: "Join thousands of satisfied students and clients who have illuminated their paths with Aacharya Om Shah's guidance."
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                        lineNumber: 222,
+                                        lineNumber: 188,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                lineNumber: 211,
+                                lineNumber: 177,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                            lineNumber: 210,
+                            lineNumber: 176,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                        lineNumber: 209,
+                        lineNumber: 175,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -1240,12 +1155,12 @@ function About() {
                                             className: "w-8 h-8"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                            lineNumber: 238,
+                                            lineNumber: 204,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                        lineNumber: 233,
+                                        lineNumber: 199,
                                         columnNumber: 15
                                     }, this),
                                     selectedImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
@@ -1254,29 +1169,29 @@ function About() {
                                         className: "w-full h-full object-contain"
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                        lineNumber: 241,
+                                        lineNumber: 207,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                lineNumber: 232,
+                                lineNumber: 198,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                            lineNumber: 231,
+                            lineNumber: 197,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                        lineNumber: 230,
+                        lineNumber: 196,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                lineNumber: 48,
+                lineNumber: 46,
                 columnNumber: 7
             }, this)
         ]

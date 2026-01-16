@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Menu, X, Sparkles, Phone, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useAuth } from "@/lib/authContext";
+import { supabase } from "@/lib/supabase";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,11 +16,34 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Badge } from "@/components/ui/badge";
 
+interface CourseNav {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
+}
+
 export function Navigation() {
   const router = useRouter();
   const location = router.pathname;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, isAdmin, signOut, loading } = useAuth();
+  const [courses, setCourses] = useState<CourseNav[]>([]);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      const { data } = await supabase
+        .from("courses")
+        .select("id, title, description, price")
+        .order("created_at", { ascending: false })
+        .limit(6);
+
+      if (data) {
+        setCourses(data);
+      }
+    };
+    fetchCourses();
+  }, []);
 
   if (loading) {
     return <header className="sticky top-0 z-50 w-full border-b bg-card/95 h-16" />;
@@ -96,7 +120,7 @@ export function Navigation() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-accent/10 data-[state=open]:bg-accent/10" data-testid="button-consultation-menu">
-                    Book Consultation
+                    Consultation
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[700px] gap-3 p-6 md:grid-cols-2">
@@ -109,6 +133,39 @@ export function Navigation() {
                             </div>
                             <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
                               {service.description}
+                            </p>
+                          </NavigationMenuLink>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger
+                    className="text-sm font-medium bg-transparent hover:bg-accent/10 data-[state=open]:bg-accent/10"
+                    data-testid="button-courses-menu"
+                    onClick={() => router.push('/courses')}
+                  >
+                    Courses
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[600px] gap-3 p-6 md:grid-cols-2">
+                      {courses.map((course) => (
+                        <Link key={course.id} href={`/courses/enquiry/${course.id}`}>
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 active-elevate-2">
+                            <div className="flex justify-between items-center mb-1">
+                              <span className="text-sm font-bold leading-none">{course.title}</span>
+                              <Badge variant="outline" className="text-[10px] py-0 h-4 px-1.5 font-bold border-accent/30 text-accent">
+                                ₹{Math.floor(parseFloat(course.price)).toLocaleString()}
+                              </Badge>
+                            </div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                              {course.description}
                             </p>
                           </NavigationMenuLink>
                         </Link>
@@ -233,6 +290,32 @@ export function Navigation() {
                               <Badge variant="secondary" className="text-[10px] py-0 px-1">{service.price}</Badge>
                             </div>
                             <span className="text-[10px] text-muted-foreground leading-tight line-clamp-1">{service.description}</span>
+                          </div>
+                        </Button>
+                      </Link>
+                    ))}
+                  </div>
+
+                  <div className="border-t pt-4 space-y-1">
+                    <div className="flex items-center justify-between px-2 pb-2">
+                      <Link href="/courses" onClick={() => setMobileMenuOpen(false)}>
+                        <p className="text-sm font-semibold text-muted-foreground hover:text-primary transition-colors">Courses</p>
+                      </Link>
+                      <Link href="/courses" onClick={() => setMobileMenuOpen(false)}>
+                        <span className="text-xs text-primary underline">View All</span>
+                      </Link>
+                    </div>
+                    {courses.map((course) => (
+                      <Link key={course.id} href={`/courses/enquiry/${course.id}`}>
+                        <Button variant="ghost" className="w-full justify-start h-auto py-3" onClick={() => setMobileMenuOpen(false)}>
+                          <div className="flex flex-col items-start gap-1">
+                            <div className="flex items-center gap-2">
+                              <span className="font-medium text-sm">{course.title}</span>
+                              <Badge variant="secondary" className="text-[10px] py-0 px-1">
+                                ₹{Math.floor(parseFloat(course.price)).toLocaleString()}
+                              </Badge>
+                            </div>
+                            <span className="text-[10px] text-muted-foreground leading-tight line-clamp-1">{course.description}</span>
                           </div>
                         </Button>
                       </Link>

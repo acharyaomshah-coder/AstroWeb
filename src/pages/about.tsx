@@ -9,12 +9,10 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export default function About() {
   const credentials = [
-    { image: "/bio.jpeg", title: "Leading Spiritual Guide", subtitle: "25+ Years of Service", colSpan: "md:col-span-2 lg:col-span-1 row-span-2" },
-    { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023" },
-    { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Academic Excellence" },
-    { image: "/degree.jpeg", title: "Certified Degree", subtitle: "Master in Astrology" },
-    { image: "/result.jpeg", title: "Outstanding Results", subtitle: "Proven Track Record" },
-    { image: "/bio2.jpeg", title: "Dedicated Mentor", subtitle: "Teaching Future Astrologers", colSpan: "lg:col-span-2" },
+    { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya , BVB-Delhi", colSpan: "lg:row-span-2" },
+    { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023", colSpan: "lg:row-span-2" },
+    { image: "/result.jpeg", title: "Outstanding Result", subtitle: "Proven Track Record", colSpan: "lg:row-span-1" },
+    { image: "/degree.jpeg", title: "Certified Degree", subtitle: "M.A (Astrology)", colSpan: "lg:row-span-1" },
   ];
 
   const values = [
@@ -47,64 +45,21 @@ export default function About() {
       />
       <div className="min-h-screen bg-background pb-12">
 
-        {/* Hero Bio Section */}
-        <section className="relative flex items-start justify-center overflow-hidden pt-4 pb-12 lg:pt-8 lg:pb-16 bg-[#f8fafc]">
-          <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        {/* About Section */}
+        <section className="py-20 bg-background overflow-hidden relative">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-              {/* Bio Text */}
+              {/* Image Side (Matching Homepage Position) */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="space-y-6 order-2 lg:order-1 mt-4 lg:mt-6"
-              >
-                <div className="space-y-3">
-                  <Badge className="bg-blue-50 text-blue-600 hover:bg-blue-100 border-blue-100 px-4 py-1 text-[10px] font-bold uppercase tracking-widest shadow-sm">
-                    Vedic Astrologer & Mentor
-                  </Badge>
-                  <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
-                    <span className="text-slate-900">Aacharya</span> <br />
-                    <span className="text-accent italic drop-shadow-sm font-serif">Om Shah</span>
-                  </h1>
-                </div>
-
-                <div className="space-y-4 text-md md:text-lg text-slate-600 leading-relaxed font-light">
-                  <p>
-                    <span className="font-semibold text-slate-900">Aacharya Om Shah</span> is a <span className="text-accent font-semibold underline decoration-accent/20 underline-offset-4">Gold Medalist Astrologer</span> (Jyotish Aacharya) from K.N. Rao Institute of Astrology, Bhartiya Vidya Bhawan & Batch Topper (Diploma in Medical Astrology) from SLBS National Sanskrit University, New Delhi.
-                  </p>
-
-                  <p>
-                    He also holds a <span className="font-medium text-slate-900 border-b border-slate-200">Master's Degree in Medical Microbiology</span> & Pre PhD in Molecular Medicine.
-                  </p>
-
-                  <div className="pl-4 border-l-4 border-accent/20 italic bg-white/50 py-3 rounded-r-xl text-sm md:text-base">
-                    <p className="text-slate-500">
-                      "His expertise includes Financial Astrology, Medical Astrology, Career Counseling, Marriage/Relationship Astrology, Prashna, Varshaphal, Muhurta & Astro-Vaastu."
-                    </p>
-                  </div>
-
-                  <p className="text-sm md:text-base">
-                    He actively teaches Astrology and Vaastu to Diploma and M.A. students, sharing rare techniques like <span className="text-accent font-medium">Sarbatobhadra Chakra</span>.
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-slate-200">
-                  <p className="font-serif text-2xl text-slate-900">Aacharya Om Shah</p>
-                  <p className="text-[10px] text-slate-400 uppercase tracking-[0.3em] mt-1 font-bold">Spiritual Guide & Mentor</p>
-                </div>
-              </motion.div>
-
-              {/* Side Photo - Gold Medal */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                className="relative order-1 lg:order-2 cursor-pointer pt-2 lg:pt-4"
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative flex justify-center order-2 lg:order-1"
                 onClick={() => setSelectedImage("/gold medal.jpeg")}
               >
-                <div className="relative aspect-[4/5] w-full max-w-[400px] md:max-w-[450px] lg:mr-auto rounded-xl overflow-hidden border-[12px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 group">
-                  <div className="absolute inset-0 border border-slate-100 z-10 pointer-events-none rounded-sm"></div>
+                <div className="relative aspect-[4/5] w-full max-w-[400px] md:max-w-[450px] rounded-xl overflow-hidden border-[12px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 group">
                   <Image
                     src="/gold medal.jpeg"
                     alt="Gold Medal Achievement"
@@ -117,24 +72,35 @@ export default function About() {
                     <p className="text-[8px] text-slate-400 mt-1 leading-tight">K.N. Rao Institute of Astrology</p>
                   </div>
                 </div>
-                {/* Decorative elements */}
-                <div className="absolute -z-10 top-[-30px] right-[-30px] w-64 h-64 bg-blue-100/50 rounded-full blur-3xl"></div>
-                <div className="absolute -z-10 bottom-[-30px] left-[-30px] w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
               </motion.div>
 
+              {/* Bio Text Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="order-1 lg:order-2"
+              >
+                <Badge className="bg-accent/10 text-accent mb-6 px-4 py-1.5 uppercase tracking-wider font-semibold">Vedic Astrologer & Vaastu consultant</Badge>
+                <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                  Aacharya <span className="text-accent italic">Om Shah</span>
+                </h2>
+
+                <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+                  <p className="border-l-4 border-accent/30 pl-6 py-2">
+                    <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold underline decoration-[#D4AF37]/50">Gold Medalist</span> Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
+                  </p>
+
+                  <p>
+                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU , <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
+                    Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
+                    <br /> With Over <span className="text-foreground font-medium">6 years of experience</span> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1, repeat: Infinity, repeatType: "reverse" }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-300"
-          >
-            <div className="w-px h-12 bg-gradient-to-b from-transparent via-current to-transparent mx-auto mb-2"></div>
-            <p className="text-[9px] uppercase tracking-[0.3em] font-bold">Discover More</p>
-          </motion.div>
         </section>
 
         {/* Credentials & Achievements Section (One by One Animation) */}
@@ -148,7 +114,7 @@ export default function About() {
               <div className="w-24 h-1 bg-accent mx-auto"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-[300px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] md:auto-rows-[280px]">
               {credentials.map((item, index) => (
                 <motion.div
                   key={index}

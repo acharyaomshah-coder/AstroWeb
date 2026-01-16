@@ -22,7 +22,8 @@ import {
     Clock,
     Moon,
     CheckCircle,
-    Sunrise
+    Sunrise,
+    BookOpen
 } from "lucide-react";
 
 interface Stats {
@@ -34,6 +35,7 @@ interface Stats {
     totalTestimonials: number;
     totalOrders: number;
     pendingOrders: number;
+    totalCourses: number;
 }
 
 export default function AdminDashboard() {
@@ -48,6 +50,7 @@ export default function AdminDashboard() {
         totalTestimonials: 0,
         totalOrders: 0,
         pendingOrders: 0,
+        totalCourses: 0,
     });
     const [loadingStats, setLoadingStats] = useState(true);
 
@@ -107,6 +110,11 @@ export default function AdminDashboard() {
                 .select("*", { count: "exact", head: true })
                 .eq("payment_status", "pending");
 
+            // Fetch courses
+            const { count: totalCourses } = await supabase
+                .from("courses")
+                .select("*", { count: "exact", head: true });
+
             setStats({
                 totalAppointments: totalAppointments || 0,
                 pendingAppointments: pendingAppointments || 0,
@@ -116,6 +124,7 @@ export default function AdminDashboard() {
                 totalTestimonials: totalTestimonials || 0,
                 totalOrders: totalOrders || 0,
                 pendingOrders: pendingOrders || 0,
+                totalCourses: totalCourses || 0,
             });
         } catch (error) {
             console.error("Error fetching stats:", error);
@@ -151,6 +160,14 @@ export default function AdminDashboard() {
             href: "/admin/products",
             count: stats.totalProducts,
             color: "from-purple-500 to-pink-500",
+        },
+        {
+            title: "Courses",
+            description: "Manage educational courses",
+            icon: BookOpen,
+            href: "/admin/courses",
+            count: stats.totalCourses,
+            color: "from-teal-500 to-green-500",
         },
         {
             title: "Videos",

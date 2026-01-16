@@ -13,7 +13,7 @@
   "static/chunks/22aaf_@supabase_realtime-js_dist_module_eb066e46._.js",
   "static/chunks/22aaf_@supabase_storage-js_dist_module_2cf06bf3._.js",
   "static/chunks/22aaf_@supabase_auth-js_dist_module_969f862b._.js",
-  "static/chunks/22aaf_d32fddda._.js"
+  "static/chunks/22aaf_8d7577a9._.js"
 ],
     source: "entry"
 });

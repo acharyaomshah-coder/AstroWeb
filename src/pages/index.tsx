@@ -344,8 +344,8 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight"
             >
-              Decode Your <span className="text-accent">Prārabdha</span> to <br />
-              Engineer Your <span className="text-accent">Karma</span>
+              Decode Your <span className="text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50">Prārabdha</span> to <br />
+              Engineer Your <span className="text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50">Karma</span>
             </motion.h2>
 
             <motion.p
@@ -354,7 +354,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
             >
-              <span className="font-semibold text-accent">Vedic Intuition</span> offers Expert Vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!
+              <span className="font-semibold text-[#D4AF37]  decoration-[#D4AF37]/50">Vedic Intuition</span> offers Expert Vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!
             </motion.p>
 
             <motion.div
@@ -364,7 +364,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link href="/products">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 min-w-[200px]">
+                <Button size="lg" className="bg-accent text-[#D4AF37]  text-accent-foreground hover:bg-accent/90 min-w-[200px]">
                   Explore Products
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -412,7 +412,7 @@ export default function Home() {
 
                 <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
                   <p className="border-l-4 border-accent/30 pl-6 py-2">
-                    <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold underline decoration-accent/20">Gold Medalist</span> Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
+                    <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold  decoration-accent/20">Gold Medalist</span> Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
                   </p>
 
                   <p>

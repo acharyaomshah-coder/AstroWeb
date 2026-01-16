@@ -1019,6 +1019,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/node_modules/lucide-react/dist/esm/icons/moon.js [client] (ecmascript) <export default as Moon>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/node_modules/lucide-react/dist/esm/icons/circle-check-big.js [client] (ecmascript) <export default as CheckCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sunrise$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sunrise$3e$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/node_modules/lucide-react/dist/esm/icons/sunrise.js [client] (ecmascript) <export default as Sunrise>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/node_modules/lucide-react/dist/esm/icons/book-open.js [client] (ecmascript) <export default as BookOpen>");
 ;
 var _s = __turbopack_context__.k.signature();
 ;
@@ -1043,7 +1044,8 @@ function AdminDashboard() {
         totalBlogs: 0,
         totalTestimonials: 0,
         totalOrders: 0,
-        pendingOrders: 0
+        pendingOrders: 0,
+        totalCourses: 0
     });
     const [loadingStats, setLoadingStats] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(true);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
@@ -1107,6 +1109,11 @@ function AdminDashboard() {
                 count: "exact",
                 head: true
             }).eq("payment_status", "pending");
+            // Fetch courses
+            const { count: totalCourses } = await __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$lib$2f$supabase$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["supabase"].from("courses").select("*", {
+                count: "exact",
+                head: true
+            });
             setStats({
                 totalAppointments: totalAppointments || 0,
                 pendingAppointments: pendingAppointments || 0,
@@ -1115,7 +1122,8 @@ function AdminDashboard() {
                 totalBlogs: totalBlogs || 0,
                 totalTestimonials: totalTestimonials || 0,
                 totalOrders: totalOrders || 0,
-                pendingOrders: pendingOrders || 0
+                pendingOrders: pendingOrders || 0,
+                totalCourses: totalCourses || 0
             });
         } catch (error) {
             console.error("Error fetching stats:", error);
@@ -1133,7 +1141,7 @@ function AdminDashboard() {
                         className: "animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                        lineNumber: 131,
+                        lineNumber: 140,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1141,18 +1149,18 @@ function AdminDashboard() {
                         children: "Loading..."
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                        lineNumber: 132,
+                        lineNumber: 141,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                lineNumber: 130,
+                lineNumber: 139,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-            lineNumber: 129,
+            lineNumber: 138,
             columnNumber: 13
         }, this);
     }
@@ -1172,6 +1180,14 @@ function AdminDashboard() {
             href: "/admin/products",
             count: stats.totalProducts,
             color: "from-purple-500 to-pink-500"
+        },
+        {
+            title: "Courses",
+            description: "Manage educational courses",
+            icon: __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"],
+            href: "/admin/courses",
+            count: stats.totalCourses,
+            color: "from-teal-500 to-green-500"
         },
         {
             title: "Videos",
@@ -1213,12 +1229,12 @@ function AdminDashboard() {
                     children: "Admin Dashboard - Vedic Intuition"
                 }, void 0, false, {
                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                    lineNumber: 192,
+                    lineNumber: 209,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                lineNumber: 191,
+                lineNumber: 208,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1239,19 +1255,19 @@ function AdminDashboard() {
                                                 className: "h-4 w-4 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 201,
+                                                lineNumber: 218,
                                                 columnNumber: 33
                                             }, this),
                                             "Back to Website"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 200,
+                                        lineNumber: 217,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                    lineNumber: 199,
+                                    lineNumber: 216,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1259,7 +1275,7 @@ function AdminDashboard() {
                                     children: "Admin Dashboard"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                    lineNumber: 205,
+                                    lineNumber: 222,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1270,18 +1286,18 @@ function AdminDashboard() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                    lineNumber: 206,
+                                    lineNumber: 223,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                            lineNumber: 198,
+                            lineNumber: 215,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                        lineNumber: 197,
+                        lineNumber: 214,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1304,7 +1320,7 @@ function AdminDashboard() {
                                                                 children: "Panchang Updates"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 217,
+                                                                lineNumber: 234,
                                                                 columnNumber: 41
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1312,7 +1328,7 @@ function AdminDashboard() {
                                                                 children: "Daily"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 218,
+                                                                lineNumber: 235,
                                                                 columnNumber: 41
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1323,43 +1339,43 @@ function AdminDashboard() {
                                                                         className: "h-3 w-3 mr-1"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                        lineNumber: 220,
+                                                                        lineNumber: 237,
                                                                         columnNumber: 45
                                                                     }, this),
                                                                     "Active"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 219,
+                                                                lineNumber: 236,
                                                                 columnNumber: 41
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 216,
+                                                        lineNumber: 233,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"], {
                                                         className: "h-12 w-12 text-blue-500 opacity-50"
                                                     }, void 0, false, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 224,
+                                                        lineNumber: 241,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 215,
+                                                lineNumber: 232,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                            lineNumber: 214,
+                                            lineNumber: 231,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 213,
+                                        lineNumber: 230,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -1376,7 +1392,7 @@ function AdminDashboard() {
                                                                 children: "Total Products"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 233,
+                                                                lineNumber: 250,
                                                                 columnNumber: 41
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1384,36 +1400,36 @@ function AdminDashboard() {
                                                                 children: stats.totalProducts
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 234,
+                                                                lineNumber: 251,
                                                                 columnNumber: 41
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 232,
+                                                        lineNumber: 249,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$package$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Package$3e$__["Package"], {
                                                         className: "h-12 w-12 text-purple-500 opacity-50"
                                                     }, void 0, false, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 236,
+                                                        lineNumber: 253,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 231,
+                                                lineNumber: 248,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                            lineNumber: 230,
+                                            lineNumber: 247,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 246,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -1430,7 +1446,7 @@ function AdminDashboard() {
                                                                 children: "Total Orders"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 245,
+                                                                lineNumber: 262,
                                                                 columnNumber: 41
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1438,7 +1454,7 @@ function AdminDashboard() {
                                                                 children: stats.totalOrders
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 246,
+                                                                lineNumber: 263,
                                                                 columnNumber: 41
                                                             }, this),
                                                             stats.pendingOrders > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1449,7 +1465,7 @@ function AdminDashboard() {
                                                                         className: "h-3 w-3 mr-1"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                        lineNumber: 249,
+                                                                        lineNumber: 266,
                                                                         columnNumber: 49
                                                                     }, this),
                                                                     stats.pendingOrders,
@@ -1457,36 +1473,36 @@ function AdminDashboard() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 248,
+                                                                lineNumber: 265,
                                                                 columnNumber: 45
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 244,
+                                                        lineNumber: 261,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$cart$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingCart$3e$__["ShoppingCart"], {
                                                         className: "h-12 w-12 text-green-500 opacity-50"
                                                     }, void 0, false, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 254,
+                                                        lineNumber: 271,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 243,
+                                                lineNumber: 260,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                            lineNumber: 242,
+                                            lineNumber: 259,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 241,
+                                        lineNumber: 258,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -1503,7 +1519,7 @@ function AdminDashboard() {
                                                                 children: "Content Items"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 263,
+                                                                lineNumber: 280,
                                                                 columnNumber: 41
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1511,42 +1527,42 @@ function AdminDashboard() {
                                                                 children: stats.totalVideos + stats.totalBlogs + stats.totalTestimonials
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 264,
+                                                                lineNumber: 281,
                                                                 columnNumber: 41
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 262,
+                                                        lineNumber: 279,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"], {
                                                         className: "h-12 w-12 text-orange-500 opacity-50"
                                                     }, void 0, false, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                        lineNumber: 268,
+                                                        lineNumber: 285,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 261,
+                                                lineNumber: 278,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                            lineNumber: 260,
+                                            lineNumber: 277,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 259,
+                                        lineNumber: 276,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                lineNumber: 212,
+                                lineNumber: 229,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1557,7 +1573,7 @@ function AdminDashboard() {
                                         children: "Manage Content"
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 276,
+                                        lineNumber: 293,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1575,12 +1591,12 @@ function AdminDashboard() {
                                                                         className: "h-6 w-6 text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                        lineNumber: 283,
+                                                                        lineNumber: 300,
                                                                         columnNumber: 49
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                    lineNumber: 282,
+                                                                    lineNumber: 299,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -1592,26 +1608,26 @@ function AdminDashboard() {
                                                                             children: section.count
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                            lineNumber: 287,
+                                                                            lineNumber: 304,
                                                                             columnNumber: 49
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                    lineNumber: 285,
+                                                                    lineNumber: 302,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                                     children: section.description
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                    lineNumber: 289,
+                                                                    lineNumber: 306,
                                                                     columnNumber: 45
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                            lineNumber: 281,
+                                                            lineNumber: 298,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1622,41 +1638,41 @@ function AdminDashboard() {
                                                                         className: "h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                        lineNumber: 293,
+                                                                        lineNumber: 310,
                                                                         columnNumber: 49
                                                                     }, this),
                                                                     "All up to date"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                                lineNumber: 292,
+                                                                lineNumber: 309,
                                                                 columnNumber: 45
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                            lineNumber: 291,
+                                                            lineNumber: 308,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                    lineNumber: 280,
+                                                    lineNumber: 297,
                                                     columnNumber: 37
                                                 }, this)
                                             }, index, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 279,
+                                                lineNumber: 296,
                                                 columnNumber: 33
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 277,
+                                        lineNumber: 294,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                lineNumber: 275,
+                                lineNumber: 292,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1666,7 +1682,7 @@ function AdminDashboard() {
                                         children: "Quick Actions"
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 305,
+                                        lineNumber: 322,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1682,19 +1698,19 @@ function AdminDashboard() {
                                                             className: "h-4 w-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                            lineNumber: 309,
+                                                            lineNumber: 326,
                                                             columnNumber: 37
                                                         }, this),
                                                         "Manage Panchang"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                    lineNumber: 308,
+                                                    lineNumber: 325,
                                                     columnNumber: 33
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 307,
+                                                lineNumber: 324,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1708,19 +1724,19 @@ function AdminDashboard() {
                                                             className: "h-4 w-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                            lineNumber: 315,
+                                                            lineNumber: 332,
                                                             columnNumber: 37
                                                         }, this),
                                                         "Manage Products"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                    lineNumber: 314,
+                                                    lineNumber: 331,
                                                     columnNumber: 33
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 313,
+                                                lineNumber: 330,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1734,19 +1750,19 @@ function AdminDashboard() {
                                                             className: "h-4 w-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                            lineNumber: 321,
+                                                            lineNumber: 338,
                                                             columnNumber: 37
                                                         }, this),
                                                         "Manage Blogs"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                    lineNumber: 320,
+                                                    lineNumber: 337,
                                                     columnNumber: 33
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 319,
+                                                lineNumber: 336,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1760,49 +1776,49 @@ function AdminDashboard() {
                                                             className: "h-4 w-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                            lineNumber: 327,
+                                                            lineNumber: 344,
                                                             columnNumber: 37
                                                         }, this),
                                                         "Manage Videos"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                    lineNumber: 326,
+                                                    lineNumber: 343,
                                                     columnNumber: 33
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                                lineNumber: 325,
+                                                lineNumber: 342,
                                                 columnNumber: 29
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                        lineNumber: 306,
+                                        lineNumber: 323,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                                lineNumber: 304,
+                                lineNumber: 321,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                        lineNumber: 211,
+                        lineNumber: 228,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/admin/index.tsx",
-                lineNumber: 195,
+                lineNumber: 212,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true);
 }
-_s(AdminDashboard, "iFhlWF0SWfzqW5G9UgP8UdFCRoU=", false, function() {
+_s(AdminDashboard, "6WBL8wsZkSoEO1fC+hMjNPkWrc0=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"],
         __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$lib$2f$authContext$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["useAuth"]

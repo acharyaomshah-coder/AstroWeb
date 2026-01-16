@@ -1,14 +1,14 @@
 __turbopack_load_page_chunks__("/products", [
-  "static/chunks/70d72_next_dist_compiled_0573f9c1._.js",
-  "static/chunks/70d72_next_dist_shared_lib_5a6a3a36._.js",
-  "static/chunks/70d72_next_dist_client_02e29845._.js",
-  "static/chunks/70d72_next_dist_b2895175._.js",
-  "static/chunks/70d72_next_ebc85fb8._.js",
-  "static/chunks/70d72_react_a450380a._.js",
-  "static/chunks/70d72_react-dom_cjs_react-dom_development_290ae4ac.js",
-  "static/chunks/70d72_react-dom_daa8b4c6._.js",
-  "static/chunks/70d72_3a430be9._.js",
-  "static/chunks/[root-of-the-server]__eca8374c._.js",
-  "static/chunks/afc4f_b-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_products_index_tsx_2da965e7._.js",
-  "static/chunks/3fa3e_b-7ae30bc1f7a1605f38f538a70a5f77df29722c38_src_pages_products_index_tsx_cba6f137._.js"
+  "static/chunks/22aaf_next_dist_compiled_06d30792._.js",
+  "static/chunks/22aaf_next_dist_shared_lib_98c4ddf8._.js",
+  "static/chunks/22aaf_next_dist_client_a9bc3bc9._.js",
+  "static/chunks/22aaf_next_dist_547b0852._.js",
+  "static/chunks/22aaf_next_3936988a._.js",
+  "static/chunks/22aaf_react_aadced80._.js",
+  "static/chunks/22aaf_react-dom_cjs_react-dom_development_bf73e345.js",
+  "static/chunks/22aaf_react-dom_c4eafa69._.js",
+  "static/chunks/22aaf_e323249d._.js",
+  "static/chunks/[root-of-the-server]__ae31d967._.js",
+  "static/chunks/DEMO-PROJECTS_AstroWeb_src_pages_products_index_tsx_2da965e7._.js",
+  "static/chunks/turbopack-DEMO-PROJECTS_AstroWeb_src_pages_products_index_tsx_23f13d7a._.js"
 ])

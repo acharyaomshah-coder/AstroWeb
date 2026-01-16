@@ -1326,6 +1326,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/src/components/ui/button.tsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/src/components/ui/sheet.tsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$lib$2f$authContext$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/src/lib/authContext.tsx [ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$lib$2f$supabase$2e$ts__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/src/lib/supabase.ts [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/src/components/ui/navigation-menu.tsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DEMO-PROJECTS/AstroWeb/src/components/ui/badge.tsx [ssr] (ecmascript)");
 var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
@@ -1345,17 +1346,30 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 ;
 ;
+;
 function Navigation() {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const location = router.pathname;
     const [mobileMenuOpen, setMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     const { user, isAdmin, signOut, loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$lib$2f$authContext$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
+    const [courses, setCourses] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
+    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
+        const fetchCourses = async ()=>{
+            const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$lib$2f$supabase$2e$ts__$5b$ssr$5d$__$28$ecmascript$29$__["supabase"].from("courses").select("id, title, description, price").order("created_at", {
+                ascending: false
+            }).limit(6);
+            if (data) {
+                setCourses(data);
+            }
+        };
+        fetchCourses();
+    }, []);
     if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("header", {
             className: "sticky top-0 z-50 w-full border-b bg-card/95 h-16"
         }, void 0, false, {
             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-            lineNumber: 25,
+            lineNumber: 49,
             columnNumber: 12
         }, this);
     }
@@ -1446,17 +1460,17 @@ function Navigation() {
                                 children: "Vedic Intuition"
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 83,
+                                lineNumber: 107,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                            lineNumber: 82,
+                            lineNumber: 106,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                        lineNumber: 81,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("nav", {
@@ -1472,12 +1486,12 @@ function Navigation() {
                                     children: "About Us"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                    lineNumber: 90,
+                                    lineNumber: 114,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 89,
+                                lineNumber: 113,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenu"], {
@@ -1487,10 +1501,10 @@ function Navigation() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuTrigger"], {
                                                 className: "text-sm font-medium bg-transparent hover:bg-accent/10 data-[state=open]:bg-accent/10",
                                                 "data-testid": "button-consultation-menu",
-                                                children: "Book Consultation"
+                                                children: "Consultation"
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                lineNumber: 98,
+                                                lineNumber: 122,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuContent"], {
@@ -1509,7 +1523,7 @@ function Navigation() {
                                                                                 children: service.title
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                                lineNumber: 107,
+                                                                                lineNumber: 131,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1518,13 +1532,13 @@ function Navigation() {
                                                                                 children: service.price
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                                lineNumber: 108,
+                                                                                lineNumber: 132,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                        lineNumber: 106,
+                                                                        lineNumber: 130,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1532,44 +1546,140 @@ function Navigation() {
                                                                         children: service.description
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                        lineNumber: 110,
+                                                                        lineNumber: 134,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 105,
+                                                                lineNumber: 129,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, service.href, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 104,
+                                                            lineNumber: 128,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 126,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 125,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 121,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 120,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 95,
+                                lineNumber: 119,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenu"], {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuList"], {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuItem"], {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuTrigger"], {
+                                                className: "text-sm font-medium bg-transparent hover:bg-accent/10 data-[state=open]:bg-accent/10",
+                                                "data-testid": "button-courses-menu",
+                                                onClick: ()=>router.push('/courses'),
+                                                children: "Courses"
+                                            }, void 0, false, {
+                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                lineNumber: 149,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuContent"], {
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                    className: "grid w-[600px] gap-3 p-6 md:grid-cols-2",
+                                                    children: courses.map((course)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                            href: `/courses/enquiry/${course.id}`,
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuLink"], {
+                                                                className: "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 active-elevate-2",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                                        className: "flex justify-between items-center mb-1",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                                className: "text-sm font-bold leading-none",
+                                                                                children: course.title
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                                lineNumber: 162,
+                                                                                columnNumber: 31
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Badge"], {
+                                                                                variant: "outline",
+                                                                                className: "text-[10px] py-0 h-4 px-1.5 font-bold border-accent/30 text-accent",
+                                                                                children: [
+                                                                                    "₹",
+                                                                                    Math.floor(parseFloat(course.price)).toLocaleString()
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                                lineNumber: 163,
+                                                                                columnNumber: 31
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                        lineNumber: 161,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                        className: "line-clamp-2 text-xs leading-snug text-muted-foreground",
+                                                                        children: course.description
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                        lineNumber: 167,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                lineNumber: 160,
+                                                                columnNumber: 27
+                                                            }, this)
+                                                        }, course.id, false, {
+                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                            lineNumber: 159,
+                                                            columnNumber: 25
+                                                        }, this))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                    lineNumber: 157,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                lineNumber: 156,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                        lineNumber: 148,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                    lineNumber: 147,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                lineNumber: 146,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenu"], {
@@ -1582,7 +1692,7 @@ function Navigation() {
                                                 children: "Products"
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 182,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["NavigationMenuContent"], {
@@ -1599,7 +1709,7 @@ function Navigation() {
                                                                         children: category.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                        lineNumber: 133,
+                                                                        lineNumber: 190,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1607,44 +1717,44 @@ function Navigation() {
                                                                         children: category.description
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                        lineNumber: 134,
+                                                                        lineNumber: 191,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 132,
+                                                                lineNumber: 189,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, category.href, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 131,
+                                                            lineNumber: 188,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                    lineNumber: 129,
+                                                    lineNumber: 186,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                lineNumber: 128,
+                                                lineNumber: 185,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 181,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 180,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 122,
+                                lineNumber: 179,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1657,12 +1767,12 @@ function Navigation() {
                                     children: "Blogs"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 204,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 146,
+                                lineNumber: 203,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1675,12 +1785,12 @@ function Navigation() {
                                     children: "Videos"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                    lineNumber: 153,
+                                    lineNumber: 210,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 152,
+                                lineNumber: 209,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1693,18 +1803,18 @@ function Navigation() {
                                     children: "Contact Us"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 216,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 158,
+                                lineNumber: 215,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                        lineNumber: 88,
+                        lineNumber: 112,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1719,12 +1829,12 @@ function Navigation() {
                                     className: "h-5 w-5"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 225,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 167,
+                                lineNumber: 224,
                                 columnNumber: 13
                             }, this),
                             user ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1740,17 +1850,17 @@ function Navigation() {
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 233,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                            lineNumber: 175,
+                                            lineNumber: 232,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 174,
+                                        lineNumber: 231,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1762,18 +1872,18 @@ function Navigation() {
                                             className: "h-5 w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                            lineNumber: 185,
+                                            lineNumber: 242,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 236,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 173,
+                                lineNumber: 230,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                 className: "flex items-center gap-2",
@@ -1787,12 +1897,12 @@ function Navigation() {
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 248,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 190,
+                                        lineNumber: 247,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1803,18 +1913,18 @@ function Navigation() {
                                             children: "Sign Up"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                            lineNumber: 196,
+                                            lineNumber: 253,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 195,
+                                        lineNumber: 252,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 189,
+                                lineNumber: 246,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Sheet"], {
@@ -1832,17 +1942,17 @@ function Navigation() {
                                                 className: "h-6 w-6"
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                lineNumber: 207,
+                                                lineNumber: 264,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                            lineNumber: 206,
+                                            lineNumber: 263,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 205,
+                                        lineNumber: 262,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["SheetContent"], {
@@ -1863,17 +1973,17 @@ function Navigation() {
                                                             children: "About Us"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 214,
+                                                            lineNumber: 271,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                        lineNumber: 213,
+                                                        lineNumber: 270,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                    lineNumber: 212,
+                                                    lineNumber: 269,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1884,7 +1994,7 @@ function Navigation() {
                                                             children: "Book a Consultation"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 221,
+                                                            lineNumber: 278,
                                                             columnNumber: 21
                                                         }, this),
                                                         consultationServices.map((service)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1905,7 +2015,7 @@ function Navigation() {
                                                                                         children: service.title
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                                        lineNumber: 232,
+                                                                                        lineNumber: 289,
                                                                                         columnNumber: 31
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1914,13 +2024,13 @@ function Navigation() {
                                                                                         children: service.price
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                                        lineNumber: 233,
+                                                                                        lineNumber: 290,
                                                                                         columnNumber: 31
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                                lineNumber: 231,
+                                                                                lineNumber: 288,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -1928,29 +2038,141 @@ function Navigation() {
                                                                                 children: service.description
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                                lineNumber: 235,
+                                                                                lineNumber: 292,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                        lineNumber: 230,
+                                                                        lineNumber: 287,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                    lineNumber: 224,
+                                                                    lineNumber: 281,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, service.href, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 223,
+                                                                lineNumber: 280,
                                                                 columnNumber: 23
                                                             }, this))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                    lineNumber: 220,
+                                                    lineNumber: 277,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                    className: "border-t pt-4 space-y-1",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                            className: "flex items-center justify-between px-2 pb-2",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                                    href: "/courses",
+                                                                    onClick: ()=>setMobileMenuOpen(false),
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                                        className: "text-sm font-semibold text-muted-foreground hover:text-primary transition-colors",
+                                                                        children: "Courses"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                        lineNumber: 302,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                    lineNumber: 301,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                                    href: "/courses",
+                                                                    onClick: ()=>setMobileMenuOpen(false),
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                        className: "text-xs text-primary underline",
+                                                                        children: "View All"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                        lineNumber: 305,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                    lineNumber: 304,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                            lineNumber: 300,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        courses.map((course)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                                href: `/courses/enquiry/${course.id}`,
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                                                    variant: "ghost",
+                                                                    className: "w-full justify-start h-auto py-3",
+                                                                    onClick: ()=>setMobileMenuOpen(false),
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                                        className: "flex flex-col items-start gap-1",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                                                                className: "flex items-center gap-2",
+                                                                                children: [
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                                        className: "font-medium text-sm",
+                                                                                        children: course.title
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                                        lineNumber: 313,
+                                                                                        columnNumber: 31
+                                                                                    }, this),
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Badge"], {
+                                                                                        variant: "secondary",
+                                                                                        className: "text-[10px] py-0 px-1",
+                                                                                        children: [
+                                                                                            "₹",
+                                                                                            Math.floor(parseFloat(course.price)).toLocaleString()
+                                                                                        ]
+                                                                                    }, void 0, true, {
+                                                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                                        lineNumber: 314,
+                                                                                        columnNumber: 31
+                                                                                    }, this)
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                                lineNumber: 312,
+                                                                                columnNumber: 29
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                                className: "text-[10px] text-muted-foreground leading-tight line-clamp-1",
+                                                                                children: course.description
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                                lineNumber: 318,
+                                                                                columnNumber: 29
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                        lineNumber: 311,
+                                                                        columnNumber: 27
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                    lineNumber: 310,
+                                                                    columnNumber: 25
+                                                                }, this)
+                                                            }, course.id, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                                lineNumber: 309,
+                                                                columnNumber: 23
+                                                            }, this))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
+                                                    lineNumber: 299,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1961,7 +2183,7 @@ function Navigation() {
                                                             children: "Products"
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 243,
+                                                            lineNumber: 326,
                                                             columnNumber: 21
                                                         }, this),
                                                         productCategories.map((category)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1974,18 +2196,18 @@ function Navigation() {
                                                                     children: category.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                    lineNumber: 246,
+                                                                    lineNumber: 329,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, category.href, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 245,
+                                                                lineNumber: 328,
                                                                 columnNumber: 23
                                                             }, this))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                    lineNumber: 242,
+                                                    lineNumber: 325,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2001,12 +2223,12 @@ function Navigation() {
                                                                 children: "Blogs"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 260,
+                                                                lineNumber: 343,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 259,
+                                                            lineNumber: 342,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2019,12 +2241,12 @@ function Navigation() {
                                                                 children: "Videos"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 265,
+                                                                lineNumber: 348,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 264,
+                                                            lineNumber: 347,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2037,18 +2259,18 @@ function Navigation() {
                                                                 children: "Contact Us"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 270,
+                                                                lineNumber: 353,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                            lineNumber: 269,
+                                                            lineNumber: 352,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                    lineNumber: 258,
+                                                    lineNumber: 341,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -2067,19 +2289,19 @@ function Navigation() {
                                                                             className: "w-4 h-4 mr-2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                            lineNumber: 281,
+                                                                            lineNumber: 364,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         "Profile"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                    lineNumber: 280,
+                                                                    lineNumber: 363,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 279,
+                                                                lineNumber: 362,
                                                                 columnNumber: 25
                                                             }, this),
                                                             isAdmin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2092,12 +2314,12 @@ function Navigation() {
                                                                     children: "Admin Dashboard"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                    lineNumber: 287,
+                                                                    lineNumber: 370,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 286,
+                                                                lineNumber: 369,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2113,14 +2335,14 @@ function Navigation() {
                                                                         className: "w-4 h-4 mr-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                        lineNumber: 301,
+                                                                        lineNumber: 384,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     "Logout"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 292,
+                                                                lineNumber: 375,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
@@ -2136,12 +2358,12 @@ function Navigation() {
                                                                     children: "Login"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                    lineNumber: 308,
+                                                                    lineNumber: 391,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 307,
+                                                                lineNumber: 390,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2153,58 +2375,58 @@ function Navigation() {
                                                                     children: "Sign Up"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                    lineNumber: 313,
+                                                                    lineNumber: 396,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                                lineNumber: 312,
+                                                                lineNumber: 395,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true)
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                                    lineNumber: 276,
+                                                    lineNumber: 359,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                            lineNumber: 211,
+                                            lineNumber: 268,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                        lineNumber: 210,
+                                        lineNumber: 267,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                                lineNumber: 204,
+                                lineNumber: 261,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                        lineNumber: 166,
+                        lineNumber: 223,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-                lineNumber: 79,
+                lineNumber: 103,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-            lineNumber: 78,
+            lineNumber: 102,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/components/Navigation.tsx",
-        lineNumber: 77,
+        lineNumber: 101,
         columnNumber: 5
     }, this);
 }
