@@ -670,11 +670,8 @@ export default function Home() {
                           <h3 className="font-serif text-xl font-bold text-primary mb-3 line-clamp-2">
                             {course.title}
                           </h3>
-                          <div className="mb-4">
-                            <div className="flex items-baseline gap-2">
-                              <span className="text-2xl font-bold text-accent">₹{Math.floor(parseFloat(course.price)).toLocaleString()}</span>
-                              <span className="text-sm text-muted-foreground line-through">₹{Math.floor(parseFloat(course.price) * 1.4).toLocaleString()}</span>
-                            </div>
+                          <div className="flex items-baseline gap-2">
+                            <span className="text-2xl font-bold text-accent">₹{Math.floor(parseFloat(course.price)).toLocaleString()} + 18% GST</span>
                           </div>
                           <p className="text-sm text-muted-foreground line-clamp-3 mb-6 flex-grow">
                             {course.description}

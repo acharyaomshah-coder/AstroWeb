@@ -331,31 +331,19 @@ function CoursesPage() {
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                                     className: "mt-2 flex items-baseline gap-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                            className: "text-2xl font-bold text-foreground",
-                                                            children: [
-                                                                "₹",
-                                                                Math.floor(parseFloat(course.price)).toLocaleString()
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                            lineNumber: 118,
-                                                            columnNumber: 45
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                            className: "text-sm text-muted-foreground line-through",
-                                                            children: [
-                                                                "₹",
-                                                                Math.floor(parseFloat(course.price) * 1.4).toLocaleString()
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                            lineNumber: 119,
-                                                            columnNumber: 45
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                        className: "text-2xl font-bold text-foreground",
+                                                        children: [
+                                                            "₹",
+                                                            Math.floor(parseFloat(course.price)).toLocaleString(),
+                                                            " + 18% GST"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
+                                                        lineNumber: 118,
+                                                        columnNumber: 45
+                                                    }, this)
+                                                }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
                                                     lineNumber: 117,
                                                     columnNumber: 41
@@ -374,7 +362,7 @@ function CoursesPage() {
                                                     children: course.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                    lineNumber: 124,
+                                                    lineNumber: 123,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -387,20 +375,20 @@ function CoursesPage() {
                                                                     className: "h-3 w-3 text-green-500"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                                    lineNumber: 129,
+                                                                    lineNumber: 128,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                     children: "Lifetime Access"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                                    lineNumber: 130,
+                                                                    lineNumber: 129,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                            lineNumber: 128,
+                                                            lineNumber: 127,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -410,32 +398,32 @@ function CoursesPage() {
                                                                     className: "h-3 w-3 text-green-500"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                                    lineNumber: 133,
+                                                                    lineNumber: 132,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                     children: "Certificate of Completion"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                                    lineNumber: 134,
+                                                                    lineNumber: 133,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                            lineNumber: 132,
+                                                            lineNumber: 131,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                    lineNumber: 127,
+                                                    lineNumber: 126,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                            lineNumber: 123,
+                                            lineNumber: 122,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["CardFooter"], {
@@ -449,17 +437,17 @@ function CoursesPage() {
                                                     children: "Get Course"
                                                 }, void 0, false, {
                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                    lineNumber: 141,
+                                                    lineNumber: 140,
                                                     columnNumber: 45
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                                lineNumber: 140,
+                                                lineNumber: 139,
                                                 columnNumber: 41
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/courses/index.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 138,
                                             columnNumber: 37
                                         }, this)
                                     ]

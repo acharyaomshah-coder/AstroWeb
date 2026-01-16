@@ -115,8 +115,7 @@ export default function CoursesPage() {
                                             {course.title}
                                         </CardTitle>
                                         <div className="mt-2 flex items-baseline gap-2">
-                                            <span className="text-2xl font-bold text-foreground">₹{Math.floor(parseFloat(course.price)).toLocaleString()}</span>
-                                            <span className="text-sm text-muted-foreground line-through">₹{Math.floor(parseFloat(course.price) * 1.4).toLocaleString()}</span>
+                                            <span className="text-2xl font-bold text-foreground">₹{Math.floor(parseFloat(course.price)).toLocaleString()} + 18% GST</span>
                                         </div>
                                     </CardHeader>
 
