@@ -22,6 +22,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+import { supabase } from "@/lib/supabase";
+
+interface Course {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
+  thumbnail: string;
+}
 
 export default function Home() {
   // Zodiac sign metadata (symbols and colors)
@@ -169,6 +178,49 @@ export default function Home() {
       return response.json();
     }
   });
+
+  // State for courses
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [isLoadingCourses, setIsLoadingCourses] = useState(true);
+
+  // Fetch courses data from Supabase
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("courses")
+          .select("*")
+          .order("created_at", { ascending: false });
+
+        if (error) throw error;
+
+        if (data) {
+          const sortedCourses = [...data].sort((a, b) => {
+            const getIndex = (title: string) => {
+              const t = title.toLowerCase();
+              if (t.includes("basic vaastu")) return 0;
+              if (t.includes("advanced vaastu")) return 1;
+              if (t.includes("predictive astrology")) {
+                if (t.includes("ii")) return 3;
+                if (t.includes("i")) return 2;
+              }
+              if (t.includes("remedial")) return 4;
+              if (t.includes("mundane")) return 5;
+              return 6;
+            };
+            return getIndex(a.title) - getIndex(b.title);
+          });
+          setCourses(sortedCourses.slice(0, 3));
+        }
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      } finally {
+        setIsLoadingCourses(false);
+      }
+    };
+
+    fetchCourses();
+  }, []);
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -573,6 +625,84 @@ export default function Home() {
                 </Card>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 3.5. Educational Courses Section */}
+        <section className="py-20 bg-background">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
+            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Educational Courses</h2>
+              <p className="text-white/90 text-lg max-w-2xl mx-auto">Master the sacred sciences of Vedic Astrology and Vaastu Shastra with our comprehensive courses.</p>
+            </div>
+          </div>
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            {isLoadingCourses ? (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="h-[400px] bg-muted animate-pulse rounded-2xl" />
+                ))}
+              </div>
+            ) : courses.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {courses.map((course) => (
+                    <motion.div
+                      key={course.id}
+                      whileHover={{ y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="group"
+                    >
+                      <Card className="h-full flex flex-col overflow-hidden border-primary/10 hover:shadow-2xl transition-all duration-500">
+                        <div className="relative aspect-video overflow-hidden">
+                          <Image
+                            src={course.thumbnail}
+                            alt={course.title}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span className="text-white font-medium">View Course Details</span>
+                          </div>
+                        </div>
+
+                        <CardContent className="p-6 flex-grow flex flex-col">
+                          <h3 className="font-serif text-xl font-bold text-primary mb-3 line-clamp-2">
+                            {course.title}
+                          </h3>
+                          <div className="mb-4">
+                            <div className="flex items-baseline gap-2">
+                              <span className="text-2xl font-bold text-accent">₹{Math.floor(parseFloat(course.price)).toLocaleString()}</span>
+                              <span className="text-sm text-muted-foreground line-through">₹{Math.floor(parseFloat(course.price) * 1.4).toLocaleString()}</span>
+                            </div>
+                          </div>
+                          <p className="text-sm text-muted-foreground line-clamp-3 mb-6 flex-grow">
+                            {course.description}
+                          </p>
+                          <Link href={`/courses/enquiry/${course.id}`} className="w-full">
+                            <Button className="w-full bg-accent hover:bg-accent/90">
+                              Enroll Now
+                            </Button>
+                          </Link>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="text-center mt-12">
+                  <Link href="/courses">
+                    <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-white">
+                      See More Courses
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground">No courses available at the moment. Please check back later.</p>
+              </div>
+            )}
           </div>
         </section>
 
