@@ -394,10 +394,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight"
             >
-              Decode Your <span className="text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50">Prārabdha</span> & <br />
-              Engineer Your <span className="text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50">Karma</span>
+              Decode Your <span className="text-[#D4AF37] font-serif   decoration-double decoration-[#D4AF37]/50">Prārabdha</span> & <br />
+              Engineer Your <span className="text-[#D4AF37]  font-serif decoration-double decoration-[#D4AF37]/50">Karma</span>
             </motion.h2>
 
             <motion.p

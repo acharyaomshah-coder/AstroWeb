@@ -2625,11 +2625,11 @@ function Home() {
                                         transition: {
                                             duration: 0.8
                                         },
-                                        className: "font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight",
+                                        className: "text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight",
                                         children: [
                                             "Decode Your ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50",
+                                                className: "text-[#D4AF37] font-serif   decoration-double decoration-[#D4AF37]/50",
                                                 children: "Prārabdha"
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
@@ -2640,11 +2640,11 @@ function Home() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                 lineNumber: 399,
-                                                columnNumber: 122
+                                                columnNumber: 134
                                             }, this),
                                             "Engineer Your ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50",
+                                                className: "text-[#D4AF37]  font-serif decoration-double decoration-[#D4AF37]/50",
                                                 children: "Karma"
                                             }, void 0, false, {
                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
