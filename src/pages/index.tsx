@@ -396,7 +396,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 max-w-4xl mx-auto leading-tight"
             >
-              Decode Your <span className="text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50">Prārabdha</span> to <br />
+              Decode Your <span className="text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50">Prārabdha</span> & <br />
               Engineer Your <span className="text-[#D4AF37]  decoration-double decoration-[#D4AF37]/50">Karma</span>
             </motion.h2>
 
