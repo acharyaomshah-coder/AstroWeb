@@ -228,7 +228,7 @@ export default function Home() {
     { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya , BVB-Delhi", colSpan: "lg:row-span-2" },
     { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023", colSpan: "lg:row-span-2" },
     { image: "/result.jpeg", title: "Outstanding Result", subtitle: "Proven Track Record", colSpan: "lg:row-span-1" },
-    { image: "/degree.jpeg", title: "Certified Degree", subtitle: "M.A (Astrology)", colSpan: "lg:row-span-1" },
+    { image: "/degree.jpeg", title: "Certified Degree", subtitle: "Diploma in Medical Astrology", colSpan: "lg:row-span-1" },
   ];
 
 
@@ -404,7 +404,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
+              className="text-base md:text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
             >
               <span className="font-semibold text-[#D4AF37]  decoration-[#D4AF37]/50">Vedic Intuition</span> offers Expert Astrology & Vaastu Consultation with Vedic remedies to guide your journey to holistic Growth!
             </motion.p>
@@ -458,17 +458,17 @@ export default function Home() {
                 className="order-1 lg:order-2"
               >
                 <Badge className="bg-accent/10 text-accent mb-6 px-4 py-1.5 uppercase tracking-wider font-semibold">Vedic Astrologer & Vaastu consultant</Badge>
-                <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">
                   Aacharya <span className="text-accent italic">Om Shah</span>
                 </h2>
 
-                <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+                <div className="space-y-8 text-base text-muted-foreground leading-relaxed">
                   <p className="border-l-4 border-accent/30 pl-6 py-2">
                     <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold  decoration-accent/20">Gold Medalist</span> Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU , <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
+                    He holds <span className="text-foreground font-medium">Diploma in Medical Astrology</span> from UOU , <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
                     <br></br> With Over <span className="text-foreground font-medium">6 years of experience</span> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
                   </p>
@@ -486,8 +486,8 @@ export default function Home() {
         <section className="py-20 bg-muted/30">
           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Book Your Consultation</h2>
-              <p className="text-white/90 text-lg max-w-2xl mx-auto">Get personalized astrology guidance from our expert Astrologers</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Book Your Consultation</h2>
+              <p className="text-white/90 text-base max-w-2xl mx-auto">Get personalized astrology guidance from our expert Astrologers</p>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
@@ -632,8 +632,8 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Astro & Vaastu Courses Courses</h2>
-              <p className="text-white/90 text-lg max-w-2xl mx-auto">Master the sacred sciences of Vedic Astrology and Vaastu Shastra with our comprehensive courses.</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Astrology & Vaastu  Courses</h2>
+              <p className="text-white/90 text-base max-w-2xl mx-auto">Learn the ancient Vedic Astrology and Vaastu with Aacharya Om Shah.</p>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
@@ -707,8 +707,8 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Purchase Authentic Products</h2>
-              <p className="text-white/90 text-lg max-w-2xl mx-auto">Sourced and certified by experts for your spiritual growth</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Purchase Authentic Products</h2>
+              <p className="text-white/90 text-base max-w-2xl mx-auto">Sourced and certified by experts for your spiritual growth</p>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
@@ -739,7 +739,7 @@ export default function Home() {
         <section className="py-20 bg-muted/30">
           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Academic Excellence & Recognition</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Academic Excellence & Recognition</h2>
               <div className="w-24 h-1 bg-accent mx-auto"></div>
             </div>
           </div>
@@ -778,8 +778,8 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Vedic Intuition Blogs</h2>
-              <p className="text-white/90 text-lg max-w-2xl mx-auto">Knowledge and wisdom for your modern lifestyle</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Vedic Intuition Blogs</h2>
+              <p className="text-white/90 text-base max-w-2xl mx-auto">Knowledge and wisdom for your modern lifestyle</p>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
@@ -796,8 +796,8 @@ export default function Home() {
         <section className="py-20 bg-muted/30">
           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Vedic Intuition Videos</h2>
-              <p className="text-white/90 text-lg max-w-2xl mx-auto">Watch guidances and insights from Aacharya Om Shah</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Vedic Intuition Videos</h2>
+              <p className="text-white/90 text-base max-w-2xl mx-auto">Watch guidances and insights from Aacharya Om Shah</p>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 lg:px-8">

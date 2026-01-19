@@ -12,7 +12,7 @@ export default function About() {
     { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya , BVB-Delhi", colSpan: "lg:row-span-2" },
     { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023", colSpan: "lg:row-span-2" },
     { image: "/result.jpeg", title: "Outstanding Result", subtitle: "Proven Track Record", colSpan: "lg:row-span-1" },
-    { image: "/degree.jpeg", title: "Certified Degree", subtitle: "M.A (Astrology)", colSpan: "lg:row-span-1" },
+    { image: "/degree.jpeg", title: "Certified Degree", subtitle: "Diploma in Medical Astrology", colSpan: "lg:row-span-1" },
   ];
 
   const values = [
@@ -83,17 +83,17 @@ export default function About() {
                 className="order-1 lg:order-2"
               >
                 <Badge className="bg-accent/10 text-accent mb-6 px-4 py-1.5 uppercase tracking-wider font-semibold">Vedic Astrologer & Vaastu consultant</Badge>
-                <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">
                   Aacharya <span className="text-accent italic">Om Shah</span>
                 </h2>
 
-                <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+                <div className="space-y-8 text-base text-muted-foreground leading-relaxed">
                   <p className="border-l-4 border-accent/30 pl-6 py-2">
                     <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold underline decoration-[#D4AF37]/50">Gold Medalist</span> Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU , <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
+                    He holds <span className="text-foreground font-medium">Diploma in Medical Astrology</span> from UOU , <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
                     <br /> With Over <span className="text-foreground font-medium">6 years of experience</span> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
                   </p>
@@ -108,7 +108,7 @@ export default function About() {
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-20">
               <span className="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Excellence</span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 Credentials & Recognition
               </h2>
               <div className="w-24 h-1 bg-accent mx-auto"></div>
@@ -147,8 +147,8 @@ export default function About() {
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Values That Guide Us</h2>
-              <p className="text-muted-foreground text-lg">The principles behind our spiritual practice</p>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">Values That Guide Us</h2>
+              <p className="text-muted-foreground text-base">The principles behind our spiritual practice</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {values.map((value, index) => (
@@ -182,10 +182,10 @@ export default function About() {
               className="px-4 lg:px-8 text-center relative z-10"
             >
               <Sparkles className="h-12 w-12 text-accent mx-auto mb-6" />
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
                 Begin Your Spiritual Transformation
               </h2>
-              <p className="text-white/90 text-xl max-w-2xl mx-auto mb-10 font-light">
+              <p className="text-white/90 text-lg max-w-2xl mx-auto mb-10 font-light">
                 Join thousands of satisfied students and clients who have illuminated their paths with Aacharya Om Shah's guidance.
               </p>
             </motion.div>
