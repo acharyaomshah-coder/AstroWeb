@@ -366,8 +366,8 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Vedic Intuition - Expert Vedic astrology & Vaastu consultation"
-        description="Vedic Intuition offers expert Vedic Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products."
+        title="Vedic Intuition - Expert astrology & Vaastu consultation"
+        description="Vedic Intuition offers expert  Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products."
         keywords={["Gemstones", "Spiritual Guidance", "Remedies", "Vedic Astrology", "Vastu Shastra"]}
         image="/favicon.png"
       />
@@ -406,7 +406,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
             >
-              <span className="font-semibold text-[#D4AF37]  decoration-[#D4AF37]/50">Vedic Intuition</span> offers Expert Vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!
+              <span className="font-semibold text-[#D4AF37]  decoration-[#D4AF37]/50">Vedic Intuition</span> offers Expert Astrology & Vaastu Consultation with Vedic remedies to guide your journey to holistic Growth!
             </motion.p>
 
             <motion.div
@@ -525,7 +525,7 @@ export default function Home() {
 
                     <div className="pt-4 border-t">
                       <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wider">Consultation Fee</p>
-                      <div className="font-bold text-accent text-2xl">
+                      <div className="font-bold text-accent text-lg">
                         {services.find(s => s.name === consultationType)?.price || "Select Service"}
                       </div>
                     </div>
@@ -671,7 +671,7 @@ export default function Home() {
                             {course.title}
                           </h3>
                           <div className="flex items-baseline gap-2">
-                            <span className="text-2xl font-bold text-accent">₹{Math.floor(parseFloat(course.price)).toLocaleString()} + 18% GST</span>
+                            <span className="text-lg font-bold text-accent">₹{Math.floor(parseFloat(course.price)).toLocaleString()} + 18% GST</span>
                           </div>
                           <p className="text-sm text-muted-foreground line-clamp-3 mb-6 flex-grow">
                             {course.description}

@@ -1672,8 +1672,8 @@ function Home() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$SEOHead$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["SEOHead"], {
-                title: "Vedic Intuition - Expert Vedic astrology & Vaastu consultation",
-                description: "Vedic Intuition offers expert Vedic Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products.",
+                title: "Vedic Intuition - Expert astrology & Vaastu consultation",
+                description: "Vedic Intuition offers expert  Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products.",
                 keywords: [
                     "Gemstones",
                     "Spiritual Guidance",
@@ -1806,7 +1806,7 @@ function Home() {
                                                 lineNumber: 409,
                                                 columnNumber: 15
                                             }, this),
-                                            " offers Expert Vedic Astrology & Vaastu Consultation through scientific remedies to guide your journey to holistic prosperity!"
+                                            " offers Expert Astrology & Vaastu Consultation with Vedic remedies to guide your journey to holistic Growth!"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
@@ -2358,7 +2358,7 @@ function Home() {
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                                                    className: "font-bold text-accent text-2xl",
+                                                                    className: "font-bold text-accent text-lg",
                                                                     children: services.find((s)=>s.name === consultationType)?.price || "Select Service"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
@@ -2857,7 +2857,7 @@ function Home() {
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                                                         className: "flex items-baseline gap-2",
                                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                            className: "text-2xl font-bold text-accent",
+                                                                            className: "text-lg font-bold text-accent",
                                                                             children: [
                                                                                 "₹",
                                                                                 Math.floor(parseFloat(course.price)).toLocaleString(),
