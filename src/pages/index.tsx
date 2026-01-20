@@ -1066,6 +1066,32 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Map Section */}
+        <section className="py-20 bg-background">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 italic">Find Us</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Visit our office located at the prime location of Greater Noida for personal consultations.
+              </p>
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-2xl border border-muted h-[500px] w-full group relative">
+              <div className="absolute inset-0 bg-accent/5 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+              <iframe
+                src="https://www.google.com/maps?q=133%20D,%20India%20Expo%20Plaza,%20Knowledge%20Park%20II%20Metro,%20Greater%20Noida,%20201310&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Maps Location"
+                className="filter grayscale-[20%] contrast-[1.1] hover:grayscale-0 transition-all duration-700"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
         {/* 12. FAQ Section */}
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
