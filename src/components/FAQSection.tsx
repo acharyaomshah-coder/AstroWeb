@@ -28,8 +28,8 @@ export function FAQSection() {
       answer: "Yes, we offer comprehensive astrology consultations with experienced astrologers. Sessions can be booked online and conducted via video call at your convenience."
     },
     {
-      question: "How should I care for my gemstone?",
-      answer: "Each gemstone comes with specific care instructions. Generally, avoid exposure to harsh chemicals, extreme temperatures, and direct sunlight. Clean regularly with a soft cloth and store separately to prevent scratches."
+      question: "Do you offer vaastu consultation?",
+      answer: "Yes, We need soft copy of your house map to prepare an energy grid for your house/office. Based on it, we will suggest possible vaastu remedies."
     }
   ];
 

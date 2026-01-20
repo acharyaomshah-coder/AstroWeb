@@ -1026,7 +1026,11 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs opacity-70">Address</p>
-                      <p className="font-bold">Greater Noida, India</p>
+                      <p className="font-bold leading-relaxed">
+                        133 D, India Expo Plaza, <br />
+                        Knowledge Park II Metro, <br />
+                        Greater Noida, 201310
+                      </p>
                     </div>
                   </div>
                 </div>
