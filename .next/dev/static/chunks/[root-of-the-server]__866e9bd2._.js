@@ -5254,85 +5254,11 @@ function Home() {
                                     className: "text-center mb-12",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "font-serif text-3xl md:text-5xl font-bold mb-4 italic",
-                                            children: "Find Us"
-                                        }, void 0, false, {
-                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                            lineNumber: 1073,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-muted-foreground text-lg max-w-2xl mx-auto",
-                                            children: "Visit our office located at the prime location of Greater Noida for personal consultations."
-                                        }, void 0, false, {
-                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                            lineNumber: 1074,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                    lineNumber: 1072,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "rounded-3xl overflow-hidden shadow-2xl border border-muted h-[500px] w-full group relative",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-accent/5 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10"
-                                        }, void 0, false, {
-                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                            lineNumber: 1079,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                                            src: "https://www.google.com/maps?q=133%20D,%20India%20Expo%20Plaza,%20Knowledge%20Park%20II%20Metro,%20Greater%20Noida,%20201310&output=embed",
-                                            width: "100%",
-                                            height: "100%",
-                                            style: {
-                                                border: 0
-                                            },
-                                            allowFullScreen: true,
-                                            loading: "lazy",
-                                            referrerPolicy: "no-referrer-when-downgrade",
-                                            title: "Google Maps Location",
-                                            className: "filter grayscale-[20%] contrast-[1.1] hover:grayscale-0 transition-all duration-700"
-                                        }, void 0, false, {
-                                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                            lineNumber: 1080,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                    lineNumber: 1078,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                            lineNumber: 1071,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                        lineNumber: 1070,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                        className: "py-20 bg-background",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "max-w-6xl mx-auto px-4 lg:px-8",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-center mb-12",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             className: "font-serif text-3xl md:text-3xl font-bold mb-4",
                                             children: "Frequently Asked Questions"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                            lineNumber: 1099,
+                                            lineNumber: 1075,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5340,29 +5266,29 @@ function Home() {
                                             children: "Everything you need to know about our products and services"
                                         }, void 0, false, {
                                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                            lineNumber: 1102,
+                                            lineNumber: 1078,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                    lineNumber: 1098,
+                                    lineNumber: 1074,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$src$2f$components$2f$FAQSection$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["FAQSection"], {}, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                    lineNumber: 1107,
+                                    lineNumber: 1083,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                            lineNumber: 1097,
+                            lineNumber: 1073,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                        lineNumber: 1096,
+                        lineNumber: 1072,
                         columnNumber: 9
                     }, this)
                 ]
@@ -5387,12 +5313,12 @@ function Home() {
                                     className: "w-8 h-8"
                                 }, void 0, false, {
                                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                    lineNumber: 1120,
+                                    lineNumber: 1096,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                lineNumber: 1115,
+                                lineNumber: 1091,
                                 columnNumber: 13
                             }, this),
                             selectedImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DEMO$2d$PROJECTS$2f$AstroWeb$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -5401,23 +5327,23 @@ function Home() {
                                 className: "w-full h-full object-contain"
                             }, void 0, false, {
                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                                lineNumber: 1123,
+                                lineNumber: 1099,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                        lineNumber: 1114,
+                        lineNumber: 1090,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                    lineNumber: 1113,
+                    lineNumber: 1089,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
-                lineNumber: 1112,
+                lineNumber: 1088,
                 columnNumber: 7
             }, this)
         ]
