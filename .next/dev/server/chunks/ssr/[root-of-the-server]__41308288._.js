@@ -2029,29 +2029,28 @@ function Home() {
                                                             "He holds ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
-                                                                children: "Diploma in Medical Astrology"
+                                                                children: "M.A. in Medical Astrology"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
                                                                 columnNumber: 30
                                                             }, this),
-                                                            " from UOU , ",
+                                                            " from UOU Haldwani,  ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
-                                                                children: "Diploma"
+                                                                children: "Jyotish Acharya & Diploma"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
-                                                                columnNumber: 123
+                                                                columnNumber: 129
                                                             }, this),
-                                                            " in ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
-                                                                children: "(Vaastu Shastra)"
+                                                                children: " (Vaastu Shastra)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
-                                                                columnNumber: 187
+                                                                columnNumber: 207
                                                             }, this),
                                                             " from BVB-Delhi & Diploma in ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -2060,7 +2059,7 @@ function Home() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
-                                                                columnNumber: 285
+                                                                columnNumber: 306
                                                             }, this),
                                                             " from SLBS National Sanskrit University. Aacharya Shah is an ex-microbiologist , ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -2094,13 +2093,22 @@ function Home() {
                                                             " With Over ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
-                                                                children: "6 years of experience"
+                                                                children: "7 years of experience"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 473,
                                                                 columnNumber: 41
                                                             }, this),
-                                                            " in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies."
+                                                            " in ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "Vedic Astrology and Vaastu Shastra "
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
+                                                                lineNumber: 473,
+                                                                columnNumber: 119
+                                                            }, this),
+                                                            ", he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
