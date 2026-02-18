@@ -22,7 +22,7 @@ export default function About() {
     },
     {
       title: "Expertise",
-      description: "Over 25 years of experience in Vedic astrology and spiritual guidance"
+      description: "Over 7 years of experience in Vedic astrology and spiritual guidance"
     },
     {
       title: "Quality",
@@ -89,13 +89,13 @@ export default function About() {
 
                 <div className="space-y-8 text-base text-muted-foreground leading-relaxed">
                   <p className="border-l-4 border-accent/30 pl-6 py-2">
-                    <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold underline decoration-[#D4AF37]/50">Gold Medalist</span> Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
+                    <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold  decoration-accent/20">Gold Medalist</span> Astrologer from <span className="text-foreground font-medium">K.N.Rao Institute of Astrology</span>, Bharati Vidya Bhavan, New Delhi.
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-medium">Diploma in Medical Astrology</span> from UOU , <span className="text-foreground font-medium">Diploma</span> in <span className="text-foreground font-medium">(Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
-                    Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-                    <br /> With Over <span className="text-foreground font-medium">6 years of experience</span> in Vedic Astrology and Vaastu Shastra, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
+                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU Haldwani,  <span className="text-foreground font-medium">Jyotish Acharya (Astrology)</span> & <span className="text-foreground font-medium">Diploma</span><span className="text-foreground font-medium"> (Vaastu Shastra)</span> from BVB-Delhi, Diploma <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBSN Sanskrit University.
+                    He is an ex-microbiologist, <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
+                    <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his <span className="text-foreground font-medium">astrological predictions, Karmic</span> & <span className="text-foreground font-medium">vaastu remedies</span>.
                   </p>
                 </div>
               </motion.div>

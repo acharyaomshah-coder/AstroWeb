@@ -2017,7 +2017,16 @@ function Home() {
                                                                 lineNumber: 467,
                                                                 columnNumber: 94
                                                             }, this),
-                                                            " Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi."
+                                                            " Astrologer from ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "K.N.Rao Institute of Astrology"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
+                                                                lineNumber: 467,
+                                                                columnNumber: 201
+                                                            }, this),
+                                                            ", Bharati Vidya Bhavan, New Delhi."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
@@ -2029,7 +2038,7 @@ function Home() {
                                                             "He holds ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
-                                                                children: "M.A. in Medical Astrology"
+                                                                children: "M.A. (Astrology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
@@ -2038,11 +2047,20 @@ function Home() {
                                                             " from UOU Haldwani,  ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
-                                                                children: "Jyotish Acharya & Diploma"
+                                                                children: "Jyotish Acharya (Astrology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
-                                                                columnNumber: 129
+                                                                columnNumber: 120
+                                                            }, this),
+                                                            " & ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "Diploma"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
+                                                                lineNumber: 471,
+                                                                columnNumber: 203
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
@@ -2050,25 +2068,25 @@ function Home() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
-                                                                columnNumber: 207
+                                                                columnNumber: 263
                                                             }, this),
-                                                            " from BVB-Delhi & Diploma in ",
+                                                            " from BVB-Delhi, Diploma ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
                                                                 children: "(Medical Astrology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 471,
-                                                                columnNumber: 306
+                                                                columnNumber: 358
                                                             }, this),
-                                                            " from SLBS National Sanskrit University. Aacharya Shah is an ex-microbiologist , ",
+                                                            " from SLBSN Sanskrit University. He is an ex-microbiologist, ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
                                                                 children: "M.Sc. (Microbiology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 472,
-                                                                columnNumber: 61
+                                                                columnNumber: 49
                                                             }, this),
                                                             " and ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -2077,13 +2095,13 @@ function Home() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 472,
-                                                                columnNumber: 139
+                                                                columnNumber: 127
                                                             }, this),
                                                             " ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
                                                                 lineNumber: 472,
-                                                                columnNumber: 222
+                                                                columnNumber: 210
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
@@ -2108,7 +2126,25 @@ function Home() {
                                                                 lineNumber: 473,
                                                                 columnNumber: 119
                                                             }, this),
-                                                            ", he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies."
+                                                            ", he brings remarkable changes in one's life using his ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "astrological predictions, Karmic"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
+                                                                lineNumber: 473,
+                                                                columnNumber: 262
+                                                            }, this),
+                                                            " & ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "vaastu remedies"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
+                                                                lineNumber: 473,
+                                                                columnNumber: 350
+                                                            }, this),
+                                                            "."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx",
