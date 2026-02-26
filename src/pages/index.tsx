@@ -415,15 +415,15 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Link href="/products">
-                <Button size="lg" className="bg-accent text-[#D4AF37]  text-accent-foreground hover:bg-accent/90 min-w-[200px]">
-                  Explore Products
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
               <Link href="/book-appointment">
                 <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 min-w-[200px]">
                   Book Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/products">
+                <Button size="lg" className="bg-accent text-[#D4AF37]  text-accent-foreground hover:bg-accent/90 min-w-[200px]">
+                  Explore Products
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -468,9 +468,9 @@ export default function Home() {
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU Haldwani,  <span className="text-foreground font-medium">Jyotish Acharya (Astrology)</span> & <span className="text-foreground font-medium">Diploma</span><span className="text-foreground font-medium"> (Vaastu Shastra)</span> from BVB-Delhi, Diploma <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBSN Sanskrit University.
-                    Aacharya Shah is an ex-microbiologist, <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-                    <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his <span className="text-foreground font-medium">astrological predictions, Karmic</span> & <span className="text-foreground font-medium">vaastu remedies</span>.
+                    He holds <span className="text-foreground font-bold">M.A. (Astrology)</span> from UOU Haldwani, <span className="text-foreground font-bold">Jyotish Acharya (Astrology)</span> & <span className="text-foreground font-bold">Diploma (Vaastu Shastra)</span> from BVB-Delhi, <span className="text-foreground font-bold">Diploma (Medical Astrology)</span> from SLBSN Sanskrit University.
+                    Aacharya Shah is an ex-microbiologist, <span className="text-foreground font-bold">M.Sc. (Microbiology)</span> and <span className="text-foreground font-bold">Pre-PhD (Molecular Medicine).</span> <br />
+                    <br></br> With Over <span className="text-foreground font-bold">7 years of experience</span> in <span className="text-foreground font-bold">Vedic Astrology and Vaastu Shastra</span>, he brings remarkable changes in one's life using his <span className="text-foreground font-bold">astrological predictions, Karmic</span> & <span className="text-foreground font-bold">vaastu remedies</span>.
                   </p>
 
 
@@ -1066,7 +1066,7 @@ export default function Home() {
           </div>
         </section>
 
-    
+
 
         {/* 12. FAQ Section */}
         <section className="py-20 bg-background">

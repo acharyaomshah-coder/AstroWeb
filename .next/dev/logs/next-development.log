@@ -1,68 +1,11 @@
-[00:00:04.243] Server  LOG      ✓ Ready in 2.8s
-[00:00:08.391] Server  LOG      ○ Compiling / ...
-[00:01:03.491] Server  LOG      ✓ Compiled in 855ms
-[00:01:08.658] Server  LOG      ✓ Compiled in 492ms
-[00:01:09.735] Server  LOG      ✓ Compiled in 488ms
-[00:01:10.780] Server  LOG      ✓ Compiled in 427ms
-[00:01:14.586] Server  LOG      ✓ Compiled in 407ms
-[00:01:17.914] Server  LOG      ✓ Compiled in 895ms
-[00:01:57.347] Server  LOG      ✓ Compiled in 613ms
-[00:02:02.485] Server  LOG      ✓ Compiled in 419ms
-[00:02:02.887] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:468:23
-Parsing ecmascript source code failed
-  466 |                   <p className="border-l-4 border-accent/30 pl-6 py-2">
-  467 |                     <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold  decoration-accent/20">Gold Medalist</span> Astrologer from <span className="text-foreground font-medium">K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
-> 468 |                   </p>
-      |                       ^
-> 469 |
-      | ^
-> 470 |                   <p>
-      | ^^^^^^^^^^^^^^^^^^^
-  471 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU Haldwani,  <span className="text-foreground font-medium">Jyotish Acharya & Diploma</span><span className="text-foreground font-medium"> (Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-  473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
-
-Expected '</', got 'jsx text (
-
-                  )'
-[00:02:02.887] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:02:13.535] Server  LOG      ✓ Compiled in 707ms
-[00:02:16.863] Browser ERROR   Warning: Text content did not match. Server: "%s" Client: "%s"%s  Astrologer from K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.  Astrologer from  
-    at p
-    at div
-    at div
-    at MotionComponent (http://localhost:3000/_next/static/chunks/22aaf_framer-motion_dist_es_45d9f4de._.js:10266:189)
-    at div
-    at div
-    at section
-    at div
-    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:132:210)
-    at main
-    at div
-    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
-    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
-    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
-    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
-    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3340:16)
-    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
-    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
-    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
-    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
-    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:02:16.863] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
-[00:02:16.863] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+[00:00:02.433] Server  LOG      ✓ Ready in 1515ms
+[00:00:05.541] Server  LOG      ○ Compiling / ...
+[00:00:08.787] Browser WARN    Image with src "/healing crystal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:08.788] Browser WARN    Image with src "/gemstones.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:08.788] Browser WARN    Image with src "/vaastu.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:08.788] Browser WARN    Image with src "/rudraksha.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:08.788] Browser WARN    Image with src "/astro-remedies-for-all-sun-signs-2025-1733308932583.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:31.780] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
     at div
     at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
     at p
@@ -76,7 +19,7 @@ Debug info:
     at div
     at section
     at div
-    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:132:210)
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:2181:210)
     at main
     at div
     at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
@@ -90,335 +33,154 @@ Debug info:
     at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
     at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
     at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Text content does not match server-rendered HTML.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.863] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.864] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.864] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:02:16.864] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
-[00:02:16.864] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/gemstones.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/healing crystal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/rudraksha.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/vaastu.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/astro-remedies-for-all-sun-signs-2025-1733308932583.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:16.864] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:27.887] Browser LOG     Refreshing page data due to server-side change
-[00:02:27.942] Server  LOG      ✓ Compiled in 413ms
-[00:02:28.887] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:468:23
-Parsing ecmascript source code failed
-  466 |                   <p className="border-l-4 border-accent/30 pl-6 py-2">
-  467 |                     <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold  decoration-accent/20">Gold Medalist</span> Astrologer from <span className="text-foreground font-medium">K.N.Rao Institute of Astrology, Bharati Vidya Bhavan, New Delhi.
-> 468 |                   </p>
-      |                       ^
-> 469 |
-      | ^
-> 470 |                   <p>
-      | ^^^^^^^^^^^^^^^^^^^
-  471 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU Haldwani,  <span className="text-foreground font-medium">Jyotish Acharya & Diploma</span><span className="text-foreground font-medium"> (Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-  473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
-
-Expected '</', got 'jsx text (
-
-                  )'
-[00:02:28.887] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:02:31.754] Browser LOG     Refreshing page data due to server-side change
-[00:02:32.317] Server  LOG      ✓ Compiled in 876ms
-[00:03:34.164] Server  LOG      ✓ Compiled in 508ms
-[00:03:34.892] Browser LOG     Refreshing page data due to server-side change
-[00:03:34.892] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:471:205
-Parsing ecmascript source code failed
-  469 |
-  470 |                   <p>
-> 471 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU Haldwani,  <span className="text-foreground font-medium">Jyotish Acharya</span> & Diploma</span><span className="text-foreground font-medium"> (Vaastu Shastra)</span> from BVB-Delhi & Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBS National Sanskrit University.
-      |                                                                                                                                                                                                             ^
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-  473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his astrological predictions, Vaastu, and karmic remedies.
-  474 |                   </p>
-
-Expression expected
-[00:03:34.892] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:03:43.119] Server  LOG      ✓ Compiled in 461ms
-[00:03:43.394] Browser LOG     Refreshing page data due to server-side change
-[00:03:57.317] Server  LOG      ✓ Compiled in 1039ms
-[00:04:03.079] Server  LOG      ✓ Compiled in 837ms
-[00:04:18.885] Server  LOG      ✓ Compiled in 415ms
-[00:04:21.100] Server  LOG      ✓ Compiled in 929ms
-[00:04:25.853] Server  LOG      ✓ Compiled in 897ms
-[00:04:37.178] Server  LOG      ✓ Compiled in 468ms
-[00:04:42.291] Server  LOG      ✓ Compiled in 978ms
-[00:05:11.444] Server  LOG      ✓ Compiled in 406ms
-[00:05:13.562] Server  LOG      ✓ Compiled in 381ms
-[00:06:10.589] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_jn7jdwhz7p_1768469578886.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:10.589] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_fhjq0uqb8os_1768469122847.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:10.589] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_c9tihuee0d9_1768547110337.jfif" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/aries.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/tauraus.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/gemini.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/cancer.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/leo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/virgo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/scorpio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/libra.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/sagittarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/capricon.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/aqarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:11.399] Browser WARN    Image with src "/pisces.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:06:43.589] Server  LOG      ✓ Compiled in 393ms
-[00:06:47.855] Server  LOG      ✓ Compiled in 916ms
-[00:06:53.210] Server  LOG      ✓ Compiled in 384ms
-[00:06:58.564] Server  LOG      ✓ Compiled in 850ms
-[00:07:13.501] Server  LOG      ✓ Compiled in 812ms
-[00:07:54.124] Server  LOG      ✓ Compiled in 401ms
-[00:08:00.570] Server  LOG      ✓ Compiled in 391ms
-[00:08:00.885] Browser LOG     Refreshing page data due to server-side change
-[00:08:00.885] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:486:44
-Parsing ecmascript source code failed
-  484 |
-  485 |         {/* 3. Book Consultation Section */}
-> 486 |         <section className="py-20 bg-muted/30">
-      |                                            ^^
-  487 |           <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
-  488 |             <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-  489 |               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Book Your Consultation</h2>
-
-Expected '</', got 'numeric literal (30, 30)'
-[00:08:00.885] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:08:02.342] Server  LOG      ✓ Compiled in 334ms
-[00:08:02.885] Browser LOG     Refreshing page data due to server-side change
-[00:08:14.919] Browser LOG     Refreshing page data due to server-side change
-[00:08:15.002] Server  LOG      ✓ Compiled in 387ms
-[00:08:15.886] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:474:23
-Parsing ecmascript source code failed
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-  473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his <span className="text-foreground font-medium">astrological predictions, Karmic, & vaastu remedies.
-> 474 |                   </p>
-      |                       ^
-> 475 |
-      | ^
-> 476 |
-      | ^
-> 477 |                 </div>
-      | ^^^^^^^^^^^^^^^^^
-  478 |               </motion.div>
-  479 |             </div>
-  480 |
-
-Expected '</', got 'jsx text (
-
-                )'
-[00:08:15.886] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:08:17.185] Server  LOG      ✓ Compiled in 388ms
-[00:08:17.899] Browser LOG     Refreshing page data due to server-side change
-[00:08:35.838] Server  LOG      ✓ Compiled in 397ms
-[00:08:39.297] Server  LOG      ✓ Compiled in 405ms
-[00:08:53.250] Server  LOG      ✓ Compiled in 417ms
-[00:08:53.903] Browser LOG     Refreshing page data due to server-side change
-[00:08:53.903] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:474:23
-Parsing ecmascript source code failed
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-  473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his <span className="text-foreground font-medium">astrological predictions, Karmic, & vaastu remedies.
-> 474 |                   </p>
-      |                       ^
-> 475 |
-      | ^
-> 476 |
-      | ^
-> 477 |                 </div>
-      | ^^^^^^^^^^^^^^^^^
-  478 |               </motion.div>
-  479 |             </div>
-  480 |
-
-Expected '</', got 'jsx text (
-
-                )'
-[00:08:53.903] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:08:59.897] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:474:23
-Parsing ecmascript source code failed
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-  473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his <span className="text-foreground font-medium">astrological predictions, Karmic & vaastu remedies.
-> 474 |                   </p>
-      |                       ^
-> 475 |
-      | ^
-> 476 |
-      | ^
-> 477 |                 </div>
-      | ^^^^^^^^^^^^^^^^^
-  478 |               </motion.div>
-  479 |             </div>
-  480 |
-
-Expected '</', got 'jsx text (
-
-                )'
-[00:08:59.897] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:09:00.233] Server  LOG      ✓ Compiled in 415ms
-[00:09:00.896] Browser LOG     Refreshing page data due to server-side change
-[00:09:03.527] Server  LOG      ✓ Compiled in 392ms
-[00:09:03.936] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:473:366
-Parsing ecmascript source code failed
-  471 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU Haldwani,  <span className="text-foreground font-medium">Jyotish Acharya</span> & <span className="text-foreground font-medium">Diploma</span><span className="text-foreground font-medium"> (Vaastu Shastra)</span> from BVB-Delhi, Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBSN Sanskrit University.
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-> 473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his <span className="text-foreground font-medium">astrological predictions, Karmic</span> & <vaastu remedies.
-      |                                                                                                                                                                                                                                                                                                                                                                              ^
-  474 |                   </p>
-  475 |
-  476 |
-
-Expected '</', got '.'
-[00:09:03.936] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:09:05.895] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx:473:370
-Parsing ecmascript source code failed
-  471 |                     He holds <span className="text-foreground font-medium">M.A. (Astrology)</span> from UOU Haldwani,  <span className="text-foreground font-medium">Jyotish Acharya</span> & <span className="text-foreground font-medium">Diploma</span><span className="text-foreground font-medium"> (Vaastu Shastra)</span> from BVB-Delhi, Diploma in <span className="text-foreground font-medium">(Medical Astrology)</span> from SLBSN Sanskrit University.
-  472 |                     Aacharya Shah is an ex-microbiologist , <span className="text-foreground font-medium">M.Sc. (Microbiology)</span> and <span className="text-foreground font-medium">Pre-PhD (Molecular Medicine).</span> <br />
-> 473 |                     <br></br> With Over <span className="text-foreground font-medium">7 years of experience</span> in <span className="text-foreground font-medium">Vedic Astrology and Vaastu Shastra </span>, he brings remarkable changes in one's life using his <span className="text-foreground font-medium">astrological predictions, Karmic</span> & <spanvaastu remedies.
-      |                                                                                                                                                                                                                                                                                                                                                                                  ^
-  474 |                   </p>
-  475 |
-  476 |
-
-Expected '</', got '.'
-[00:09:05.895] Browser ERROR   ./DEMO-PROJECTS/AstroWeb/src/pages/index.tsx
-Code generation for chunk item errored
-An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-
-Caused by:
-- CJS module can't be async.
-
-Debug info:
-- An error occurred while generating the chunk item [project]/DEMO-PROJECTS/AstroWeb/src/pages/index.tsx [ssr] (ecmascript)
-- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
-- Execution of EcmascriptChunkItemContent::new failed
-- CJS module can't be async.
-[00:09:08.286] Server  LOG      ✓ Compiled in 325ms
-[00:09:08.892] Browser LOG     Refreshing page data due to server-side change
-[00:09:41.801] Server  LOG      ✓ Compiled in 891ms
-[00:11:33.415] Server  LOG      ✓ Compiled in 419ms
-[00:12:05.190] Server  LOG      ✓ Compiled in 893ms
-[00:15:08.928] Server  ERROR   Error fetching horoscopes: {}
-[00:15:08.931] Server  ERROR   Error fetching muhurat: {}
-[00:15:08.934] Server  ERROR   Error fetching panchang: {}
-[00:15:09.122] Server  LOG      ✓ Compiled in 413ms
-[00:15:20.225] Server  LOG      ✓ Compiled in 959ms
-[00:15:29.568] Server  ERROR   Error fetching horoscopes: {}
-[00:15:29.721] Server  ERROR   Error fetching muhurat: {}
-[00:15:29.880] Server  ERROR   Error fetching panchang: {}
-[00:15:48.674] Server  ERROR   Error fetching horoscopes: {}
-[00:15:48.680] Server  ERROR   Error fetching muhurat: {}
-[00:15:48.689] Server  ERROR   Error fetching panchang: {}
-[00:15:48.900] Server  LOG      ✓ Compiled in 387ms
-[00:15:53.416] Server  ERROR   Error fetching horoscopes: {}
-[00:15:53.428] Server  ERROR   Error fetching muhurat: {}
-[00:15:53.432] Server  ERROR   Error fetching panchang: {}
-[00:15:53.598] Server  LOG      ✓ Compiled in 374ms
-[00:15:54.900] Browser ERROR   Error fetching courses: {"code":"","details":"TypeError: Failed to fetch\n    at value (chrome-extension://aflkmfhebedbjioipglgcbcmnbpgliof/injected.js:1:7314244)\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15189:23\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15207:16\n    at async Home.useEffect.fetchCourses (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:301:49)","hint":"","message":"TypeError: Failed to fetch"}
-[00:15:54.900] Browser ERROR   Error fetching courses: {"code":"","details":"TypeError: Failed to fetch\n    at value (chrome-extension://aflkmfhebedbjioipglgcbcmnbpgliof/injected.js:1:7314244)\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15189:23\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15207:16\n    at async Home.useEffect.fetchCourses (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:301:49)","hint":"","message":"TypeError: Failed to fetch"}
-[00:15:57.218] Server  ERROR   Error fetching horoscopes: {}
-[00:15:57.221] Server  ERROR   Error fetching muhurat: {}
-[00:15:57.225] Server  ERROR   Error fetching panchang: {}
-[00:15:57.922] Server  LOG      ✓ Compiled in 978ms
-[00:16:05.632] Server  ERROR   Error fetching horoscopes: {}
-[00:16:05.635] Server  ERROR   Error fetching muhurat: {}
-[00:16:05.646] Server  ERROR   Error fetching panchang: {}
-[00:16:05.791] Server  LOG      ✓ Compiled in 410ms
-[00:16:22.886] Browser ERROR   Error fetching courses: {"code":"","details":"TypeError: Failed to fetch\n    at value (chrome-extension://aflkmfhebedbjioipglgcbcmnbpgliof/injected.js:1:7314244)\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15189:23\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15207:16\n    at async Home.useEffect.fetchCourses (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:301:49)","hint":"","message":"TypeError: Failed to fetch"}
-[00:16:26.889] Browser ERROR   Error fetching courses: {"code":"","details":"TypeError: Failed to fetch\n    at value (chrome-extension://aflkmfhebedbjioipglgcbcmnbpgliof/injected.js:1:7314244)\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15189:23\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15207:16\n    at async Home.useEffect.fetchCourses (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:301:49)","hint":"","message":"TypeError: Failed to fetch"}
-[00:16:29.886] Browser ERROR   Error fetching courses: {"code":"","details":"TypeError: Failed to fetch\n    at value (chrome-extension://aflkmfhebedbjioipglgcbcmnbpgliof/injected.js:1:7314244)\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15189:23\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15207:16\n    at async Home.useEffect.fetchCourses (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:301:49)","hint":"","message":"TypeError: Failed to fetch"}
-[00:16:29.886] Browser ERROR   Error fetching courses: {"code":"","details":"TypeError: Failed to fetch\n    at value (chrome-extension://aflkmfhebedbjioipglgcbcmnbpgliof/injected.js:1:7314244)\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15189:23\n    at http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:15207:16\n    at async Home.useEffect.fetchCourses (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js?id=%255Bproject%255D%252FDEMO-PROJECTS%252FAstroWeb%252Fsrc%252Fpages%252Findex.tsx+%255Bclient%255D+%2528ecmascript%2529:301:49)","hint":"","message":"TypeError: Failed to fetch"}
-[00:17:16.190] Server  LOG      ✓ Compiled in 341ms
-[00:17:19.881] Server  LOG      ✓ Compiled in 730ms
-[00:17:50.865] Server  LOG      ✓ Compiled in 1039ms
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
+[00:00:31.780] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+    at div
+    at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
+    at p
+    at div
+    at div
+    at _c8 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:877:213)
+    at div
+    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:833:205)
+    at div
+    at div
+    at div
+    at section
+    at div
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:2181:210)
+    at main
+    at div
+    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
+    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
+    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3340:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
+    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:00:31.780] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
+[00:00:32.159] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:24.493] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
+    at div
+    at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
+    at p
+    at div
+    at div
+    at _c8 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:877:213)
+    at div
+    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:833:205)
+    at div
+    at div
+    at div
+    at section
+    at div
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:2181:210)
+    at main
+    at div
+    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
+    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
+    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3340:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
+    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
+[00:03:24.493] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.493] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
+[00:03:24.494] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+    at div
+    at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1692:18)
+    at p
+    at div
+    at div
+    at _c8 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:877:213)
+    at div
+    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:833:205)
+    at div
+    at div
+    at div
+    at section
+    at div
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__866e9bd2._.js:2181:210)
+    at main
+    at div
+    at Provider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:2767:21)
+    at TooltipProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:12315:13)
+    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:1059:25)
+    at QueryClientProvider (http://localhost:3000/_next/static/chunks/22aaf_5bb0969b._.js:583:30)
+    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__75d9c3eb._.js:3340:16)
+    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/22aaf_next_dist_shared_lib_28e1c111._.js:5052:43)
+    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1142:9)
+    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/22aaf_next_dist_547b0852._.js:1919:34)
+    at Container (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3041:1)
+    at AppContainer (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3140:25)
+    at Root (http://localhost:3000/_next/static/chunks/22aaf_next_dist_client_a9bc3bc9._.js:3353:17)
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:03:24.494] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
+[00:03:24.676] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:16.411] Server  LOG      ✓ Compiled in 992ms
+[00:07:35.662] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:35.662] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:35.662] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:35.662] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:41.880] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_fhjq0uqb8os_1768469122847.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:41.880] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_jn7jdwhz7p_1768469578886.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:41.880] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_c9tihuee0d9_1768547110337.jfif" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:42.638] Browser WARN    Image with src "/gemstones.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:42.638] Browser WARN    Image with src "/healing crystal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:42.638] Browser WARN    Image with src "/rudraksha.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:42.638] Browser WARN    Image with src "/vaastu.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:42.638] Browser WARN    Image with src "/astro-remedies-for-all-sun-signs-2025-1733308932583.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:44.506] Browser WARN    Image with src "/aries.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:44.506] Browser WARN    Image with src "/tauraus.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/cancer.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/gemini.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/leo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/virgo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/libra.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/scorpio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/sagittarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.046] Browser WARN    Image with src "/capricon.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.202] Browser WARN    Image with src "/pisces.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:45.202] Browser WARN    Image with src "/aqarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

@@ -757,71 +757,63 @@ function About() {
                                                         children: [
                                                             "He holds ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
+                                                                className: "text-foreground font-bold",
                                                                 children: "M.A. (Astrology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 96,
                                                                 columnNumber: 30
                                                             }, this),
-                                                            " from UOU Haldwani,  ",
+                                                            " from UOU Haldwani, ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
+                                                                className: "text-foreground font-bold",
                                                                 children: "Jyotish Acharya (Astrology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 120
+                                                                columnNumber: 117
                                                             }, this),
                                                             " & ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
-                                                                children: "Diploma"
+                                                                className: "text-foreground font-bold",
+                                                                children: "Diploma (Vaastu Shastra)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 203
+                                                                columnNumber: 198
                                                             }, this),
+                                                            " from BVB-Delhi, ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
-                                                                children: " (Vaastu Shastra)"
+                                                                className: "text-foreground font-bold",
+                                                                children: "Diploma (Medical Astrology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 263
+                                                                columnNumber: 290
                                                             }, this),
-                                                            " from BVB-Delhi, Diploma ",
+                                                            " from SLBSN Sanskrit University. Aacharya Shah is an ex-microbiologist, ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
-                                                                children: "(Medical Astrology)"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
-                                                                lineNumber: 96,
-                                                                columnNumber: 358
-                                                            }, this),
-                                                            " from SLBSN Sanskrit University. He is an ex-microbiologist, ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
+                                                                className: "text-foreground font-bold",
                                                                 children: "M.Sc. (Microbiology)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 97,
-                                                                columnNumber: 49
+                                                                columnNumber: 60
                                                             }, this),
                                                             " and ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
+                                                                className: "text-foreground font-bold",
                                                                 children: "Pre-PhD (Molecular Medicine)."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 97,
-                                                                columnNumber: 127
+                                                                columnNumber: 136
                                                             }, this),
                                                             " ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 97,
-                                                                columnNumber: 210
+                                                                columnNumber: 217
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
@@ -830,7 +822,7 @@ function About() {
                                                             }, this),
                                                             " With Over ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
+                                                                className: "text-foreground font-bold",
                                                                 children: "7 years of experience"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
@@ -839,30 +831,30 @@ function About() {
                                                             }, this),
                                                             " in ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
-                                                                children: "Vedic Astrology and Vaastu Shastra "
+                                                                className: "text-foreground font-bold",
+                                                                children: "Vedic Astrology and Vaastu Shastra"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 98,
-                                                                columnNumber: 119
+                                                                columnNumber: 117
                                                             }, this),
                                                             ", he brings remarkable changes in one's life using his ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
+                                                                className: "text-foreground font-bold",
                                                                 children: "astrological predictions, Karmic"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 98,
-                                                                columnNumber: 262
+                                                                columnNumber: 257
                                                             }, this),
                                                             " & ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
+                                                                className: "text-foreground font-bold",
                                                                 children: "vaastu remedies"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/DEMO-PROJECTS/AstroWeb/src/pages/about.tsx",
                                                                 lineNumber: 98,
-                                                                columnNumber: 350
+                                                                columnNumber: 343
                                                             }, this),
                                                             "."
                                                         ]
