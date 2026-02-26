@@ -406,7 +406,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base md:text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
             >
-              <span className="font-semibold text-[#D4AF37]  decoration-[#D4AF37]/50">Vedic Intuition</span> offers Expert Astrology & Vaastu Consultation with Vedic remedies to guide your journey to holistic Growth!
+              Transform your life with personalized Astrology & Vaastu guidance!
             </motion.p>
 
             <motion.div
