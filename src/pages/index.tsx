@@ -237,44 +237,31 @@ export default function Home() {
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [consultationType, setConsultationType] = useState("");
 
-  const services = [
-    {
-      id: "horoscope-analysis",
-      name: "Horoscope Analysis",
-      description: "A comprehensive analysis of your birth chart to provide insights into your personality, health, relationships, marriage, career, and financial gains etc.",
-      price: "₹3,000 + 18% GST"
-    },
-    {
-      id: "varshaphala",
-      name: "Varshaphala (Annual Forecast)",
-      description: "Detailed astrological guidance for one full year. This analysis utilizes your Janma Kundali  (parashari and jaimini systems) combined with your Varsha Kundali to predict yearly trends.",
-      price: "₹6,000 + 18% GST"
-    },
-    {
-      id: "muhurta-selection",
-      name: "Muhurta Selection",
-      description: "Identification of the most auspicious moments for significant life events, including marriage, travel, Griha Pravesh, and business inaugurations.",
-      price: "₹6,000 + 18% GST"
-    },
-    {
-      id: "residential-Vaastu",
-      name: "Residential Vaastu Analysis",
-      description: "A detailed Vaastu report for your home with effective remedies to optimize energy flow, ensuring peace and prosperity.",
-      price: "₹20 / sq. ft.+  18% GST"
-    },
-    {
-      id: "commercial-Vaastu",
-      name: "Commercial Vaastu Analysis",
-      description: "Specialized Vaastu assessment for offices, shops, or factories to identify remedies that remove obstacles and stimulate business growth.",
-      price: "₹20 / sq. ft + 18% GST."
-    },
-    {
-      id: "karmic-remedial",
-      name: "Astrological (Karmic) Remedial Services",
-      description: " Vedic remedies includes Vaastu remedies , garha anusthaan(mantra , hawan ), panch tatwa treatment and yantra therapy",
-      price: "₹20,000 + 18% GST"
-    }
-  ];
+  const [services, setServices] = useState<any[]>([]);
+  const [isLoadingServices, setIsLoadingServices] = useState(true);
+
+  // Fetch consultations dynamically
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("consultations")
+          .select("*")
+          .order("position", { ascending: true });
+
+        if (!error && data) {
+          setServices(data);
+        } else {
+            setServices([]); // fallback
+        }
+      } catch (error) {
+        console.error("Error fetching services:", error);
+      } finally {
+        setIsLoadingServices(false);
+      }
+    };
+    fetchServices();
+  }, []);
 
   const timeSlots = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"];
 

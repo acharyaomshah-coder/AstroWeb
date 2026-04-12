@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Clock, Award, Calendar as CalendarIcon, MapPin, Video, Check, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/lib/authContext";
-import { getAuthToken } from "@/lib/supabase";
+import { getAuthToken, supabase } from "@/lib/supabase";
 import { Sunrise, BookOpen, GraduationCap, Microscope, CheckCircle2 } from "lucide-react";
 
 interface Appointment {
@@ -40,62 +40,42 @@ export default function BookAppointment() {
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  const services = [
-    {
-      id: "horoscope-analysis",
-      name: "Horoscope Analysis",
-      description: "A comprehensive analysis of your birth chart to provide insights into your personality, health, relationships, marriage, career, and financial gains etc.",
-      price: "₹3,000 + 18% GST",
-      category: "horoscope"
-    },
-    {
-      id: "varshaphala",
-      name: "Varshaphala (Annual Forecast)",
-      description: "Detailed astrological guidance for one full year. This analysis utilizes your Janma Kundali (parashari and jaimini systems) combined with your Varsha Kundali to predict yearly trends.",
-      price: "₹6,000 + 18% GST",
-      category: "horoscope"
-    },
-    {
-      id: "muhurta-selection",
-      name: "Muhurta Selection",
-      description: "Identification of the most auspicious moments for significant life events, including marriage, travel, Griha Pravesh, and business inaugurations.",
-      price: "₹6,000 + 18% GST",
-      category: "muhurta"
-    },
-    {
-      id: "residential-Vaastu",
-      name: "Residential Vaastu Analysis",
-      description: "A detailed Vaastu report for your home with effective remedies to optimize energy flow, ensuring peace and prosperity.",
-      price: "₹20 / sq. ft. + 18% GST",
-      category: "vastu"
-    },
-    {
-      id: "commercial-Vaastu",
-      name: "Commercial Vaastu Analysis",
-      description: "Specialized Vaastu assessment for offices, shops, or factories to identify remedies that remove obstacles and stimulate business growth.",
-      price: "₹20 / sq. ft. + 18% GST",
-      category: "vastu"
-    },
-    {
-      id: "karmic-remedial",
-      name: "Astrological (Karmic) Remedial Services",
-      description: "Vedic remedies includes Vaastu remedies, garha anusthaan (mantra, hawan), panch tatwa treatment and yantra therapy",
-      price: "₹20,000 + 18% GST",
-      category: "remedial"
-    }
-  ];
+  const [services, setServices] = useState<any[]>([]);
+  const [isLoadingServices, setIsLoadingServices] = useState(true);
 
   useEffect(() => {
-    const service = router.query.service as string;
-    if (service) {
-      setSelectedService(service);
-      const foundService = services.find(s => s.id === service);
-      if (foundService) {
-        setConsultationType(foundService.name);
+    const fetchServices = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("consultations")
+          .select("*")
+          .order("position", { ascending: true });
+
+        if (!error && data) {
+          setServices(data);
+          
+          // Check query param after loading
+          const serviceQuery = router.query.service as string;
+          if (serviceQuery) {
+            setSelectedService(serviceQuery);
+            // Try matching by uuid or custom_id
+            const foundService = data.find((s: any) => s.id === serviceQuery || s.custom_id === serviceQuery);
+            if (foundService) {
+              setConsultationType(foundService.name);
+            }
+          } else {
+            setSelectedService(null);
+          }
+        } else {
+            setServices([]);
+        }
+      } catch (error) {
+        console.error("Error fetching services:", error);
+      } finally {
+        setIsLoadingServices(false);
       }
-    } else {
-      setSelectedService(null);
-    }
+    };
+    fetchServices();
   }, [router.query.service]);
 
   const timeSlots = [

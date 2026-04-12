@@ -232,3 +232,23 @@ export interface ZodiacSign {
   compatibility: string[];
   luckyStone: string;
 }
+
+// Consultations Schema
+export const consultations = pgTable("consultations", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull(),
+  description: text("description").notNull(),
+  price: text("price").notNull(),
+  category: text("category"),
+  customId: text("custom_id"),
+  position: integer("position").default(0),
+  createdAt: timestamp("created_at").default(sql`now()`),
+});
+
+export const insertConsultationSchema = createInsertSchema(consultations).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type Consultation = typeof consultations.$inferSelect;
+export type InsertConsultation = z.infer<typeof insertConsultationSchema>;

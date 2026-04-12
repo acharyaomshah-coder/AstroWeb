@@ -23,7 +23,8 @@ import {
     Moon,
     CheckCircle,
     Sunrise,
-    BookOpen
+    BookOpen,
+    ClipboardList
 } from "lucide-react";
 
 interface Stats {
@@ -36,6 +37,7 @@ interface Stats {
     totalOrders: number;
     pendingOrders: number;
     totalCourses: number;
+    totalConsultations: number;
 }
 
 export default function AdminDashboard() {
@@ -51,6 +53,7 @@ export default function AdminDashboard() {
         totalOrders: 0,
         pendingOrders: 0,
         totalCourses: 0,
+        totalConsultations: 0,
     });
     const [loadingStats, setLoadingStats] = useState(true);
 
@@ -115,6 +118,11 @@ export default function AdminDashboard() {
                 .from("courses")
                 .select("*", { count: "exact", head: true });
 
+            // Fetch consultations
+            const { count: totalConsultations } = await supabase
+                .from("consultations")
+                .select("*", { count: "exact", head: true });
+
             setStats({
                 totalAppointments: totalAppointments || 0,
                 pendingAppointments: pendingAppointments || 0,
@@ -125,6 +133,7 @@ export default function AdminDashboard() {
                 totalOrders: totalOrders || 0,
                 pendingOrders: pendingOrders || 0,
                 totalCourses: totalCourses || 0,
+                totalConsultations: totalConsultations || 0,
             });
         } catch (error) {
             console.error("Error fetching stats:", error);
@@ -168,6 +177,14 @@ export default function AdminDashboard() {
             href: "/admin/courses",
             count: stats.totalCourses,
             color: "from-teal-500 to-green-500",
+        },
+        {
+            title: "Consultations",
+            description: "Manage astrology services",
+            icon: ClipboardList,
+            href: "/admin/consultations",
+            count: stats.totalConsultations,
+            color: "from-blue-600 to-indigo-600",
         },
         {
             title: "Videos",

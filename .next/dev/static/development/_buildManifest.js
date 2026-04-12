@@ -2,8 +2,20 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
-  "/about": [
-    "static/chunks/pages/about.js"
+  "/admin": [
+    "static/chunks/pages/admin.js"
+  ],
+  "/admin/consultations": [
+    "static/chunks/pages/admin/consultations.js"
+  ],
+  "/book-appointment": [
+    "static/chunks/pages/book-appointment.js"
+  ],
+  "/login": [
+    "static/chunks/pages/login.js"
+  ],
+  "/profile": [
+    "static/chunks/pages/profile.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -19,6 +31,7 @@ self.__BUILD_MANIFEST = {
     "/admin",
     "/admin/appointments",
     "/admin/blogs",
+    "/admin/consultations",
     "/admin/courses",
     "/admin/horoscopes",
     "/admin/muhurat",
