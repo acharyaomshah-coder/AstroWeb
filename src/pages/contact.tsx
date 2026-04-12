@@ -35,7 +35,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Address",
-      details: ["133 D, India Expo Plaza", "Knowledge Park II Metro", "Greater Noida, 201310"],
+      details: ["07, First Floor, Sun Twilight Mall", "Delta 1", "Greater Noida, 201315"],
       action: null
     },
     {
@@ -149,7 +149,7 @@ export default function Contact() {
               <CardContent className="p-0">
                 <div className="w-full h-96 bg-muted rounded-lg overflow-hidden">
                   <iframe
-                    src="https://maps.google.com/maps?q=133%20D%2C%20India%20Expo%20Plaza%2C%20Knowledge%20Park%20II%20Metro%2C%20Greater%20Noida%2C%20201310&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=07%2C%20First%20Floor%2C%20Sun%20Twilight%20Mall%2C%20Delta%201%2C%20Greater%20Noida%2C%20201315&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

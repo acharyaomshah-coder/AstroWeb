@@ -48,16 +48,16 @@ export const SEOHead = ({
         "priceRange": "₹₹",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "133 D, India Expo Plaza, Knowledge Park II Metro",
+            "streetAddress": "07, First Floor, Sun Twilight Mall, Delta 1",
             "addressLocality": "Greater Noida",
             "addressRegion": "UP",
-            "postalCode": "201310",
+            "postalCode": "201315",
             "addressCountry": "IN"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 28.4744,
-            "longitude": 77.5040
+            "latitude": 28.465,
+            "longitude": 77.514
         },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",

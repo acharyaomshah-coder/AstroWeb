@@ -1014,9 +1014,9 @@ export default function Home() {
                     <div>
                       <p className="text-xs opacity-70">Address</p>
                       <p className="font-bold leading-relaxed">
-                        133 D, India Expo Plaza, <br />
-                        Knowledge Park II Metro, <br />
-                        Greater Noida, 201310
+                        07, First Floor, <br />
+                        Sun Twilight Mall, Delta 1, <br />
+                        Greater Noida, 201315
                       </p>
                     </div>
                   </div>
