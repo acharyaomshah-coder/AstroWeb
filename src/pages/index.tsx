@@ -5,8 +5,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Shield, Award, TrendingUp, CheckCircle2, ArrowRight, Zap, Sunrise, Clock, Sun, Moon, Settings, ShoppingBag, Home as HomeIcon, XCircle } from "lucide-react";
-import { ProductGrid } from "@/components/ProductGrid";
+import { Sparkles, Shield, Award, TrendingUp, CheckCircle2, ArrowRight, Zap, Sunrise, Clock, Sun, Moon, Settings, Home as HomeIcon, XCircle } from "lucide-react";
 import { TestimonialsSlider } from "@/components/TestimonialsSlider";
 import { BlogSection } from "@/components/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
@@ -227,6 +226,7 @@ export default function Home() {
   const credentials = [
     { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya , BVB-Delhi", colSpan: "lg:row-span-2" },
     { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023", colSpan: "lg:row-span-2" },
+    { image: "/photo_2026-10-28_22-43-11.jpg", title: "M.A. in Astrology", subtitle: "Uttarakhand Open University (First Div)", colSpan: "lg:row-span-2" },
     { image: "/result.jpeg", title: "Outstanding Result", subtitle: "Proven Track Record", colSpan: "lg:row-span-1" },
     { image: "/degree.jpeg", title: "Certified Degree", subtitle: "Diploma in Medical Astrology", colSpan: "lg:row-span-1" },
   ];
@@ -263,7 +263,12 @@ export default function Home() {
     fetchServices();
   }, []);
 
-  const timeSlots = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"];
+  const timeSlots = [
+    { label: "09:00 AM - 10:00 AM", short: "9:00 - 10:00 AM", period: "Morning Slot 1" },
+    { label: "10:00 AM - 11:00 AM", short: "10:00 - 11:00 AM", period: "Morning Slot 2" },
+    { label: "11:00 AM - 12:00 PM", short: "11:00 AM - 12:00 PM", period: "Midday Slot 1" },
+    { label: "12:00 PM - 01:00 PM", short: "12:00 - 1:00 PM", period: "Midday Slot 2" },
+  ];
 
   const handleBookingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -294,68 +299,34 @@ export default function Home() {
     {
       icon: Shield,
       title: "100% Authentic",
-      description: "All products certified and verified by expert Astrologers"
+      description: "Vedic wisdom backed by scientific research & ancient scriptures"
     },
     {
       icon: Award,
-      title: "Premium Quality",
-      description: "Sourced from trusted suppliers with quality assurance"
+      title: "Academic Excellence",
+      description: "Guidance from Gold Medalist Jyotish Acharya and researchers"
     },
     {
       icon: TrendingUp,
       title: "Proven Results",
-      description: "Thousands of satisfied customers with life transformations"
-    }
-  ];
-
-  const categories = [
-    {
-      name: "Gemstones",
-      href: "/products/gemstones",
-      image: "/gemstones.jpeg",
-      description: "Natural certified gemstones"
-    },
-    {
-      name: "Healing Crystals",
-      href: "/products/healing-crystals",
-      image: "/healing crystal.jpeg",
-      description: "Powerful healing crystals"
-    },
-    {
-      name: "Rudrakshas",
-      href: "/products/rudraksha",
-      image: "/rudraksha.jpeg",
-      description: "Sacred Rudraksha beads"
-    },
-    {
-      name: "Vaastu Products",
-      href: "/products/vaastu",
-      image: "/vaastu.jpeg",
-      description: "Energy balancing Vaastu tools"
-    },
-    {
-      name: "Others",
-      href: "/products/others",
-      image: "/astro-remedies-for-all-sun-signs-2025-1733308932583.jpg",
-      description: "Other spiritual items"
+      description: "Thousands of satisfied clients with life transformations"
     }
   ];
 
   const benefits = [
     "Expert astrology consultations",
-    "Certified authentic products",
+    "Comprehensive Astrology & Vaastu Courses",
     "Personalized recommendations",
     "Secure online payments",
-    "Fast & safe delivery",
     "100% satisfaction guarantee"
   ];
 
   return (
     <>
       <SEOHead
-        title="Vedic Intuition - Expert astrology & Vaastu consultation"
-        description="Vedic Intuition offers expert  Astrology and Vaastu consultation to engineer your karma and holistic prosperity with scientific remedies and authentic products."
-        keywords={["Gemstones", "Spiritual Guidance", "Remedies", "Vedic Astrology", "Vastu Shastra"]}
+        title="Vedic Intuition - Expert Astrology & Vaastu Consultations & Courses"
+        description="Vedic Intuition offers expert Astrology and Vaastu consultation and certified courses to engineer your karma and holistic prosperity with scientific remedies."
+        keywords={["Astrology Courses", "Vaastu Courses", "Spiritual Guidance", "Remedies", "Vedic Astrology", "Vastu Shastra"]}
         image="/favicon.png"
       />
       <div className="min-h-screen">
@@ -371,7 +342,7 @@ export default function Home() {
             >
               <source src="/videoplayback.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-950/95 via-blue-950/90 to-slate-950/95"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 via-blue-950/40 to-slate-950/60"></div>
           </div>
 
           <div className="relative z-10 px-8 text-center">
@@ -408,9 +379,9 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/products">
-                <Button size="lg" className="bg-accent text-[#D4AF37]  text-accent-foreground hover:bg-accent/90 min-w-[200px]">
-                  Explore Products
+              <Link href="/courses">
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 min-w-[200px]">
+                  Astrology & Vaastu Courses
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -449,18 +420,22 @@ export default function Home() {
                   Aacharya <span className="text-accent italic">Om Shah</span>
                 </h2>
 
-                <div className="space-y-8 text-base text-muted-foreground leading-relaxed">
+                <div className="space-y-6 text-base text-muted-foreground leading-relaxed">
                   <p className="border-l-4 border-accent/30 pl-6 py-2">
-                    <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold  decoration-accent/20">Gold Medalist</span> Astrologer from <span className="text-foreground font-medium">K.N.Rao Institute of Astrology</span>, Bharati Vidya Bhavan, New Delhi.
+                    <span className="font-bold text-foreground">Acharya Om Shah</span> is an acclaimed Vedic Astrologer, currently pursuing <span className="text-foreground font-bold">Ph.D. in Astrology</span> from <span className="text-foreground font-medium">Kumar Bhaskar Varma Sanskrit & Ancient Studies University</span>, Assam. He holds <span className="text-foreground font-bold">M.A. in Astrology</span> from <span className="text-foreground font-medium">UOU, Uttarakhand</span>.
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-bold">M.A. (Astrology)</span> from UOU Haldwani, <span className="text-foreground font-bold">Jyotish Acharya (Astrology)</span> & <span className="text-foreground font-bold">Diploma (Vaastu Shastra)</span> from BVB-Delhi, <span className="text-foreground font-bold">Diploma (Medical Astrology)</span> from SLBSN Sanskrit University.
-                    Aacharya Shah is an ex-microbiologist, <span className="text-foreground font-bold">M.Sc. (Microbiology)</span> and <span className="text-foreground font-bold">Pre-PhD (Molecular Medicine).</span> <br />
-                    <br></br> With Over <span className="text-foreground font-bold">7 years of experience</span> in <span className="text-foreground font-bold">Vedic Astrology and Vaastu Shastra</span>, he brings remarkable changes in one's life using his <span className="text-foreground font-bold">astrological predictions, Karmic</span> & <span className="text-foreground font-bold">vaastu remedies</span>.
+                    He holds <span className="text-foreground font-bold">Jyotish Acharya</span> (<span className="text-[#D4AF37] font-extrabold decoration-accent/20">Gold Medal</span>) from <span className="text-foreground font-medium">Bhartiya Vidya Bhawan</span> & <span className="text-foreground font-bold">Diploma in Medical Astrology</span> from <span className="text-foreground font-medium">SLBS National Sanskrit University</span>, New Delhi.
                   </p>
 
+                  <p>
+                    He is an ex-microbiologist (<span className="text-foreground font-bold">M.Sc. Medical Microbiology</span> from <span className="text-foreground font-medium">TU, Kathmandu</span> & <span className="text-foreground font-bold">Pre Ph.D. Molecular Medicine</span> from <span className="text-foreground font-medium">JNU, New Delhi</span>).
+                  </p>
 
+                  <p>
+                    With over <span className="text-foreground font-bold">eight years of expertise</span> in <span className="text-foreground font-bold">Vedic astrology</span> & solid academic foundation in <span className="text-foreground font-bold">astrology and natural science</span>, he has developed a <span className="text-foreground font-bold">scientific method</span> to understand one’s <span className="text-foreground font-bold">karmic problems</span> and try to solve with <span className="text-foreground font-bold">valid and practical remedies</span>. His predictions are accurate and deep rooted in <span className="text-foreground font-bold">complex astrological mathematics and techniques</span>.
+                  </p>
                 </div>
               </motion.div>
             </div>
@@ -491,7 +466,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-serif text-2xl font-bold">Aacharya Om Shah</h3>
-                      <p className="text-accent font-medium text-sm">Astro & Vaastu Consultant</p>
+                      <p className="text-accent font-medium text-sm">Astrologer</p>
                       <p className="text-muted-foreground text-xs italic">(Karmic Consultant)</p>
                     </div>
 
@@ -576,24 +551,52 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="space-y-4">
-                          <Label>Select Time</Label>
-                          <div className="grid grid-cols-2 gap-2">
-                            {timeSlots.map((time) => {
-                              const isUnavailable = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM"].includes(time);
+                          <div className="flex items-center justify-between">
+                            <Label className="text-sm font-semibold">Select Time Slot</Label>
+                            <span className="text-xs text-muted-foreground flex items-center gap-1">
+                              <Clock className="w-3.5 h-3.5 text-accent" /> 60 mins / slot
+                            </span>
+                          </div>
+
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            {timeSlots.map((slot) => {
+                              const isSelected = selectedTime === slot.label;
                               return (
-                                <Button
-                                  key={time}
+                                <button
+                                  key={slot.label}
                                   type="button"
-                                  variant={selectedTime === time ? "default" : "outline"}
-                                  onClick={() => !isUnavailable && setSelectedTime(time)}
-                                  disabled={isUnavailable}
-                                  className={`text-xs relative ${isUnavailable ? "opacity-60 bg-muted cursor-not-allowed border-dashed" : ""}`}
+                                  onClick={() => setSelectedTime(slot.label)}
+                                  className={`relative text-left p-3 rounded-xl border transition-all duration-200 flex items-center justify-between group ${
+                                    isSelected
+                                      ? "bg-accent/10 border-accent shadow-sm ring-2 ring-accent/30"
+                                      : "bg-background/80 hover:bg-muted/50 border-border/70 hover:border-accent/40"
+                                  }`}
                                 >
-                                  {time}
-                                  {isUnavailable && (
-                                    <span className="absolute -top-2 -right-1 bg-destructive text-[8px] text-white px-2 rounded-full uppercase">Unavailable</span>
-                                  )}
-                                </Button>
+                                  <div className="space-y-0.5">
+                                    <div className="flex items-center gap-1.5">
+                                      <span className={`text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full ${
+                                        isSelected ? "bg-accent text-accent-foreground" : "bg-muted text-muted-foreground"
+                                      }`}>
+                                        {slot.period}
+                                      </span>
+                                    </div>
+                                    <p className={`text-xs font-semibold ${isSelected ? "text-accent" : "text-foreground group-hover:text-accent"} transition-colors`}>
+                                      {slot.label}
+                                    </p>
+                                  </div>
+
+                                  <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${
+                                    isSelected
+                                      ? "bg-accent border-accent text-white"
+                                      : "border-muted-foreground/30 group-hover:border-accent/50"
+                                  }`}>
+                                    {isSelected ? (
+                                      <CheckCircle2 className="w-3.5 h-3.5" />
+                                    ) : (
+                                      <span className="w-1.5 h-1.5 rounded-full bg-transparent group-hover:bg-accent/40" />
+                                    )}
+                                  </div>
+                                </button>
                               );
                             })}
                           </div>
@@ -690,37 +693,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 4. Products Section */}
-        <section className="py-20 bg-background">
-          <div className="max-w-6xl mx-auto px-4 lg:px-8 mb-12">
-            <div className="vedic-header py-10 text-center relative z-10 rounded-2xl shadow-lg border border-white/5">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Purchase Authentic Products</h2>
-              <p className="text-white/90 text-base max-w-2xl mx-auto">Sourced and certified by experts for your spiritual growth</p>
-            </div>
-          </div>
-          <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {categories.map((category, index) => (
-                <Link key={index} href={category.href}>
-                  <motion.div
-                    whileHover={{ y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="group cursor-pointer"
-                  >
-                    <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 shadow-lg">
-                      <Image src={category.image} alt={category.name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                      <div className="absolute bottom-4 left-4">
-                        <h3 className="text-white font-bold text-lg">{category.name}</h3>
-                      </div>
-                    </div>
-                  </motion.div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* 5. Academic Excellence Section */}
         <section className="py-20 bg-muted/30">
@@ -1063,7 +1036,7 @@ export default function Home() {
                 Frequently Asked Questions
               </h2>
               <p className="text-muted-foreground text-lg">
-                Everything you need to know about our products and services
+                Everything you need to know about our consultations and courses
               </p>
             </div>
 

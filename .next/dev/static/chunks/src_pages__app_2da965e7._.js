@@ -13,7 +13,7 @@
   "static/chunks/node_modules_@supabase_realtime-js_dist_module_ff1c51c7._.js",
   "static/chunks/node_modules_@supabase_storage-js_dist_module_9c628d94._.js",
   "static/chunks/node_modules_@supabase_auth-js_dist_module_e0400d86._.js",
-  "static/chunks/node_modules_36d7dd36._.js",
+  "static/chunks/node_modules_b0e35836._.js",
   "static/chunks/src_styles_globals_5bb75e7e.css"
 ],
     source: "entry"

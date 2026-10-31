@@ -14,7 +14,7 @@ export function Footer() {
               <span className="font-serif text-xl font-bold">Vedic Intuition</span>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Authentic spiritual products and expert astrology consultations to guide you on your journey to wellness and enlightenment.
+              Authentic Vedic wisdom, courses, and expert astrology & Vaastu consultations to guide you on your journey to wellness and enlightenment.
             </p>
             <div className="flex gap-2">
               <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-accent" data-testid="link-facebook">
@@ -36,6 +36,11 @@ export function Footer() {
               <Link href="/about">
                 <Button variant="ghost" className="h-auto p-0 text-sm text-primary-foreground/80 hover:text-accent justify-start" data-testid="link-footer-about">
                   About Us
+                </Button>
+              </Link>
+              <Link href="/courses">
+                <Button variant="ghost" className="h-auto p-0 text-sm text-primary-foreground/80 hover:text-accent justify-start" data-testid="link-footer-courses">
+                  Courses
                 </Button>
               </Link>
               <Link href="/blog">
@@ -75,11 +80,6 @@ export function Footer() {
                   Refund Policy
                 </Button>
               </Link>
-              <Link href="/shipping-policy">
-                <Button variant="ghost" className="h-auto p-0 text-sm text-primary-foreground/80 hover:text-accent justify-start" data-testid="link-footer-shipping">
-                  Shipping Policy
-                </Button>
-              </Link>
             </nav>
           </div>
 
@@ -87,7 +87,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-base">Stay Connected</h3>
             <p className="text-sm text-primary-foreground/80">
-              Subscribe to receive updates on new products and exclusive offers.
+              Subscribe to receive updates on new courses, astrological insights and exclusive offers.
             </p>
             <div className="flex gap-2">
               <Input

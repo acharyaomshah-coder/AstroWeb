@@ -11,6 +11,7 @@ export default function About() {
   const credentials = [
     { image: "/gold medal.jpeg", title: "Gold Medalist", subtitle: "Jyotish Aacharya , BVB-Delhi", colSpan: "lg:row-span-2" },
     { image: "/award.jpeg", title: "Excellence Award", subtitle: "Best Astrologer 2023", colSpan: "lg:row-span-2" },
+    { image: "/photo_2026-10-28_22-43-11.jpg", title: "M.A. in Astrology", subtitle: "Uttarakhand Open University (First Div)", colSpan: "lg:row-span-2" },
     { image: "/result.jpeg", title: "Outstanding Result", subtitle: "Proven Track Record", colSpan: "lg:row-span-1" },
     { image: "/degree.jpeg", title: "Certified Degree", subtitle: "Diploma in Medical Astrology", colSpan: "lg:row-span-1" },
   ];
@@ -18,19 +19,19 @@ export default function About() {
   const values = [
     {
       title: "Authenticity",
-      description: "Every product is certified and verified by expert gemologists and astrologers"
+      description: "Every consultation and course is grounded in authentic Vedic principles and scientific methodology"
     },
     {
       title: "Expertise",
-      description: "Over 7 years of experience in Vedic astrology and spiritual guidance"
+      description: "Over 8 years of experience in Vedic astrology and spiritual guidance"
     },
     {
       title: "Quality",
-      description: "Premium products sourced from trusted suppliers worldwide"
+      description: "Rigorous curriculum, deep astrological insights, and verified predictive techniques"
     },
     {
       title: "Care",
-      description: "Personalized attention and support for every customer's spiritual journey"
+      description: "Personalized attention and support for every student and seeker's spiritual journey"
     }
   ];
 
@@ -40,8 +41,8 @@ export default function About() {
     <>
       <SEOHead
         title="About Vedic Intuition - Aacharya Om Shah"
-        description="Learn about Aacharya Om Shah and Vedic Intuition, a leading source for Vedic Astrology, Vaastu Shastra, and authentic spiritual products."
-        keywords={["About Aacharya Om Shah", "Vedic Intuition Profile", "Astrologer Biography"]}
+        description="Learn about Aacharya Om Shah and Vedic Intuition, a leading source for Vedic Astrology, Vaastu Shastra consultations, and certified courses."
+        keywords={["About Aacharya Om Shah", "Vedic Intuition Profile", "Astrologer Biography", "Astrology Courses"]}
       />
       <div className="min-h-screen bg-background pb-12">
 
@@ -87,15 +88,21 @@ export default function About() {
                   Aacharya <span className="text-accent italic">Om Shah</span>
                 </h2>
 
-                <div className="space-y-8 text-base text-muted-foreground leading-relaxed">
+                <div className="space-y-6 text-base text-muted-foreground leading-relaxed">
                   <p className="border-l-4 border-accent/30 pl-6 py-2">
-                    <span className="font-bold text-foreground">Aacharya Om Shah</span> is a <span className="text-[#D4AF37] font-extrabold  decoration-accent/20">Gold Medalist</span> Astrologer from <span className="text-foreground font-medium">K.N.Rao Institute of Astrology</span>, Bharati Vidya Bhavan, New Delhi.
+                    <span className="font-bold text-foreground">Acharya Om Shah</span> is an acclaimed Vedic Astrologer, currently pursuing <span className="text-foreground font-bold">Ph.D. in Astrology</span> from <span className="text-foreground font-medium">Kumar Bhaskar Varma Sanskrit & Ancient Studies University</span>, Assam. He holds <span className="text-foreground font-bold">M.A. in Astrology</span> from <span className="text-foreground font-medium">UOU, Uttarakhand</span>.
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-bold">M.A. (Astrology)</span> from UOU Haldwani, <span className="text-foreground font-bold">Jyotish Acharya (Astrology)</span> & <span className="text-foreground font-bold">Diploma (Vaastu Shastra)</span> from BVB-Delhi, <span className="text-foreground font-bold">Diploma (Medical Astrology)</span> from SLBSN Sanskrit University.
-                    Aacharya Shah is an ex-microbiologist, <span className="text-foreground font-bold">M.Sc. (Microbiology)</span> and <span className="text-foreground font-bold">Pre-PhD (Molecular Medicine).</span> <br />
-                    <br></br> With Over <span className="text-foreground font-bold">7 years of experience</span> in <span className="text-foreground font-bold">Vedic Astrology and Vaastu Shastra</span>, he brings remarkable changes in one's life using his <span className="text-foreground font-bold">astrological predictions, Karmic</span> & <span className="text-foreground font-bold">vaastu remedies</span>.
+                    He holds <span className="text-foreground font-bold">Jyotish Acharya</span> (<span className="text-[#D4AF37] font-extrabold decoration-accent/20">Gold Medal</span>) from <span className="text-foreground font-medium">Bhartiya Vidya Bhawan</span> & <span className="text-foreground font-bold">Diploma in Medical Astrology</span> from <span className="text-foreground font-medium">SLBS National Sanskrit University</span>, New Delhi.
+                  </p>
+
+                  <p>
+                    He is an ex-microbiologist (<span className="text-foreground font-bold">M.Sc. Medical Microbiology</span> from <span className="text-foreground font-medium">TU, Kathmandu</span> & <span className="text-foreground font-bold">Pre Ph.D. Molecular Medicine</span> from <span className="text-foreground font-medium">JNU, New Delhi</span>).
+                  </p>
+
+                  <p>
+                    With over <span className="text-foreground font-bold">eight years of expertise</span> in <span className="text-foreground font-bold">Vedic astrology</span> & solid academic foundation in <span className="text-foreground font-bold">astrology and natural science</span>, he has developed a <span className="text-foreground font-bold">scientific method</span> to understand one’s <span className="text-foreground font-bold">karmic problems</span> and try to solve with <span className="text-foreground font-bold">valid and practical remedies</span>. His predictions are accurate and deep rooted in <span className="text-foreground font-bold">complex astrological mathematics and techniques</span>.
                   </p>
                 </div>
               </motion.div>

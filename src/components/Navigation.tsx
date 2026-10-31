@@ -65,14 +65,7 @@ export function Navigation() {
     return <header className="sticky top-0 z-50 w-full border-b bg-card/95 h-16" />;
   }
 
-  const productCategories = [
-    { name: "Gemstones", href: "/products/gemstones", description: "Certified natural gemstones" },
-    { name: "Healing Crystals", href: "/products/healing-crystals", description: "Powerful healing crystals" },
-    { name: "Rudrakshas", href: "/products/rudraksha", description: "Authentic Rudraksha beads" },
-    { name: "Spiritual Remedies", href: "/products/spiritual-remedies", description: "Remedies for planetary afflictions" },
-    { name: "Vaastu Products", href: "/products/vaastu", description: "Energy balancing vaastu tools" },
-    { name: "Others", href: "/products/others", description: "Other spiritual items" },
-  ];
+
 
   const consultationServices = [
     {
@@ -192,29 +185,6 @@ export function Navigation() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium" data-testid="button-products-menu">
-                    Products
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid w-[600px] gap-3 p-6 md:grid-cols-2">
-                      {productCategories.map((category) => (
-                        <Link key={category.href} href={category.href}>
-                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover-elevate active-elevate-2" data-testid={`link-category-${category.name.toLowerCase()}`}>
-                            <div className="text-sm font-medium leading-none">{category.name}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {category.description}
-                            </p>
-                          </NavigationMenuLink>
-                        </Link>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
 
             <Link href="/blog">
               <Button variant="ghost" size="sm" data-testid="link-blog" className={location === "/blog" ? "bg-accent/10" : ""}>
@@ -338,21 +308,7 @@ export function Navigation() {
                     ))}
                   </div>
 
-                  <div className="space-y-2">
-                    <p className="text-sm font-semibold text-muted-foreground px-2">Products</p>
-                    {productCategories.map((category) => (
-                      <Link key={category.href} href={category.href}>
-                        <Button
-                          variant="ghost"
-                          className="w-full justify-start"
-                          onClick={() => setMobileMenuOpen(false)}
-                          data-testid={`link-mobile-${category.name.toLowerCase()}`}
-                        >
-                          {category.name}
-                        </Button>
-                      </Link>
-                    ))}
-                  </div>
+
 
                   <div className="border-t pt-4 space-y-1">
                     <Link href="/blog">

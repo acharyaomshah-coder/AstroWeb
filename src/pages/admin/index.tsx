@@ -162,14 +162,7 @@ export default function AdminDashboard() {
             count: 0,
             color: "from-blue-500 to-cyan-500",
         },
-        {
-            title: "Products",
-            description: "Manage product catalog",
-            icon: Package,
-            href: "/admin/products",
-            count: stats.totalProducts,
-            color: "from-purple-500 to-pink-500",
-        },
+
         {
             title: "Courses",
             description: "Manage educational courses",

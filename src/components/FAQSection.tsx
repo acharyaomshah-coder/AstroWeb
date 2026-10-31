@@ -8,28 +8,28 @@ import {
 export function FAQSection() {
   const faqs = [
     {
-      question: "Are all your gemstones certified?",
-      answer: "Yes, all our gemstones come with authentic certification from recognized gemological laboratories. Each product includes detailed information about its origin, quality, and astrological properties."
+      question: "What courses do you offer in Astrology & Vaastu?",
+      answer: "We offer structured courses ranging from foundational to advanced levels in Vedic Astrology, Medical Astrology, Vaastu Shastra, and Karmic Astrology. All courses are curated and taught with deep practical case studies."
     },
     {
-      question: "How do I know which gemstone is right for me?",
-      answer: "Our expert astrologers provide personalized consultations to recommend the perfect gemstone based on your birth chart, planetary positions, and specific life goals. You can book a consultation through our website."
+      question: "Are these courses suitable for beginners?",
+      answer: "Yes, our curriculum starts from the fundamental concepts of Vedic astrology and energy architecture, making them accessible to beginners while progressing into sophisticated predictive techniques for advanced practitioners."
     },
     {
-      question: "What is your return and refund policy?",
-      answer: "We offer a 7-day return policy for all products. If you're not satisfied with your purchase, you can return it in its original condition for a full refund. Custom-made items may have different terms."
+      question: "Will I receive a certificate after completing a course?",
+      answer: "Yes, upon completing the course modules and practical assignments, students receive an official certificate of completion from Vedic Intuition."
     },
     {
-      question: "How long does shipping take?",
-      answer: "We typically ship orders within 1-2 business days. Delivery usually takes 3-7 business days depending on your location. We provide tracking information for all orders."
+      question: "How do I enroll in a course or book a consultation?",
+      answer: "You can explore available courses under the Courses tab and submit an enrollment enquiry, or click 'Book Consultation' to schedule a personalized one-on-one session with Aacharya Om Shah."
     },
     {
       question: "Do you offer astrology consultations?",
-      answer: "Yes, we offer comprehensive astrology consultations with experienced astrologers. Sessions can be booked online and conducted via video call at your convenience."
+      answer: "Yes, we offer comprehensive astrology consultations with experienced astrologers. Sessions can be booked online and conducted via video call or phone at your convenience."
     },
     {
       question: "Do you offer vaastu consultation?",
-      answer: "Yes, We need soft copy of your house map to prepare an energy grid for your house/office. Based on it, we will suggest possible vaastu remedies."
+      answer: "Yes, we need a soft copy of your house/office map to prepare an energy grid. Based on it, we analyze directional energies and suggest practical, non-destructive Vaastu remedies."
     }
   ];
 

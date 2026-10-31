@@ -1,16 +1,24 @@
 (globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/[root-of-the-server]__009326ab._.js",
-  "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
-  "static/chunks/node_modules_next_dist_shared_lib_cc397485._.js",
-  "static/chunks/node_modules_next_dist_client_3ede7da4._.js",
+  "static/chunks/[root-of-the-server]__0a6d3cff._.js",
+  "static/chunks/node_modules_next_dist_compiled_3e12a2ad._.js",
+  "static/chunks/node_modules_next_dist_shared_lib_fe7e72ad._.js",
+  "static/chunks/node_modules_next_dist_client_9b1b49db._.js",
   "static/chunks/node_modules_next_dist_6024eba3._.js",
-  "static/chunks/node_modules_next_eda16823._.js",
+  "static/chunks/node_modules_next_44b6bcca._.js",
   "static/chunks/node_modules_react_e3593a73._.js",
   "static/chunks/node_modules_react-dom_cjs_react-dom_development_2b5e0eb3.js",
   "static/chunks/node_modules_react-dom_8a8085df._.js",
-  "static/chunks/node_modules_572c4ab3._.js"
+  "static/chunks/node_modules_framer-motion_dist_es_545e3e54._.js",
+  "static/chunks/node_modules_react-icons_si_index_mjs_81654ddc._.js",
+  "static/chunks/node_modules_react-icons_lib_7cd2a28b._.js",
+  "static/chunks/node_modules_date-fns_ebb7bc9a._.js",
+  "static/chunks/node_modules_react-day-picker_dist_index_esm_659798af.js",
+  "static/chunks/node_modules_@supabase_realtime-js_dist_module_ff1c51c7._.js",
+  "static/chunks/node_modules_@supabase_storage-js_dist_module_9c628d94._.js",
+  "static/chunks/node_modules_@supabase_auth-js_dist_module_e0400d86._.js",
+  "static/chunks/node_modules_bb4cc548._.js"
 ],
     source: "entry"
 });

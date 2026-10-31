@@ -79,8 +79,10 @@ export default function BookAppointment() {
   }, [router.query.service]);
 
   const timeSlots = [
-    "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM",
-    "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"
+    { label: "09:00 AM - 10:00 AM", short: "9:00 - 10:00 AM", period: "Morning Slot 1" },
+    { label: "10:00 AM - 11:00 AM", short: "10:00 - 11:00 AM", period: "Morning Slot 2" },
+    { label: "11:00 AM - 12:00 PM", short: "11:00 AM - 12:00 PM", period: "Midday Slot 1" },
+    { label: "12:00 PM - 01:00 PM", short: "12:00 - 1:00 PM", period: "Midday Slot 2" },
   ];
 
   const { data: appointments = [], isLoading: appointmentsLoading, refetch } = useQuery<Appointment[]>({
@@ -336,7 +338,7 @@ export default function BookAppointment() {
                   </div>
                   <div>
                     <h3 className="font-serif text-2xl font-bold uppercase">Aacharya Om shah</h3>
-                    <p className="text-accent font-medium text-sm">Astro & Vaastu Consultant</p>
+                    <p className="text-accent font-medium text-sm">Astrologer</p>
                     <p className="text-muted-foreground text-xs italic">(Karmic Consultant)</p>
                   </div>
 
@@ -448,24 +450,52 @@ export default function BookAppointment() {
                         </div>
                       </div>
                       <div className="space-y-4">
-                        <Label>Select Time</Label>
-                        <div className="grid grid-cols-2 gap-2">
-                          {timeSlots.map((time) => {
-                            const isUnavailable = ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM"].includes(time);
+                        <div className="flex items-center justify-between">
+                          <Label className="text-sm font-semibold">Select Time Slot</Label>
+                          <span className="text-xs text-muted-foreground flex items-center gap-1">
+                            <Clock className="w-3.5 h-3.5 text-accent" /> 60 mins / slot
+                          </span>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          {timeSlots.map((slot) => {
+                            const isSelected = selectedTime === slot.label;
                             return (
-                              <Button
-                                key={time}
+                              <button
+                                key={slot.label}
                                 type="button"
-                                variant={selectedTime === time ? "default" : "outline"}
-                                onClick={() => !isUnavailable && setSelectedTime(time)}
-                                disabled={isUnavailable}
-                                className={`text-xs relative ${isUnavailable ? "opacity-60 bg-muted cursor-not-allowed border-dashed" : ""}`}
+                                onClick={() => setSelectedTime(slot.label)}
+                                className={`relative text-left p-3 rounded-xl border transition-all duration-200 flex items-center justify-between group ${
+                                  isSelected
+                                    ? "bg-accent/10 border-accent shadow-sm ring-2 ring-accent/30"
+                                    : "bg-background/80 hover:bg-muted/50 border-border/70 hover:border-accent/40"
+                                }`}
                               >
-                                {time}
-                                {isUnavailable && (
-                                  <span className="absolute -top-2 -right-1 bg-destructive text-[8px] text-white px-2 rounded-full uppercase">Unavailable</span>
-                                )}
-                              </Button>
+                                <div className="space-y-0.5">
+                                  <div className="flex items-center gap-1.5">
+                                    <span className={`text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full ${
+                                      isSelected ? "bg-accent text-accent-foreground" : "bg-muted text-muted-foreground"
+                                    }`}>
+                                      {slot.period}
+                                    </span>
+                                  </div>
+                                  <p className={`text-xs font-semibold ${isSelected ? "text-accent" : "text-foreground group-hover:text-accent"} transition-colors`}>
+                                    {slot.label}
+                                  </p>
+                                </div>
+
+                                <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${
+                                  isSelected
+                                    ? "bg-accent border-accent text-white"
+                                    : "border-muted-foreground/30 group-hover:border-accent/50"
+                                }`}>
+                                  {isSelected ? (
+                                    <CheckCircle2 className="w-3.5 h-3.5" />
+                                  ) : (
+                                    <span className="w-1.5 h-1.5 rounded-full bg-transparent group-hover:bg-accent/40" />
+                                  )}
+                                </div>
+                              </button>
                             );
                           })}
                         </div>
