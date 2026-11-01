@@ -4,9 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Sparkles, Shield, Award, TrendingUp, CheckCircle2, ArrowRight, Zap, Sunrise, Clock, Sun, Moon, Settings, Home as HomeIcon, XCircle } from "lucide-react";
-import { TestimonialsSlider } from "@/components/TestimonialsSlider";
+import { Sparkles, Shield, Award, TrendingUp, CheckCircle2, ArrowRight, Zap, Sunrise, Clock, Sun, Moon, Settings, Home as HomeIcon, XCircle, Car, ShoppingBag, Info } from "lucide-react";
 import { BlogSection } from "@/components/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
 import { motion, AnimatePresence } from "framer-motion";
@@ -480,7 +478,7 @@ export default function Home() {
                       </p>
                       <p className="flex items-start gap-3">
                         <Badge variant="outline" className="w-[60px] h-4 px-0 justify-center text-[9px] uppercase flex-shrink-0">Academic</Badge>
-                        <span className="flex-1">PhD Astrology (Research Scholar) <br /> M.A.(Astrology) <br /> M.Sc.(Microbiology) <br /> Pre-PhD (Molecular Medicine)</span>
+                        <span className="flex-1">PhD Astrology (Research Scholar) <br /> M.A.(Astrology) <br /> Pre-PhD (Molecular Medicine) <br /> M.Sc.(Microbiology)</span>
                       </p>
                     </div>
 
@@ -858,18 +856,21 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             {panchang ? (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-6xl mx-auto">
                 {[
                   { l: "Tithi", v: panchang.tithi, s: "तिथि" },
                   { l: "Vaar", v: panchang.vaar, s: "वार" },
                   { l: "Nakshatra", v: panchang.nakshatr, s: "नक्षत्र" },
-                  { l: "Yoga", v: panchang.yoga, s: "योग" }
+                  { l: "Yoga", v: panchang.yoga, s: "योग" },
+                  { l: "Karan", v: panchang.karan, s: "करण" }
                 ].map((x, i) => (
-                  <Card key={i} className="bg-muted/20 border-accent/10">
-                    <CardContent className="p-8 text-center">
-                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">{x.l}</p>
-                      <p className="font-serif text-2xl font-bold text-accent mb-1">{x.v || "—"}</p>
-                      <p className="text-[10px] text-muted-foreground opacity-60">{x.s}</p>
+                  <Card key={i} className="bg-muted/30 border border-border/60 shadow-sm hover:shadow-md transition-shadow">
+                    <CardContent className="p-3.5 sm:p-4 text-center flex flex-col justify-between h-full">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">{x.l}</p>
+                      <p className="font-serif text-sm sm:text-base md:text-lg font-bold text-black dark:text-white leading-snug break-words my-auto py-1">
+                        {x.v || "—"}
+                      </p>
+                      <p className="text-[10px] font-medium text-muted-foreground/75 mt-1">{x.s}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -893,31 +894,33 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             {muhurat ? (
-              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card className="bg-background">
-                  <CardContent className="p-8 space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-accent/10 rounded-xl text-accent">
-                        <CheckCircle2 className="h-6 w-6" />
+              <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+                {muhurat.auspiciousDays && (
+                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-600 flex-shrink-0">
+                          <CheckCircle2 className="h-6 w-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">General Auspicious Days</p>
+                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.auspiciousDays}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter mb-1">General Auspicious Days</p>
-                        <p className="text-lg font-medium leading-relaxed">{muhurat.auspiciousDays}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                )}
 
                 {muhurat.newHome && (
-                  <Card className="bg-background">
-                    <CardContent className="p-8 space-y-6">
+                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 bg-accent/10 rounded-xl text-accent">
+                        <div className="p-3 bg-accent/10 rounded-xl text-accent flex-shrink-0">
                           <HomeIcon className="h-6 w-6" />
                         </div>
-                        <div>
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter mb-1">Griha Pravesh (New Home)</p>
-                          <p className="text-lg font-medium leading-relaxed">{muhurat.newHome}</p>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Griha Pravesh (New Home)</p>
+                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.newHome}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -925,15 +928,63 @@ export default function Home() {
                 )}
 
                 {muhurat.vehiclePurchase && (
-                  <Card className="bg-background md:col-span-2">
-                    <CardContent className="p-8 space-y-6">
+                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 bg-accent/10 rounded-xl text-accent">
-                          <Settings className="h-6 w-6" />
+                        <div className="p-3 bg-blue-500/10 rounded-xl text-blue-600 flex-shrink-0">
+                          <Car className="h-6 w-6" />
                         </div>
-                        <div>
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter mb-1">Vehicle Purchase</p>
-                          <p className="text-lg font-medium leading-relaxed">{muhurat.vehiclePurchase}</p>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Vehicle Purchase</p>
+                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.vehiclePurchase}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {muhurat.miscellaneousPurchase && (
+                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-amber-500/10 rounded-xl text-amber-600 flex-shrink-0">
+                          <ShoppingBag className="h-6 w-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Property & Miscellaneous Purchase</p>
+                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.miscellaneousPurchase}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {muhurat.inauspiciousDays && (
+                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-rose-500/10 rounded-xl text-rose-600 flex-shrink-0">
+                          <XCircle className="h-6 w-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Inauspicious Days (Varjya)</p>
+                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.inauspiciousDays}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {muhurat.note && (
+                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-purple-500/10 rounded-xl text-purple-600 flex-shrink-0">
+                          <Info className="h-6 w-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Important Astrological Note</p>
+                          <p className="text-sm sm:text-base font-normal text-muted-foreground leading-relaxed">{muhurat.note}</p>
                         </div>
                       </div>
                     </CardContent>

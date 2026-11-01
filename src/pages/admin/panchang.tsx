@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, Clock, Save } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { getAuthToken } from "@/lib/supabase";
 
 export default function AdminPanchang() {
     const router = useRouter();
@@ -72,7 +73,7 @@ export default function AdminPanchang() {
     const handleSave = async () => {
         try {
             setSaving(true);
-            const token = localStorage.getItem("token");
+            const token = (await getAuthToken()) || localStorage.getItem("token");
             const response = await fetch("/api/panchang", {
                 method: "POST",
                 headers: {

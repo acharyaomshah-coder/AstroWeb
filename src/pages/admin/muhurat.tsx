@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, Sunrise, Save } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { getAuthToken } from "@/lib/supabase";
 
 export default function AdminMuhurat() {
     const router = useRouter();
@@ -87,7 +88,7 @@ export default function AdminMuhurat() {
             setSaving(true);
             const [year, month] = selectedMonth.split('-');
 
-            const token = localStorage.getItem("token");
+            const token = (await getAuthToken()) || localStorage.getItem("token");
             const response = await fetch("/api/muhurat", {
                 method: "POST",
                 headers: {
