@@ -504,7 +504,6 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$run
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$SEOHead$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/SEOHead.tsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/card.tsx [ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/badge.tsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sparkles.js [ssr] (ecmascript) <export default as Sparkles>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [ssr] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__ = __turbopack_context__.i("[externals]/framer-motion [external] (framer-motion, esm_import)");
@@ -512,12 +511,10 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/dialog.tsx [ssr] (ecmascript)");
 var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__,
-    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__,
     __TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__,
     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__
 ]);
-[__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__, __TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__;
-;
+[__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__, __TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__;
 ;
 ;
 ;
@@ -538,6 +535,12 @@ function About() {
             image: "/award.jpeg",
             title: "Excellence Award",
             subtitle: "Best Astrologer 2023",
+            colSpan: "lg:row-span-2"
+        },
+        {
+            image: "/photo_2026-10-28_22-43-11.jpg",
+            title: "M.A. in Astrology",
+            subtitle: "Uttarakhand Open University (First Div)",
             colSpan: "lg:row-span-2"
         },
         {
@@ -585,7 +588,7 @@ function About() {
                 ]
             }, void 0, false, {
                 fileName: "[project]/src/pages/about.tsx",
-                lineNumber: 41,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -625,7 +628,7 @@ function About() {
                                                     className: "object-cover group-hover:scale-105 transition-transform duration-700"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/about.tsx",
-                                                    lineNumber: 63,
+                                                    lineNumber: 64,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -636,7 +639,7 @@ function About() {
                                                             children: "1st"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/about.tsx",
-                                                            lineNumber: 70,
+                                                            lineNumber: 71,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -644,7 +647,7 @@ function About() {
                                                             children: "Gold Medalist"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/about.tsx",
-                                                            lineNumber: 71,
+                                                            lineNumber: 72,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -652,24 +655,24 @@ function About() {
                                                             children: "K.N. Rao Institute of Astrology"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/about.tsx",
-                                                            lineNumber: 72,
+                                                            lineNumber: 73,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/pages/about.tsx",
-                                                    lineNumber: 69,
+                                                    lineNumber: 70,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 63,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/about.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 55,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$framer$2d$motion__$5b$external$5d$__$28$framer$2d$motion$2c$__esm_import$29$__["motion"].div, {
@@ -689,14 +692,6 @@ function About() {
                                         },
                                         className: "order-1 lg:order-2",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Badge"], {
-                                                className: "bg-accent/10 text-accent mb-6 px-4 py-1.5 uppercase tracking-wider font-semibold",
-                                                children: "Vedic Astrologer & Vaastu consultant"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/pages/about.tsx",
-                                                lineNumber: 85,
-                                                columnNumber: 17
-                                            }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
                                                 className: "font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight",
                                                 children: [
@@ -723,20 +718,20 @@ function About() {
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "font-bold text-foreground",
-                                                                children: "Aacharya Om Shah"
+                                                                children: "Acharya Om Shah"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 92,
                                                                 columnNumber: 21
                                                             }, this),
-                                                            " is currently pursuing ",
+                                                            " is an acclaimed Vedic Astrologer, currently pursuing ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-bold",
                                                                 children: "Ph.D. in Astrology"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 92,
-                                                                columnNumber: 111
+                                                                columnNumber: 141
                                                             }, this),
                                                             " from ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -745,7 +740,7 @@ function About() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 92,
-                                                                columnNumber: 186
+                                                                columnNumber: 216
                                                             }, this),
                                                             ", Assam. He holds ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -754,7 +749,7 @@ function About() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 92,
-                                                                columnNumber: 314
+                                                                columnNumber: 344
                                                             }, this),
                                                             " from ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -763,7 +758,7 @@ function About() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 92,
-                                                                columnNumber: 388
+                                                                columnNumber: 418
                                                             }, this),
                                                             "."
                                                         ]
@@ -774,32 +769,32 @@ function About() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
                                                         children: [
-                                                            "He holds ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-bold",
-                                                                children: "Jyotish Acharya"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 96,
-                                                                columnNumber: 30
-                                                            }, this),
-                                                            " (",
+                                                            "He was awarded ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-[#D4AF37] font-extrabold decoration-accent/20",
                                                                 children: "Gold Medal"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 98
+                                                                columnNumber: 36
                                                             }, this),
-                                                            ") from ",
+                                                            " in ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
-                                                                children: "Bhartiya Vidya Bhawan"
+                                                                className: "text-foreground font-bold",
+                                                                children: "Jyotish Acharya"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 191
+                                                                columnNumber: 126
+                                                            }, this),
+                                                            " from ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "Bhartiya Vidya Bhawan, Delhi-Kendra"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/about.tsx",
+                                                                lineNumber: 96,
+                                                                columnNumber: 198
                                                             }, this),
                                                             " & ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -808,54 +803,18 @@ function About() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 268
+                                                                columnNumber: 289
                                                             }, this),
                                                             " from ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-medium",
-                                                                children: "SLBS National Sanskrit University"
+                                                                children: "Shri Lal Bahadur Shastri National Sanskrit University"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 353
+                                                                columnNumber: 374
                                                             }, this),
-                                                            ", New Delhi. He is an ex-microbiologist (",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-bold",
-                                                                children: "M.Sc. Medical Microbiology"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 97,
-                                                                columnNumber: 49
-                                                            }, this),
-                                                            " from ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
-                                                                children: "TU, Kathmandu"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 97,
-                                                                columnNumber: 132
-                                                            }, this),
-                                                            " & ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-bold",
-                                                                children: "Pre Ph.D. Molecular Medicine"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 97,
-                                                                columnNumber: 201
-                                                            }, this),
-                                                            " from ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-medium",
-                                                                children: "JNU, New Delhi"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 97,
-                                                                columnNumber: 286
-                                                            }, this),
-                                                            ")."
+                                                            ", New Delhi."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/pages/about.tsx",
@@ -864,59 +823,77 @@ function About() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
                                                         children: [
+                                                            "He is an ex-microbiologist (",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-bold",
+                                                                children: "M.Sc. Medical Microbiology"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/about.tsx",
+                                                                lineNumber: 100,
+                                                                columnNumber: 49
+                                                            }, this),
+                                                            " from ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "TU, Kathmandu"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/about.tsx",
+                                                                lineNumber: 100,
+                                                                columnNumber: 132
+                                                            }, this),
+                                                            " & ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-bold",
+                                                                children: "Pre Ph.D. Molecular Medicine"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/about.tsx",
+                                                                lineNumber: 100,
+                                                                columnNumber: 201
+                                                            }, this),
+                                                            " from ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                                className: "text-foreground font-medium",
+                                                                children: "JNU, New Delhi"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/pages/about.tsx",
+                                                                lineNumber: 100,
+                                                                columnNumber: 286
+                                                            }, this),
+                                                            ")."
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/pages/about.tsx",
+                                                        lineNumber: 99,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                                        children: [
                                                             "With over ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-bold",
-                                                                children: "eight years of expertise"
+                                                                children: "eight years of experience"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 101,
+                                                                lineNumber: 104,
                                                                 columnNumber: 31
                                                             }, this),
                                                             " in ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-bold",
-                                                                children: "Vedic astrology"
+                                                                children: "Vedic Astrology"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 101,
-                                                                columnNumber: 110
+                                                                lineNumber: 104,
+                                                                columnNumber: 111
                                                             }, this),
-                                                            " & solid academic foundation in ",
+                                                            " & solid academic foundation in astrology and natural science, he has developed a scientific method to understand one’s karmic problems and try to solve with ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                                                                 className: "text-foreground font-bold",
-                                                                children: "astrology and natural science"
+                                                                children: "validated & practical remedies"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 101,
-                                                                columnNumber: 208
-                                                            }, this),
-                                                            ", he has developed a ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-bold",
-                                                                children: "scientific method"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 101,
-                                                                columnNumber: 309
-                                                            }, this),
-                                                            " to understand one’s ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-bold",
-                                                                children: "karmic problems"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 101,
-                                                                columnNumber: 398
-                                                            }, this),
-                                                            " and try to solve with ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                                                className: "text-foreground font-bold",
-                                                                children: "valid and practical remedies"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 101,
-                                                                columnNumber: 487
+                                                                lineNumber: 104,
+                                                                columnNumber: 335
                                                             }, this),
                                                             ". His predictions are accurate and deep rooted in ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -924,14 +901,14 @@ function About() {
                                                                 children: "complex astrological mathematics and techniques"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 101,
-                                                                columnNumber: 616
+                                                                lineNumber: 104,
+                                                                columnNumber: 466
                                                             }, this),
                                                             "."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/pages/about.tsx",
-                                                        lineNumber: 100,
+                                                        lineNumber: 103,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
@@ -943,23 +920,23 @@ function About() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/pages/about.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 79,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/about.tsx",
-                                lineNumber: 51,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/about.tsx",
-                            lineNumber: 50,
+                            lineNumber: 51,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/about.tsx",
-                        lineNumber: 49,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -975,7 +952,7 @@ function About() {
                                             children: "Excellence"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 113,
+                                            lineNumber: 116,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
@@ -983,20 +960,20 @@ function About() {
                                             children: "Credentials & Recognition"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 114,
+                                            lineNumber: 117,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                             className: "w-24 h-1 bg-accent mx-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 117,
+                                            lineNumber: 120,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/pages/about.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1028,7 +1005,7 @@ function About() {
                                                     className: "object-cover transform group-hover:scale-105 transition-transform duration-700"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/about.tsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 134,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1041,7 +1018,7 @@ function About() {
                                                                 children: item.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 139,
+                                                                lineNumber: 142,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1049,40 +1026,40 @@ function About() {
                                                                 children: item.subtitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/pages/about.tsx",
-                                                                lineNumber: 140,
+                                                                lineNumber: 143,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/pages/about.tsx",
-                                                        lineNumber: 138,
+                                                        lineNumber: 141,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/about.tsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 140,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 125,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/about.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/about.tsx",
-                            lineNumber: 111,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/about.tsx",
-                        lineNumber: 110,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -1098,7 +1075,7 @@ function About() {
                                             children: "Values That Guide Us"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 156,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1106,13 +1083,13 @@ function About() {
                                             children: "The principles behind our spiritual practice"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 154,
+                                            lineNumber: 157,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/pages/about.tsx",
-                                    lineNumber: 152,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1143,7 +1120,7 @@ function About() {
                                                             children: value.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/about.tsx",
-                                                            lineNumber: 167,
+                                                            lineNumber: 170,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1151,39 +1128,39 @@ function About() {
                                                             children: value.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/about.tsx",
-                                                            lineNumber: 168,
+                                                            lineNumber: 171,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/pages/about.tsx",
-                                                    lineNumber: 166,
+                                                    lineNumber: 169,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/pages/about.tsx",
-                                                lineNumber: 165,
+                                                lineNumber: 168,
                                                 columnNumber: 19
                                             }, this)
                                         }, index, false, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 161,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/about.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 159,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/pages/about.tsx",
-                            lineNumber: 151,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/about.tsx",
-                        lineNumber: 150,
+                        lineNumber: 153,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1211,7 +1188,7 @@ function About() {
                                         className: "h-12 w-12 text-accent mx-auto mb-6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/about.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 190,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
@@ -1219,7 +1196,7 @@ function About() {
                                         children: "Begin Your Spiritual Transformation"
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/about.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 191,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1227,23 +1204,23 @@ function About() {
                                         children: "Join thousands of satisfied students and clients who have illuminated their paths with Aacharya Om Shah's guidance."
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/about.tsx",
-                                        lineNumber: 191,
+                                        lineNumber: 194,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/about.tsx",
-                                lineNumber: 180,
+                                lineNumber: 183,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/about.tsx",
-                            lineNumber: 179,
+                            lineNumber: 182,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/about.tsx",
-                        lineNumber: 178,
+                        lineNumber: 181,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -1262,12 +1239,12 @@ function About() {
                                             className: "w-8 h-8"
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/about.tsx",
-                                            lineNumber: 207,
+                                            lineNumber: 210,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/about.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 205,
                                         columnNumber: 15
                                     }, this),
                                     selectedImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
@@ -1276,29 +1253,29 @@ function About() {
                                         className: "w-full h-full object-contain"
                                     }, void 0, false, {
                                         fileName: "[project]/src/pages/about.tsx",
-                                        lineNumber: 210,
+                                        lineNumber: 213,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/pages/about.tsx",
-                                lineNumber: 201,
+                                lineNumber: 204,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/about.tsx",
-                            lineNumber: 200,
+                            lineNumber: 203,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/about.tsx",
-                        lineNumber: 199,
+                        lineNumber: 202,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/pages/about.tsx",
-                lineNumber: 46,
+                lineNumber: 47,
                 columnNumber: 7
             }, this)
         ]

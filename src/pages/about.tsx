@@ -83,7 +83,6 @@ export default function About() {
                 transition={{ duration: 0.8 }}
                 className="order-1 lg:order-2"
               >
-                <Badge className="bg-accent/10 text-accent mb-6 px-4 py-1.5 uppercase tracking-wider font-semibold">Vedic Astrologer & Vaastu consultant</Badge>
                 <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">
                   Aacharya <span className="text-accent italic">Om Shah</span>
                 </h2>
@@ -94,7 +93,7 @@ export default function About() {
                   </p>
 
                   <p>
-                    He holds <span className="text-foreground font-bold">Jyotish Acharya</span> (<span className="text-[#D4AF37] font-extrabold decoration-accent/20">Gold Medal</span>) from <span className="text-foreground font-medium">Bhartiya Vidya Bhawan</span> & <span className="text-foreground font-bold">Diploma in Medical Astrology</span> from <span className="text-foreground font-medium">SLBS National Sanskrit University</span>, New Delhi.
+                    He was awarded <span className="text-[#D4AF37] font-extrabold decoration-accent/20">Gold Medal</span> in <span className="text-foreground font-bold">Jyotish Acharya</span> from <span className="text-foreground font-medium">Bhartiya Vidya Bhawan, Delhi-Kendra</span> & <span className="text-foreground font-bold">Diploma in Medical Astrology</span> from <span className="text-foreground font-medium">Shri Lal Bahadur Shastri National Sanskrit University</span>, New Delhi.
                   </p>
 
                   <p>
@@ -102,7 +101,7 @@ export default function About() {
                   </p>
 
                   <p>
-                    With over <span className="text-foreground font-bold">eight years of expertise</span> in <span className="text-foreground font-bold">Vedic astrology</span> & solid academic foundation in <span className="text-foreground font-bold">astrology and natural science</span>, he has developed a <span className="text-foreground font-bold">scientific method</span> to understand one’s <span className="text-foreground font-bold">karmic problems</span> and try to solve with <span className="text-foreground font-bold">valid and practical remedies</span>. His predictions are accurate and deep rooted in <span className="text-foreground font-bold">complex astrological mathematics and techniques</span>.
+                    With over <span className="text-foreground font-bold">eight years of experience</span> in <span className="text-foreground font-bold">Vedic Astrology</span> & solid academic foundation in astrology and natural science, he has developed a scientific method to understand one’s karmic problems and try to solve with <span className="text-foreground font-bold">validated & practical remedies</span>. His predictions are accurate and deep rooted in <span className="text-foreground font-bold">complex astrological mathematics and techniques</span>.
                   </p>
                 </div>
               </motion.div>

@@ -16,7 +16,7 @@ __turbopack_load_page_chunks__("/", [
   "static/chunks/node_modules_@supabase_realtime-js_dist_module_ff1c51c7._.js",
   "static/chunks/node_modules_@supabase_storage-js_dist_module_9c628d94._.js",
   "static/chunks/node_modules_@supabase_auth-js_dist_module_e0400d86._.js",
-  "static/chunks/node_modules_bb4cc548._.js",
+  "static/chunks/node_modules_ec832b4e._.js",
   "static/chunks/src_pages_index_2da965e7._.js",
-  "static/chunks/turbopack-src_pages_index_db6c62b8._.js"
+  "static/chunks/turbopack-src_pages_index_980015d5._.js"
 ])
