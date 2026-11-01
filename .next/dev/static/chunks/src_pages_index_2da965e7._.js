@@ -18,7 +18,7 @@
   "static/chunks/node_modules_@supabase_realtime-js_dist_module_ff1c51c7._.js",
   "static/chunks/node_modules_@supabase_storage-js_dist_module_9c628d94._.js",
   "static/chunks/node_modules_@supabase_auth-js_dist_module_e0400d86._.js",
-  "static/chunks/node_modules_ec832b4e._.js"
+  "static/chunks/node_modules_d9b54026._.js"
 ],
     source: "entry"
 });

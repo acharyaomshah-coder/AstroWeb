@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Sparkles, Shield, Award, TrendingUp, CheckCircle2, ArrowRight, Zap, Sunrise, Clock, Sun, Moon, Settings, Home as HomeIcon, XCircle, Car, ShoppingBag, Info } from "lucide-react";
 import { BlogSection } from "@/components/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
@@ -856,24 +857,34 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             {panchang ? (
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                 {[
-                  { l: "Tithi", v: panchang.tithi, s: "तिथि" },
-                  { l: "Vaar", v: panchang.vaar, s: "वार" },
-                  { l: "Nakshatra", v: panchang.nakshatr, s: "नक्षत्र" },
-                  { l: "Yoga", v: panchang.yoga, s: "योग" },
-                  { l: "Karan", v: panchang.karan, s: "करण" }
-                ].map((x, i) => (
-                  <Card key={i} className="bg-muted/30 border border-border/60 shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-3.5 sm:p-4 text-center flex flex-col justify-between h-full">
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">{x.l}</p>
-                      <p className="font-serif text-sm sm:text-base md:text-lg font-bold text-black dark:text-white leading-snug break-words my-auto py-1">
-                        {x.v || "—"}
-                      </p>
-                      <p className="text-[10px] font-medium text-muted-foreground/75 mt-1">{x.s}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+                  { l: "Tithi", v: panchang.tithi, s: "तिथि", icon: Moon },
+                  { l: "Vaar", v: panchang.vaar, s: "वार", icon: Sun },
+                  { l: "Nakshatra", v: panchang.nakshatr, s: "नक्षत्र", icon: Sparkles },
+                  { l: "Yoga", v: panchang.yoga, s: "योग", icon: Zap },
+                  { l: "Karan", v: panchang.karan, s: "करण", icon: Clock }
+                ].map((x, i) => {
+                  const Icon = x.icon;
+                  return (
+                    <Card key={i} className="bg-background border border-border/70 shadow-sm hover:shadow-md transition-shadow">
+                      <CardContent className="p-5 flex flex-col justify-between h-full space-y-3">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2.5 bg-blue-500/10 rounded-xl text-blue-600 flex-shrink-0">
+                            <Icon className="h-5 w-5" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-blue-600 font-bold uppercase tracking-wider">{x.l}</p>
+                            <p className="text-[10px] text-muted-foreground/75 font-medium">{x.s}</p>
+                          </div>
+                        </div>
+                        <p className="text-sm sm:text-base font-medium text-foreground leading-snug break-words pt-1">
+                          {x.v || "—"}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             ) : (
               <div className="text-center p-12 bg-muted/20 rounded-2xl max-w-2xl mx-auto">
@@ -894,103 +905,127 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
 
             {muhurat ? (
-              <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
-                {muhurat.auspiciousDays && (
-                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-600 flex-shrink-0">
-                          <CheckCircle2 className="h-6 w-6" />
-                        </div>
-                        <div className="space-y-1">
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">General Auspicious Days</p>
-                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.auspiciousDays}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
+              (() => {
+                // Helper to format dot-separated dates into comma-separated dates (e.g. 2.5.7.9 -> 2, 5, 7, 9)
+                const formatDates = (val?: string) => {
+                  if (!val) return "";
+                  // Replace sequences of dots with comma and space if used as date separators
+                  return val
+                    .replace(/\.+/g, ', ')
+                    .replace(/,\s*,+/g, ', ')
+                    .replace(/^,\s*|,\s*$/g, '');
+                };
 
-                {muhurat.newHome && (
-                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-accent/10 rounded-xl text-accent flex-shrink-0">
-                          <HomeIcon className="h-6 w-6" />
-                        </div>
-                        <div className="space-y-1">
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Griha Pravesh (New Home)</p>
-                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.newHome}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
+                return (
+                  <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {muhurat.auspiciousDays && (
+                      <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-4">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-600 flex-shrink-0">
+                              <CheckCircle2 className="h-6 w-6" />
+                            </div>
+                            <div className="space-y-1">
+                              <p className="text-xs text-blue-600 font-bold uppercase tracking-wider">General Auspicious Days</p>
+                              <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">
+                                {formatDates(muhurat.auspiciousDays)}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
 
-                {muhurat.vehiclePurchase && (
-                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-blue-500/10 rounded-xl text-blue-600 flex-shrink-0">
-                          <Car className="h-6 w-6" />
-                        </div>
-                        <div className="space-y-1">
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Vehicle Purchase</p>
-                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.vehiclePurchase}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
+                    {muhurat.newHome && (
+                      <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-4">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-600 flex-shrink-0">
+                              <HomeIcon className="h-6 w-6" />
+                            </div>
+                            <div className="space-y-1">
+                              <p className="text-xs text-blue-600 font-bold uppercase tracking-wider">Griha Pravesh (New Home)</p>
+                              <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">
+                                {formatDates(muhurat.newHome)}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
 
-                {muhurat.miscellaneousPurchase && (
-                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-amber-500/10 rounded-xl text-amber-600 flex-shrink-0">
-                          <ShoppingBag className="h-6 w-6" />
-                        </div>
-                        <div className="space-y-1">
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Property & Miscellaneous Purchase</p>
-                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.miscellaneousPurchase}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
+                    {muhurat.vehiclePurchase && (
+                      <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-4">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-600 flex-shrink-0">
+                              <Car className="h-6 w-6" />
+                            </div>
+                            <div className="space-y-1">
+                              <p className="text-xs text-blue-600 font-bold uppercase tracking-wider">Vehicle Purchase</p>
+                              <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">
+                                {formatDates(muhurat.vehiclePurchase)}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
 
-                {muhurat.inauspiciousDays && (
-                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-rose-500/10 rounded-xl text-rose-600 flex-shrink-0">
-                          <XCircle className="h-6 w-6" />
-                        </div>
-                        <div className="space-y-1">
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Inauspicious Days (Varjya)</p>
-                          <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">{muhurat.inauspiciousDays}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
+                    {muhurat.miscellaneousPurchase && (
+                      <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-4">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-600 flex-shrink-0">
+                              <ShoppingBag className="h-6 w-6" />
+                            </div>
+                            <div className="space-y-1">
+                              <p className="text-xs text-blue-600 font-bold uppercase tracking-wider">Property & Miscellaneous Purchase</p>
+                              <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">
+                                {formatDates(muhurat.miscellaneousPurchase)}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
 
-                {muhurat.note && (
-                  <Card className="bg-background shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-purple-500/10 rounded-xl text-purple-600 flex-shrink-0">
-                          <Info className="h-6 w-6" />
-                        </div>
-                        <div className="space-y-1">
-                          <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Important Astrological Note</p>
-                          <p className="text-sm sm:text-base font-normal text-muted-foreground leading-relaxed">{muhurat.note}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
-              </div>
+                    {muhurat.inauspiciousDays && (
+                      <Card className="bg-background shadow-sm hover:shadow-md transition-shadow">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-4">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-600 flex-shrink-0">
+                              <XCircle className="h-6 w-6" />
+                            </div>
+                            <div className="space-y-1">
+                              <p className="text-xs text-blue-600 font-bold uppercase tracking-wider">Inauspicious Days (Varjya)</p>
+                              <p className="text-base sm:text-lg font-medium text-foreground leading-relaxed">
+                                {formatDates(muhurat.inauspiciousDays)}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
+
+                    {muhurat.note && (
+                      <Card className="bg-background shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-4">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-600 flex-shrink-0">
+                              <Info className="h-6 w-6" />
+                            </div>
+                            <div className="space-y-1">
+                              <p className="text-xs text-blue-600 font-bold uppercase tracking-wider">Important Astrological Note</p>
+                              <p className="text-sm sm:text-base font-normal text-muted-foreground leading-relaxed">{muhurat.note}</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
+                  </div>
+                );
+              })()
             ) : (
               <div className="text-center p-12 bg-background/50 rounded-2xl max-w-2xl mx-auto border border-dashed border-muted-foreground/30">
                 <p className="text-muted-foreground">No auspicious muhurats listed for this month.</p>

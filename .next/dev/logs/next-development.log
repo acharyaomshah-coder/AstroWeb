@@ -1,6 +1,99 @@
-[00:00:07.064] Server  LOG      ✓ Ready in 4.7s
-[00:00:17.237] Server  LOG      ○ Compiling / ...
-[00:00:51.287] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
+[00:00:05.962] Server  LOG      ✓ Ready in 4s
+[00:00:09.016] Server  LOG      ○ Compiling / ...
+[00:00:17.740] Browser ERROR   uncaughtError: Error: ./src/pages/index.tsx:907:16
+Parsing ecmascript source code failed
+  905 |
+  906 |             {muhurat ? (
+> 907 |               {(() => {
+      |                ^
+  908 |                 // Helper to format dot-separated dates into comma-separated dates (e.g. 2.5.7.9 -> 2, 5, 7, 9)
+  909 |                 const formatDates = (val?: string) => {
+  910 |                   if (!val) return "";
+
+Expected '</', got '('
+
+
+[00:00:18.656] Browser ERROR   ./src/pages/index.tsx:907:16
+Parsing ecmascript source code failed
+  905 |
+  906 |             {muhurat ? (
+> 907 |               {(() => {
+      |                ^
+  908 |                 // Helper to format dot-separated dates into comma-separated dates (e.g. 2.5.7.9 -> 2, 5, 7, 9)
+  909 |                 const formatDates = (val?: string) => {
+  910 |                   if (!val) return "";
+
+Expected '</', got '('
+[00:00:18.656] Browser ERROR   ./src/pages/index.tsx:907:16
+Parsing ecmascript source code failed
+  905 |
+  906 |             {muhurat ? (
+> 907 |               {(() => {
+      |                ^
+  908 |                 // Helper to format dot-separated dates into comma-separated dates (e.g. 2.5.7.9 -> 2, 5, 7, 9)
+  909 |                 const formatDates = (val?: string) => {
+  910 |                   if (!val) return "";
+
+Expected '</', got '('
+[00:00:19.737] Browser DEBUG   Provider initialization - wallet not connected
+[00:00:38.660] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:00:38.661] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:00:41.245] Browser ERROR   uncaughtError: Error: ./src/pages/index.tsx:1027:19
+Parsing ecmascript source code failed
+  1025 |                   </div>
+  1026 |                 );
+> 1027 |               })()}
+       |                   ^
+  1028 |             ) : (
+  1029 |               <div className="text-center p-12 bg-background/50 rounded-2xl max-w-2xl mx-auto border border-dashed border-muted-foreground/30">
+  1030 |                 <p className="text-muted-foreground">No auspicious muhurats listed for this month.</p>
+
+Expected '</', got '}'
+
+
+[00:00:41.524] Browser ERROR   ./src/pages/index.tsx:1027:19
+Parsing ecmascript source code failed
+  1025 |                   </div>
+  1026 |                 );
+> 1027 |               })()}
+       |                   ^
+  1028 |             ) : (
+  1029 |               <div className="text-center p-12 bg-background/50 rounded-2xl max-w-2xl mx-auto border border-dashed border-muted-foreground/30">
+  1030 |                 <p className="text-muted-foreground">No auspicious muhurats listed for this month.</p>
+
+Expected '</', got '}'
+[00:00:41.524] Browser ERROR   ./src/pages/index.tsx:1027:19
+Parsing ecmascript source code failed
+  1025 |                   </div>
+  1026 |                 );
+> 1027 |               })()}
+       |                   ^
+  1028 |             ) : (
+  1029 |               <div className="text-center p-12 bg-background/50 rounded-2xl max-w-2xl mx-auto border border-dashed border-muted-foreground/30">
+  1030 |                 <p className="text-muted-foreground">No auspicious muhurats listed for this month.</p>
+
+Expected '</', got '}'
+[00:00:41.524] Browser DEBUG   Provider initialization - wallet not connected
+[00:00:50.494] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:00:53.561] Server  LOG      ○ Compiling / ...
+[00:00:54.039] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:05.285] Server  ERROR   D:\DEMO-PROJECTS\AstroWeb\.next\dev\server\chunks\ssr\[root-of-the-server]__9ec65192._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:05.292] Server  ERROR   ReferenceError: Badge is not defined
+[00:01:05.297] Server  ERROR   D:\DEMO-PROJECTS\AstroWeb\.next\dev\server\chunks\ssr\[root-of-the-server]__9ec65192._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:05.302] Server  ERROR   ReferenceError: Badge is not defined
+[00:01:05.306] Server  ERROR   D:\DEMO-PROJECTS\AstroWeb\.next\dev\server\chunks\ssr\[root-of-the-server]__9ec65192._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:05.311] Server  ERROR    ⨯ ReferenceError: Badge is not defined
+[00:01:05.313] Server  ERROR   D:\DEMO-PROJECTS\AstroWeb\.next\dev\server\chunks\ssr\[root-of-the-server]__9ec65192._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:05.316] Server  ERROR    ⨯ ReferenceError: Badge is not defined
+[00:01:05.320] Server  ERROR   D:\DEMO-PROJECTS\AstroWeb\.next\dev\server\chunks\ssr\[root-of-the-server]__9ec65192._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:05.327] Server  ERROR    ⨯ ReferenceError: Badge is not defined
+[00:01:05.331] Server  ERROR   D:\DEMO-PROJECTS\AstroWeb\.next\dev\server\chunks\ssr\[root-of-the-server]__9ec65192._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:05.338] Server  ERROR    ⨯ ReferenceError: Badge is not defined
+[00:01:07.401] Browser ERROR   uncaughtError: ReferenceError: Badge is not defined
+[00:01:08.234] Browser DEBUG   Provider initialization - wallet not connected
+[00:02:01.617] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:02:02.724] Server  LOG      ✓ Compiled in 569ms
+[00:02:06.083] Browser ERROR   Warning: Expected server HTML to contain a matching <%s> in <%s>.%s div p 
     at div
     at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:1692:18)
     at p
@@ -14,7 +107,7 @@
     at div
     at section
     at div
-    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0a6d3cff._.js:2181:178)
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0a6d3cff._.js:2188:178)
     at main
     at div
     at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
@@ -28,9 +121,9 @@
     at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3041:1)
     at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3140:25)
     at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3353:17)
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
-[00:00:51.288] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   Warning: An error occurred during hydration. The server HTML was replaced with client content in <%s>. div
+[00:02:06.083] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
     at div
     at Badge (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:1692:18)
     at p
@@ -44,7 +137,7 @@
     at div
     at section
     at div
-    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0a6d3cff._.js:2181:178)
+    at Home (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0a6d3cff._.js:2188:178)
     at main
     at div
     at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
@@ -58,125 +151,42 @@
     at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3041:1)
     at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3140:25)
     at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3353:17)
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
-[00:00:51.288] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
-[00:00:51.456] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.081] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_w9a84dfhcxr_1775713394249.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.081] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_fhjq0uqb8os_1768469122847.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.081] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_ntdjrxyt2h_1775713049980.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.830] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.831] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.831] Browser WARN    Image with src "/photo_2026-10-28_22-43-11.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.831] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:58.831] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:59.664] Browser WARN    Image with src "/tauraus.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:59.664] Browser WARN    Image with src "/aries.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/gemini.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/cancer.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/leo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/virgo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/libra.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/scorpio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/sagittarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/capricon.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/aqarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:00.222] Browser WARN    Image with src "/pisces.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:05.933] Browser ERROR   Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <a> a 
-    at a
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3041:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:18415:13
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:18054:13
-    at a
-    at LinkComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:4335:19)
-    at div
-    at div
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3267:13
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3028:17
-    at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3014:17)
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:18393:13
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:18217:13
-    at Presence (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3609:13)
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:18153:13
-    at _c6 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:1598:191)
-    at li
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:17921:13
-    at ul
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3028:17
-    at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3014:17)
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:18393:13
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2905:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2873:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3028:17
-    at div
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:17896:13
-    at _c2 (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:1562:188)
-    at nav
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3138:17
-    at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
-    at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
-    at CollectionProvider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:3014:17)
-    at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
-    at NavigationMenuProvider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:17840:13)
-    at http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:17702:13
-    at _c (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:1543:183)
-    at nav
-    at div
-    at div
-    at header
-    at Navigation (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:1747:160)
-    at div
-    at Provider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:2767:21)
-    at TooltipProvider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:12315:13)
-    at AuthProvider (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:1059:25)
-    at QueryClientProvider (http://localhost:3000/_next/static/chunks/node_modules_b0e35836._.js:583:30)
-    at App (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__5bb157e4._.js:3198:16)
-    at PathnameContextProviderAdapter (http://localhost:3000/_next/static/chunks/node_modules_next_dist_shared_lib_4025f6b7._.js:5052:43)
-    at PagesDevOverlayErrorBoundary (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js:1142:9)
-    at PagesDevOverlayBridge (http://localhost:3000/_next/static/chunks/node_modules_next_dist_6024eba3._.js:1919:34)
-    at Container (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3041:1)
-    at AppContainer (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3140:25)
-    at Root (http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_3ede7da4._.js:3353:17)
-[00:06:29.569] Server  LOG      ✓ Compiled in 930ms
-[00:06:42.299] Server  LOG      ✓ Compiled in 470ms
-[00:07:43.398] Server  LOG      ✓ Compiled in 1057ms
-[00:12:42.279] Server  LOG      ✓ Compiled in 1048ms
-[00:19:23.909] Server  LOG      ✓ Compiled in 489ms
-[00:19:36.267] Server  LOG      ✓ Compiled in 269ms
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: Hydration failed because the initial UI does not match what was rendered on the server.
+[00:02:06.083] Browser ERROR   uncaughtError: Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
+[00:02:06.666] Browser WARN    Image with src "/WhatsApp Image 2026-01-03 at 17.07.18.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:06.837] Browser DEBUG   Provider initialization - wallet not connected
+[00:02:09.828] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_fhjq0uqb8os_1768469122847.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:09.828] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_w9a84dfhcxr_1775713394249.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:09.828] Browser WARN    Image with src "https://muvycgcnmqdhgivrjpry.supabase.co/storage/v1/object/public/images/courses/course_ntdjrxyt2h_1775713049980.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:10.038] Browser WARN    Image with src "/award.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:10.038] Browser WARN    Image with src "/gold medal.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:10.038] Browser WARN    Image with src "/photo_2026-10-28_22-43-11.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:10.312] Browser WARN    Image with src "/result.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:10.313] Browser WARN    Image with src "/degree.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:11.786] Browser WARN    Image with src "/aries.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:11.786] Browser WARN    Image with src "/tauraus.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:11.928] Browser WARN    Image with src "/cancer.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:11.928] Browser WARN    Image with src "/gemini.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:11.928] Browser WARN    Image with src "/virgo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:11.928] Browser WARN    Image with src "/leo.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:12.077] Browser WARN    Image with src "/scorpio.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:12.077] Browser WARN    Image with src "/libra.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:12.462] Browser WARN    Image with src "/sagittarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:12.462] Browser WARN    Image with src "/capricon.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:12.966] Browser WARN    Image with src "/aqarius.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:12.966] Browser WARN    Image with src "/pisces.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
